@@ -1,4 +1,4 @@
-import agentImg from "../assets/images/agent.png";
+import agentImg from "@assets/PJM_HEADSHOT_light_touch_1772926722025.png";
 
 export default function Agent() {
   return (
