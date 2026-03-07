@@ -8,6 +8,8 @@ import Home from "@/pages/Home";
 import Buy from "@/pages/Buy";
 import Sell from "@/pages/Sell";
 import Answers from "@/pages/Answers";
+import Reviews from "@/pages/Reviews";
+import Trends from "@/pages/Trends";
 
 function Router() {
   return (
@@ -16,6 +18,8 @@ function Router() {
       <Route path="/buy" component={Buy}/>
       <Route path="/sell" component={Sell}/>
       <Route path="/answers" component={Answers}/>
+      <Route path="/reviews" component={Reviews}/>
+      <Route path="/trends" component={Trends}/>
       <Route component={NotFound} />
     </Switch>
   );
