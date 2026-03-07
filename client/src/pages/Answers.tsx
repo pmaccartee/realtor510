@@ -7,52 +7,137 @@ const insights = [
   {
     category: "Market Intelligence",
     title: "Are We in a Buyer’s Market or Seller’s Market—and Why That’s the Wrong Question",
-    description: "The East Bay isn't one market—it's dozens of micro-markets. We explore how to evaluate your specific neighborhood dynamics rather than relying on broad regional generalizations."
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Market Intelligence",
     title: "Are Cash Buyers Still Dominating the $2M+ Market?",
-    description: "A practical, East Bay–specific breakdown of current financing trends, the rise of the cash-equivalent buyer, and how sellers should evaluate contingent versus non-contingent offers."
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "What are the new reporting requirements for all-cash home purchases starting March 1, 2026?",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Market Intelligence",
     title: "How Interest Rate Changes Really Affect High‑Net‑Worth Buyers",
-    description: "Interest rates impact different market segments differently. We analyze how shifting rates influence buying power and psychology in the luxury East Bay market."
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Market Intelligence",
     title: "How Seasonality Has Shifted in the East Bay Post‑2020",
-    description: "The traditional Spring and Fall markets have evolved. Learn how to strategically time your sale based on new post-pandemic buyer behavior patterns."
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "What’s Actually Driving Demand in East Bay Luxury Right Now?",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "Why “Days on Market” Is a Misleading Metric in Luxury Real Estate",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "Why Some Homes Sell Quietly—and Others Don’t",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Pricing Strategy",
-    title: "Why “Days on Market” Is a Misleading Metric in Luxury Real Estate",
-    description: "High-end properties often follow a different timeline. We discuss why evaluating days on market requires nuance and context in the luxury sector."
+    title: "How I Decide When to “Test” the Market—and When Not To",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Pricing Strategy",
     title: "How I Think About Pricing When There Are No True Comps",
-    description: "Unique homes require unique pricing strategies. Discover our analytical approach to valuing architecturally significant or highly customized properties."
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Pricing Strategy",
     title: "How Micro‑Location Can Swing Value by Hundreds of Thousands",
-    description: "In the East Bay, a few blocks can change everything. We break down the hyper-local factors that drive significant premium pricing."
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Pricing Strategy",
+    title: "How to Read Buyer Behavior Before Offers Come In",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Pricing Strategy",
+    title: "Why Overpricing Is Still the #1 Seller Mistake",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Pricing Strategy",
+    title: "Why the First 14 Days Matter More Than the List Price",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Negotiation",
-    title: "How to Read Buyer Behavior Before Offers Come In",
-    description: "The velocity of disclosure downloads, return visits, and specific agent questions—these leading indicators help us predict offer strength and volume."
+    title: "How I Handle Aggressive Buyers Without Killing the Deal",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Negotiation",
+    title: "How I Read Between the Lines of Buyer Requests",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Negotiation",
+    title: "How to Keep Emotions Out of High-Stakes Negotiations",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Negotiation",
+    title: "The Difference Between a Good Negotiator and a Great One",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Negotiation",
+    title: "When to Walk Away from a Deal",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Local Expertise",
     title: "Piedmont vs. North Oakland: How Buyers Actually Compare Them",
-    description: "While Piedmont's schools remain a driver, many luxury buyers are increasingly drawn to the walkability and architectural diversity of North Oakland."
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
     category: "Local Expertise",
-    title: "Why Some Homes Sell Quietly—and Others Don’t",
-    description: "An inside look at the mechanics of off-market sales versus public MLS listings, and how to choose the right path for your property."
+    title: "What Buyers Notice First During Showings (It’s Not What You Think)",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Local Expertise",
+    title: "What School District Perception Does to Home Value",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Local Expertise",
+    title: "What Today’s Buyers Will Overlook—and What They Won’t",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Local Expertise",
+    title: "Where I See the East Bay Luxury Market Heading Next",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Local Expertise",
+    title: "Why Architecture Matters More Than Ever in Buyer Decisions",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Local Expertise",
+    title: "Why Crocker Highlands Behaves Differently Than Nearby Neighborhoods",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Local Expertise",
+    title: "Why “Turnkey” Means Something Different Today",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   }
 ];
 
