@@ -45,6 +45,136 @@ const insights = [
     description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
   },
   {
+    category: "Market Intelligence",
+    title: "The New Psychology of Luxury Buyers in the East Bay",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "The Role of Auction Theory in Luxury Home Pricing",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "What a Strategic Price Reduction Actually Looks Like",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "How Proposition 19 Changed the Downsizing Equation",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "How to Coordinate a Sale and Purchase Without Stress",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "Selling the Family Home Without Regret",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "The Hidden Costs of Waiting Too Long to Sell",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "What Downsizers Should Know About Today’s Buyer Expectations",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "Why the East Bay Luxury Market Is Different Than SF",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "What It Actually Takes to Get Multiple Offers Today",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "Why Most Remodels Don’t Deliver the ROI You Expect",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "The Real Reason Some Homes Sit on the Market",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "How to Handle Pre-Emptive Offers",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "When Off-Market Makes Sense and When It Costs You Money",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "The Truth About Zestimates in Luxury Markets",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "Why Buyer Letters Don’t Work (And What Does)",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "How to Read a Disclosures Packet Like a Pro",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "The Art of the Counter Offer",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "What to Expect During the Escrow Process",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "How to Evaluate Multiple Offers Beyond the Purchase Price",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "Why Local Agent Relationships Matter More Than Ever",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "The Impact of Staging on Luxury Sales",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "How to Navigate Appraisal Contingencies",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "The Rise of the Cash-Equivalent Buyer",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "Why Pre-Sale Inspections Are Crucial in the East Bay",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
+    category: "Market Intelligence",
+    title: "How to Position a Trust Sale for Maximum Value",
+    description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
+  },
+  {
     category: "Pricing Strategy",
     title: "How I Decide When to “Test” the Market—and When Not To",
     description: "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers."
