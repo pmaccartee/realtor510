@@ -7,29 +7,34 @@ export default function Sell() {
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
       <main className="flex-1">
-        <section className="relative pt-40 pb-32 flex items-center justify-center">
+        <section className="relative flex items-center justify-center h-[60vh] min-h-[400px]">
           <div className="absolute inset-0 z-0">
             <img src={heroImg} alt="Beautiful classic home exterior" className="w-full h-full object-cover object-center" />
-            <div className="absolute inset-0 bg-black/60"></div>
           </div>
           <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-            <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight drop-shadow-lg">
-              Smart pricing.<br />
-              <span className="italic text-primary drop-shadow-md">Thoughtful negotiation.</span>
+            <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight drop-shadow-md">
+              Selling Your Home
             </h1>
-            <p className="text-xl md:text-2xl font-light text-white/90 leading-relaxed mb-16 max-w-3xl mx-auto drop-shadow-sm">
-              Strategic pricing, data-driven marketing, and expert negotiation to get the highest possible return for your East Bay property.
-            </p>
-            <p className="text-xl md:text-2xl font-light text-white/90 leading-relaxed mb-8 drop-shadow-sm">
-              I am committed to exceeding my sellers' expectations. My comprehensive marketing strategy is built to position your home for maximum value—achieving the highest possible price in the shortest amount of time, with the strongest terms.
-            </p>
-            <p className="text-xl md:text-2xl font-light text-white/90 leading-relaxed drop-shadow-sm">
-              With discretion, diligence, and careful attention to detail, I manage every step of the process with intention and precision.
-            </p>
           </div>
         </section>
 
         <section className="py-24 bg-white">
+          <div className="max-w-4xl mx-auto px-6 text-center mb-24">
+            <h2 className="text-4xl md:text-6xl font-serif text-foreground mb-6 leading-tight">
+              Smart pricing.<br />
+              <span className="italic text-primary">Thoughtful negotiation.</span>
+            </h2>
+            <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed mb-16 max-w-3xl mx-auto">
+              Strategic pricing, data-driven marketing, and expert negotiation to get the highest possible return for your East Bay property.
+            </p>
+            <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed mb-8">
+              I am committed to exceeding my sellers' expectations. My comprehensive marketing strategy is built to position your home for maximum value—achieving the highest possible price in the shortest amount of time, with the strongest terms.
+            </p>
+            <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed">
+              With discretion, diligence, and careful attention to detail, I manage every step of the process with intention and precision.
+            </p>
+          </div>
+
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
               <div className="bg-secondary p-8 border-t-2 border-primary shadow-sm flex flex-col">
