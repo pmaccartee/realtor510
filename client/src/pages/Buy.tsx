@@ -7,6 +7,13 @@ export default function Buy() {
       <Navigation />
       <main className="flex-1 pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 text-center mb-24">
+          <h1 className="text-5xl md:text-7xl font-serif text-foreground mb-6 leading-tight">
+            TURNING CHAOS<br />
+            <span className="italic text-primary">INTO CLEAR DECISIONS.</span>
+          </h1>
+          <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed mb-16 max-w-3xl mx-auto">
+            Access off-market opportunities and navigate the competitive East Bay market with a strategic partner by your side.
+          </p>
           <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed mb-8">
             Buying a home is one of the most significant financial and personal decisions you'll make. Choosing the right agent deserves thoughtful consideration—it directly impacts your experience, your leverage, and your outcome.
           </p>
