@@ -1,11 +1,12 @@
 import { Link } from "wouter";
+import logo from "@assets/PM_LOGO_Red_1772927689333.png";
 
 export default function Navigation() {
   return (
     <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl tracking-wider text-primary">
-          PATRICK M<span className="text-sm align-top lowercase">AC</span>CARTEE
+        <Link href="/">
+          <img src={logo} alt="Patrick MacCartee Logo" className="h-12 w-auto cursor-pointer object-contain" />
         </Link>
         <div className="hidden md:flex items-center space-x-8 text-sm tracking-widest uppercase">
           <Link href="/buy" className="hover:text-primary transition-colors">Buy</Link>
