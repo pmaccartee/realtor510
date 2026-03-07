@@ -1,26 +1,33 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import heroImg from "@assets/002-1015-warfield-avenue.80998.p4k.001.web_1772922978781.jpg";
 
 export default function Buy() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
-      <main className="flex-1 pt-32 pb-24">
-        <div className="max-w-4xl mx-auto px-6 text-center mb-24">
-          <h1 className="text-5xl md:text-7xl font-serif text-foreground mb-6 leading-tight">
-            Turning chaos<br />
-            <span className="italic text-primary">into clear decisions.</span>
-          </h1>
-          <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed mb-16 max-w-3xl mx-auto">
-            Access off-market opportunities and navigate the competitive East Bay market with a strategic partner by your side.
-          </p>
-          <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed mb-8">
-            Buying a home is one of the most significant financial and personal decisions you'll make. Choosing the right agent deserves thoughtful consideration—it directly impacts your experience, your leverage, and your outcome.
-          </p>
-          <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed">
-            I understand that a home purchase touches far more than finances. It affects your family, your lifestyle, your long term goals, and the future you're building. My role is to guide that process with clarity, strategy, and steady execution.
-          </p>
-        </div>
+      <main className="flex-1">
+        <section className="relative pt-40 pb-32 flex items-center justify-center">
+          <div className="absolute inset-0 z-0">
+            <img src={heroImg} alt="Beautiful classic home" className="w-full h-full object-cover object-center" />
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+            <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight drop-shadow-lg">
+              Turning chaos<br />
+              <span className="italic text-primary drop-shadow-md">into clear decisions.</span>
+            </h1>
+            <p className="text-xl md:text-2xl font-light text-white/90 leading-relaxed mb-16 max-w-3xl mx-auto drop-shadow-sm">
+              Access off-market opportunities and navigate the competitive East Bay market with a strategic partner by your side.
+            </p>
+            <p className="text-xl md:text-2xl font-light text-white/90 leading-relaxed mb-8 drop-shadow-sm">
+              Buying a home is one of the most significant financial and personal decisions you'll make. Choosing the right agent deserves thoughtful consideration—it directly impacts your experience, your leverage, and your outcome.
+            </p>
+            <p className="text-xl md:text-2xl font-light text-white/90 leading-relaxed drop-shadow-sm">
+              I understand that a home purchase touches far more than finances. It affects your family, your lifestyle, your long term goals, and the future you're building. My role is to guide that process with clarity, strategy, and steady execution.
+            </p>
+          </div>
+        </section>
 
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-7xl px-6">
