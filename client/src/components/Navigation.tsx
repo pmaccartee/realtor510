@@ -3,7 +3,7 @@ import logo from "@assets/PM_LOGO_Red_1772927689333.png";
 
 export default function Navigation() {
   return (
-    <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
+    <nav className="fixed w-full z-50 bg-white border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/">
           <img src={logo} alt="Patrick MacCartee Logo" className="h-12 w-auto cursor-pointer object-contain" />
