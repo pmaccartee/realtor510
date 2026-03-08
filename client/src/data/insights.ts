@@ -1,5 +1,21 @@
 export const insights = [
   {
+    "id": "1015-warfield-avenue-oakland",
+    "title": "1015 Warfield Avenue, Oakland — Grand Lake Craftsman with ADU & Urban Orchard",
+    "category": "Sold Listing",
+    "description": "Masterfully renovated 1907 Craftsman in Grand Lake / Crocker Highlands. 5 bed / 3.5 bath / 3,230 sq ft. Full ADU. Heath tile kitchen, BlueStar stove. Urban orchard with 20+ fruit trees, pizza oven, hot tub.",
+    "content": "",
+    "link": "/1015-warfield-avenue-oakland.html"
+  },
+  {
+    "id": "615-western-drive-richmond",
+    "title": "615 Western Drive, Point Richmond — The Wave Garden Residence",
+    "category": "Active Listing",
+    "description": "Smithsonian-listed bayfront compound in Point Richmond. 6 bed / 3 bath / 5,027 sq ft on two levels with elevator. Wave Garden — 7,000 sq ft private park designed by Victor Amador.",
+    "content": "",
+    "link": "/615-western-drive-richmond.html"
+  },
+  {
     "id": "293-elysian-fields-drive-oakland",
     "title": "293 Elysian Fields Drive, Oakland — Japanese Minka-Style Home in Sequoyah Highlands",
     "category": "Sold Listing",
