@@ -26,6 +26,7 @@ function Router() {
       <Route path="/trends" component={Trends}/>
       <Route path="/waters" component={Waters}/>
       <Route path="/neighborhoods" component={Neighborhoods}/>
+      <Route path="/trends/waters" component={Waters}/>
       <Route component={NotFound} />
     </Switch>
   );
