@@ -151,6 +151,11 @@
     .feature-list, .photo-grid-2, .photo-grid-3 { grid-template-columns: 1fr; }
     .photo-grid-2 img, .photo-grid-3 img { height: 220px; }
   }
+
+  .btn-red { display: inline-block; background: hsl(355, 75%, 35%); color: white; padding: 14px 36px; text-decoration: none; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.2s; text-align: center; border: none; cursor: pointer; }
+  .btn-red:hover { background: hsl(355, 75%, 25%); color: white; }
+  .text-red { color: hsl(355, 75%, 35%); text-decoration: underline; cursor: pointer; }
+  .text-red:hover { color: hsl(355, 75%, 25%); }
 </style>
 </head>
 <body>
@@ -355,7 +360,7 @@
     <div class="sidebar-cta">
       <div class="sidebar-cta-title">Inquire About This Property</div>
       <p>The Wave Garden Residence is a singular opportunity. Patrick MacCartee can arrange a private tour and provide full property details.</p>
-      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-sage">Contact Patrick</a>
+      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-red">Contact Patrick</a>
       <a href="https://www.wavegardenresidence.com" target="_blank" class="btn-outline">Full Listing Site →</a>
     </div>
   </aside>
@@ -366,14 +371,14 @@
   <h2 class="cta-title">A Property That Defines<br>Its Own Category</h2>
   <p class="cta-sub">The Wave Garden Residence is one of the most distinctive properties available in the East Bay. Private tours available by appointment.</p>
   <div class="cta-buttons">
-    <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-primary">Request a Private Tour</a>
+    <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-red">Request a Private Tour</a>
     <a href="https://www.wavegardenresidence.com" target="_blank" class="btn-secondary">Visit wavegardenresidence.com</a>
   </div>
 </section>
 
 <footer class="footer">
   <span>© 2025 Patrick MacCartee · The Grubb Company · DRE #02142693</span>
-  <span><a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')">patrick@realtor510.com</a></span>
+  <span><a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-red">patrick@realtor510.com</a></span>
 </footer>
 
 </body>

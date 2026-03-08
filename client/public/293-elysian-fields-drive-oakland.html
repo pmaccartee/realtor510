@@ -137,6 +137,11 @@
     .feature-list { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px; }
   }
+
+  .btn-red { display: inline-block; background: hsl(355, 75%, 35%); color: white; padding: 14px 36px; text-decoration: none; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.2s; text-align: center; border: none; cursor: pointer; }
+  .btn-red:hover { background: hsl(355, 75%, 25%); color: white; }
+  .text-red { color: hsl(355, 75%, 35%); text-decoration: underline; cursor: pointer; }
+  .text-red:hover { color: hsl(355, 75%, 25%); }
 </style>
 </head>
 <body>
@@ -331,7 +336,7 @@
     <div class="sidebar-cta">
       <div class="sidebar-cta-title">Looking for a Similar Property?</div>
       <p>This home has sold. If you're searching for architectural distinction in the Oakland Hills, Patrick MacCartee knows this market intimately.</p>
-      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')">Contact Patrick</a>
+      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-red">Contact Patrick</a>
     </div>
   </aside>
 </div>
@@ -341,7 +346,7 @@
   <h2 class="cta-title">Looking for Something<br>Equally Extraordinary?</h2>
   <p class="cta-sub">Patrick MacCartee specializes in architecturally significant homes in the East Bay hills.</p>
   <div class="cta-buttons">
-    <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')">Get in Touch</a>
+    <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-red">Get in Touch</a>
     <a href="https://realtor510.com/oakland-neighborhood-guide.html" class="btn-secondary">Oakland Neighborhood Guide</a>
   </div>
 </section>

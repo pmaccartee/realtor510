@@ -417,6 +417,11 @@
     .fact { padding: 16px 24px 16px 0; }
     .feature-list { grid-template-columns: 1fr; }
   }
+
+  .btn-red { display: inline-block; background: hsl(355, 75%, 35%); color: white; padding: 14px 36px; text-decoration: none; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.2s; text-align: center; border: none; cursor: pointer; }
+  .btn-red:hover { background: hsl(355, 75%, 25%); color: white; }
+  .text-red { color: hsl(355, 75%, 35%); text-decoration: underline; cursor: pointer; }
+  .text-red:hover { color: hsl(355, 75%, 25%); }
 </style>
 </head>
 <body>
@@ -619,7 +624,7 @@
     <div class="sidebar-cta">
       <div class="sidebar-cta-title">Schedule a Showing</div>
       <p>261 Silverado Court is actively listed and available to show. Contact Patrick MacCartee directly to arrange a private tour.</p>
-      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-sage">Contact Patrick</a>
+      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-red">Contact Patrick</a>
     </div>
   </aside>
 
@@ -631,7 +636,7 @@
   <h2 class="cta-title">Questions About<br>261 Silverado Court?</h2>
   <p class="cta-sub">Patrick MacCartee represents this property exclusively.</p>
   <div class="cta-buttons">
-    <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-primary">Get in Touch</a>
+    <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-red">Get in Touch</a>
     <a href="https://realtor510.com/oakland-neighborhood-guide.html" class="btn-secondary">Oakland Neighborhood Guide</a>
   </div>
 </section>
@@ -639,7 +644,7 @@
 <!-- FOOTER -->
 <footer class="footer">
   <span>© 2025 Patrick MacCartee · The Grubb Company · DRE #02142693</span>
-  <span><a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')">patrick@realtor510.com</a></span>
+  <span><a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="btn-red">patrick@realtor510.com</a></span>
 </footer>
 
 </body>
