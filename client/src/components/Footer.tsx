@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export default function Footer() {
   return (
     <footer className="bg-foreground border-t border-white/10 text-white/50 py-16 text-center text-sm">
@@ -11,6 +13,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="space-x-8 text-xs tracking-widest uppercase font-medium">
+          <Link href="/julia" className="hover:text-primary transition-colors">Julia Morgan</Link>
           <a href="#" className="hover:text-primary transition-colors">Privacy</a>
           <a href="#" className="hover:text-primary transition-colors">Terms</a>
           <a href="mailto:patrick@realtor510.com" className="hover:text-primary transition-colors">Contact</a>
