@@ -9,8 +9,8 @@ export default function Hero() {
       </div>
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pb-24 animate-in fade-in zoom-in duration-1000">
         <h1 className="text-5xl md:text-7xl lg:text-8xl text-foreground font-serif mb-6 leading-[1.1] drop-shadow-sm">
-          SMART STRATEGY.<br />
-          <span className="italic text-primary">CLEAN EXECUTION.</span>
+          Luxury Real Estate,<br />
+          <span className="italic text-primary">Locally Mastered.</span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light leading-relaxed">
           Your partner in East Bay Real Estate. Serving Oakland, Piedmont, Berkeley, and Alameda with a rigorous, analytical approach.
