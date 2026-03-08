@@ -1,4 +1,4 @@
-export const aliceWatersHtml = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -367,7 +367,7 @@ function findNode(list, id) {
 function badge(type) {
   if (!type || !BDG[type]) return '';
   const b = BDG[type];
-  return \`<span class="badge" style="background:\${b.bg};color:\${b.color}">\${b.text}</span>\`;
+  return `<span class="badge" style="background:${b.bg};color:${b.color}">${b.text}</span>`;
 }
 
 function select(id) {
@@ -383,73 +383,73 @@ function card(node, gen) {
   const kids = node.children && node.children.length > 0;
   const shadow = sel ? '0 6px 20px rgba(60,40,10,0.18)' : '0 2px 10px rgba(60,40,10,0.09)';
   const bg = sel ? ac : '#ffffff';
-  return \`<div class="chef-card\${sel?' sel':''}" style="border-left:4px solid \${ac};box-shadow:\${shadow};background:\${bg}" onclick="select('\${node.id}')">
-    <div class="cname">\${node.name}\${kids&&!sel?' <span style="font-size:9px;opacity:0.4">▶</span>':''}</div>
-    <div class="crest">\${node.restaurant}</div>
-    <div class="cloc">\${node.location}</div>
-    \${node.restCount ? \`<div class="ccount">\${node.restCount} restaurant\${node.restCount>1?'s':''}</div>\` : ''}
-    \${!sel ? badge(node.badge) : ''}
-  </div>\`;
+  return `<div class="chef-card${sel?' sel':''}" style="border-left:4px solid ${ac};box-shadow:${shadow};background:${bg}" onclick="select('${node.id}')">
+    <div class="cname">${node.name}${kids&&!sel?' <span style="font-size:9px;opacity:0.4">▶</span>':''}</div>
+    <div class="crest">${node.restaurant}</div>
+    <div class="cloc">${node.location}</div>
+    ${node.restCount ? `<div class="ccount">${node.restCount} restaurant${node.restCount>1?'s':''}</div>` : ''}
+    ${!sel ? badge(node.badge) : ''}
+  </div>`;
 }
 
 function subBranch(node, gen) {
   const kids = node.children || [];
   const lc = GC[Math.min(gen,5)];
-  let h = \`<div style="display:flex;align-items:flex-start;margin-bottom:6px">\${card(node,gen)}\`;
+  let h = `<div style="display:flex;align-items:flex-start;margin-bottom:6px">${card(node,gen)}`;
   if (kids.length) {
-    h += \`<div style="display:flex;align-items:flex-start">
-      <div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:\${lc}66"></div></div>
+    h += `<div style="display:flex;align-items:flex-start">
+      <div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${lc}66"></div></div>
       <div style="position:relative">
-        \${kids.length>1?\`<div style="position:absolute;left:0;top:22px;width:2px;height:calc(100% - 44px);background:\${lc}44"></div>\`:''}
+        ${kids.length>1?`<div style="position:absolute;left:0;top:22px;width:2px;height:calc(100% - 44px);background:${lc}44"></div>`:''}
         <div style="display:flex;flex-direction:column;gap:8px">
-          \${kids.map(k=>\`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:\${lc}44"></div></div>\${subBranch(k,gen+1)}</div>\`).join('')}
+          ${kids.map(k=>`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${lc}44"></div></div>${subBranch(k,gen+1)}</div>`).join('')}
         </div>
       </div>
-    </div>\`;
+    </div>`;
   }
-  h += \`</div>\`;
+  h += `</div>`;
   return h;
 }
 
 function gen1row(node) {
   const kids = node.children || [];
   const lc = GC[2];
-  let h = \`<div style="display:flex;align-items:flex-start;margin-bottom:6px">\${card(node,1)}\`;
+  let h = `<div style="display:flex;align-items:flex-start;margin-bottom:6px">${card(node,1)}`;
   if (kids.length) {
-    h += \`<div style="display:flex;align-items:flex-start">
-      <div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:\${lc}66"></div></div>
+    h += `<div style="display:flex;align-items:flex-start">
+      <div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${lc}66"></div></div>
       <div style="position:relative">
-        \${kids.length>1?\`<div style="position:absolute;left:0;top:22px;width:2px;height:calc(100% - 44px);background:\${lc}44"></div>\`:''}
+        ${kids.length>1?`<div style="position:absolute;left:0;top:22px;width:2px;height:calc(100% - 44px);background:${lc}44"></div>`:''}
         <div style="display:flex;flex-direction:column;gap:8px">
-          \${kids.map(k=>\`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:\${lc}44"></div></div>\${subBranch(k,2)}</div>\`).join('')}
+          ${kids.map(k=>`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${lc}44"></div></div>${subBranch(k,2)}</div>`).join('')}
         </div>
       </div>
-    </div>\`;
+    </div>`;
   }
-  h += \`</div>\`;
+  h += `</div>`;
   return h;
 }
 
 function render() {
   const asel = selected === 'alice';
   const at = GEN1.length * 23;
-  document.getElementById('tree').innerHTML = \`
-    <div class="alice-card\${asel?' sel':''}" style="margin-top:\${at}px" onclick="select('alice')">
+  document.getElementById('tree').innerHTML = `
+    <div class="alice-card${asel?' sel':''}" style="margin-top:${at}px" onclick="select('alice')">
       <div class="aeye">Founder · 1971</div>
       <div class="aname2">Alice Waters</div>
       <div class="arest">Chez Panisse</div>
       <div class="aloc">Berkeley, CA</div>
-      <div style="margin-top:6px">\${badge('founder')}</div>
+      <div style="margin-top:6px">${badge('founder')}</div>
     </div>
-    <div style="display:flex;align-items:center;padding-top:\${at+28}px">
-      <div style="width:22px;height:2px;background:\${GC[1]}88"></div>
+    <div style="display:flex;align-items:center;padding-top:${at+28}px">
+      <div style="width:22px;height:2px;background:${GC[1]}88"></div>
     </div>
     <div style="position:relative">
-      <div style="position:absolute;left:0;top:28px;width:2px;height:calc(100% - 56px);background:\${GC[1]}44"></div>
+      <div style="position:absolute;left:0;top:28px;width:2px;height:calc(100% - 56px);background:${GC[1]}44"></div>
       <div style="display:flex;flex-direction:column">
-        \${GEN1.map(n=>\`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:\${GC[1]}66"></div></div>\${gen1row(n)}</div>\`).join('')}
+        ${GEN1.map(n=>`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${GC[1]}66"></div></div>${gen1row(n)}</div>`).join('')}
       </div>
-    </div>\`;
+    </div>`;
 }
 
 function detail() {
@@ -458,12 +458,12 @@ function detail() {
   const node = selected === 'alice' ? ALICE_NODE : findNode(GEN1, selected);
   if (!node) { panel.classList.add('hidden'); return; }
   document.getElementById('dname').textContent = node.name;
-  document.getElementById('dmeta').innerHTML = \`<strong>\${node.restaurant}</strong> · \${node.location}\`;
+  document.getElementById('dmeta').innerHTML = `<strong>${node.restaurant}</strong> · ${node.location}`;
   document.getElementById('dnote').textContent = node.note;
   const rl = document.getElementById('drestlist');
   if (node.restList && node.restList.length) {
     rl.style.display = 'block';
-    rl.innerHTML = \`<div class="rest-list-title">Restaurants &amp; Ventures</div><div class="rest-list">\${node.restList.map(r=>\`<div class="rest-pill">\${r.name}<span class="rp-year">\${r.year||''}</span><span class="rp-loc">\${r.loc?' · '+r.loc:''}</span></div>\`).join('')}</div>\`;
+    rl.innerHTML = `<div class="rest-list-title">Restaurants &amp; Ventures</div><div class="rest-list">${node.restList.map(r=>`<div class="rest-pill">${r.name}<span class="rp-year">${r.year||''}</span><span class="rp-loc">${r.loc?' · '+r.loc:''}</span></div>`).join('')}</div>`;
   } else { rl.style.display = 'none'; }
   panel.classList.remove('hidden');
   panel.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -471,9 +471,8 @@ function detail() {
 
 // Init
 render();
-document.getElementById('stats').innerHTML = STATS_DATA.map(s=>\`<div class="stat"><div class="stat-n">\${s.n}</div><div class="stat-l">\${s.l}</div></div>\`).join('');
-document.getElementById('gen-leg').innerHTML = GC.slice(0,5).map((c,i)=>\`<div style="display:flex;align-items:center;gap:4px"><div style="width:9px;height:9px;border-radius:2px;background:\${c}"></div><span style="color:#5c4a2a;opacity:0.65">\${GL[i]}</span></div>\`).join('');
+document.getElementById('stats').innerHTML = STATS_DATA.map(s=>`<div class="stat"><div class="stat-n">${s.n}</div><div class="stat-l">${s.l}</div></div>`).join('');
+document.getElementById('gen-leg').innerHTML = GC.slice(0,5).map((c,i)=>`<div style="display:flex;align-items:center;gap:4px"><div style="width:9px;height:9px;border-radius:2px;background:${c}"></div><span style="color:#5c4a2a;opacity:0.65">${GL[i]}</span></div>`).join('');
 </script>
 </body>
 </html>
-`;
