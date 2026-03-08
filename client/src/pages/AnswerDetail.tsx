@@ -4,10 +4,15 @@ import Footer from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
 import { insights } from "../data/insights";
 import { Link } from "wouter";
+import { useEffect } from "react";
 
 export default function AnswerDetail() {
   const [, params] = useRoute("/answers/:id");
   const id = params?.id;
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
   
   const insight = insights.find(i => i.id === id);
 
