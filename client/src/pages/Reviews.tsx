@@ -101,8 +101,7 @@ export default function Reviews() {
         <section className="py-24 bg-[#FAF9F6]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <div className="text-sm tracking-[0.2em] text-primary uppercase mb-4">Track Record</div>
-              <h2 className="font-serif text-4xl md:text-5xl text-foreground">Past Sales</h2>
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground">Track Record</h2>
             </div>
             
             {/* RealScout Integration */}
@@ -112,6 +111,8 @@ export default function Reviews() {
                 sort-order="STATUS_AND_SIGNIFICANT_CHANGE" 
                 listing-status=",Sold" 
                 property-types="SFR,MF"
+                include-co-listings
+                include-seller-listings
               ></realscout-your-listings>
             </div>
           </div>
