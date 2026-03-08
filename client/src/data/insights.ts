@@ -1,101 +1,5 @@
 export const insights = [
   {
-    "id": "1297-sunnyhills-road-oakland",
-    "title": "1297 Sunnyhills Road, Oakland — Mid-Century Modern in Crocker Highlands",
-    "category": "Sold Listing",
-    "description": "Luminous mid-century modern residence in Crocker Highlands. Level-in entry, primary suite on main level, walls of glass, Ipe decks on two levels, two fireplaces, fully fenced backyard. 4 bed / 3.5 bath / 2,742 sq ft.",
-    "content": "",
-    "link": "/1297-sunnyhills-road-oakland.html"
-  },
-  {
-    "id": "1015-warfield-avenue-oakland",
-    "title": "1015 Warfield Avenue, Oakland — Grand Lake Craftsman with ADU & Urban Orchard",
-    "category": "Sold Listing",
-    "description": "Masterfully renovated 1907 Craftsman in Grand Lake / Crocker Highlands. 5 bed / 3.5 bath / 3,230 sq ft. Full ADU. Heath tile kitchen, BlueStar stove. Urban orchard with 20+ fruit trees, pizza oven, hot tub.",
-    "content": "",
-    "link": "/1015-warfield-avenue-oakland.html"
-  },
-  {
-    "id": "615-western-drive-richmond",
-    "title": "615 Western Drive, Point Richmond — The Wave Garden Residence",
-    "category": "Active Listing",
-    "description": "Smithsonian-listed bayfront compound in Point Richmond. 6 bed / 3 bath / 5,027 sq ft on two levels with elevator. Wave Garden — 7,000 sq ft private park designed by Victor Amador.",
-    "content": "",
-    "link": "/615-western-drive-richmond.html"
-  },
-  {
-    "id": "293-elysian-fields-drive-oakland",
-    "title": "293 Elysian Fields Drive, Oakland — Japanese Minka-Style Home in Sequoyah Highlands",
-    "category": "Sold Listing",
-    "description": "Authentic Japanese Minka-style home designed by UC architect Seiichi Kami. 25-foot vaulted cathedral ceiling, Japanese tea gardens, koi ponds, Knowland Park views.",
-    "content": "",
-    "link": "/293-elysian-fields-drive-oakland.html"
-  },
-  {
-    "id": "298-elysian-fields-drive-oakland",
-    "title": "298 Elysian Fields Drive, Oakland — Fully Renovated Modern Home in Sequoyah",
-    "category": "Sold Listing",
-    "description": "Fully renovated modern home in Oakland's Sequoyah neighborhood. 4 bedrooms / 3 bathrooms / 2,259 sq ft. Brand-new kitchen, luxury vinyl plank throughout, bonus suite with private entrance.",
-    "content": "",
-    "link": "/298-elysian-fields-drive-oakland.html"
-  },
-  {
-    "id": "261-silverado-court-oakland",
-    "title": "261 Silverado Court, Oakland — Renovated Mid-Century Ranch",
-    "category": "Active Listing",
-    "description": "Beautifully renovated mid-century ranch home in Oakland's Joaquin Miller neighborhood. Single-level living, newly constructed chef's kitchen, and seamless indoor-outdoor connection.",
-    "content": "",
-    "link": "/261-silverado-court-oakland.html"
-  },
-  {
-    "id": "piedmont-luxury-market",
-    "title": "Piedmont Luxury Real Estate: What $3M, $6M & $10M Buys in 2025",
-    "category": "Market Intelligence",
-    "description": "A data-driven guide to Piedmont's luxury real estate market in 2025 — what $3M, $6M, and $10M+ actually buys, backed by every closed sale.",
-    "content": "",
-    "link": "/piedmont-luxury-market.html"
-  },
-  {
-    "id": "alameda-neighborhood-guide",
-    "title": "Living in Alameda, CA: The Complete Island Living & Real Estate Guide",
-    "category": "Neighborhood Guide",
-    "description": "The definitive guide to Alameda, CA — Victorian architecture, ferry commute, top schools, neighborhoods, real estate.",
-    "content": "",
-    "link": "/alameda-neighborhood-guide.html"
-  },
-  {
-    "id": "berkeley-neighborhood-guide",
-    "title": "Living in Berkeley, CA: The Complete 2025 Guide",
-    "category": "Neighborhood Guide",
-    "description": "Everything buyers need to know about Berkeley, CA — Elmwood, Claremont, North Berkeley, schools, commute, real estate.",
-    "content": "",
-    "link": "/berkeley-neighborhood-guide.html"
-  },
-  {
-    "id": "oakland-neighborhood-guide",
-    "title": "Living in Oakland, CA: The Complete 2025 Neighborhood Guide",
-    "category": "Neighborhood Guide",
-    "description": "The definitive guide to Oakland's premium neighborhoods — Rockridge, Upper Rockridge, Montclair, Crocker Highlands, Trestle Glen, and Glenview.",
-    "content": "",
-    "link": "/oakland-neighborhood-guide.html"
-  },
-  {
-    "id": "piedmont-neighborhood-guide",
-    "title": "Living in Piedmont, CA: The Complete 2025 Guide",
-    "category": "Neighborhood Guide",
-    "description": "Everything you need to know about living in Piedmont, CA — schools, real estate, commute, architecture, and lifestyle.",
-    "content": "",
-    "link": "/piedmont-neighborhood-guide.html"
-  },
-  {
-    "id": "piedmont-vs-rockridge",
-    "title": "Piedmont vs. Rockridge: Comparing the East Bay's Premier Residential Options",
-    "category": "Neighborhood Guide",
-    "description": "Piedmont or Rockridge? A detailed comparison of two of the East Bay's most sought-after neighborhoods — schools, price, lifestyle, commute, architecture.",
-    "content": "",
-    "link": "/piedmont-vs-rockridge.html"
-  },
-  {
     "id": "whats-your-approach-when-a-high-end-buyer-requests-excessive-credits-or-concessions",
     "title": "What’s your approach when a high-end buyer requests excessive credits or concessions?",
     "category": "Buyer/Seller Dynamics",
@@ -311,5 +215,101 @@ export const insights = [
     "category": "Market Intelligence",
     "description": "Simple pre-sale updates that yield the highest return in East Bay luxury \nlistings — from kitchens to lighting and floors",
     "content": "In the East Bay luxury market, not every dollar spent before selling delivers equal return. The key is focusing on visible impact and buyer emotion—the details that make someone fall in love before they finish the tour.\n\n1. Refresh the kitchen and baths without a full gut. New cabinet hardware, stone counters, modern plumbing fixtures, and updated lighting go a long way. East Bay buyers—especially in Crocker Highlands and Piedmont—value homes that feel “move-in ready” but retain architectural charm.\n\n2. Refinish or replace flooring. Clean, cohesive floors signal quality. Wide-plank oak or freshly refinished hardwood elevates the entire home and photographs beautifully, which is crucial in your digital marketing rollout.\n\n3. Paint and lighting updates. A fresh, neutral palette paired with layered lighting instantly modernizes an older home. Avoid “builder white”; warm whites or soft hues showcase wood trim and natural light.\n\nBeyond aesthetics, ensure your systems (roof, sewer lateral, electrical) are in good condition—buyers in the $2M+ range expect transparency.\n\nThinking of selling in 2026? Let’s review which upgrades will net the highest return for your specific property."
+  },
+  {
+    "id": "1297-sunnyhills-road-oakland",
+    "title": "1297 Sunnyhills Road, Oakland — Mid-Century Modern in Crocker Highlands",
+    "category": "Sold Listing",
+    "description": "Luminous mid-century modern residence in Crocker Highlands. Level-in entry, primary suite on main level, walls of glass, Ipe decks on two levels, two fireplaces, fully fenced backyard. 4 bed / 3.5 bath / 2,742 sq ft.",
+    "content": "",
+    "link": "/1297-sunnyhills-road-oakland.html"
+  },
+  {
+    "id": "1015-warfield-avenue-oakland",
+    "title": "1015 Warfield Avenue, Oakland — Grand Lake Craftsman with ADU & Urban Orchard",
+    "category": "Sold Listing",
+    "description": "Masterfully renovated 1907 Craftsman in Grand Lake / Crocker Highlands. 5 bed / 3.5 bath / 3,230 sq ft. Full ADU. Heath tile kitchen, BlueStar stove. Urban orchard with 20+ fruit trees, pizza oven, hot tub.",
+    "content": "",
+    "link": "/1015-warfield-avenue-oakland.html"
+  },
+  {
+    "id": "615-western-drive-richmond",
+    "title": "615 Western Drive, Point Richmond — The Wave Garden Residence",
+    "category": "Active Listing",
+    "description": "Smithsonian-listed bayfront compound in Point Richmond. 6 bed / 3 bath / 5,027 sq ft on two levels with elevator. Wave Garden — 7,000 sq ft private park designed by Victor Amador.",
+    "content": "",
+    "link": "/615-western-drive-richmond.html"
+  },
+  {
+    "id": "293-elysian-fields-drive-oakland",
+    "title": "293 Elysian Fields Drive, Oakland — Japanese Minka-Style Home in Sequoyah Highlands",
+    "category": "Sold Listing",
+    "description": "Authentic Japanese Minka-style home designed by UC architect Seiichi Kami. 25-foot vaulted cathedral ceiling, Japanese tea gardens, koi ponds, Knowland Park views.",
+    "content": "",
+    "link": "/293-elysian-fields-drive-oakland.html"
+  },
+  {
+    "id": "298-elysian-fields-drive-oakland",
+    "title": "298 Elysian Fields Drive, Oakland — Fully Renovated Modern Home in Sequoyah",
+    "category": "Sold Listing",
+    "description": "Fully renovated modern home in Oakland's Sequoyah neighborhood. 4 bedrooms / 3 bathrooms / 2,259 sq ft. Brand-new kitchen, luxury vinyl plank throughout, bonus suite with private entrance.",
+    "content": "",
+    "link": "/298-elysian-fields-drive-oakland.html"
+  },
+  {
+    "id": "261-silverado-court-oakland",
+    "title": "261 Silverado Court, Oakland — Renovated Mid-Century Ranch",
+    "category": "Active Listing",
+    "description": "Beautifully renovated mid-century ranch home in Oakland's Joaquin Miller neighborhood. Single-level living, newly constructed chef's kitchen, and seamless indoor-outdoor connection.",
+    "content": "",
+    "link": "/261-silverado-court-oakland.html"
+  },
+  {
+    "id": "piedmont-luxury-market",
+    "title": "Piedmont Luxury Real Estate: What $3M, $6M & $10M Buys in 2025",
+    "category": "Market Intelligence",
+    "description": "A data-driven guide to Piedmont's luxury real estate market in 2025 — what $3M, $6M, and $10M+ actually buys, backed by every closed sale.",
+    "content": "",
+    "link": "/piedmont-luxury-market.html"
+  },
+  {
+    "id": "alameda-neighborhood-guide",
+    "title": "Living in Alameda, CA: The Complete Island Living & Real Estate Guide",
+    "category": "Neighborhood Guide",
+    "description": "The definitive guide to Alameda, CA — Victorian architecture, ferry commute, top schools, neighborhoods, real estate.",
+    "content": "",
+    "link": "/alameda-neighborhood-guide.html"
+  },
+  {
+    "id": "berkeley-neighborhood-guide",
+    "title": "Living in Berkeley, CA: The Complete 2025 Guide",
+    "category": "Neighborhood Guide",
+    "description": "Everything buyers need to know about Berkeley, CA — Elmwood, Claremont, North Berkeley, schools, commute, real estate.",
+    "content": "",
+    "link": "/berkeley-neighborhood-guide.html"
+  },
+  {
+    "id": "oakland-neighborhood-guide",
+    "title": "Living in Oakland, CA: The Complete 2025 Neighborhood Guide",
+    "category": "Neighborhood Guide",
+    "description": "The definitive guide to Oakland's premium neighborhoods — Rockridge, Upper Rockridge, Montclair, Crocker Highlands, Trestle Glen, and Glenview.",
+    "content": "",
+    "link": "/oakland-neighborhood-guide.html"
+  },
+  {
+    "id": "piedmont-neighborhood-guide",
+    "title": "Living in Piedmont, CA: The Complete 2025 Guide",
+    "category": "Neighborhood Guide",
+    "description": "Everything you need to know about living in Piedmont, CA — schools, real estate, commute, architecture, and lifestyle.",
+    "content": "",
+    "link": "/piedmont-neighborhood-guide.html"
+  },
+  {
+    "id": "piedmont-vs-rockridge",
+    "title": "Piedmont vs. Rockridge: Comparing the East Bay's Premier Residential Options",
+    "category": "Neighborhood Guide",
+    "description": "Piedmont or Rockridge? A detailed comparison of two of the East Bay's most sought-after neighborhoods — schools, price, lifestyle, commute, architecture.",
+    "content": "",
+    "link": "/piedmont-vs-rockridge.html"
   }
 ];
