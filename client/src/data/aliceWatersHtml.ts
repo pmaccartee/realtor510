@@ -1,8 +1,10 @@
-export const aliceWatersHtml = `<!DOCTYPE html>
+export const aliceWatersHtml = `
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="/favicon.png" type="image/png">
 <title>The House That Alice Built · Realtor510</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -116,6 +118,11 @@ export const aliceWatersHtml = `<!DOCTYPE html>
   .ccount { font-size:9px;color:#7a9170;font-family:sans-serif;margin-top:2px;letter-spacing:0.03em; }
   .chef-card.sel .ccount { color:#ffffffaa; }
   @keyframes slideUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+  .btn-red { display: inline-block; background: hsl(355, 75%, 35%); color: white; padding: 14px 36px; text-decoration: none; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.2s; text-align: center; border: none; cursor: pointer; }
+  .btn-red:hover { background: hsl(355, 75%, 25%); color: white; }
+  .text-red { color: hsl(355, 75%, 35%); text-decoration: underline; cursor: pointer; }
+  .text-red:hover { color: hsl(355, 75%, 25%); }
 </style>
 </head>
 <body>
@@ -230,7 +237,7 @@ const BDG = {
   farmer:{bg:"#4a6741",color:"#fff",text:"The Farmer"},
 };
 const STATS_DATA = [
-  {n:"82+",l:"Notable alumni"},{n:"270+",l:"Restaurants worldwide†"},
+  {n:"90+",l:"Notable alumni"},{n:"270+",l:"Restaurants worldwide†"},
   {n:"1971",l:"Chez Panisse opens"},{n:"6",l:"James Beard Awards"},
   {n:"5,000+",l:"Edible Schoolyard sites"},{n:"8,000+",l:"US farmers markets today"},
 ];
@@ -264,9 +271,17 @@ const GEN1 = [
    children:[
     {id:"tusk",name:"Michael Tusk",restaurant:"Quince",location:"San Francisco, CA · 2003",note:"Trained under Bertolli at Oliveto before opening Quince. Three Michelin stars; James Beard Best Chef: West 2013.",badge:"michelin3",restCount:2,restList:[{name:"Quince",year:"2003",loc:"San Francisco, CA"},{name:"Cotogna",year:"2010",loc:"San Francisco, CA"}],
      children:[
-      {id:"burns",name:"Cortney Burns",restaurant:"Bar Tartine",location:"San Francisco, CA · 2011",note:"Quince alum who co-helmed Bar Tartine — Chad Robertson's Tartine Bakery sister restaurant — alongside Nick Balla. Their James Beard–winning cookbook on fermentation and preservation cemented Bar Tartine's legacy as one of SF's most influential kitchens of the 2010s.",badge:"jbf",restCount:1,restList:[{name:"Bar Tartine",year:"2011",loc:"San Francisco, CA"}],children:[]},
+      {id:"burns",name:"Cortney Burns",restaurant:"Bar Tartine",location:"San Francisco, CA · 2011",note:"Quince alum who co-helmed Bar Tartine — Chad Robertson's Tartine Bakery sister restaurant — alongside Nick Balla. Their James Beard–winning cookbook on fermentation and preservation cemented Bar Tartine's legacy as one of SF's most influential kitchens of the 2010s.",badge:"jbf",restCount:1,restList:[{name:"Bar Tartine",year:"2011",loc:"San Francisco, CA"}],children:[
+        {id:"kronner",name:"Chris Kronner",restaurant:"KronnerBurger",location:"Oakland, CA · 2015",note:"Chef at Bar Tartine before launching KronnerBurger on Piedmont Avenue in Oakland — a cult destination built around wood-fired, dry-aged beef. Praised by Food & Wine, Bon Appétit, and Eater. His farm-direct sourcing philosophy carries the Bar Tartine/Oliveto tradition into an unlikely format: the elevated Oakland cheeseburger.",badge:null,restCount:1,restList:[{name:"KronnerBurger",year:"2015",loc:"Oakland, CA"}],children:[]}
+      ]},
      ]},
-    {id:"canales",name:"Paul Canales",restaurant:"Duende · Occitania",location:"Oakland, CA · 2013",note:"Cooked under Bertolli at Oliveto for years before opening Duende, his celebrated Spanish-inspired Oakland restaurant. Later opened Occitania, continuing the Oliveto/Bertolli tradition of ingredient-driven Mediterranean cooking rooted in the East Bay.",badge:null,restCount:2,restList:[{name:"Duende",year:"2013",loc:"Oakland, CA"},{name:"Occitania",year:"2022",loc:"Oakland, CA"}],children:[]},
+    {id:"canales",name:"Paul Canales",restaurant:"Duende · Occitania",location:"Oakland, CA · 2013",note:"Cooked under Bertolli at Oliveto for years before opening Duende, his celebrated Spanish-inspired Oakland restaurant. Later opened Occitania, continuing the Oliveto/Bertolli tradition of ingredient-driven Mediterranean cooking rooted in the East Bay.",badge:null,restCount:2,restList:[{name:"Duende",year:"2013",loc:"Oakland, CA"},{name:"Occitania",year:"2022",loc:"Oakland, CA"}],children:[
+      {id:"cavazos",name:"Brandon Cavazos",restaurant:"Burdell",location:"Oakland, CA · 2023",note:"Trained under Paul Canales before joining Burdell as Chef de Cuisine. A fourth-generation link — Waters → Bertolli → Canales → Cavazos — carrying the Oliveto tradition of seasonal, ingredient-driven California cooking into Oakland's most celebrated new restaurant.",badge:null,restCount:1,restList:[{name:"Burdell (Chef de Cuisine)",year:"2023",loc:"Oakland, CA"}],children:[]},
+      {id:"vennari",name:"Andrew Vennari",restaurant:"Sequoia Diner",location:"Oakland, CA · 2015",note:"Cooked under Canales at Duende before co-founding Sequoia Diner in the Laurel District — the very space where Geoff Davis launched the Burdell pop-ups in 2022. A quiet but direct link between the Oliveto/Canales tradition and Oakland's next generation of chefs.",badge:null,restCount:1,restList:[{name:"Sequoia Diner",year:"2015",loc:"Oakland, CA"}],children:[]},
+      {id:"chase",name:"Christa Chase",restaurant:"Tartine Manufactory",location:"San Francisco, CA · 2016",note:"Worked under Canales at both Oliveto and Duende (as sous chef) before joining the opening team of Tartine Manufactory in 2016, becoming Executive Chef in 2017. Named a StarChefs Rising Star and Zagat 30 Under 30. A direct Canales alumna who carried the Oliveto/Duende ethos of seasonal, farm-direct cooking into one of San Francisco's most celebrated kitchens.",badge:null,restCount:1,restList:[{name:"Tartine Manufactory (Executive Chef)",year:"2016",loc:"San Francisco, CA"}],children:[]},
+    ]},
+    {id:"berglund",name:"Paul Berglund",restaurant:"The Bachelor Farmer",location:"Minneapolis, MN · 2011",note:"Rose from line cook to chef de cuisine under Canales at Oliveto, absorbing the Bertolli/Canales philosophy of ingredient-first, farm-direct cooking. Opened The Bachelor Farmer in 2011, earning James Beard Best Chef: Midwest 2016 — carrying the Oliveto ethos into Nordic-inflected Minnesota cuisine.",badge:"jbf",restCount:1,restList:[{name:"The Bachelor Farmer",year:"2011",loc:"Minneapolis, MN"}],children:[]},
+    {id:"rocchino",name:"Aaron Rocchino",restaurant:"The Local Butcher Shop",location:"Berkeley, CA · 2011",note:"Sous chef under Bertolli and Canales at Oliveto; later cooked at Chez Panisse before co-founding The Local Butcher Shop in Berkeley in 2011. Channeled the Oliveto farm-direct sourcing philosophy into artisan whole-animal butchery — bringing restaurant-quality, sustainably raised meat directly to home cooks.",badge:null,restCount:1,restList:[{name:"The Local Butcher Shop",year:"2011",loc:"Berkeley, CA"}],children:[]},
    ]},
   {id:"moulle",name:"Jean-Pierre Moullé",restaurant:"Chez Panisse Chef de Cuisine",location:"Berkeley, CA · Bordeaux, FR",note:"One of the longest-serving chefs de cuisine; embodied the French soul of the kitchen. Later ran a culinary education program in Bordeaux.",badge:"intl",restCount:1,restList:[{name:"Chez Panisse (Chef de Cuisine)",year:"1975",loc:"Berkeley, CA"}],
    children:[
@@ -305,6 +320,7 @@ const GEN1 = [
   {id:"moore",name:"Russell Moore",restaurant:"Camino",location:"Oakland, CA · 2008",note:"After 21 years at Chez Panisse, opened Camino — an Oakland restaurant built around live fire, fermentation, and seasonal creativity.",badge:null,restCount:1,restList:[{name:"Camino",year:"2008",loc:"Oakland, CA"}],
    children:[
     {id:"assil",name:"Reem Assil",restaurant:"Reem's California",location:"Oakland, CA · 2017",note:"Cited Camino and the Chez Panisse tradition as formative influences. Reem's California pioneered Arab street food through a California lens. James Beard Award 2023. Named one of Obama Foundation's Leaders.",badge:"jbf",restCount:2,restList:[{name:"Reem's California (Fruitvale)",year:"2017",loc:"Oakland, CA"},{name:"Reem's California (Mission)",year:"2018",loc:"San Francisco, CA"}],children:[]},
+    {id:"sassen",name:"Fred & Elizabeth Sassen",restaurant:"Homestead",location:"Oakland, CA · 2011",note:"Fred cooked at Camino under Russell Moore before he and Elizabeth opened Homestead on Piedmont Avenue — a wood-fired, seasonal New American restaurant that became one of Oakland's most beloved neighborhood anchors. A direct second-generation link from Chez Panisse to Piedmont Avenue.",badge:null,restCount:1,restList:[{name:"Homestead",year:"2011",loc:"Oakland, CA"}],children:[]},
    ]},
   {id:"goin",name:"Suzanne Goin",restaurant:"Lucques · AOC · Tavern",location:"Los Angeles, CA · 1998",note:"One of LA's most celebrated chefs. Lucques (1998) and A.O.C. (2002) defined seasonal fine dining in Southern California. James Beard Best Chef: California 2006.",badge:"jbf",restCount:7,restList:[{name:"Lucques",year:"1998",loc:"West Hollywood, CA"},{name:"A.O.C.",year:"2002",loc:"Los Angeles, CA"},{name:"Tavern",year:"2009",loc:"Brentwood, CA"},{name:"The Larder at Maple Drive",year:"2011",loc:"Los Angeles, CA"},{name:"Hollywood Bowl Food+Wine",year:"2016",loc:"Los Angeles, CA"},{name:"Caldo Verde",year:"2021",loc:"Los Angeles, CA"},{name:"Cara Cara",year:"2021",loc:"Los Angeles, CA"}],
    children:[
@@ -341,6 +357,7 @@ const GEN1 = [
   {id:"gresham",name:"Suzette Gresham",restaurant:"Acquerello",location:"San Francisco, CA · 1989",note:"Chef-owner of Acquerello, the two-Michelin-starred Italian restaurant that opened in 1989 and never closed. Her career runs through the same Bay Area fine dining world shaped by Chez Panisse. Honored at Greens' 40th anniversary series.",badge:"michelin2",restCount:1,restList:[{name:"Acquerello",year:"1989",loc:"San Francisco, CA"}],children:[]},
   {id:"kinch",name:"David Kinch",restaurant:"Manresa",location:"Los Gatos, CA · 2002",note:"His friendship with Joyce Goldstein and the broader Chez Panisse network shaped Manresa's obsessive local sourcing. Three Michelin stars. His Love Apple Farm model — a chef-owned farm supplying a single restaurant — carried the Chez Panisse ideal to its logical extreme.",badge:"michelin3",restCount:2,restList:[{name:"Manresa",year:"2002",loc:"Los Gatos, CA"},{name:"The Bywater",year:"2016",loc:"Los Gatos, CA"}],children:[]},
   {id:"washington",name:"Eric Washington",restaurant:"Comfort: A Southern Experience",location:"Oakland, CA",note:"Recent Chez Panisse alum running acclaimed pop-ups including Comfort: A Southern Experience. In June 2021 he brought it back to Chez Panisse for one day. A next-generation voice connecting the restaurant's philosophy to African-American culinary heritage.",badge:null,restCount:1,restList:[{name:"Comfort: A Southern Experience (pop-up)",year:"2019",loc:"Oakland, CA"}],children:[]},
+  {id:"white_omar",name:"Omar White",restaurant:"Burdell",location:"Oakland, CA · 2023",note:"Chez Panisse alum who became General Manager of Burdell, bringing the restaurant's celebrated hospitality philosophy directly into Oakland's most-talked-about new kitchen. His presence is a direct thread from Waters' table to Geoff Davis's.",badge:null,restCount:1,restList:[{name:"Burdell (General Manager)",year:"2023",loc:"Oakland, CA"}],children:[]},
   {id:"reicher",name:"Katie Reicher",restaurant:"Greens Restaurant",location:"San Francisco, CA · 2022",note:"Current executive chef of Greens, carrying forward the Chez Panisse–adjacent tradition of vegetarian fine dining that Deborah Madison and Annie Somerville built. Relaunched the Greens Guest Chef Series post-pandemic.",badge:null,restCount:1,restList:[{name:"Greens Restaurant (exec chef)",year:"2022",loc:"San Francisco, CA"}],children:[]},
   {id:"bauer",name:"Mark Bittman",restaurant:"How to Cook Everything",location:"New York, NY",note:"While not a Chez Panisse alumnus himself, Bittman was so influenced by Waters and the California cuisine philosophy that he has described her as one of the most important figures in his thinking. His How to Cook Everything series brought the 'good ingredients, simple preparation' ethos to millions of American home kitchens.",badge:null,restCount:1,restList:[{name:"NYT Cooking column",year:"1991",loc:"New York, NY"}],children:[]},
   {id:"samuelsson",name:"Marcus Samuelsson",restaurant:"Aquavit · Red Rooster",location:"New York, NY · 1995",note:"While trained in the classical European tradition, Samuelsson came up in a New York scene where Waxman and Chez Panisse alumni set the standards. Red Rooster became Harlem's defining seasonal restaurant. JBF Best Chef: New York 2003.",badge:"jbf",restCount:8,restList:[{name:"Aquavit",year:"1995",loc:"New York, NY"},{name:"Red Rooster Harlem",year:"2010",loc:"New York, NY"},{name:"Ginny's Supper Club",year:"2012",loc:"New York, NY"},{name:"Red Rooster London",year:"2019",loc:"London, UK"}],children:[]},
@@ -476,4 +493,5 @@ document.getElementById('gen-leg').innerHTML = GC.slice(0,5).map((c,i)=>\`<div s
 </script>
 </body>
 </html>
+
 `;
