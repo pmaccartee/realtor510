@@ -8,7 +8,7 @@ import temescalImg from "../assets/images/temescal.jpg";
 import rockridgeImg from "../assets/images/rockridge.webp";
 import oakmoreImg from "../assets/images/oakmore.jpg";
 import montclairImg from "../assets/images/montclair.jpeg";
-import clevelandImg from "../assets/images/cleveland-heights.webp";
+import sequoyahImg from "../assets/images/sequoyah-hills.png";
 import berkeleyImg from "../assets/images/berkeley.webp";
 
 const neighborhoods = [
@@ -43,9 +43,9 @@ const neighborhoods = [
     description: "Montclair's hills were once logged for redwood. Now they're shaded by it. What grew up in its place is a forested neighborhood centered on a genuine village — cafés, markets, and a pace of life that feels closer to a mountain town than a major city. The fact that downtown Oakland and the freeway are minutes away never quite feels real until you're already there."
   },
   {
-    name: "Cleveland Heights",
-    image: clevelandImg,
-    description: "Perched above Lake Merritt with some of the best views in Oakland, Cleveland Heights offers central location without the noise. The 1920s Cleveland Cascade stairway and fountain is a neighborhood landmark, and easy walks to Lakeshore and Grand Avenue make daily life here effortlessly connected."
+    name: "Sequoyah Hills",
+    image: sequoyahImg,
+    description: "Tucked away in the hills above the Oak Knoll golf course, Sequoyah Hills is Oakland's hidden mid-century gem. Characterized by expansive lots, distinctive architecture, and sweeping bay views, this tranquil neighborhood feels worlds away from the city while maintaining easy access to major thoroughfares."
   },
   {
     name: "Berkeley",
