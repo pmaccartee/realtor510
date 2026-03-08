@@ -11,6 +11,7 @@ import Answers from "@/pages/Answers";
 import Reviews from "@/pages/Reviews";
 import Trends from "@/pages/Trends";
 import Waters from "@/pages/Waters";
+import Neighborhoods from "@/pages/Neighborhoods";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/reviews" component={Reviews}/>
       <Route path="/trends" component={Trends}/>
       <Route path="/waters" component={Waters}/>
+      <Route path="/neighborhoods" component={Neighborhoods}/>
       <Route component={NotFound} />
     </Switch>
   );
