@@ -1,51 +1,67 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+import fs from "fs";
 import tailwindcss from "@tailwindcss/vite";
-import path from "path";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
-import { metaImagesPlugin } from "./vite-plugin-meta-images";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Define our entry points
+const inputs: Record<string, string> = {
+  main: path.resolve(__dirname, 'client/index.html'),
+};
+
+// Create directories and HTML files for each page
+const dirs = ['buy', 'sell', 'answers', 'reviews', 'trends', 'waters', 'julia', 'neighborhoods'];
+
+const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Patrick MacCartee | Realtor510</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>`;
+
+dirs.forEach(dir => {
+  const dirPath = path.resolve(__dirname, `client/${dir}`);
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+  const indexPath = path.resolve(dirPath, 'index.html');
+  fs.writeFileSync(indexPath, htmlContent);
+  inputs[dir] = indexPath;
+});
 
 export default defineConfig({
   plugins: [
-    react(),
-    runtimeErrorOverlay(),
     tailwindcss(),
-    metaImagesPlugin(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
-      ? [
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer(),
-          ),
-          await import("@replit/vite-plugin-dev-banner").then((m) =>
-            m.devBanner(),
-          ),
-        ]
-      : []),
+    react()
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      "@": path.resolve(__dirname, "client", "src"),
+      "@shared": path.resolve(__dirname, "shared"),
+      "@assets": path.resolve(__dirname, "attached_assets"),
     },
   },
-  css: {
-    postcss: {
-      plugins: [],
-    },
-  },
-  root: path.resolve(import.meta.dirname, "client"),
+  root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      input: inputs,
+    },
   },
   server: {
+    port: 5000,
     host: "0.0.0.0",
-    allowedHosts: true,
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
-    },
-  },
+    allowedHosts: true
+  }
 });
