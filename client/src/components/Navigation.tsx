@@ -14,9 +14,9 @@ export default function Navigation() {
           <Link href="/answers" className="hover:text-primary transition-colors">Answers</Link>
           <Link href="/reviews" className="hover:text-primary transition-colors">Reviews</Link>
           <Link href="/neighborhoods" className="hover:text-primary transition-colors">Neighborhoods</Link>
-          <button className="bg-primary text-primary-foreground px-6 py-2 hover:bg-primary/90 transition-colors shadow-sm">
+          <a href="mailto:patrick@realtor510.com" className="bg-primary text-primary-foreground px-6 py-2 hover:bg-primary/90 transition-colors shadow-sm inline-block">
             Contact
-          </button>
+          </a>
         </div>
       </div>
     </nav>
