@@ -74,23 +74,25 @@ export default function Neighborhoods() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-16">
               {neighborhoods.map((n, i) => (
-                <div key={i} className="group cursor-pointer">
-                  <div className="overflow-hidden h-[300px] mb-6 shadow-md border border-border">
+                <div key={i} className={`group cursor-pointer ${i === 0 ? 'md:col-span-2 lg:col-span-2 grid md:grid-cols-2 gap-12 items-center bg-secondary/10 p-0 border border-border overflow-hidden shadow-sm hover:shadow-md transition-all' : ''}`}>
+                  <div className={`overflow-hidden shadow-md border border-border ${i === 0 ? 'h-[500px] mb-0 border-none shadow-none w-full' : 'h-[300px] mb-6'}`}>
                     <img 
                       src={n.image} 
                       alt={n.name} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="text-3xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">
-                    {n.name}
-                  </h3>
-                  <p className="text-muted-foreground font-light leading-relaxed mb-6">
-                    {n.description}
-                  </p>
-                  <button className="text-sm font-bold border-b-2 border-primary pb-1 text-primary uppercase tracking-widest group-hover:text-primary/70 group-hover:border-primary/70 transition-colors">
-                    Explore {n.name}
-                  </button>
+                  <div className={i === 0 ? 'p-12 md:pr-16' : ''}>
+                    <h3 className={`font-serif text-foreground mb-4 group-hover:text-primary transition-colors ${i === 0 ? 'text-4xl md:text-5xl mb-6' : 'text-3xl'}`}>
+                      {n.name}
+                    </h3>
+                    <p className={`text-muted-foreground font-light leading-relaxed mb-6 ${i === 0 ? 'text-lg' : ''}`}>
+                      {n.description}
+                    </p>
+                    <button className="text-sm font-bold border-b-2 border-primary pb-1 text-primary uppercase tracking-widest group-hover:text-primary/70 group-hover:border-primary/70 transition-colors">
+                      Explore {n.name}
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
