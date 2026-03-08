@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-let content = fs.readFileSync('attached_assets/alice-waters-family-tree_(4)_1772989060095.html', 'utf-8');
+let content = fs.readFileSync('attached_assets/alice-waters-family-tree_(5)_1772989257692.html', 'utf-8');
 
 // 1. Add Favicon if not present
 if (!content.includes('<link rel="icon"')) {
@@ -43,4 +43,4 @@ fs.writeFileSync('client/public/alice-waters.html', content);
 const tsContent = `export const aliceWatersHtml = \`\n${content.replace(/`/g, '\\`').replace(/\$/g, '\\$')}\n\`;\n`;
 fs.writeFileSync('client/src/data/aliceWatersHtml.ts', tsContent);
 
-console.log('Processed alice-waters file successfully');
+console.log('Processed new alice-waters file successfully');

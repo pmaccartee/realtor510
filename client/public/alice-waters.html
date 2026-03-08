@@ -65,8 +65,22 @@
   .tree-inst { color: var(--sage); font-size: 12px; margin: 0 auto; font-style: italic; font-family: sans-serif; max-width: 520px; }
   .gen-leg { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px; font-family: sans-serif; font-size: 10px; }
 
-  .tree-scroll { overflow-x: auto; overflow-y: visible; padding: 8px 24px 16px; background: var(--cream); }
-  .tree-flex { display: flex; align-items: flex-start; min-width: max-content; }
+  .tree-scroll { overflow-x: auto; overflow-y: visible; padding: 8px 24px 16px; background: var(--cream); -webkit-overflow-scrolling: touch; }
+  .tree-flex { display: flex; align-items: flex-start; min-width: max-content; transform-origin: top left; }
+  .zoom-bar { display: flex; align-items: center; gap: 10px; justify-content: center; padding: 8px 16px; background: var(--cream); border-bottom: 1px solid #e8dfc8; font-family: sans-serif; font-size: 11px; color: var(--sage); }
+  .zoom-bar input[type=range] { width: 120px; accent-color: var(--sage); cursor: pointer; }
+  .zoom-btn { background: none; border: 1px solid var(--sage); color: var(--sage); border-radius: 3px; width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; }
+  .zoom-lbl { min-width: 36px; text-align: center; }
+  @media (min-width: 768px) { .zoom-bar { display: none; } }
+  @media (max-width: 767px) {
+    .detail { flex-direction: column; padding: 12px 16px; max-height: 45vh; }
+    .dbar { width: 100%; min-height: 4px; height: 4px; margin: 0 0 10px; }
+    .dname { font-size: 15px; }
+    .dnote { font-size: 12px; line-height: 1.65; }
+    .hero-inner { padding: 36px 20px 0; }
+    .footer { flex-direction: column; text-align: center; padding: 20px 16px; }
+    .fright { text-align: center; }
+  }
 
   .chef-card { background: var(--white); border-radius: 4px; padding: 10px 14px; width: 190px; flex-shrink: 0; cursor: pointer; transition: all 0.15s; user-select: none; box-shadow: 0 2px 10px rgba(60,40,10,0.09); }
   .chef-card .cname { font-family: Georgia, serif; font-weight: 700; font-size: 12.5px; color: var(--bark); line-height: 1.3; }
@@ -191,7 +205,15 @@
   <div class="gen-leg" id="gen-leg"></div>
 </div>
 
-<div class="tree-scroll">
+<div class="zoom-bar" id="zoomBar">
+  <button class="zoom-btn" id="zoomOut">−</button>
+  <input type="range" id="zoomSlider" min="30" max="100" value="100" step="5">
+  <button class="zoom-btn" id="zoomIn">+</button>
+  <span class="zoom-lbl" id="zoomLbl">100%</span>
+  <span style="opacity:0.6;font-size:10px">· pinch or drag to explore</span>
+</div>
+
+<div class="tree-scroll" id="treeScroll">
   <div class="tree-flex" id="tree"></div>
 </div>
 
@@ -489,6 +511,31 @@ function detail() {
 render();
 document.getElementById('stats').innerHTML = STATS_DATA.map(s=>`<div class="stat"><div class="stat-n">${s.n}</div><div class="stat-l">${s.l}</div></div>`).join('');
 document.getElementById('gen-leg').innerHTML = GC.slice(0,5).map((c,i)=>`<div style="display:flex;align-items:center;gap:4px"><div style="width:9px;height:9px;border-radius:2px;background:${c}"></div><span style="color:#5c4a2a;opacity:0.65">${GL[i]}</span></div>`).join('');
-</script>
+
+// Mobile zoom (runs after render so tree dimensions are real)
+(function(){
+  const slider = document.getElementById('zoomSlider');
+  const lbl = document.getElementById('zoomLbl');
+  const tree = document.getElementById('tree');
+  const scroll = document.getElementById('treeScroll');
+  function applyZoom(v){
+    const scale = v/100;
+    tree.style.transform = `scale(${scale})`;
+    tree.style.marginBottom = `-${tree.scrollHeight * (1 - scale)}px`;
+    lbl.textContent = v + '%';
+    slider.value = v;
+  }
+  slider.addEventListener('input', ()=> applyZoom(parseInt(slider.value)));
+  document.getElementById('zoomOut').addEventListener('click', ()=>{
+    applyZoom(Math.max(30, parseInt(slider.value) - 10));
+  });
+  document.getElementById('zoomIn').addEventListener('click', ()=>{
+    applyZoom(Math.min(100, parseInt(slider.value) + 10));
+  });
+  if(window.innerWidth < 768){
+    const fit = Math.max(30, Math.floor((window.innerWidth / 1400) * 100 / 5) * 5);
+    applyZoom(fit);
+  }
+})();</script>
 </body>
 </html>
