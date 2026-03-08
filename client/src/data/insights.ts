@@ -1,5 +1,13 @@
 export const insights = [
   {
+    "id": "1297-sunnyhills-road-oakland",
+    "title": "1297 Sunnyhills Road, Oakland — Mid-Century Modern in Crocker Highlands",
+    "category": "Sold Listing",
+    "description": "Luminous mid-century modern residence in Crocker Highlands. Level-in entry, primary suite on main level, walls of glass, Ipe decks on two levels, two fireplaces, fully fenced backyard. 4 bed / 3.5 bath / 2,742 sq ft.",
+    "content": "",
+    "link": "/1297-sunnyhills-road-oakland.html"
+  },
+  {
     "id": "1015-warfield-avenue-oakland",
     "title": "1015 Warfield Avenue, Oakland — Grand Lake Craftsman with ADU & Urban Orchard",
     "category": "Sold Listing",
