@@ -8,7 +8,7 @@ import Home from "@/pages/Home";
 import Buy from "@/pages/Buy";
 import Sell from "@/pages/Sell";
 import Answers from "@/pages/Answers";
-import AnswerDetail from "@/pages/AnswerDetail";
+import AnswerDetail from "./pages/AnswerDetail";
 import Reviews from "@/pages/Reviews";
 import Trends from "@/pages/Trends";
 import Waters from "@/pages/Waters";

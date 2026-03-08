@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { useState } from "react";
 import { Search, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import { insights } from "@/data/insights";
+import { insights } from "../data/insights";
 
 export default function Answers() {
   const [search, setSearch] = useState("");

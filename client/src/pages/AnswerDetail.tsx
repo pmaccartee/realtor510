@@ -2,7 +2,7 @@ import { useRoute } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
-import { insights } from "@/data/insights";
+import { insights } from "../data/insights";
 import { Link } from "wouter";
 
 export default function AnswerDetail() {
@@ -27,7 +27,7 @@ export default function AnswerDetail() {
   }
 
   // Split content by newlines to render paragraphs
-  const paragraphs = insight.content.split('\n').filter(p => p.trim() !== '');
+  const paragraphs = insight.content.split('\n').filter((p: string) => p.trim() !== '');
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -51,7 +51,7 @@ export default function AnswerDetail() {
           </div>
           
           <div className="prose prose-lg md:prose-xl prose-p:font-light prose-p:leading-relaxed prose-p:text-muted-foreground max-w-none">
-            {paragraphs.map((paragraph, index) => (
+            {paragraphs.map((paragraph: string, index: number) => (
               <p key={index} className="mb-8">{paragraph}</p>
             ))}
           </div>
