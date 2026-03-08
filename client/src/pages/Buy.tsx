@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import heroImg from "@assets/002-1015-warfield-avenue.80998.p4k.001.web_1772922978781.jpg";
+import heroImg from "@assets/005-293-elysian-fields-drive_1772929219661.jpg";
 
 export default function Buy() {
   return (
