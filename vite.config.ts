@@ -22,7 +22,13 @@ const htmlContent = `<!DOCTYPE html>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Patrick MacCartee | Realtor510</title>
-    <script src="https://plugin.realscout.com/rs-plugin-v1.js" type="module"></script>
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+    <style>
+      realscout-your-listings {
+        --rs-listing-divider-color: rgb(101, 141, 172);
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
