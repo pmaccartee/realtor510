@@ -8,5 +8,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Automatically route to the correct path based on folder
+      var path = window.location.pathname;
+      if (path.endsWith('/')) path = path.slice(0, -1);
+      window.initialRoute = path;
+    </script>
   </body>
 </html>
