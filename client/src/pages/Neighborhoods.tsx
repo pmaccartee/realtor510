@@ -9,7 +9,7 @@ import rockridgeImg from "../assets/images/rockridge.webp";
 import oakmoreImg from "../assets/images/oakmore.jpg";
 import montclairImg from "../assets/images/montclair.jpeg";
 import sequoyahImg from "../assets/images/sequoyah-hills.png";
-import berkeleyImg from "../assets/images/berkeley.webp";
+import berkeleyImg from "../assets/images/berkeley-hills.webp";
 
 const neighborhoods = [
   {
@@ -54,7 +54,7 @@ const neighborhoods = [
     link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xOTMxNg=="
   },
   {
-    name: "Berkeley",
+    name: "Berkeley Hills",
     image: berkeleyImg,
     description: "Berkeley incorporated in 1878 around a university that would shape it forever — intellectually restless, culturally rich, and endlessly interesting. Today it's one of the most walkable, food-forward cities in California, with historic neighborhoods, strong schools, and Bay views that remind you exactly where you are.",
     link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNg=="
