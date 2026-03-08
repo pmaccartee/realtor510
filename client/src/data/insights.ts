@@ -1,5 +1,13 @@
 export const insights = [
   {
+    "id": "293-elysian-fields-drive-oakland",
+    "title": "293 Elysian Fields Drive, Oakland — Japanese Minka-Style Home in Sequoyah Highlands",
+    "category": "Sold Listing",
+    "description": "Authentic Japanese Minka-style home designed by UC architect Seiichi Kami. 25-foot vaulted cathedral ceiling, Japanese tea gardens, koi ponds, Knowland Park views.",
+    "content": "",
+    "link": "/293-elysian-fields-drive-oakland.html"
+  },
+  {
     "id": "298-elysian-fields-drive-oakland",
     "title": "298 Elysian Fields Drive, Oakland — Fully Renovated Modern Home in Sequoyah",
     "category": "Sold Listing",
