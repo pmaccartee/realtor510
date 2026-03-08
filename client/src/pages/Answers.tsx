@@ -53,8 +53,8 @@ export default function Answers() {
           <div className="max-w-7xl mx-auto px-6">
             {filteredInsights.length > 0 ? (
               <div className="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
-                {filteredInsights.map((insight, index) => (
-                  <Link key={index} href={`/answers/${insight.id}`} className="group cursor-pointer flex flex-col h-full block">
+                {filteredInsights.map((insight, index) => {
+                  const content = (
                     <div className="flex flex-col flex-grow border-t border-primary/20 pt-6">
                       <div className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">
                         {insight.category}
@@ -69,8 +69,18 @@ export default function Answers() {
                         Read Insight <ArrowRight className="ml-2 h-4 w-4 text-primary" />
                       </div>
                     </div>
-                  </Link>
-                ))}
+                  );
+                  
+                  return insight.link ? (
+                    <a key={index} href={insight.link} className="group cursor-pointer flex flex-col h-full block">
+                      {content}
+                    </a>
+                  ) : (
+                    <Link key={index} href={`/answers/${insight.id}`} className="group cursor-pointer flex flex-col h-full block">
+                      {content}
+                    </Link>
+                  );
+                })}
               </div>
             ) : (
               <div className="text-center py-20">

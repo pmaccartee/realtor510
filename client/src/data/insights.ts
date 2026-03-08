@@ -1,5 +1,61 @@
 export const insights = [
   {
+    "id": "261-silverado-court-oakland",
+    "title": "261 Silverado Court, Oakland — Renovated Mid-Century Ranch",
+    "category": "Active Listing",
+    "description": "Beautifully renovated mid-century ranch home in Oakland's Joaquin Miller neighborhood. Single-level living, newly constructed chef's kitchen, and seamless indoor-outdoor connection.",
+    "content": "",
+    "link": "/261-silverado-court-oakland.html"
+  },
+  {
+    "id": "piedmont-luxury-market",
+    "title": "Piedmont Luxury Real Estate: What $3M, $6M & $10M Buys in 2025",
+    "category": "Market Intelligence",
+    "description": "A data-driven guide to Piedmont's luxury real estate market in 2025 — what $3M, $6M, and $10M+ actually buys, backed by every closed sale.",
+    "content": "",
+    "link": "/piedmont-luxury-market.html"
+  },
+  {
+    "id": "alameda-neighborhood-guide",
+    "title": "Living in Alameda, CA: The Complete Island Living & Real Estate Guide",
+    "category": "Neighborhood Guide",
+    "description": "The definitive guide to Alameda, CA — Victorian architecture, ferry commute, top schools, neighborhoods, real estate.",
+    "content": "",
+    "link": "/alameda-neighborhood-guide.html"
+  },
+  {
+    "id": "berkeley-neighborhood-guide",
+    "title": "Living in Berkeley, CA: The Complete 2025 Guide",
+    "category": "Neighborhood Guide",
+    "description": "Everything buyers need to know about Berkeley, CA — Elmwood, Claremont, North Berkeley, schools, commute, real estate.",
+    "content": "",
+    "link": "/berkeley-neighborhood-guide.html"
+  },
+  {
+    "id": "oakland-neighborhood-guide",
+    "title": "Living in Oakland, CA: The Complete 2025 Neighborhood Guide",
+    "category": "Neighborhood Guide",
+    "description": "The definitive guide to Oakland's premium neighborhoods — Rockridge, Upper Rockridge, Montclair, Crocker Highlands, Trestle Glen, and Glenview.",
+    "content": "",
+    "link": "/oakland-neighborhood-guide.html"
+  },
+  {
+    "id": "piedmont-neighborhood-guide",
+    "title": "Living in Piedmont, CA: The Complete 2025 Guide",
+    "category": "Neighborhood Guide",
+    "description": "Everything you need to know about living in Piedmont, CA — schools, real estate, commute, architecture, and lifestyle.",
+    "content": "",
+    "link": "/piedmont-neighborhood-guide.html"
+  },
+  {
+    "id": "piedmont-vs-rockridge",
+    "title": "Piedmont vs. Rockridge: Comparing the East Bay's Premier Residential Options",
+    "category": "Neighborhood Guide",
+    "description": "Piedmont or Rockridge? A detailed comparison of two of the East Bay's most sought-after neighborhoods — schools, price, lifestyle, commute, architecture.",
+    "content": "",
+    "link": "/piedmont-vs-rockridge.html"
+  },
+  {
     "id": "whats-your-approach-when-a-high-end-buyer-requests-excessive-credits-or-concessions",
     "title": "What’s your approach when a high-end buyer requests excessive credits or concessions?",
     "category": "Buyer/Seller Dynamics",
