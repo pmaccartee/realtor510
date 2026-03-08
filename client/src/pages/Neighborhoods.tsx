@@ -21,7 +21,8 @@ const neighborhoods = [
   {
     name: "Piedmont",
     image: piedmontImg,
-    description: "Fully surrounded by Oakland yet governed entirely on its own terms, Piedmont has long been one of the East Bay's most coveted addresses. What began as a fashionable residential enclave remains just that — manicured streets, exceptional public schools, and a small-town atmosphere that somehow sits minutes from everything the city has to offer."
+    description: "Fully surrounded by Oakland yet governed entirely on its own terms, Piedmont has long been one of the East Bay's most coveted addresses. What began as a fashionable residential enclave remains just that — manicured streets, exceptional public schools, and a small-town atmosphere that somehow sits minutes from everything the city has to offer.",
+    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxOA=="
   },
   {
     name: "Temescal",
