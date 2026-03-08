@@ -10,6 +10,7 @@ import Sell from "@/pages/Sell";
 import Answers from "@/pages/Answers";
 import Reviews from "@/pages/Reviews";
 import Trends from "@/pages/Trends";
+import Waters from "@/pages/Waters";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/answers" component={Answers}/>
       <Route path="/reviews" component={Reviews}/>
       <Route path="/trends" component={Trends}/>
+      <Route path="/waters" component={Waters}/>
       <Route component={NotFound} />
     </Switch>
   );
