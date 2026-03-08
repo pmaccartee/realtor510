@@ -78,10 +78,16 @@ export default function Sell() {
               </div>
             </div>
             
-            <div className="mt-20 text-center">
-              <button className="bg-primary text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors shadow-lg">
-                Schedule a Valuation
-              </button>
+            <div className="mt-20 text-center flex flex-col items-center">
+              <h3 className="text-2xl font-serif mb-6">Schedule a Valuation</h3>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:5108594895" className="bg-primary text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors shadow-lg text-center">
+                  Call (510) 859-4895
+                </a>
+                <a href="mailto:patrick@realtor510.com" className="bg-secondary text-foreground border-2 border-border px-8 py-4 text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-colors shadow-sm text-center">
+                  Email patrick@realtor510.com
+                </a>
+              </div>
             </div>
           </div>
         </section>

@@ -15,13 +15,13 @@ export default function Hero() {
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light leading-relaxed">
             Your partner in East Bay Real Estate. Serving Oakland, Piedmont, Berkeley, and Alameda with a rigorous, analytical approach.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-primary text-primary-foreground px-10 py-5 text-sm tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 shadow-md">
-              Schedule Strategy Call
-            </button>
-            <button className="bg-secondary text-foreground border-2 border-border px-10 py-5 text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-all duration-300 shadow-sm">
-              View Active Listings
-            </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:5108594895" className="bg-primary text-primary-foreground px-8 py-5 text-sm tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 shadow-md text-center">
+              Call (510) 859-4895
+            </a>
+            <a href="mailto:patrick@realtor510.com" className="bg-secondary text-foreground border-2 border-border px-8 py-5 text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-all duration-300 shadow-sm text-center">
+              Email patrick@realtor510.com
+            </a>
           </div>
         </div>
       </div>

@@ -67,9 +67,14 @@ export default function AnswerDetail() {
               <p className="text-muted-foreground font-light mb-6 max-w-md">
                 Every transaction in the East Bay is unique. Let's discuss how these insights apply to your specific situation.
               </p>
-              <button className="bg-primary text-primary-foreground px-8 py-4 text-sm tracking-widest uppercase hover:bg-primary/90 transition-all shadow-md">
-                Schedule a Conversation
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl mt-4">
+                <a href="tel:5108594895" className="bg-primary text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors shadow-lg flex-1">
+                  Call (510) 859-4895
+                </a>
+                <a href="mailto:patrick@realtor510.com" className="bg-white text-foreground border-2 border-border px-8 py-4 text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-colors shadow-sm flex-1">
+                  Email patrick@realtor510.com
+                </a>
+              </div>
             </div>
           </div>
         </article>
