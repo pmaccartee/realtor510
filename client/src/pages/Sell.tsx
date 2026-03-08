@@ -97,25 +97,6 @@ export default function Sell() {
             </div>
           </div>
         </section>
-
-        <section className="py-24 bg-[#FAF9F6]">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <div className="text-sm tracking-[0.2em] text-primary uppercase mb-4">Track Record</div>
-              <h2 className="font-serif text-4xl md:text-5xl text-foreground">Past Clients</h2>
-            </div>
-            
-            {/* RealScout Integration */}
-            <div className="w-full bg-white shadow-sm border border-black/5 p-4 min-h-[400px]">
-              <realscout-your-listings 
-                agent-encoded-id="QWdlbnQtMjUyMzU1" 
-                sort-order="STATUS_AND_SIGNIFICANT_CHANGE" 
-                listing-status=",Sold" 
-                property-types="SFR,MF"
-              ></realscout-your-listings>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
