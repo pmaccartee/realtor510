@@ -42,7 +42,7 @@ export default function Featured() {
           <p className="text-muted-foreground leading-relaxed mb-8 text-lg font-light">
             Tucked away on one of Alameda's most delightful little courts, this charming storybook bungalow brims with vintage character. Features a sunny living room with a cozy woodburning fireplace, hardwood floors throughout, and a generous eat-in kitchen perfect for entertaining. Just moments from Park Street's cafés and boutiques.
           </p>
-          <a href="#" className="inline-block bg-transparent border border-primary text-primary px-8 py-4 text-sm tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300">
+          <a href="https://www.martirae.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-transparent border border-primary text-primary px-8 py-4 text-sm tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300">
             View Full Details
           </a>
         </div>
