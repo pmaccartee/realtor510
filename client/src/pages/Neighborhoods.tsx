@@ -37,9 +37,10 @@ const neighborhoods = [
     link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNw=="
   },
   {
-    name: "Oakmore",
+    name: "Oakmore-Glenview",
     image: oakmoreImg,
-    description: "Oakmore feels like a secret the rest of Oakland hasn't fully discovered. Built in the 1920s and 30s as a hillside commuter retreat, it retains that tucked-away quality — quiet streets, charming architecture, and the landmark Leimert Bridge connecting it all. Glenview and Dimond dining are right next door, and Highway 13 keeps the rest of the region within easy reach."
+    description: "Oakmore feels like a secret the rest of Oakland hasn't fully discovered. Built in the 1920s and 30s as a hillside commuter retreat, it retains that tucked-away quality — quiet streets, charming architecture, and the landmark Leimert Bridge connecting it all. Glenview and Dimond dining are right next door, and Highway 13 keeps the rest of the region within easy reach.",
+    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xOTMxNQ=="
   },
   {
     name: "Montclair",
