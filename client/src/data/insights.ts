@@ -1,5 +1,13 @@
 export const insights = [
   {
+    "id": "298-elysian-fields-drive-oakland",
+    "title": "298 Elysian Fields Drive, Oakland — Fully Renovated Modern Home in Sequoyah",
+    "category": "Sold Listing",
+    "description": "Fully renovated modern home in Oakland's Sequoyah neighborhood. 4 bedrooms / 3 bathrooms / 2,259 sq ft. Brand-new kitchen, luxury vinyl plank throughout, bonus suite with private entrance.",
+    "content": "",
+    "link": "/298-elysian-fields-drive-oakland.html"
+  },
+  {
     "id": "261-silverado-court-oakland",
     "title": "261 Silverado Court, Oakland — Renovated Mid-Century Ranch",
     "category": "Active Listing",
