@@ -1,7 +1,8 @@
 import { Link } from "wouter";
-import frontImg from "../assets/images/property-front.png";
-import livingImg from "../assets/images/property-living.png";
-import entryImg from "../assets/images/property-entry.png";
+
+const frontImg = "https://imgx.openhomes.photo/q:60/https://cdn.openhomesphotography.com/uploads/2417-marti-rae-court.1f0a2f56-83ce-6d42-bbd2-02ffd8b76bfd/manualBatchUploads/web.1f0a2f56-83e5-6fb0-9dde-02ffd8b76bfd/pictures/2417-marti-rae-court.85419.www.01Front1.JPG?signature=f26e8cb2ca1d0567abb95da1a9182dbf158cc92fb3a563f1ab4f56ec1a482eb0";
+const entryImg = "https://imgx.openhomes.photo/q:60/https://cdn.openhomesphotography.com/uploads/2417-marti-rae-court.1f0a2f56-83ce-6d42-bbd2-02ffd8b76bfd/manualBatchUploads/web.1f0a2f56-83e5-6fb0-9dde-02ffd8b76bfd/pictures/2417-marti-rae-court.85419.www.03Entry.JPG?signature=6de270ec8b322ab98b4352042d9b59dbbabfba50f4b6def20fa73125d951d0f4";
+const livingImg = "https://imgx.openhomes.photo/q:60/https://cdn.openhomesphotography.com/uploads/2417-marti-rae-court.1f0a2f56-83ce-6d42-bbd2-02ffd8b76bfd/manualBatchUploads/web.1f0a2f56-83e5-6fb0-9dde-02ffd8b76bfd/pictures/2417-marti-rae-court.85419.www.05Liv2.JPG?signature=665f5ac7781ed8832c21e7d4936dfd7dbef83bf01ea85610208971313c48fea3";
 
 export default function Featured() {
   return (
