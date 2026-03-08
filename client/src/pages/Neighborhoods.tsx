@@ -15,7 +15,8 @@ const neighborhoods = [
   {
     name: "Crocker Highlands",
     image: crockerImg,
-    description: "One of Oakland's most beloved historic districts, Crocker Highlands was designed in the early 1900s as a model garden suburb — curving streets, mature trees, and handsome period architecture built to last. The neighborhood has kept its storybook character intact, and today it pairs that quiet beauty with top-rated schools, walkable access to Lakeshore and Grand Avenue, and a genuine sense of community."
+    description: "One of Oakland's most beloved historic districts, Crocker Highlands was designed in the early 1900s as a model garden suburb — curving streets, mature trees, and handsome period architecture built to last. The neighborhood has kept its storybook character intact, and today it pairs that quiet beauty with top-rated schools, walkable access to Lakeshore and Grand Avenue, and a genuine sense of community.",
+    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzQ2OA=="
   },
   {
     name: "Piedmont",
@@ -25,12 +26,14 @@ const neighborhoods = [
   {
     name: "Temescal",
     image: temescalImg,
-    description: "Temescal has been reinventing itself since before Oakland was Oakland — from Peralta farmland to streetcar suburb to one of the East Bay's most energetic urban neighborhoods. Today it's all craft coffee, serious restaurants, indie retail, and BART access that makes leaving the car behind an easy choice."
+    description: "Temescal has been reinventing itself since before Oakland was Oakland — from Peralta farmland to streetcar suburb to one of the East Bay's most energetic urban neighborhoods. Today it's all craft coffee, serious restaurants, indie retail, and BART access that makes leaving the car behind an easy choice.",
+    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNw=="
   },
   {
     name: "Rockridge",
     image: rockridgeImg,
-    description: "Named for the rocky outcrops left behind by the Hayward Fault, Rockridge has traded its industrial origins for one of the most livable streetscapes in the Bay Area. College Avenue anchors it all — cafés, boutiques, Market Hall, and BART — and the surrounding residential streets are as good as Oakland gets."
+    description: "Named for the rocky outcrops left behind by the Hayward Fault, Rockridge has traded its industrial origins for one of the most livable streetscapes in the Bay Area. College Avenue anchors it all — cafés, boutiques, Market Hall, and BART — and the surrounding residential streets are as good as Oakland gets.",
+    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNw=="
   },
   {
     name: "Oakmore",
@@ -50,7 +53,8 @@ const neighborhoods = [
   {
     name: "Berkeley",
     image: berkeleyImg,
-    description: "Berkeley incorporated in 1878 around a university that would shape it forever — intellectually restless, culturally rich, and endlessly interesting. Today it's one of the most walkable, food-forward cities in California, with historic neighborhoods, strong schools, and Bay views that remind you exactly where you are."
+    description: "Berkeley incorporated in 1878 around a university that would shape it forever — intellectually restless, culturally rich, and endlessly interesting. Today it's one of the most walkable, food-forward cities in California, with historic neighborhoods, strong schools, and Bay views that remind you exactly where you are.",
+    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNg=="
   }
 ];
 
@@ -74,7 +78,7 @@ export default function Neighborhoods() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-16">
               {neighborhoods.map((n, i) => (
-                <div key={i} className={`group cursor-pointer ${i === 0 ? 'md:col-span-2 lg:col-span-2 grid md:grid-cols-2 gap-12 items-center bg-secondary/10 p-0 border border-border overflow-hidden shadow-sm hover:shadow-md transition-all' : ''}`}>
+                <div key={i} onClick={() => n.link && window.open(n.link, '_blank')} className={`group ${n.link ? 'cursor-pointer' : ''} ${i === 0 ? 'md:col-span-2 lg:col-span-2 grid md:grid-cols-2 gap-12 items-center bg-secondary/10 p-0 border border-border overflow-hidden shadow-sm hover:shadow-md transition-all' : ''}`}>
                   <div className={`overflow-hidden shadow-md border border-border ${i === 0 ? 'h-[500px] mb-0 border-none shadow-none w-full' : 'h-[300px] mb-6'}`}>
                     <img 
                       src={n.image} 
@@ -89,9 +93,21 @@ export default function Neighborhoods() {
                     <p className={`text-muted-foreground font-light leading-relaxed mb-6 ${i === 0 ? 'text-lg' : ''}`}>
                       {n.description}
                     </p>
-                    <button className="text-sm font-bold border-b-2 border-primary pb-1 text-primary uppercase tracking-widest group-hover:text-primary/70 group-hover:border-primary/70 transition-colors">
-                      Explore {n.name}
-                    </button>
+                    {n.link ? (
+                      <a 
+                        href={n.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block text-sm font-bold border-b-2 border-primary pb-1 text-primary uppercase tracking-widest hover:text-primary/70 hover:border-primary/70 transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Explore {n.name}
+                      </a>
+                    ) : (
+                      <span className="inline-block text-sm font-bold border-b-2 border-transparent pb-1 text-muted-foreground uppercase tracking-widest">
+                        More info coming soon
+                      </span>
+                    )}
                   </div>
                 </div>
               ))}
