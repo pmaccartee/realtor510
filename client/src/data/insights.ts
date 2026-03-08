@@ -319,5 +319,13 @@ export const insights = [
     "description": "Comprehensive buyer's guide to Crocker Highlands and Trestle Glen in Oakland, CA. Architecture, schools, lifestyle, and real estate market analysis.",
     "content": "",
     "link": "/crocker-highlands-trestle-glen-oakland.html"
+  },
+  {
+    "id": "selling-crocker-highlands-oakland",
+    "title": "Selling Your Crocker Highlands Home — A Guide for Long-Term Owners",
+    "category": "Neighborhood Guide",
+    "description": "Decades of equity. A home full of memories. And a process that feels like too much to take on alone. Patrick MacCartee specializes in helping long-term Crocker Highlands owners sell well and move forward with confidence.",
+    "content": "",
+    "link": "/selling-crocker-highlands-oakland.html"
   }
 ];
