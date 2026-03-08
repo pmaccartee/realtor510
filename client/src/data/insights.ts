@@ -311,5 +311,13 @@ export const insights = [
     "description": "Piedmont or Rockridge? A detailed comparison of two of the East Bay's most sought-after neighborhoods — schools, price, lifestyle, commute, architecture.",
     "content": "",
     "link": "/piedmont-vs-rockridge.html"
+  },
+  {
+    "id": "crocker-highlands-trestle-glen-oakland",
+    "title": "Crocker Highlands & Trestle Glen, Oakland — Neighborhood Guide & Market Data 2025",
+    "category": "Neighborhood Guide",
+    "description": "Comprehensive buyer's guide to Crocker Highlands and Trestle Glen in Oakland, CA. Architecture, schools, lifestyle, and real estate market analysis.",
+    "content": "",
+    "link": "/crocker-highlands-trestle-glen-oakland.html"
   }
 ];
