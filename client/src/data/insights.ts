@@ -326,7 +326,8 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "Decades of equity. A home full of memories. And a process that feels like too much to take on alone. Patrick MacCartee specializes in helping long-term Crocker Highlands owners sell well and move forward with confidence.",
     "content": "",
-    "link": "/selling-crocker-highlands-oakland.html",
+    "link": "/selling-crocker-highlands-oakland.html"
+  },
   {
     "id": "trestle-glen-guide",
     "title": "Trestle Glen Real Estate Guide",
