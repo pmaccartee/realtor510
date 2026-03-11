@@ -41,10 +41,22 @@ function ScrollToTop() {
   const [location] = useLocation();
   
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Need a tiny timeout to ensure it happens after React renders the new route
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, 0);
   }, [location]);
 
   return null;
+}
+
+function AppContent() {
+  return (
+    <>
+      <ScrollToTop />
+      <Router />
+    </>
+  );
 }
 
 function App() {
@@ -52,7 +64,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router />
+        <AppContent />
       </TooltipProvider>
     </QueryClientProvider>
   );

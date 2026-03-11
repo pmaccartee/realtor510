@@ -747,6 +747,26 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <meta property="og:image" content="https://realtor510.com/PM_LOGO_Red_1772927689333.png">
+
+<script>
+  // Disable native browser scroll restoration
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  
+  // Force scroll to top on load and DOMContentLoaded
+  function forceScrollToTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    setTimeout(function() { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, 10);
+    setTimeout(function() { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, 50);
+  }
+  
+  window.addEventListener('load', forceScrollToTop);
+  window.addEventListener('DOMContentLoaded', forceScrollToTop);
+  
+  // Execute immediately just in case
+  window.scrollTo(0, 0);
+</script>
 </head>
 <body>
 <header class="react-header-wrapper">
@@ -913,11 +933,8 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
 </footer>
 
 
-<script>
-  // Ensure the page loads at the top
-  window.addEventListener('load', function() {
-    window.scrollTo(0, 0);
-  });
-</script>
+
+
+
 </body>
 </html>
