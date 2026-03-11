@@ -1,4 +1,7 @@
-import { Link } from "wouter";
+const fs = require('fs');
+
+const file = 'client/src/components/Navigation.tsx';
+let content = `import { Link } from "wouter";
 import { useState } from "react";
 import logo from "@assets/PM_LOGO_Red_1772927689333.png";
 import { Menu, X } from "lucide-react";
@@ -57,3 +60,7 @@ export default function Navigation() {
     </nav>
   );
 }
+`;
+
+fs.writeFileSync(file, content);
+console.log('Fixed React mobile nav');
