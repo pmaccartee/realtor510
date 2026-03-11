@@ -16,13 +16,13 @@ const neighborhoods = [
     name: "Crocker Highlands",
     image: crockerImg,
     description: "One of Oakland's most beloved historic districts, Crocker Highlands was designed in the early 1900s as a model garden suburb — curving streets, mature trees, and handsome period architecture built to last. The neighborhood has kept its storybook character intact, and today it pairs that quiet beauty with top-rated schools, walkable access to Lakeshore and Grand Avenue, and a genuine sense of community.",
-    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzQ2OA=="
+    link: "/crocker-highlands-guide.html"
   },
   {
     name: "Piedmont",
     image: piedmontImg,
     description: "Fully surrounded by Oakland yet governed entirely on its own terms, Piedmont has long been one of the East Bay's most coveted addresses. What began as a fashionable residential enclave remains just that — manicured streets, exceptional public schools, and a small-town atmosphere that somehow sits minutes from everything the city has to offer.",
-    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxOA=="
+    link: "/piedmont-home-values.html"
   },
   {
     name: "Temescal",
@@ -52,13 +52,19 @@ const neighborhoods = [
     name: "Sequoyah Hills",
     image: sequoyahImg,
     description: "Tucked away in the hills above the Oak Knoll golf course, Sequoyah Hills is Oakland's hidden mid-century gem. Characterized by expansive lots, distinctive architecture, and sweeping bay views, this tranquil neighborhood feels worlds away from the city while maintaining easy access to major thoroughfares.",
-    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xOTMxNg=="
+    link: "/sequoyah-hills-market-report.html"
   },
   {
     name: "Berkeley Hills",
     image: berkeleyImg,
     description: "Berkeley incorporated in 1878 around a university that would shape it forever — intellectually restless, culturally rich, and endlessly interesting. Today it's one of the most walkable, food-forward cities in California, with historic neighborhoods, strong schools, and Bay views that remind you exactly where you are.",
     link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNg=="
+  },
+  {
+    name: "Trestle Glen",
+    image: temescalImg, // Temporarily using Temescal image as placeholder until we have a dedicated Trestle Glen one
+    description: "Trestle Glen gives you the feel of Piedmont — the architecture, the quiet, the tree canopy — with the cultural access of Oakland. That combination is genuinely hard to find.",
+    link: "/trestle-glen-guide.html"
   }
 ];
 

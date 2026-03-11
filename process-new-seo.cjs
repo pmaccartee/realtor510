@@ -1,8 +1,10 @@
 const fs = require('fs');
 
 const files = [
-  'client/public/trestle-glen-guide.html',
-  'client/public/crocker-highlands-guide.html'
+  'client/public/crocker-highlands-guide.html',
+  'client/public/piedmont-home-values.html',
+  'client/public/sequoyah-hills-market-report.html',
+  'client/public/trestle-glen-guide.html'
 ];
 
 const obfuscatedLink = `href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')"`;
@@ -27,12 +29,11 @@ files.forEach(file => {
     content = content.replace('</style>', css + '</style>');
   }
 
-  // 3. Obfuscate mailto links
-  content = content.replace(/href="mailto:patrick@realtor510\.com"/g, obfuscatedLink);
+  // 3. Obfuscate mailto and tel links
+  content = content.replace(/href="mailto:[^"]+"/g, obfuscatedLink);
   content = content.replace(/href="tel:[^"]+"/g, obfuscatedLink);
   
   // 4. Update the cta-btn to use the new red button style if appropriate, or keep cta-btn.
-  // We can just change class="cta-btn" to class="btn-red" for consistency
   content = content.replace(/class="cta-btn"/g, 'class="btn-red"');
   
   fs.writeFileSync(file, content);
