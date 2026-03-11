@@ -31,6 +31,12 @@ const neighborhoods = [
     link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNw=="
   },
   {
+    name: "Sequoyah Hills",
+    image: sequoyahImg,
+    description: "Tucked away in the hills above the Oak Knoll golf course, Sequoyah Hills is Oakland's hidden mid-century gem. Characterized by expansive lots, distinctive architecture, and sweeping bay views, this tranquil neighborhood feels worlds away from the city while maintaining easy access to major thoroughfares.",
+    link: "/sequoyah-hills-market-report.html"
+  },
+  {
     name: "Rockridge",
     image: rockridgeImg,
     description: "Named for the rocky outcrops left behind by the Hayward Fault, Rockridge has traded its industrial origins for one of the most livable streetscapes in the Bay Area. College Avenue anchors it all — cafés, boutiques, Market Hall, and BART — and the surrounding residential streets are as good as Oakland gets.",
@@ -47,12 +53,6 @@ const neighborhoods = [
     image: montclairImg,
     description: "Montclair's hills were once logged for redwood. Now they're shaded by it. What grew up in its place is a forested neighborhood centered on a genuine village — cafés, markets, and a pace of life that feels closer to a mountain town than a major city. The fact that downtown Oakland and the freeway are minutes away never quite feels real until you're already there.",
     link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xOTMxNA=="
-  },
-  {
-    name: "Sequoyah Hills",
-    image: sequoyahImg,
-    description: "Tucked away in the hills above the Oak Knoll golf course, Sequoyah Hills is Oakland's hidden mid-century gem. Characterized by expansive lots, distinctive architecture, and sweeping bay views, this tranquil neighborhood feels worlds away from the city while maintaining easy access to major thoroughfares.",
-    link: "/sequoyah-hills-market-report.html"
   },
   {
     name: "Berkeley Hills",
