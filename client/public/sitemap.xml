@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core React Pages -->
   <url>
     <loc>https://realtor510.com/</loc>
     <changefreq>weekly</changefreq>
@@ -31,14 +32,71 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/crocker-highlands-guide.html</loc>
+    <loc>https://realtor510.com/trends/waters</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/trends/julia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Content & SEO Pages -->
+  <url>
+    <loc>https://realtor510.com/1015-warfield-avenue-oakland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/1297-sunnyhills-road-oakland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/261-silverado-court-oakland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/293-elysian-fields-drive-oakland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/298-elysian-fields-drive-oakland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/615-western-drive-richmond.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/alameda-neighborhood-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/trestle-glen-guide.html</loc>
+    <loc>https://realtor510.com/alice-waters-family-tree_%283%29.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/alice-waters-family-tree_%284%29.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/alice-waters-family-tree_%285%29.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/alice-waters.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://realtor510.com/berkeley-hills-guide.html</loc>
@@ -46,17 +104,42 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/piedmont-home-values.html</loc>
+    <loc>https://realtor510.com/berkeley-neighborhood-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/rockridge-guide.html</loc>
+    <loc>https://realtor510.com/crocker-highlands-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/temescal-guide.html</loc>
+    <loc>https://realtor510.com/crocker-highlands-trestle-glen-oakland_%281%29.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/crocker-highlands-trestle-glen-oakland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/julia-morgan_%281%29.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/montclair-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/oakland-neighborhood-guide_%281%29.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/oakland-neighborhood-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -66,9 +149,34 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/montclair-guide.html</loc>
+    <loc>https://realtor510.com/piedmont-home-values.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/piedmont-luxury-market.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/piedmont-neighborhood-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/piedmont-vs-rockridge.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/rockridge-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/selling-crocker-highlands-oakland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://realtor510.com/sequoyah-hills-market-report.html</loc>
@@ -76,13 +184,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/trends/waters</loc>
+    <loc>https://realtor510.com/temescal-guide.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/trends/julia</loc>
+    <loc>https://realtor510.com/trestle-glen-guide.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>
