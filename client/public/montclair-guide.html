@@ -9,7 +9,8 @@
 <meta property="og:title" content="Montclair Real Estate Guide | Patrick MacCartee">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,160 +53,90 @@
   body {
     background: var(--white);
     color: var(--gray-body);
-    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     line-height: 1.7;
     font-size: 16px;
   }
 
   
-  /* ── Site Header (matches realtor510.com) ── */
+  /* ── Site Header (Exactly matches React) ── */
   .site-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 68px;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 200;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #ffffff;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    display: block !important;
   }
-
   
+  .site-header-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 5rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-sizing: border-box;
+  }
 
+  .site-nav-links {
+    display: none !important;
+  }
+
+  @media (min-width: 768px) {
+    .site-nav-links {
+      display: flex !important;
+      align-items: center !important;
+      gap: 2rem !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+
+  .site-nav-links a:not(.contact-btn) {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: hsl(0, 0%, 15%) !important;
+    text-decoration: none !important;
+    transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .site-nav-links a:not(.contact-btn):hover {
+    color: hsl(355, 75%, 35%) !important;
+  }
+
+  .contact-btn {
+    background-color: hsl(355, 75%, 35%) !important;
+    color: hsl(0, 0%, 100%) !important;
+    padding: 0.5rem 1.5rem !important;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-block !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .contact-btn:hover {
+    background-color: hsla(355, 75%, 35%, 0.9) !important;
+  }
   
-
-  
-
-  .logo-first, .logo-last {
-    font-size: 8.5px;
-    font-weight: 700;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: #1a1a1a;
-    font-family: 'Jost', sans-serif;
+  .page-hero, .hero {
+    padding-top: 5rem !important;
   }
-
-  .site-nav {
-    display: flex;
-    align-items: center;
-    gap: 0;
-  }
-
-  .site-nav a {
-    font-family: 'Jost', sans-serif;
-    font-size: .62rem;
-    font-weight: 500;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: #3a3a3a;
-    text-decoration: none;
-    padding: 0 16px;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    transition: color .15s;
-  }
-
-  .site-nav a:hover { color: #8B1A1A; }
-
-  /* ── Neighborhood Sub-Nav ── */
-  .neigh-nav {
-    background: #1a1a1a;
-    border-bottom: 1px solid #333;
-    position: sticky;
-    top: 68px;
-    z-index: 190;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .neigh-nav::-webkit-scrollbar { display: none; }
-
-  .neigh-nav-inner {
-    display: flex;
-    align-items: center;
-    min-width: max-content;
-    padding: 0 40px;
-  }
-
-  .neigh-nav a {
-    font-family: 'Jost', sans-serif;
-    font-size: .58rem;
-    font-weight: 500;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: #999;
-    text-decoration: none;
-    padding: 0 16px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    border-bottom: 2px solid transparent;
-    transition: color .15s, border-color .15s;
-  }
-
-  .neigh-nav a:hover { color: #fff; }
-  .neigh-nav a.n-active { color: #fff; border-bottom-color: #8B1A1A; }
-
-  /* ── Footer (matches realtor510.com) ── */
-  .site-footer {
-    background: #2a2a2a;
-    padding: 52px 32px 40px;
-    text-align: center;
-  }
-
-  .footer-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    letter-spacing: .28em;
-    text-transform: uppercase;
-    color: #ffffff;
-    margin-bottom: 6px;
-  }
-
-  .footer-name sup { font-size: .5em; letter-spacing: 0; vertical-align: super; }
-
-  .footer-dre {
-    font-size: .62rem;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: #777;
-    margin-bottom: 24px;
-    font-family: 'Jost', sans-serif;
-  }
-
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    flex-wrap: wrap;
-  }
-
-  .footer-links a {
-    font-family: 'Jost', sans-serif;
-    font-size: .6rem;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: #777;
-    text-decoration: none;
-    transition: color .15s;
-  }
-
-  .footer-links a:hover { color: #ffffff; }
-
-  @media (max-width: 680px) {
-    .site-header { padding: 0 20px; }
-    .site-nav a { padding: 0 10px; font-size: .55rem; }
-    .neigh-nav-inner { padding: 0 16px; }
-    .neigh-nav a { padding: 0 10px; }
-  }
-
 
   /* ── Page Hero ── */
   .page-hero {
@@ -224,7 +155,7 @@
   }
 
   .page-hero h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 300;
     color: var(--white);
@@ -233,7 +164,7 @@
   }
 
   .page-hero .deck {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     font-style: italic;
     color: rgba(255,255,255,.75);
@@ -250,7 +181,7 @@
   }
 
   h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.7rem;
     font-weight: 400;
     color: var(--black);
@@ -277,7 +208,7 @@
     border-left: 3px solid var(--crimson);
     margin: 40px 0;
     padding: 8px 0 8px 28px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.35rem;
     font-style: italic;
     color: var(--crimson-dark);
@@ -301,7 +232,7 @@
   }
 
   .stat-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     font-weight: 300;
     color: var(--crimson);
@@ -335,7 +266,7 @@
 
   .arch-item strong {
     display: block;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--black);
@@ -365,7 +296,7 @@
   .metric-card.accent { border-top-color: var(--crimson); }
 
   .metric-val {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2.6rem;
     font-weight: 300;
     color: var(--gray-mid);
@@ -419,7 +350,7 @@
   }
 
   .trend-table td:not(:first-child) {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.05rem;
   }
 
@@ -440,7 +371,7 @@
   }
 
   .seg-card h4 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--black);
@@ -462,7 +393,7 @@
   }
 
   .driver-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 300;
     color: var(--crimson);
@@ -472,7 +403,7 @@
   }
 
   .driver-content h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--black);
@@ -499,7 +430,7 @@
   .faq-item:first-child { border-top: 1px solid var(--rule); }
 
   .faq-q {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--black);
@@ -527,7 +458,7 @@
   }
 
   .team-block h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--black);
@@ -546,7 +477,7 @@
   }
 
   .cta-block h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 300;
     color: var(--white);
@@ -579,7 +510,7 @@
   }
 
   .footer-name {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: .25em;
@@ -762,7 +693,7 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
 
   
       <div style="text-align: center; margin: 40px 0;">
-        <a href="https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xOTMxNQ==" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: hsl(355, 75%, 35%); color: white; padding: 16px 32px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 1rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s;">
+        <a href="https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xOTMxNQ==" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: hsl(355, 75%, 35%); color: white; padding: 16px 32px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s;">
           See Current Montclair Listings
         </a>
       </div>
