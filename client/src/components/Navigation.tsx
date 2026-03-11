@@ -17,9 +17,9 @@ export default function Navigation() {
         <div className="hidden md:flex items-center space-x-8 text-sm tracking-widest uppercase">
           <Link href="/buy" className="hover:text-primary transition-colors">Buy</Link>
           <Link href="/sell" className="hover:text-primary transition-colors">Sell</Link>
-          <Link href="/answers" className="hover:text-primary transition-colors">Answers</Link>
           <Link href="/reviews" className="hover:text-primary transition-colors">Reviews</Link>
           <Link href="/neighborhoods" className="hover:text-primary transition-colors">Neighborhoods</Link>
+          <Link href="/answers" className="hover:text-primary transition-colors">Answers</Link>
           <a href="mailto:patrick@realtor510.com" className="bg-primary text-primary-foreground px-6 py-2 hover:bg-primary/90 transition-colors shadow-sm inline-block">
             Contact
           </a>
@@ -41,9 +41,9 @@ export default function Navigation() {
           <div className="flex flex-col p-6 space-y-6 text-lg tracking-widest uppercase font-medium">
             <Link href="/buy" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Buy</Link>
             <Link href="/sell" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Sell</Link>
-            <Link href="/answers" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Answers</Link>
             <Link href="/reviews" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Reviews</Link>
             <Link href="/neighborhoods" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Neighborhoods</Link>
+            <Link href="/answers" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Answers</Link>
             <a 
               href="mailto:patrick@realtor510.com" 
               className="bg-primary text-primary-foreground px-6 py-3 text-center mt-4 shadow-sm"
