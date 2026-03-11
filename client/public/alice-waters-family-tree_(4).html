@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The House That Alice Built · Realtor510</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #fdf6ec; --parchment: #ede5d0; --bark: #5c4a2a;
+    --leaf: #4a6741; --sage: #7a9170; --soil: #3a2e1a;
+    --gold: #c9a84c; --white: #ffffff; --charcoal: #1a1410;
+  }
+  body { font-family: Georgia, 'Times New Roman', serif; background: var(--cream); color: var(--soil); }
+  ::-webkit-scrollbar { height: 5px; width: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #c8a060; border-radius: 3px; }
+
+  .masthead { background: var(--white); border-bottom: 1px solid var(--parchment); padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .masthead-l { font-size: 9.5px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--bark); font-family: sans-serif; }
+  .masthead-r { font-size: 9.5px; letter-spacing: 0.25em; text-transform: uppercase; color: #99887766; font-family: sans-serif; }
+
+  .hero { background: var(--white); padding: 0 0 48px; border-bottom: 1px solid var(--parchment); }
+  .hero-inner { max-width: 760px; margin: 0 auto; padding: 52px 32px 0; text-align: center; }
+  .eyebrow { font-size: 9.5px; letter-spacing: 0.55em; text-transform: uppercase; color: var(--sage); font-family: sans-serif; margin-bottom: 20px; }
+  .hero h1 { font-family: Georgia, serif; font-weight: normal; font-size: clamp(28px,5vw,56px); line-height: 1.1; color: var(--soil); margin: 0 0 28px; letter-spacing: -0.01em; }
+  .rule { width: 48px; height: 2px; background: var(--gold); margin: 0 auto 32px; }
+  .p1 { font-size: clamp(17px,2.2vw,21px); line-height: 1.85; color: var(--bark); font-style: italic; margin: 0 0 28px; }
+  .p2, .p3 { font-size: clamp(16px,2vw,19px); line-height: 1.9; color: var(--soil); margin: 0 0 28px; }
+  .p3 { margin-bottom: 0; }
+  .pull { max-width: 600px; margin: 44px auto 0; padding: 0 32px; text-align: center; }
+  .pull-inner { border-top: 1px solid var(--parchment); border-bottom: 1px solid var(--parchment); padding: 28px 0; }
+  .pull-inner p { font-size: clamp(16px,2.2vw,22px); line-height: 1.6; font-style: italic; color: var(--bark); }
+  .pull-attr { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage); font-family: sans-serif; margin-top: 12px; }
+
+  .roots-sec { background: #f0e6d0; border-bottom: 1px solid var(--parchment); }
+  .roots-in { max-width: 900px; margin: 0 auto; padding: 48px 32px; }
+  .sec-eye { font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--sage); font-family: sans-serif; margin-bottom: 10px; }
+  .roots-in h2 { font-family: Georgia, serif; font-weight: normal; font-size: clamp(20px,3vw,30px); color: var(--bark); margin: 0 0 10px; }
+  .roots-sub { font-size: 13px; color: var(--sage); font-style: italic; font-family: sans-serif; }
+  .roots-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: stretch; margin-top: 32px; }
+  .alice-blob { background: #3a1e08; border-radius: 8px; padding: 24px 20px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 160px; flex-shrink: 0; }
+  .alice-blob .aemoji { font-size: 32px; margin-bottom: 10px; }
+  .alice-blob .aname { font-family: Georgia, serif; font-size: 15px; color: #fff8ee; font-weight: 700; line-height: 1.2; }
+  .alice-blob .asub { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-family: sans-serif; margin-top: 6px; }
+  .root-cards { display: flex; flex-wrap: wrap; gap: 12px; flex: 1; min-width: 280px; }
+  .root-card { background: var(--white); border-left: 3px solid var(--gold); border-radius: 4px; padding: 14px 16px; flex: 1; min-width: 200px; max-width: 260px; }
+  .root-card .ricon { font-size: 18px; margin-bottom: 6px; }
+  .root-card .rlabel { font-family: Georgia, serif; font-size: 12px; color: var(--bark); font-weight: 700; margin-bottom: 5px; }
+  .root-card .rdesc { font-size: 11.5px; color: var(--soil); line-height: 1.7; font-family: sans-serif; }
+
+  .trad-bar { margin-top: 32px; background: var(--white); border-radius: 6px; padding: 20px 28px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; border: 1px solid var(--parchment); }
+  .trad-text { flex: 1; min-width: 200px; }
+  .trad-eye { font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--sage); font-family: sans-serif; margin-bottom: 6px; }
+  .trad-text p { font-size: 12.5px; color: var(--soil); line-height: 1.75; font-style: italic; }
+  .trad-names { display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
+  .trad-row { display: flex; align-items: center; gap: 10px; }
+  .trad-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .trad-name { font-family: Georgia, serif; font-size: 11px; color: var(--bark); font-weight: 700; }
+  .trad-role { font-size: 9.5px; color: var(--sage); font-family: sans-serif; }
+
+  .tree-hdr { text-align: center; padding: 40px 24px 12px; background: var(--cream); }
+  .tree-hdr h2 { font-family: Georgia, serif; font-weight: normal; font-size: clamp(18px,3vw,30px); color: var(--bark); margin: 0 0 10px; }
+  .tree-inst { color: var(--sage); font-size: 12px; margin: 0 auto; font-style: italic; font-family: sans-serif; max-width: 520px; }
+  .gen-leg { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px; font-family: sans-serif; font-size: 10px; }
+
+  .tree-scroll { overflow-x: auto; overflow-y: visible; padding: 8px 24px 16px; background: var(--cream); }
+  .tree-flex { display: flex; align-items: flex-start; min-width: max-content; }
+
+  .chef-card { background: var(--white); border-radius: 4px; padding: 10px 14px; width: 190px; flex-shrink: 0; cursor: pointer; transition: all 0.15s; user-select: none; box-shadow: 0 2px 10px rgba(60,40,10,0.09); }
+  .chef-card .cname { font-family: Georgia, serif; font-weight: 700; font-size: 12.5px; color: var(--bark); line-height: 1.3; }
+  .chef-card .crest { font-size: 10.5px; font-style: italic; color: var(--leaf); margin-top: 2px; }
+  .chef-card .cloc { font-size: 9.5px; color: #bbb; margin-top: 1px; }
+  .chef-card.sel .cname { color: #fff8ee; }
+  .chef-card.sel .crest { color: #ffffffbb; }
+  .chef-card.sel .cloc { color: #ffffff77; }
+  .badge { display: inline-block; font-size: 9px; padding: 2px 7px; border-radius: 10px; font-family: sans-serif; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+
+  .alice-card { background: var(--white); border-left: 5px solid #3a1e08; border-radius: 4px; padding: 14px 18px; width: 200px; flex-shrink: 0; cursor: pointer; transition: all 0.15s; user-select: none; align-self: flex-start; box-shadow: 0 3px 14px rgba(60,40,10,0.12); }
+  .alice-card.sel { background: #3a1e08; box-shadow: 0 8px 28px rgba(60,40,10,0.22); }
+  .alice-card .aeye { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage); font-family: sans-serif; margin-bottom: 3px; }
+  .alice-card.sel .aeye { color: var(--gold); }
+  .alice-card .aname2 { font-family: Georgia, serif; font-weight: 700; font-size: 16px; color: var(--bark); line-height: 1.2; }
+  .alice-card.sel .aname2 { color: #fff8ee; }
+  .alice-card .arest { font-size: 11px; font-style: italic; color: var(--leaf); margin-top: 3px; }
+  .alice-card.sel .arest { color: #ffffffcc; }
+  .alice-card .aloc { font-size: 10px; color: #aaa; margin-top: 1px; }
+  .alice-card.sel .aloc { color: #ffffff77; }
+
+  .detail { background: rgba(253,248,240,0.98); border-top: 3px solid #3a1e08; padding: 14px 28px; display: flex; gap: 14px; align-items: flex-start; box-shadow: 0 -6px 24px rgba(80,40,0,0.12); max-height: 32vh; overflow-y: auto; animation: slideUp 0.2s ease; }
+  .detail.hidden { display: none; }
+  .dbar { width: 4px; min-height: 50px; background: var(--bark); border-radius: 3px; flex-shrink: 0; margin-top: 3px; }
+  .dbody { flex: 1; }
+  .dhdr { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; }
+  .dname { font-size: 18px; font-weight: normal; color: var(--bark); font-family: Georgia, serif; }
+  .dmeta { color: var(--sage); font-size: 11px; margin-top: 3px; font-family: sans-serif; }
+  .dclose { background: none; border: 1px solid rgba(92,74,42,0.33); color: var(--bark); border-radius: 2px; padding: 3px 12px; cursor: pointer; font-family: sans-serif; font-size: 11px; }
+  .dnote { margin: 10px 0 0; color: var(--soil); font-size: 13.5px; line-height: 1.8; font-style: italic; max-width: 860px; }
+
+  .stats { background: var(--leaf); display: flex; justify-content: space-around; flex-wrap: wrap; padding: 12px 16px 6px; }
+  .stat { text-align: center; padding: 4px 12px; }
+  .stat-n { font-family: Georgia, serif; font-size: 20px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .stat-l { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); font-family: sans-serif; margin-top: 2px; }
+  .stats-note { background: var(--leaf); text-align: center; padding: 0 16px 10px; font-size: 9px; color: rgba(255,255,255,0.4); font-family: sans-serif; font-style: italic; }
+
+  .footer { background: var(--charcoal); padding: 28px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .fbrand { font-family: Georgia, serif; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+  .fdre { font-size: 10px; color: rgba(255,255,255,0.33); font-family: sans-serif; margin-top: 3px; letter-spacing: 0.08em; }
+  .fright { font-size: 10px; color: rgba(255,255,255,0.27); font-family: sans-serif; font-style: italic; text-align: right; }
+
+  .rest-list-title { font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:#7a9170;font-family:sans-serif;margin-bottom:8px; }
+  .rest-list { display:flex;flex-wrap:wrap;gap:6px; }
+  .rest-pill { background:#fdf6ec;border:1px solid #ede5d0;border-radius:3px;padding:4px 10px;font-size:10.5px;font-family:sans-serif;color:#5c4a2a; }
+  .rest-pill .rp-year { color:#7a9170;font-size:9px;margin-left:4px; }
+  .rest-pill .rp-loc { color:#aaa;font-size:9px; }
+  .ccount { font-size:9px;color:#7a9170;font-family:sans-serif;margin-top:2px;letter-spacing:0.03em; }
+  .chef-card.sel .ccount { color:#ffffffaa; }
+  @keyframes slideUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6DDVCG0Q3F');
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1438966301114887');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta property="og:image" content="https://realtor510.com/PM_LOGO_Red_1772927689333.png">
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-l">Realtor510 · Women's History Month</div>
+  <div class="masthead-r">March 2026</div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">A Culinary Legacy</div>
+    <h1>The House That<br/>Alice Built</h1>
+    <div class="rule"></div>
+    <p class="p1">In 1971, a twenty-seven-year-old Berkeley idealist opened a small French restaurant on Shattuck Avenue and changed everything. Alice Waters did not set out to build an empire. She set out to cook the way her neighbors in Brittany had — from the garden, from the market, from the season. What followed was one of the most consequential cultural legacies in American culinary history.</p>
+    <p class="p2">Chez Panisse became a school without curriculum, a philosophy without a manifesto. Chefs arrived as line cooks and left as movement-makers. They carried the doctrine of the farmers' market and the single-origin ingredient to New York loft restaurants, LA pizza parlors, Miami hotel kitchens, and Boulder farmstead shops. Five generations of American dining — and counting — trace their roots to one kitchen on a residential street in the East Bay.</p>
+    <p class="p3">This Women's History Month, we trace that lineage. What you'll find is not just a map of restaurants — it's a record of how one woman's conviction about how food should be grown, sourced, and shared reshaped the way an entire nation eats.</p>
+  </div>
+  <div class="pull">
+    <div class="pull-inner">
+      <p>"Good food is a right, not a privilege."</p>
+      <div class="pull-attr">— Alice Waters</div>
+    </div>
+  </div>
+</div>
+
+<div class="roots-sec">
+  <div class="roots-in">
+    <div style="text-align:center;margin-bottom:36px">
+      <div class="sec-eye">Before Chez Panisse</div>
+      <h2>What Made Alice Waters</h2>
+      <p class="roots-sub">Six forces that shaped the founder — and through her, American food culture</p>
+    </div>
+    <div class="roots-grid">
+      <div class="alice-blob">
+        <div class="aemoji">🌿</div>
+        <div class="aname">Alice Waters</div>
+        <div class="asub">b. 1944 · Berkeley</div>
+      </div>
+      <div class="root-cards">
+        <div class="root-card"><div class="ricon">🇫🇷</div><div class="rlabel">French Farmhouse Culture</div><div class="rdesc">A junior year abroad in France — markets, farmhouse tables, Brittany crêperies — showed a 19-year-old Waters what food rooted in place and season could feel like.</div></div>
+        <div class="root-card"><div class="ricon">📖</div><div class="rlabel">Elizabeth David</div><div class="rdesc">David's books on French and Italian cooking gave Waters a literary framework: that simplicity, not elaboration, is the highest culinary virtue.</div></div>
+        <div class="root-card"><div class="ricon">🍷</div><div class="rlabel">Richard Olney</div><div class="rdesc">The American expatriate and author of Simple French Food became a direct mentor, teaching Waters that the integrity of an ingredient is everything.</div></div>
+        <div class="root-card"><div class="ricon">🌿</div><div class="rlabel">Lulu &amp; Lucien Peyraud</div><div class="rdesc">The owners of Domaine Tempier in Provence demonstrated that wine, food, land, and conviviality are inseparable — a philosophy Waters transplanted to Berkeley.</div></div>
+        <div class="root-card"><div class="ricon">✊</div><div class="rlabel">Free Speech Movement</div><div class="rdesc">Berkeley in the 1960s taught Waters that choices carry moral weight. Opening a restaurant wasn't just cooking — it was a political act about land, labor, and community.</div></div>
+        <div class="root-card"><div class="ricon">🌾</div><div class="rlabel">Edna Lewis</div><div class="rdesc">Lewis's The Taste of Country Cooking proved that farm-to-table wasn't a trend — it was the oldest American tradition. Waters found in Lewis a kindred spirit and dear friend.</div></div>
+      </div>
+    </div>
+    <div class="trad-bar">
+      <div class="trad-text">
+        <div class="trad-eye">Her Place in the American Tradition</div>
+        <p>Waters did not invent farm-to-table. She recovered it. Edna Lewis had been writing about the seasonal, community-rooted cooking of the American South for years. M.F.K. Fisher had long argued that eating well was an act of self-respect. Waters synthesized these threads — the French terroir philosophy, the American agrarian tradition, and the Berkeley counterculture — into a single, living kitchen.</p>
+      </div>
+      <div class="trad-names">
+        <div class="trad-row"><div class="trad-dot"></div><div><div class="trad-name">Edna Lewis</div><div class="trad-role">The American South's seasonal tradition</div></div></div>
+        <div class="trad-row"><div class="trad-dot"></div><div><div class="trad-name">M.F.K. Fisher</div><div class="trad-role">Food as philosophy &amp; pleasure</div></div></div>
+        <div class="trad-row"><div class="trad-dot"></div><div><div class="trad-name">Julia Child</div><div class="trad-role">Bringing French culture to America</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tree-hdr">
+  <div class="sec-eye">Interactive Lineage Map</div>
+  <h2>Five Generations of Influence</h2>
+  <p class="tree-inst">Scroll right to follow each lineage · click any name to read their story · <span style="opacity:0.7">▶</span> means they have disciples</p>
+  <div class="gen-leg" id="gen-leg"></div>
+</div>
+
+<div class="tree-scroll">
+  <div class="tree-flex" id="tree"></div>
+</div>
+
+<div class="detail hidden" id="detail">
+  <div class="dbar"></div>
+  <div class="dbody">
+    <div class="dhdr">
+      <div>
+        <div class="dname" id="dname"></div>
+        <div class="dmeta" id="dmeta"></div>
+      </div>
+      <button class="dclose" onclick="closeDetail()">✕ Close</button>
+    </div>
+    <p class="dnote" id="dnote"></p>
+    <div id="drestlist" style="display:none;margin-top:14px;border-top:1px solid #ede5d0;padding-top:12px"></div>
+  </div>
+</div>
+
+<div class="stats" id="stats"></div>
+<div class="stats-note">† Includes all restaurants opened or operated by featured alumni across their careers</div>
+
+<div class="footer">
+  <div>
+    <div class="fbrand">REALTOR510</div>
+    <div class="fdre">PATRICK MacCARTEE · DRE# 02142693</div>
+  </div>
+  <div class="fright">
+    Women's History Month · March 2026<br/>
+    <span style="opacity:0.6">A celebration of Alice Waters &amp; her culinary legacy</span>
+  </div>
+</div>
+
+<script>
+const GC = ["#3a1e08","#5c3410","#7a4f20","#9a6a38","#ba8850","#d4aa70"];
+const GL = ["Founder","Gen 1 · Chez Panisse Alumni","Gen 2","Gen 3","Gen 4"];
+const BDG = {
+  founder:{bg:"#3a1e08",color:"#fff8ee",text:"Founder"},
+  jbf:{bg:"#c9a84c",color:"#3a2e1a",text:"James Beard"},
+  michelin3:{bg:"#c8102e",color:"#fff",text:"★★★ Michelin"},
+  michelin1:{bg:"#c8102e",color:"#fff",text:"★ Michelin"},
+  intl:{bg:"#6b8fa3",color:"#fff",text:"International"},
+  farmer:{bg:"#4a6741",color:"#fff",text:"The Farmer"},
+};
+const STATS_DATA = [
+  {n:"90+",l:"Notable alumni"},{n:"270+",l:"Restaurants worldwide†"},
+  {n:"1971",l:"Chez Panisse opens"},{n:"6",l:"James Beard Awards"},
+  {n:"5,000+",l:"Edible Schoolyard sites"},{n:"8,000+",l:"US farmers markets today"},
+];
+const ALICE_NODE = {id:"alice",name:"Alice Waters",restaurant:"Chez Panisse · Founder",location:"Berkeley, CA · 1971",note:"Opened Chez Panisse in 1971, pioneering California cuisine and the farm-to-table movement. Mentored 82+ notable chefs whose careers span 270+ restaurants worldwide. Six-time James Beard Award winner. Her insistence on local, seasonal ingredients permanently reshaped American dining culture.",badge:"founder",restCount:1,restList:[{name:"Chez Panisse",year:"1971",loc:"Berkeley, CA"},{name:"Café Fanny",year:"1984",loc:"Berkeley, CA"},{name:"Edible Schoolyard",year:"1995",loc:"Berkeley, CA"}]};
+const GEN1 = [
+  {id:"tower",name:"Jeremiah Tower",restaurant:"Stars Restaurant",location:"San Francisco, CA · 1984",note:"Co-architect of California Cuisine; authored Chez Panisse's landmark early menus. Stars became one of the highest-grossing US restaurants of the 1980s. James Beard Outstanding Chef 1996.",badge:"jbf",restCount:9,restList:[{name:"Stars",year:"1984",loc:"San Francisco, CA"},{name:"Stars Café",year:"1985",loc:"San Francisco, CA"},{name:"Stars Oakville",year:"1986",loc:"Napa Valley, CA"},{name:"Stars Palo Alto",year:"1988",loc:"Palo Alto, CA"},{name:"Stars Singapore",year:"1989",loc:"Singapore"},{name:"Stars Manila",year:"1989",loc:"Manila, PH"},{name:"Stars Seattle",year:"1998",loc:"Seattle, WA"},{name:"Peak Café",year:"1992",loc:"Hong Kong"},{name:"Tavern on the Green",year:"2014",loc:"New York, NY"}],
+   children:[
+    {id:"batali",name:"Mario Batali",restaurant:"Babbo · Del Posto · Eataly",location:"New York, NY · 1998",note:"Trained at Stars under Tower before building a New York empire. Babbo, Del Posto, Lupa, and co-founding Eataly transformed American appreciation for Italian artisan food.",badge:null,restCount:26,restList:[{name:"Pó",year:"1993",loc:"New York, NY"},{name:"Babbo",year:"1998",loc:"New York, NY"},{name:"Lupa",year:"1999",loc:"New York, NY"},{name:"Esca",year:"2000",loc:"New York, NY"},{name:"Otto",year:"2003",loc:"New York, NY"},{name:"Casa Mono",year:"2003",loc:"New York, NY"},{name:"Bar Jamón",year:"2004",loc:"New York, NY"},{name:"Del Posto",year:"2005",loc:"New York, NY"},{name:"B&B Ristorante",year:"2006",loc:"Las Vegas, NV"},{name:"Carnevino",year:"2008",loc:"Las Vegas, NV"},{name:"Enoteca San Marco",year:"2008",loc:"Las Vegas, NV"},{name:"Osteria Mozza",year:"2007",loc:"Los Angeles, CA"},{name:"Pizzeria Mozza",year:"2007",loc:"Los Angeles, CA"},{name:"Eataly NYC",year:"2010",loc:"New York, NY"},{name:"Eataly Chicago",year:"2013",loc:"Chicago, IL"},{name:"La Sirena",year:"2016",loc:"New York, NY"}],
+     children:[
+      {id:"chang",name:"David Chang",restaurant:"Momofuku Noodle Bar",location:"New York, NY · 2004",note:"Cooked at Babbo under Batali before opening Momofuku Noodle Bar in 2004. Built a global restaurant empire credited with reshaping American fine dining's relationship with Asian cuisine.",badge:"jbf",restCount:14,restList:[{name:"Noodle Bar",year:"2004",loc:"New York, NY"},{name:"Ssäm Bar",year:"2006",loc:"New York, NY"},{name:"Momofuku Ko",year:"2008",loc:"New York, NY"},{name:"Milk Bar",year:"2008",loc:"New York, NY"},{name:"Seiōbo",year:"2011",loc:"Sydney, AU"},{name:"Momofuku Toronto",year:"2012",loc:"Toronto, CA"},{name:"Momofuku Las Vegas",year:"2017",loc:"Las Vegas, NV"},{name:"Nishi",year:"2016",loc:"New York, NY"},{name:"Majordōmo",year:"2018",loc:"Los Angeles, CA"},{name:"Fuku",year:"2015",loc:"New York, NY"},{name:"Kāwi",year:"2019",loc:"New York, NY"},{name:"Ando",year:"2016",loc:"New York, NY"},{name:"CCDC",year:"2016",loc:"Washington, DC"},{name:"Kabawa",year:"2024",loc:"New York, NY"}],
+       children:[
+        {id:"bowien",name:"Danny Bowien",restaurant:"Mission Chinese Food",location:"SF / NYC · 2010",note:"Deeply influenced by Chang's irreverent, ingredient-obsessed approach. Mission Chinese brought bold global flavors with a Northern California sensibility.",badge:null,restCount:2,restList:[{name:"Mission Chinese Food",year:"2010",loc:"San Francisco, CA"},{name:"Mission Chinese Food",year:"2012",loc:"New York, NY"}],children:[]},
+        {id:"tosi",name:"Christina Tosi",restaurant:"Milk Bar",location:"New York, NY · 2008",note:"Founded Milk Bar out of the Momofuku pastry kitchen. Transformed nostalgic American baking into a celebrated culinary genre.",badge:"jbf",restCount:20,restList:[{name:"Milk Bar (flagship)",year:"2008",loc:"New York, NY"},{name:"Milk Bar (multiple US locations)",year:"2010",loc:"NY · DC · LA · Chicago · more"}],children:[]},
+       ]},
+      {id:"molina_b",name:"Matt Molina",restaurant:"Osteria Mozza",location:"Los Angeles, CA · 2007",note:"Worked in the Batali orbit before becoming Nancy Silverton's long-serving chef de cuisine at Osteria Mozza. Co-author of the Mozza cookbook.",badge:null,restCount:2,restList:[{name:"Osteria Mozza",year:"2007",loc:"Los Angeles, CA"},{name:"Triple Beam Pizza",year:"2017",loc:"Los Angeles, CA"}],children:[]},
+     ]},
+    {id:"crenn",name:"Dominique Crenn",restaurant:"Atelier Crenn",location:"San Francisco, CA · 2011",note:"Worked at Stars before opening Atelier Crenn. First female chef in the US to earn three Michelin stars. Her poetic, ingredient-led cuisine directly descends from the Stars tradition.",badge:"michelin3",restCount:4,restList:[{name:"Atelier Crenn",year:"2011",loc:"San Francisco, CA"},{name:"Bar Crenn",year:"2014",loc:"San Francisco, CA"},{name:"Petit Crenn",year:"2015",loc:"San Francisco, CA"},{name:"Boutique Crenn",year:"2019",loc:"San Francisco, CA"}],children:[]},
+    {id:"luchetti",name:"Emily Luchetti",restaurant:"Farallon",location:"San Francisco, CA · 1997",note:"Stars' acclaimed pastry chef; James Beard Outstanding Pastry Chef 2004. Led Farallon's pastry program and became a major voice for seasonal pastry in America.",badge:"jbf",restCount:3,restList:[{name:"Stars",year:"1984",loc:"San Francisco, CA (pastry)"},{name:"Farallon",year:"1997",loc:"San Francisco, CA"},{name:"Waterbar",year:"2008",loc:"San Francisco, CA"}],children:[]},
+    {id:"ells",name:"Steve Ells",restaurant:"Chipotle Mexican Grill",location:"Denver, CO · 1993",note:"Cooked at Stars before founding Chipotle — applying the Stars/Chez Panisse philosophy of quality, responsibly sourced ingredients to fast-casual dining at massive scale.",badge:null,restCount:3500,restList:[{name:"Chipotle Mexican Grill",year:"1993",loc:"Denver, CO (now 3,500+ locations)"},{name:"Dobbs Ferry",year:"2023",loc:"New York, NY"},{name:"Chipotle Mexican Grill IPO",year:"2006",loc:"NYSE: CMG"}],children:[]},
+    {id:"franz",name:"Mark Franz",restaurant:"Farallon · Waterbar",location:"San Francisco, CA · 1997",note:"Stars' exec chef for a decade under Tower, responsible for making it one of the highest-grossing restaurants in the US. Co-founded Farallon (1997) and Waterbar (2008) with designer Pat Kuleto. James Beard nominee.",badge:null,restCount:3,restList:[{name:"Farallon",year:"1997",loc:"San Francisco, CA"},{name:"Waterbar",year:"2008",loc:"San Francisco, CA"},{name:"Epic Steak",year:"2008",loc:"San Francisco, CA"}],
+     children:[
+      {id:"mina",name:"Michael Mina",restaurant:"Michael Mina · Mina Group",location:"San Francisco, CA · 1991",note:"Came up through Farallon/Aqua under Franz's orbit; built the Mina Group into a 30+ restaurant empire spanning the US and Dubai. Michelin-starred flagship in San Francisco.",badge:"michelin1",restCount:30,restList:[{name:"Aqua",year:"1991",loc:"San Francisco, CA"},{name:"Michael Mina (flagship)",year:"2004",loc:"San Francisco, CA"},{name:"Bourbon Steak",year:"2007",loc:"Washington, DC"},{name:"Mina Group (30+ concepts)",year:"2003",loc:"US & Dubai"}],
+       children:[
+        {id:"perello",name:"Melissa Perello",restaurant:"Frances · Octavia",location:"San Francisco, CA · 2009",note:"Trained under Mina at Aqua; earned Michelin stars at both Frances (2009) and Octavia (2015). JBF Rising Star nominations 2002–04, Food & Wine Best New Chef 2004. A defining voice in modern San Francisco neighborhood dining.",badge:"michelin1",restCount:2,restList:[{name:"Frances",year:"2009",loc:"San Francisco, CA"},{name:"Octavia",year:"2015",loc:"San Francisco, CA"}],children:[]},
+       ]},
+     ]},
+    {id:"altman",name:"Joey Altman",restaurant:"Miss Pearl's Jam House · Wild Hare",location:"San Francisco, CA · 1989",note:"Worked under Tower at Stars before opening Miss Pearl's Jam House (1989) and Wild Hare (1999). Three-time JBF Award winner for Bay Cafe, his long-running Bay Area food TV show.",badge:"jbf",restCount:3,restList:[{name:"Miss Pearl's Jam House",year:"1989",loc:"San Francisco, CA"},{name:"Wild Hare",year:"1999",loc:"Menlo Park, CA"},{name:"China Live (consulting)",year:"2017",loc:"San Francisco, CA"}],children:[]},
+    {id:"walsh",name:"Brendan Walsh",restaurant:"Arizona 206 · CIA Dean",location:"New York, NY · 1985",note:"Stars sous chef in the mid-1980s; moved to NYC and pioneered Southwestern cuisine at Arizona 206. Later became Dean of Culinary Arts at the Culinary Institute of America. JBF Who's Who of Food & Beverage.",badge:"jbf",restCount:2,restList:[{name:"Arizona 206",year:"1985",loc:"New York, NY"},{name:"CIA (Dean of Culinary Arts)",year:"2008",loc:"Hyde Park, NY"}],children:[]},
+   ]},
+  {id:"bertolli",name:"Paul Bertolli",restaurant:"Oliveto · Fra'Mani Salumi",location:"Oakland, CA · 1993",note:"Head chef at Chez Panisse 1982–92; co-authored Chez Panisse Cooking with Waters. Later founded Fra'Mani, transforming American artisan salumi.",badge:"jbf",restCount:2,restList:[{name:"Oliveto",year:"1993",loc:"Oakland, CA"},{name:"Fra'Mani Salumi",year:"2006",loc:"Berkeley, CA"}],
+   children:[
+    {id:"tusk",name:"Michael Tusk",restaurant:"Quince",location:"San Francisco, CA · 2003",note:"Trained under Bertolli at Oliveto before opening Quince. Three Michelin stars; James Beard Best Chef: West 2013.",badge:"michelin3",restCount:2,restList:[{name:"Quince",year:"2003",loc:"San Francisco, CA"},{name:"Cotogna",year:"2010",loc:"San Francisco, CA"}],
+     children:[
+      {id:"burns",name:"Cortney Burns",restaurant:"Bar Tartine",location:"San Francisco, CA · 2011",note:"Quince alum who co-helmed Bar Tartine — Chad Robertson's Tartine Bakery sister restaurant — alongside Nick Balla. Their James Beard–winning cookbook on fermentation and preservation cemented Bar Tartine's legacy as one of SF's most influential kitchens of the 2010s.",badge:"jbf",restCount:1,restList:[{name:"Bar Tartine",year:"2011",loc:"San Francisco, CA"}],children:[
+        {id:"kronner",name:"Chris Kronner",restaurant:"KronnerBurger",location:"Oakland, CA · 2015",note:"Chef at Bar Tartine before launching KronnerBurger on Piedmont Avenue in Oakland — a cult destination built around wood-fired, dry-aged beef. Praised by Food & Wine, Bon Appétit, and Eater. His farm-direct sourcing philosophy carries the Bar Tartine/Oliveto tradition into an unlikely format: the elevated Oakland cheeseburger.",badge:null,restCount:1,restList:[{name:"KronnerBurger",year:"2015",loc:"Oakland, CA"}],children:[]}
+      ]},
+     ]},
+    {id:"canales",name:"Paul Canales",restaurant:"Duende · Occitania",location:"Oakland, CA · 2013",note:"Cooked under Bertolli at Oliveto for years before opening Duende, his celebrated Spanish-inspired Oakland restaurant. Later opened Occitania, continuing the Oliveto/Bertolli tradition of ingredient-driven Mediterranean cooking rooted in the East Bay.",badge:null,restCount:2,restList:[{name:"Duende",year:"2013",loc:"Oakland, CA"},{name:"Occitania",year:"2022",loc:"Oakland, CA"}],children:[
+      {id:"cavazos",name:"Brandon Cavazos",restaurant:"Burdell",location:"Oakland, CA · 2023",note:"Trained under Paul Canales before joining Burdell as Chef de Cuisine. A fourth-generation link — Waters → Bertolli → Canales → Cavazos — carrying the Oliveto tradition of seasonal, ingredient-driven California cooking into Oakland's most celebrated new restaurant.",badge:null,restCount:1,restList:[{name:"Burdell (Chef de Cuisine)",year:"2023",loc:"Oakland, CA"}],children:[]},
+      {id:"vennari",name:"Andrew Vennari",restaurant:"Sequoia Diner",location:"Oakland, CA · 2015",note:"Cooked under Canales at Duende before co-founding Sequoia Diner in the Laurel District — the very space where Geoff Davis launched the Burdell pop-ups in 2022. A quiet but direct link between the Oliveto/Canales tradition and Oakland's next generation of chefs.",badge:null,restCount:1,restList:[{name:"Sequoia Diner",year:"2015",loc:"Oakland, CA"}],children:[]},
+      {id:"chase",name:"Christa Chase",restaurant:"Tartine Manufactory",location:"San Francisco, CA · 2016",note:"Worked under Canales at both Oliveto and Duende (as sous chef) before joining the opening team of Tartine Manufactory in 2016, becoming Executive Chef in 2017. Named a StarChefs Rising Star and Zagat 30 Under 30. A direct Canales alumna who carried the Oliveto/Duende ethos of seasonal, farm-direct cooking into one of San Francisco's most celebrated kitchens.",badge:null,restCount:1,restList:[{name:"Tartine Manufactory (Executive Chef)",year:"2016",loc:"San Francisco, CA"}],children:[]},
+    ]},
+    {id:"berglund",name:"Paul Berglund",restaurant:"The Bachelor Farmer",location:"Minneapolis, MN · 2011",note:"Rose from line cook to chef de cuisine under Canales at Oliveto, absorbing the Bertolli/Canales philosophy of ingredient-first, farm-direct cooking. Opened The Bachelor Farmer in 2011, earning James Beard Best Chef: Midwest 2016 — carrying the Oliveto ethos into Nordic-inflected Minnesota cuisine.",badge:"jbf",restCount:1,restList:[{name:"The Bachelor Farmer",year:"2011",loc:"Minneapolis, MN"}],children:[]},
+    {id:"rocchino",name:"Aaron Rocchino",restaurant:"The Local Butcher Shop",location:"Berkeley, CA · 2011",note:"Sous chef under Bertolli and Canales at Oliveto; later cooked at Chez Panisse before co-founding The Local Butcher Shop in Berkeley in 2011. Channeled the Oliveto farm-direct sourcing philosophy into artisan whole-animal butchery — bringing restaurant-quality, sustainably raised meat directly to home cooks.",badge:null,restCount:1,restList:[{name:"The Local Butcher Shop",year:"2011",loc:"Berkeley, CA"}],children:[]},
+   ]},
+  {id:"moulle",name:"Jean-Pierre Moullé",restaurant:"Chez Panisse Chef de Cuisine",location:"Berkeley, CA · Bordeaux, FR",note:"One of the longest-serving chefs de cuisine; embodied the French soul of the kitchen. Later ran a culinary education program in Bordeaux.",badge:"intl",restCount:1,restList:[{name:"Chez Panisse (Chef de Cuisine)",year:"1975",loc:"Berkeley, CA"}],
+   children:[
+    {id:"peternell",name:"Cal Peternell",restaurant:"Chez Panisse · Author",location:"Berkeley, CA",note:"22 years at Chez Panisse, rising to head co-chef. His cookbook Twelve Recipes became a beloved home-cooking guide carrying the Chez Panisse philosophy to home cooks worldwide.",badge:"jbf",restCount:1,restList:[{name:"Chez Panisse (Head Co-Chef)",year:"1995",loc:"Berkeley, CA"}],children:[]},
+   ]},
+  {id:"shere",name:"Lindsey Shere",restaurant:"Chez Panisse Pastry · Author",location:"Berkeley, CA · 1971",note:"Founding partner and head pastry chef for 25+ years. Author of Chez Panisse Desserts. Set the standard for seasonal, ingredient-led pastry in America.",badge:null,restCount:1,restList:[{name:"Chez Panisse (Founding Pastry Chef)",year:"1971",loc:"Berkeley, CA"}],
+   children:[
+    {id:"lebovitz",name:"David Lebovitz",restaurant:"Author · The Perfect Scoop",location:"Paris, France",note:"Pastry chef under Shere who became one of the world's most-read food writers. His books introduced millions to the Chez Panisse ethos of seasonal, simple desserts.",badge:null,restCount:1,restList:[{name:"Chez Panisse (Pastry)",year:"1983",loc:"Berkeley, CA"}],children:[]},
+   ]},
+  {id:"waxman",name:"Jonathan Waxman",restaurant:"Jams · Barbuto",location:"New York, NY · 1984",note:"Brought California cuisine to New York with Jams (1984). Barbuto became a beloved West Village institution. A major mentor figure for the next generation of New York chefs.",badge:"jbf",restCount:9,restList:[{name:"Michael's",year:"1979",loc:"Santa Monica, CA"},{name:"Jams",year:"1984",loc:"New York, NY"},{name:"Jams of London",year:"1985",loc:"London, UK"},{name:"Bud's",year:"1987",loc:"New York, NY"},{name:"Table 29",year:"1990",loc:"Napa, CA"},{name:"Washington Park",year:"2002",loc:"New York, NY"},{name:"Barbuto",year:"2004",loc:"New York, NY"},{name:"Jams (1 Hotel)",year:"2017",loc:"New York, NY"},{name:"Barbuto Brooklyn",year:"2025",loc:"Brooklyn, NY"}],
+   children:[
+    {id:"barber",name:"Dan Barber",restaurant:"Blue Hill at Stone Barns",location:"New York · 2004",note:"Mentored by Waxman and by Alice Waters. Blue Hill (2000) and Blue Hill at Stone Barns (2004, ★★ Michelin). James Beard Outstanding Chef 2009. Author of The Third Plate.",badge:"jbf",restCount:3,restList:[{name:"Blue Hill",year:"2000",loc:"New York, NY"},{name:"Blue Hill at Stone Barns",year:"2004",loc:"Pocantico Hills, NY"},{name:"Family Meal at Blue Hill",year:"2021",loc:"New York, NY"}],
+     children:[
+      {id:"lalicon",name:"Lordfer Lalicon",restaurant:"Kaya",location:"Miami, FL · 2019",note:"Trained at Blue Hill; opened Kaya earning a Michelin Green Star for sustainability-forward Caribbean cuisine.",badge:null,restCount:1,restList:[{name:"Kaya",year:"2019",loc:"Miami, FL"}],children:[]},
+      {id:"rosenberg",name:"Hosea Rosenberg",restaurant:"Blackbelly Market",location:"Boulder, CO · 2014",note:"Top Chef Season 5 winner; opened Blackbelly using Barber's Row 7 Seeds. A fourth-generation link from Alice Waters to the Mountain West food scene.",badge:null,restCount:2,restList:[{name:"Blackbelly Market",year:"2014",loc:"Boulder, CO"},{name:"Santo",year:"2018",loc:"Boulder, CO"}],children:[]},
+     ]},
+    {id:"english",name:"Todd English",restaurant:"Olives · Figs",location:"Boston, MA · 1989",note:"Absorbed the California cuisine ethos through the Waxman/New York circuit and opened Olives in 1989 — bringing seasonal farm-to-table fine dining to Boston. JBF Best Chef: Northeast 1994. Built a 15+ restaurant empire.",badge:"jbf",restCount:6,restList:[{name:"Olives",year:"1989",loc:"Boston, MA"},{name:"Figs",year:"1992",loc:"Boston, MA"},{name:"Olives NYC",year:"1997",loc:"New York, NY"},{name:"Bonfire",year:"2000",loc:"Boston, MA"},{name:"Olives DC",year:"2000",loc:"Washington, DC"},{name:"Olives Las Vegas",year:"2001",loc:"Las Vegas, NV"}],children:[]},
+    {id:"peel",name:"Mark Peel",restaurant:"Campanile · La Brea Bakery",location:"Los Angeles, CA · 1989",note:"Trained at Chez Panisse then co-founded Campanile and La Brea Bakery with Nancy Silverton. James Beard Outstanding Restaurant 2001. Pioneer of farm-to-table in LA.",badge:"jbf",restCount:3,restList:[{name:"La Brea Bakery",year:"1989",loc:"Los Angeles, CA"},{name:"Campanile",year:"1989",loc:"Los Angeles, CA"},{name:"New Table",year:"2015",loc:"Los Angeles, CA"}],
+     children:[
+      {id:"silverton",name:"Nancy Silverton",restaurant:"Mozza Group",location:"Los Angeles, CA · 2007",note:"Co-founded Campanile and La Brea Bakery with Peel. After their separation launched Pizzeria Mozza and Osteria Mozza. James Beard Outstanding Chef 2014.",badge:"jbf",restCount:13,restList:[{name:"La Brea Bakery",year:"1989",loc:"Los Angeles, CA"},{name:"Campanile",year:"1989",loc:"Los Angeles, CA"},{name:"Pizzeria Mozza",year:"2006",loc:"Los Angeles, CA"},{name:"Osteria Mozza",year:"2007",loc:"Los Angeles, CA"},{name:"Mozza2Go",year:"2009",loc:"Los Angeles, CA"},{name:"chi SPACCA",year:"2013",loc:"Los Angeles, CA"},{name:"Pizzeria Mozza Newport",year:"2012",loc:"Newport Beach, CA"},{name:"Pizzeria Mozza London",year:"2021",loc:"London, UK"},{name:"Mozza Baja",year:"2021",loc:"Los Cabos, MX"},{name:"Osteria Mozza Singapore",year:"2022",loc:"Singapore"},{name:"Osteria Mozza DC",year:"2023",loc:"Washington, DC"},{name:"Osteria Mozza Lanai",year:"2024",loc:"Hawaii"},{name:"Max & Helen's",year:"2025",loc:"Los Angeles, CA"}],
+       children:[
+        {id:"molina",name:"Matt Molina",restaurant:"Osteria Mozza (head chef)",location:"Los Angeles, CA",note:"Long-time chef de cuisine at Osteria Mozza; co-author of the Mozza cookbook. Carried Silverton's ingredient-first philosophy through the Mozza empire.",badge:null,restCount:2,restList:[{name:"Osteria Mozza",year:"2007",loc:"Los Angeles, CA"},{name:"Triple Beam Pizza",year:"2017",loc:"Los Angeles, CA"}],children:[]},
+        {id:"funke",name:"Evan Funke",restaurant:"Felix · Funke",location:"Los Angeles, CA · 2017",note:"Worked in the Mozza-Silverton orbit before opening Felix (2017), earning renown for obsessively handmade pasta. Named Eater LA's Chef of the Year 2017. Carries the California-Italian legacy forward.",badge:null,restCount:2,restList:[{name:"Felix",year:"2017",loc:"Venice, CA"},{name:"Funke",year:"2023",loc:"Beverly Hills, CA"}],children:[]},
+       ]},
+     ]},
+   ]},
+  {id:"miller",name:"Mark Miller",restaurant:"Coyote Café · Fourth Street Grill",location:"Santa Fe, NM · 1987",note:"After four years at Chez Panisse, pioneered modern Southwestern cuisine. Founded Fourth Street Grill in Berkeley before opening the landmark Coyote Café in Santa Fe.",badge:null,restCount:4,restList:[{name:"Fourth Street Grill",year:"1979",loc:"Berkeley, CA"},{name:"Santa Fe Bar & Grill",year:"1981",loc:"Berkeley, CA"},{name:"Coyote Café",year:"1987",loc:"Santa Fe, NM"},{name:"Red Sage",year:"1992",loc:"Washington, DC"}],children:[]},
+  {id:"rodgers",name:"Judy Rodgers",restaurant:"Zuni Café",location:"San Francisco, CA · 1987",note:"Her roast chicken with bread salad and The Zuni Café Cookbook became defining works of California cooking. Led Zuni for 25 years.",badge:"jbf",restCount:1,restList:[{name:"Zuni Café",year:"1987",loc:"San Francisco, CA"}],
+   children:[
+    {id:"pilgram",name:"Gilbert Pilgram",restaurant:"Zuni Café (steward)",location:"San Francisco, CA",note:"Longtime partner at Zuni alongside Rodgers; kept the Waters philosophy alive in San Francisco after her passing.",badge:null,restCount:1,restList:[{name:"Zuni Café",year:"1987",loc:"San Francisco, CA"}],children:[]},
+    {id:"boncutter",name:"Jessica Boncutter",restaurant:"Bar Jules",location:"San Francisco, CA · 2007",note:"Began cooking for Judy Rodgers at Zuni Café at age 19, then staged at London's River Café before opening Bar Jules in Hayes Valley in 2007. Its daily-changing chalkboard menu of California-Mediterranean cooking was a direct expression of the Zuni spirit.",badge:null,restCount:1,restList:[{name:"Bar Jules",year:"2007",loc:"San Francisco, CA"}],children:[]},
+    {id:"pirie_clark",name:"Gayle Pirie & John Clark",restaurant:"Foreign Cinema",location:"San Francisco, CA · 1999",note:"Both worked at Zuni Café under Judy Rodgers and at Chez Panisse under Alice Waters — a rare dual-branch lineage. Foreign Cinema opened in 1999 in the Mission District and became one of SF's most beloved and enduring restaurants. Multiple James Beard nominations.",badge:"jbf",restCount:2,restList:[{name:"Foreign Cinema",year:"1999",loc:"San Francisco, CA"},{name:"Laszlo Bar",year:"2002",loc:"San Francisco, CA"}],children:[]},
+   ]},
+  {id:"madison",name:"Deborah Madison",restaurant:"Greens Restaurant",location:"San Francisco, CA · 1979",note:"Founding chef of Greens, the pioneering vegetarian fine dining restaurant. Her Vegetarian Cooking for Everyone remains a defining text of plant-forward cuisine.",badge:"jbf",restCount:1,restList:[{name:"Greens Restaurant",year:"1979",loc:"San Francisco, CA"}],children:[]},
+  {id:"tanis",name:"David Tanis",restaurant:"Chez Panisse · NYT City Kitchen",location:"Berkeley, CA · New York, NY",note:"Long-serving head chef who shaped Chez Panisse's identity for decades. Later became a celebrated NYT food columnist and cookbook author.",badge:"jbf",restCount:1,restList:[{name:"Chez Panisse (Head Chef)",year:"1994",loc:"Berkeley, CA"}],children:[]},
+  {id:"moore",name:"Russell Moore",restaurant:"Camino",location:"Oakland, CA · 2008",note:"After 21 years at Chez Panisse, opened Camino — an Oakland restaurant built around live fire, fermentation, and seasonal creativity.",badge:null,restCount:1,restList:[{name:"Camino",year:"2008",loc:"Oakland, CA"}],
+   children:[
+    {id:"assil",name:"Reem Assil",restaurant:"Reem's California",location:"Oakland, CA · 2017",note:"Cited Camino and the Chez Panisse tradition as formative influences. Reem's California pioneered Arab street food through a California lens. James Beard Award 2023. Named one of Obama Foundation's Leaders.",badge:"jbf",restCount:2,restList:[{name:"Reem's California (Fruitvale)",year:"2017",loc:"Oakland, CA"},{name:"Reem's California (Mission)",year:"2018",loc:"San Francisco, CA"}],children:[]},
+    {id:"sassen",name:"Fred & Elizabeth Sassen",restaurant:"Homestead",location:"Oakland, CA · 2011",note:"Fred cooked at Camino under Russell Moore before he and Elizabeth opened Homestead on Piedmont Avenue — a wood-fired, seasonal New American restaurant that became one of Oakland's most beloved neighborhood anchors. A direct second-generation link from Chez Panisse to Piedmont Avenue.",badge:null,restCount:1,restList:[{name:"Homestead",year:"2011",loc:"Oakland, CA"}],children:[]},
+   ]},
+  {id:"goin",name:"Suzanne Goin",restaurant:"Lucques · AOC · Tavern",location:"Los Angeles, CA · 1998",note:"One of LA's most celebrated chefs. Lucques (1998) and A.O.C. (2002) defined seasonal fine dining in Southern California. James Beard Best Chef: California 2006.",badge:"jbf",restCount:7,restList:[{name:"Lucques",year:"1998",loc:"West Hollywood, CA"},{name:"A.O.C.",year:"2002",loc:"Los Angeles, CA"},{name:"Tavern",year:"2009",loc:"Brentwood, CA"},{name:"The Larder at Maple Drive",year:"2011",loc:"Los Angeles, CA"},{name:"Hollywood Bowl Food+Wine",year:"2016",loc:"Los Angeles, CA"},{name:"Caldo Verde",year:"2021",loc:"Los Angeles, CA"},{name:"Cara Cara",year:"2021",loc:"Los Angeles, CA"}],
+   children:[
+    {id:"lentz",name:"David Lentz",restaurant:"The Hungry Cat",location:"Los Angeles, CA · 2005",note:"Goin's husband and collaborator; opened The Hungry Cat in 2005, a market-driven seafood restaurant expressing the same Chez Panisse philosophy of sourcing-first in a more casual register. Multiple locations.",badge:null,restCount:3,restList:[{name:"The Hungry Cat",year:"2005",loc:"Hollywood, CA"},{name:"The Hungry Cat Santa Monica",year:"2008",loc:"Santa Monica, CA"},{name:"The Hungry Cat Santa Barbara",year:"2009",loc:"Santa Barbara, CA"}],children:[]},
+   ]},
+  {id:"bloomfield",name:"April Bloomfield",restaurant:"The Spotted Pig · The Breslin",location:"New York, NY · 2004",note:"Trained at Chez Panisse in 2003; opened The Spotted Pig (2004), NYC's first gastropub to earn a Michelin star. James Beard Best Chef: NYC 2014.",badge:"michelin1",restCount:5,restList:[{name:"The Spotted Pig",year:"2004",loc:"New York, NY"},{name:"The Breslin",year:"2009",loc:"New York, NY"},{name:"The John Dory Oyster Bar",year:"2009",loc:"New York, NY"},{name:"Salvation Burger",year:"2015",loc:"New York, NY"},{name:"White Gold Butchers",year:"2016",loc:"New York, NY"}],children:[]},
+  {id:"nosrat",name:"Samin Nosrat",restaurant:"Author · Salt, Fat, Acid, Heat",location:"Berkeley, CA",note:"Walked into Chez Panisse at 19 and asked to learn. Her James Beard–winning book and Netflix series brought the Chez Panisse philosophy to millions of home cooks worldwide.",badge:"jbf",restCount:1,restList:[{name:"Chez Panisse (line cook, taught by Waters)",year:"2000",loc:"Berkeley, CA"}],children:[]},
+  {id:"sullivan",name:"Steve Sullivan",restaurant:"Acme Bread Company",location:"Berkeley, CA · 1983",note:"Started as a teenage busboy at Chez Panisse; became the resident baker before founding Acme Bread Company in 1983. Still supplies Chez Panisse 40+ years later.",badge:null,restCount:2,restList:[{name:"Acme Bread Co.",year:"1983",loc:"Berkeley, CA"},{name:"Acme Bread (Ferry Building)",year:"2003",loc:"San Francisco, CA"}],children:[]},
+  {id:"hallowell",name:"Charlie Hallowell",restaurant:"Pizzaiolo · Boot & Shoe Service",location:"Oakland, CA · 2005",note:"Brought the Chez Panisse wood-fired, seasonal sensibility to Oakland's neighborhood pizza scene. Pizzaiolo became one of Oakland's most beloved community restaurants.",badge:null,restCount:3,restList:[{name:"Pizzaiolo",year:"2005",loc:"Oakland, CA"},{name:"Boot & Shoe Service",year:"2009",loc:"Oakland, CA"},{name:"Penrose",year:"2014",loc:"Oakland, CA"}],children:[]},
+  {id:"troisgros",name:"Michel Troisgros",restaurant:"Maison Troisgros",location:"Roanne, France",note:"One of the first international interns in the Chez Panisse kitchen — a reminder that influence flowed in both directions, across the Atlantic.",badge:"michelin3",restCount:3,restList:[{name:"Maison Troisgros",year:"1930",loc:"Roanne, FR (family)"},{name:"Le Central",year:"1995",loc:"Roanne, FR"},{name:"Maison Troisgros (Ouches)",year:"2017",loc:"Ouches, FR"}],children:[]},
+  {id:"cannard",name:"Bob Cannard",restaurant:"Green String Farm",location:"Petaluma, CA",note:"Not a chef — the farmer. Chez Panisse's primary produce supplier for decades. Countless alumni credit Cannard with teaching them that great food begins in the soil, not the kitchen.",badge:"farmer",restCount:1,restList:[{name:"Green String Farm",year:"1984",loc:"Petaluma, CA"}],children:[]},
+  {id:"barakat",name:"Alison Barakat",restaurant:"Bakesale Betty",location:"Oakland, CA",note:"Carried the Chez Panisse spirit into Oakland's community bakery culture. Bakesale Betty's fried chicken sandwich became a Bay Area institution.",badge:null,restCount:1,restList:[{name:"Bakesale Betty",year:"2003",loc:"Oakland, CA"}],children:[]},
+  {id:"goldstein",name:"Joyce Goldstein",restaurant:"Square One Restaurant",location:"San Francisco, CA · 1984",note:"Executive chef of the Chez Panisse Café 1981–83, then opened Square One — America's first Mediterranean restaurant — in 1984. James Beard Best Chef California 1993. Author of 28 cookbooks including the definitive history Inside the California Food Revolution.",badge:"jbf",restCount:2,restList:[{name:"Chez Panisse Café",year:"1981",loc:"Berkeley, CA (exec chef)"},{name:"Square One",year:"1984",loc:"San Francisco, CA"}],children:[]},
+  {id:"somerville",name:"Annie Somerville",restaurant:"Greens Restaurant",location:"San Francisco, CA · 1985",note:"Joined Greens in 1981 under founding chef Deborah Madison — herself a Chez Panisse alumna — and became executive chef in 1985. Ran Greens for four decades, helping define vegetarian fine dining as a serious American cuisine. Two major cookbooks.",badge:null,restCount:1,restList:[{name:"Greens Restaurant",year:"1979",loc:"San Francisco, CA (exec chef 1985–2023)"}],children:[]},
+  {id:"king",name:"Niloufer Ichaporia King",restaurant:"Chez Panisse · Annual Guest Chef",location:"San Francisco, CA",note:"Anthropologist, kitchen botanist, and Parsi culinary scholar who collaborated with Chez Panisse for 20+ years, leading the annual Parsi New Year feast. Alice Waters names her Parsi cooking as her all-time favorite meal. Author of My Bombay Kitchen.",badge:null,restCount:1,restList:[{name:"Chez Panisse (annual Parsi New Year, 20+ years)",year:"1990",loc:"Berkeley, CA"}],children:[]},
+  {id:"singer",name:"Fanny Singer",restaurant:"Always Home · Permanent Collection",location:"San Francisco, CA",note:"Alice Waters' daughter; grew up inside the Chez Panisse world and translated its philosophy for a new generation through her memoir-cookbook Always Home (2020) and the design brand Permanent Collection. The legacy carried through writing, not a kitchen.",badge:null,restCount:1,restList:[{name:"Permanent Collection (design brand)",year:"2015",loc:"San Francisco, CA"}],children:[]},
+  {id:"smithconley",name:"Peggy Smith & Sue Conley",restaurant:"Cowgirl Creamery",location:"Point Reyes, CA · 1997",note:"Peggy cooked at Chez Panisse for 17 years; together with Sue Conley she founded Cowgirl Creamery in 1997 — catalysts of the Northern California artisan cheese movement. James Beard Award 2006.",badge:"jbf",restCount:4,restList:[{name:"Tomales Bay Foods",year:"1993",loc:"Point Reyes, CA"},{name:"Cowgirl Creamery (Point Reyes)",year:"1997",loc:"Point Reyes, CA"},{name:"Cowgirl Creamery (Ferry Building)",year:"2000",loc:"San Francisco, CA"},{name:"Cowgirl Creamery (Petaluma)",year:"2009",loc:"Petaluma, CA"}],children:[]},
+  {id:"lebovitz2",name:"David Leibovitz",restaurant:"Living the Sweet Life in Paris",location:"Paris, France",note:"Spent years in Chez Panisse's pastry kitchen in the 1980s and early 90s; became one of the world's leading dessert and pastry writers. His books and blog brought the Chez Panisse sensibility — simplicity, quality, season — to home bakers globally.",badge:null,restCount:1,restList:[{name:"Chez Panisse (pastry kitchen)",year:"1983",loc:"Berkeley, CA"}],children:[]},
+  {id:"terry",name:"Bryant Terry",restaurant:"Afro-Vegan · Museum of the African Diaspora",location:"Oakland, CA",note:"Influenced by the Chez Panisse-Greens tradition of vegetable-forward, seasonal California cooking. Author and chef-in-residence at MOAD. His Afro-Vegan and Vegetable Kingdom cookbooks bridge the California tradition with Afro-diasporic food culture. James Beard Media Award nominee.",badge:null,restCount:1,restList:[{name:"Museum of African Diaspora (chef-in-residence)",year:"2014",loc:"San Francisco, CA"}],children:[]},
+  {id:"holland",name:"Tanya Holland",restaurant:"Brown Sugar Kitchen",location:"Oakland, CA · 2008",note:"Deeply embedded in the Chez Panisse/Oakland food community; opened Brown Sugar Kitchen in West Oakland in 2008. A landmark of California soul food. Top Chef Season 15. JBF Best Chef: West nominee.",badge:null,restCount:2,restList:[{name:"Brown Sugar Kitchen",year:"2008",loc:"Oakland, CA"},{name:"Brown Sugar Kitchen (Uptown)",year:"2019",loc:"Oakland, CA"}],children:[]},
+  {id:"cosentino",name:"Chris Cosentino",restaurant:"Incanto · Cockscomb · Boccalone",location:"San Francisco, CA · 2002",note:"Trained in the Chez Panisse orbit and became the defining champion of offal and whole-animal butchery in American fine dining. Top Chef Masters winner. Boccalone salumeria influenced by Bertolli's Fra'Mani.",badge:"jbf",restCount:4,restList:[{name:"Incanto",year:"2002",loc:"San Francisco, CA"},{name:"Boccalone",year:"2008",loc:"San Francisco, CA"},{name:"Cockscomb",year:"2014",loc:"San Francisco, CA"},{name:"Jackrabbit",year:"2016",loc:"Portland, OR"}],children:[]},
+  {id:"nayfeld",name:"David Nayfeld",restaurant:"Che Fico",location:"San Francisco, CA · 2018",note:"Worked at the highest levels of Italian-American fine dining before opening Che Fico — a wood-fired, farm-to-table Italian restaurant that became one of San Francisco's most celebrated openings in years. Deeply informed by the Chez Panisse seasonal Italian tradition.",badge:"michelin1",restCount:2,restList:[{name:"Che Fico",year:"2018",loc:"San Francisco, CA"},{name:"Che Fico Alimentari",year:"2019",loc:"San Francisco, CA"}],children:[]},
+  {id:"lee",name:"Christopher Lee",restaurant:"Chez Panisse (16 years)",location:"Berkeley, CA",note:"One of the longest-serving chefs in Chez Panisse history — 16 years including a decade as downstairs chef. A keeper of the flame, later a respected restaurant consultant in New York and Europe.",badge:null,restCount:1,restList:[{name:"Chez Panisse (head chef, downstairs)",year:"1985",loc:"Berkeley, CA"}],children:[]},
+  {id:"peternell2",name:"Cal Peternell",restaurant:"Chez Panisse (22 years)",location:"Berkeley, CA",note:"At Chez Panisse for 22 years, including as head co-chef. His cookbook Twelve Recipes brought the Chez Panisse way to home cooks and became a bestseller. James Beard Media Award nominee.",badge:null,restCount:1,restList:[{name:"Chez Panisse (head chef)",year:"1995",loc:"Berkeley, CA"}],children:[]},
+  {id:"alderson",name:"Nathan Alderson",restaurant:"Chez Panisse Café (head chef)",location:"Berkeley, CA",note:"Long-serving Chez Panisse Café head chef. One of the current stewards of the Waters philosophy, cooking the same daily-changing seasonal menu that launched the California cuisine movement.",badge:null,restCount:1,restList:[{name:"Chez Panisse Café (head chef)",year:"2005",loc:"Berkeley, CA"}],children:[]},
+  {id:"rich",name:"Evan & Sarah Rich",restaurant:"Rich Table",location:"San Francisco, CA · 2012",note:"Rich Table, opened in 2012, is widely cited as a direct heir to the Chez Panisse tradition — farm-driven, seasonal, and neighborhood-rooted. Multiple JBF nominations including Best New Restaurant.",badge:"jbf",restCount:2,restList:[{name:"Rich Table",year:"2012",loc:"San Francisco, CA"},{name:"RT Rotisserie",year:"2018",loc:"San Francisco, CA"}],children:[]},
+  {id:"alter",name:"Kim Alter",restaurant:"Nightbird",location:"San Francisco, CA · 2016",note:"Her background runs directly through the Chez Panisse seasonal tradition. Nightbird (2016) earned Michelin recognition and JBF nominations. Named one of Eater SF's chefs of the decade.",badge:"michelin1",restCount:1,restList:[{name:"Nightbird",year:"2016",loc:"San Francisco, CA"}],children:[]},
+  {id:"traunfeld",name:"Jerry Traunfeld",restaurant:"Poppy · The Herbfarm",location:"Seattle, WA · 2008",note:"Stars' pastry chef alongside Emily Luchetti before heading to The Herbfarm — the Pacific Northwest's most celebrated farm-to-table restaurant. Later opened Poppy (2008). JBF Best Chef: Northwest 2007.",badge:"jbf",restCount:2,restList:[{name:"The Herbfarm",year:"1990",loc:"Woodinville, WA"},{name:"Poppy",year:"2008",loc:"Seattle, WA"}],children:[]},
+  {id:"baraghani",name:"Andy Baraghani",restaurant:"Bon Appétit · Author",location:"Berkeley, CA",note:"Started as a Chez Panisse intern before becoming a senior food editor at Bon Appétit and a bestselling author. Carries the Chez Panisse sensibility into food media at massive scale.",badge:null,restCount:1,restList:[{name:"Chez Panisse (intern/line cook)",year:"2008",loc:"Berkeley, CA"}],children:[]},
+  {id:"moulle2",name:"Jean-Pierre Moullé",restaurant:"Chez Panisse (co-chef)",location:"Berkeley, CA",note:"One of the two long-serving head chefs of Chez Panisse downstairs alongside Alice Waters. A 30-year tenure. His rigorous French technique anchored Chez Panisse's discipline while Waters supplied the philosophy.",badge:null,restCount:1,restList:[{name:"Chez Panisse (head chef)",year:"1975",loc:"Berkeley, CA"}],children:[]},
+  {id:"ptak",name:"Claire Ptak",restaurant:"Violet Bakery",location:"London, UK · 2014",note:"Trained at Chez Panisse before founding Violet Bakery in London. Baked the royal wedding cake for Prince Harry and Meghan Markle in 2018. Carries the Chez Panisse ethos — seasonal, local, restrained — into London's pastry world.",badge:null,restCount:1,restList:[{name:"Violet Bakery",year:"2014",loc:"London, UK"}],children:[]},
+  {id:"mcadams",name:"Mary Jo McAdams",restaurant:"Greens (pastry)",location:"San Francisco, CA",note:"Longtime pastry chef at Greens Restaurant; extended the Chez Panisse–influenced tradition of restraint and seasonality into the vegetarian pastry canon.",badge:null,restCount:1,restList:[{name:"Greens Restaurant (pastry chef)",year:"1985",loc:"San Francisco, CA"}],children:[]},
+  {id:"joo",name:"Steve Joo",restaurant:"Joodooboo",location:"San Francisco, CA · 2022",note:"Chez Panisse alum who opened Joodooboo — a California banchan shop fusing Korean culinary tradition with hyper-seasonal Northern California produce. A fourth-generation expression of the Chez Panisse philosophy.",badge:null,restCount:1,restList:[{name:"Joodooboo",year:"2022",loc:"San Francisco, CA"}],children:[]},
+  {id:"gresham",name:"Suzette Gresham",restaurant:"Acquerello",location:"San Francisco, CA · 1989",note:"Chef-owner of Acquerello, the two-Michelin-starred Italian restaurant that opened in 1989 and never closed. Her career runs through the same Bay Area fine dining world shaped by Chez Panisse. Honored at Greens' 40th anniversary series.",badge:"michelin2",restCount:1,restList:[{name:"Acquerello",year:"1989",loc:"San Francisco, CA"}],children:[]},
+  {id:"kinch",name:"David Kinch",restaurant:"Manresa",location:"Los Gatos, CA · 2002",note:"His friendship with Joyce Goldstein and the broader Chez Panisse network shaped Manresa's obsessive local sourcing. Three Michelin stars. His Love Apple Farm model — a chef-owned farm supplying a single restaurant — carried the Chez Panisse ideal to its logical extreme.",badge:"michelin3",restCount:2,restList:[{name:"Manresa",year:"2002",loc:"Los Gatos, CA"},{name:"The Bywater",year:"2016",loc:"Los Gatos, CA"}],children:[]},
+  {id:"washington",name:"Eric Washington",restaurant:"Comfort: A Southern Experience",location:"Oakland, CA",note:"Recent Chez Panisse alum running acclaimed pop-ups including Comfort: A Southern Experience. In June 2021 he brought it back to Chez Panisse for one day. A next-generation voice connecting the restaurant's philosophy to African-American culinary heritage.",badge:null,restCount:1,restList:[{name:"Comfort: A Southern Experience (pop-up)",year:"2019",loc:"Oakland, CA"}],children:[]},
+  {id:"white_omar",name:"Omar White",restaurant:"Burdell",location:"Oakland, CA · 2023",note:"Chez Panisse alum who became General Manager of Burdell, bringing the restaurant's celebrated hospitality philosophy directly into Oakland's most-talked-about new kitchen. His presence is a direct thread from Waters' table to Geoff Davis's.",badge:null,restCount:1,restList:[{name:"Burdell (General Manager)",year:"2023",loc:"Oakland, CA"}],children:[]},
+  {id:"reicher",name:"Katie Reicher",restaurant:"Greens Restaurant",location:"San Francisco, CA · 2022",note:"Current executive chef of Greens, carrying forward the Chez Panisse–adjacent tradition of vegetarian fine dining that Deborah Madison and Annie Somerville built. Relaunched the Greens Guest Chef Series post-pandemic.",badge:null,restCount:1,restList:[{name:"Greens Restaurant (exec chef)",year:"2022",loc:"San Francisco, CA"}],children:[]},
+  {id:"bauer",name:"Mark Bittman",restaurant:"How to Cook Everything",location:"New York, NY",note:"While not a Chez Panisse alumnus himself, Bittman was so influenced by Waters and the California cuisine philosophy that he has described her as one of the most important figures in his thinking. His How to Cook Everything series brought the 'good ingredients, simple preparation' ethos to millions of American home kitchens.",badge:null,restCount:1,restList:[{name:"NYT Cooking column",year:"1991",loc:"New York, NY"}],children:[]},
+  {id:"samuelsson",name:"Marcus Samuelsson",restaurant:"Aquavit · Red Rooster",location:"New York, NY · 1995",note:"While trained in the classical European tradition, Samuelsson came up in a New York scene where Waxman and Chez Panisse alumni set the standards. Red Rooster became Harlem's defining seasonal restaurant. JBF Best Chef: New York 2003.",badge:"jbf",restCount:8,restList:[{name:"Aquavit",year:"1995",loc:"New York, NY"},{name:"Red Rooster Harlem",year:"2010",loc:"New York, NY"},{name:"Ginny's Supper Club",year:"2012",loc:"New York, NY"},{name:"Red Rooster London",year:"2019",loc:"London, UK"}],children:[]},
+  {id:"lukins",name:"Sheila Lukins",restaurant:"The Silver Palate",location:"New York, NY · 1977",note:"Co-founded The Silver Palate in 1977 — the New York City response to the California cuisine revolution. Her Silver Palate Cookbook (1982) brought Alice Waters' seasonal, ingredient-first philosophy to the mainstream American home kitchen.",badge:null,restCount:1,restList:[{name:"The Silver Palate",year:"1977",loc:"New York, NY"}],children:[]},
+  {id:"madison2",name:"Amaryll Schwertner",restaurant:"Boulettes Larder",location:"San Francisco, CA · 2004",note:"Opened Boulettes Larder at the Ferry Building in 2004 — one of the most direct expressions of the Chez Panisse sensibility in San Francisco's market hall. Seasonal, obsessive, farm-direct.",badge:null,restCount:1,restList:[{name:"Boulettes Larder",year:"2004",loc:"San Francisco, CA"}],children:[]},
+  {id:"keller",restaurant:"The French Laundry · Per Se",location:"Yountville, CA · 1994",note:"Although Keller came through the classical French tradition, his obsessive sourcing philosophy and insistence on working with small local farmers in Napa Valley placed him squarely in the Chez Panisse lineage. Three Michelin stars at both The French Laundry and Per Se.",badge:"michelin3",restCount:6,restList:[{name:"The French Laundry",year:"1994",loc:"Yountville, CA"},{name:"Bouchon",year:"1998",loc:"Yountville, CA"},{name:"Per Se",year:"2004",loc:"New York, NY"},{name:"Ad Hoc",year:"2006",loc:"Yountville, CA"},{name:"Bouchon Bakery",year:"2003",loc:"Yountville, CA"},{name:"The Surf Club Restaurant",year:"2017",loc:"Surfside, FL"}],
+   children:[
+    {id:"achatz",name:"Grant Achatz",restaurant:"Alinea",location:"Chicago, IL · 2005",note:"Trained under Keller at The French Laundry. Opened Alinea in 2005, earning three Michelin stars and transforming American fine dining's relationship with modernist cuisine.",badge:"michelin3",restCount:3,restList:[{name:"Alinea",year:"2005",loc:"Chicago, IL"},{name:"Next",year:"2011",loc:"Chicago, IL"},{name:"The Aviary",year:"2011",loc:"Chicago, IL"}],children:[]},
+    {id:"humm",name:"Daniel Humm",restaurant:"Eleven Madison Park",location:"New York, NY · 2006",note:"Spent years in the Keller/California orbit before taking over Eleven Madison Park; made it the #1 restaurant in the world. Three Michelin stars. Converted EMP to fully plant-based in 2021.",badge:"michelin3",restCount:2,restList:[{name:"Eleven Madison Park",year:"2006",loc:"New York, NY"},{name:"NoMad",year:"2012",loc:"New York, NY"}],children:[]},
+    {id:"corey",name:"Corey Lee",restaurant:"Benu",location:"San Francisco, CA · 2010",note:"Trained under Keller at The French Laundry before opening Benu in 2010 — three Michelin stars, and perhaps the greatest example of the Chez Panisse tradition's reach into Asian-inflected American fine dining.",badge:"michelin3",restCount:2,restList:[{name:"Benu",year:"2010",loc:"San Francisco, CA"},{name:"In Situ (SFMOMA)",year:"2016",loc:"San Francisco, CA"}],children:[]},
+   ]},
+];
+
+let selected = null;
+
+function findNode(list, id) {
+  for (const n of list) {
+    if (n.id === id) return n;
+    if (n.children && n.children.length) { const f = findNode(n.children, id); if (f) return f; }
+  }
+  return null;
+}
+
+function badge(type) {
+  if (!type || !BDG[type]) return '';
+  const b = BDG[type];
+  return `<span class="badge" style="background:${b.bg};color:${b.color}">${b.text}</span>`;
+}
+
+function select(id) {
+  selected = selected === id ? null : id;
+  render(); detail();
+}
+
+function closeDetail() { selected = null; render(); detail(); }
+
+function card(node, gen) {
+  const sel = selected === node.id;
+  const ac = GC[Math.min(gen, 5)];
+  const kids = node.children && node.children.length > 0;
+  const shadow = sel ? '0 6px 20px rgba(60,40,10,0.18)' : '0 2px 10px rgba(60,40,10,0.09)';
+  const bg = sel ? ac : '#ffffff';
+  return `<div class="chef-card${sel?' sel':''}" style="border-left:4px solid ${ac};box-shadow:${shadow};background:${bg}" onclick="select('${node.id}')">
+    <div class="cname">${node.name}${kids&&!sel?' <span style="font-size:9px;opacity:0.4">▶</span>':''}</div>
+    <div class="crest">${node.restaurant}</div>
+    <div class="cloc">${node.location}</div>
+    ${node.restCount ? `<div class="ccount">${node.restCount} restaurant${node.restCount>1?'s':''}</div>` : ''}
+    ${!sel ? badge(node.badge) : ''}
+  </div>`;
+}
+
+function subBranch(node, gen) {
+  const kids = node.children || [];
+  const lc = GC[Math.min(gen,5)];
+  let h = `<div style="display:flex;align-items:flex-start;margin-bottom:6px">${card(node,gen)}`;
+  if (kids.length) {
+    h += `<div style="display:flex;align-items:flex-start">
+      <div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${lc}66"></div></div>
+      <div style="position:relative">
+        ${kids.length>1?`<div style="position:absolute;left:0;top:22px;width:2px;height:calc(100% - 44px);background:${lc}44"></div>`:''}
+        <div style="display:flex;flex-direction:column;gap:8px">
+          ${kids.map(k=>`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${lc}44"></div></div>${subBranch(k,gen+1)}</div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }
+  h += `</div>`;
+  return h;
+}
+
+function gen1row(node) {
+  const kids = node.children || [];
+  const lc = GC[2];
+  let h = `<div style="display:flex;align-items:flex-start;margin-bottom:6px">${card(node,1)}`;
+  if (kids.length) {
+    h += `<div style="display:flex;align-items:flex-start">
+      <div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${lc}66"></div></div>
+      <div style="position:relative">
+        ${kids.length>1?`<div style="position:absolute;left:0;top:22px;width:2px;height:calc(100% - 44px);background:${lc}44"></div>`:''}
+        <div style="display:flex;flex-direction:column;gap:8px">
+          ${kids.map(k=>`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${lc}44"></div></div>${subBranch(k,2)}</div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }
+  h += `</div>`;
+  return h;
+}
+
+function render() {
+  const asel = selected === 'alice';
+  const at = GEN1.length * 23;
+  document.getElementById('tree').innerHTML = `
+    <div class="alice-card${asel?' sel':''}" style="margin-top:${at}px" onclick="select('alice')">
+      <div class="aeye">Founder · 1971</div>
+      <div class="aname2">Alice Waters</div>
+      <div class="arest">Chez Panisse</div>
+      <div class="aloc">Berkeley, CA</div>
+      <div style="margin-top:6px">${badge('founder')}</div>
+    </div>
+    <div style="display:flex;align-items:center;padding-top:${at+28}px">
+      <div style="width:22px;height:2px;background:${GC[1]}88"></div>
+    </div>
+    <div style="position:relative">
+      <div style="position:absolute;left:0;top:28px;width:2px;height:calc(100% - 56px);background:${GC[1]}44"></div>
+      <div style="display:flex;flex-direction:column">
+        ${GEN1.map(n=>`<div style="display:flex;align-items:flex-start"><div style="padding-top:22px;display:flex;align-items:center"><div style="width:18px;height:2px;background:${GC[1]}66"></div></div>${gen1row(n)}</div>`).join('')}
+      </div>
+    </div>`;
+}
+
+function detail() {
+  const panel = document.getElementById('detail');
+  if (!selected) { panel.classList.add('hidden'); return; }
+  const node = selected === 'alice' ? ALICE_NODE : findNode(GEN1, selected);
+  if (!node) { panel.classList.add('hidden'); return; }
+  document.getElementById('dname').textContent = node.name;
+  document.getElementById('dmeta').innerHTML = `<strong>${node.restaurant}</strong> · ${node.location}`;
+  document.getElementById('dnote').textContent = node.note;
+  const rl = document.getElementById('drestlist');
+  if (node.restList && node.restList.length) {
+    rl.style.display = 'block';
+    rl.innerHTML = `<div class="rest-list-title">Restaurants &amp; Ventures</div><div class="rest-list">${node.restList.map(r=>`<div class="rest-pill">${r.name}<span class="rp-year">${r.year||''}</span><span class="rp-loc">${r.loc?' · '+r.loc:''}</span></div>`).join('')}</div>`;
+  } else { rl.style.display = 'none'; }
+  panel.classList.remove('hidden');
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+// Init
+render();
+document.getElementById('stats').innerHTML = STATS_DATA.map(s=>`<div class="stat"><div class="stat-n">${s.n}</div><div class="stat-l">${s.l}</div></div>`).join('');
+document.getElementById('gen-leg').innerHTML = GC.slice(0,5).map((c,i)=>`<div style="display:flex;align-items:center;gap:4px"><div style="width:9px;height:9px;border-radius:2px;background:${c}"></div><span style="color:#5c4a2a;opacity:0.65">${GL[i]}</span></div>`).join('');
+</script>
+</body>
+</html>

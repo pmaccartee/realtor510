@@ -28,7 +28,7 @@ const neighborhoods = [
     name: "Temescal",
     image: temescalImg,
     description: "Temescal has been reinventing itself since before Oakland was Oakland — from Peralta farmland to streetcar suburb to one of the East Bay's most energetic urban neighborhoods. Today it's all craft coffee, serious restaurants, indie retail, and BART access that makes leaving the car behind an easy choice.",
-    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNw=="
+    link: "/temescal-guide.html"
   },
   {
     name: "Sequoyah Hills",
@@ -40,19 +40,19 @@ const neighborhoods = [
     name: "Rockridge",
     image: rockridgeImg,
     description: "Named for the rocky outcrops left behind by the Hayward Fault, Rockridge has traded its industrial origins for one of the most livable streetscapes in the Bay Area. College Avenue anchors it all — cafés, boutiques, Market Hall, and BART — and the surrounding residential streets are as good as Oakland gets.",
-    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNw=="
+    link: "/rockridge-guide.html"
   },
   {
     name: "Oakmore-Glenview",
     image: oakmoreImg,
     description: "Oakmore feels like a secret the rest of Oakland hasn't fully discovered. Built in the 1920s and 30s as a hillside commuter retreat, it retains that tucked-away quality — quiet streets, charming architecture, and the landmark Leimert Bridge connecting it all. Glenview and Dimond dining are right next door, and Highway 13 keeps the rest of the region within easy reach.",
-    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xOTMxNQ=="
+    link: "/oakmore-glenview-guide.html"
   },
   {
     name: "Montclair",
     image: montclairImg,
     description: "Montclair's hills were once logged for redwood. Now they're shaded by it. What grew up in its place is a forested neighborhood centered on a genuine village — cafés, markets, and a pace of life that feels closer to a mountain town than a major city. The fact that downtown Oakland and the freeway are minutes away never quite feels real until you're already there.",
-    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xOTMxNA=="
+    link: "/montclair-guide.html"
   },
   {
     name: "Berkeley Hills",
