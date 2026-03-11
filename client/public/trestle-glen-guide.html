@@ -65,83 +65,97 @@
 
   
   /* ── Site Header (Exactly matches React) ── */
-  .site-header {
+  .react-header-wrapper {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     z-index: 50;
     background-color: #ffffff;
     border-bottom: 1px solid hsl(0, 0%, 90%);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    display: block !important;
+    display: block;
+    height: 80px; /* 5rem */
   }
   
-  .site-header-inner {
-    max-width: 80rem;
+  .react-header-inner {
+    max-width: 1280px; /* 80rem */
     margin: 0 auto;
-    padding: 0 1.5rem;
-    height: 5rem;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+    padding: 0 24px; /* 1.5rem */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
   }
-
-  .site-nav-links {
-    display: none !important;
+  
+  .react-header-logo-link {
+    display: block;
+    text-decoration: none;
   }
 
-  @media (min-width: 768px) {
-    .site-nav-links {
-      display: flex !important;
-      align-items: center !important;
-      gap: 2rem !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-  }
-
-  .site-nav-links a:not(.contact-btn) {
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 0.875rem !important;
-    line-height: 1.25rem !important;
-    font-weight: 400 !important;
-    letter-spacing: 0.1em !important;
-    text-transform: uppercase !important;
-    color: hsl(0, 0%, 15%) !important;
-    text-decoration: none !important;
-    transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  }
-
-  .site-nav-links a:not(.contact-btn):hover {
-    color: hsl(355, 75%, 35%) !important;
-  }
-
-  .contact-btn {
-    background-color: hsl(355, 75%, 35%) !important;
-    color: hsl(0, 0%, 100%) !important;
-    padding: 0.5rem 1.5rem !important;
-    text-decoration: none !important;
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 0.875rem !important;
-    line-height: 1.25rem !important;
-    font-weight: 400 !important;
-    letter-spacing: 0.1em !important;
-    text-transform: uppercase !important;
-    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    display: inline-block !important;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
-  }
-
-  .contact-btn:hover {
-    background-color: hsla(355, 75%, 35%, 0.9) !important;
+  .react-header-logo-img {
+    height: 48px; /* 3rem */
+    width: auto;
+    cursor: pointer;
+    object-fit: contain;
+    display: block;
   }
   
-  .page-hero, .hero {
-    padding-top: 5rem !important;
+  .react-header-links {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .react-header-links {
+      display: flex;
+      align-items: center;
+      gap: 32px; /* 2rem */
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  .react-header-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* 0.875rem */
+    line-height: 20px; /* 1.25rem */
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 15%);
+    text-decoration: none;
+    transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .react-header-link:hover {
+    color: hsl(355, 75%, 35%);
+  }
+  
+  .react-header-btn {
+    background-color: hsl(355, 75%, 35%);
+    color: #ffffff !important;
+    padding: 8px 24px; /* 0.5rem 1.5rem */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* 0.875rem */
+    line-height: 20px; /* 1.25rem */
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .react-header-btn:hover {
+    background-color: hsla(355, 75%, 35%, 0.9);
   }
 
+  .page-hero, .hero {
+    padding-top: 152px !important; /* 80px header + 72px padding */
+  }
   /* ── Page Hero ── */
   .page-hero {
     background: var(--crimson);
