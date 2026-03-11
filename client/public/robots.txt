@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://realtor510.com/sitemap.xml
