@@ -57,8 +57,8 @@ const neighborhoods = [
   {
     name: "Berkeley Hills",
     image: berkeleyImg,
-    description: "Berkeley incorporated in 1878 around a university that would shape it forever — intellectually restless, culturally rich, and endlessly interesting. Today it's one of the most walkable, food-forward cities in California, with historic neighborhoods, strong schools, and Bay views that remind you exactly where you are.",
-    link: "https://patrickmaccartee970.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNzgxNg=="
+    description: "The Berkeley Hills offer a unique blend of intellectual energy, architectural significance, and natural beauty. Winding streets reveal sweeping views of the San Francisco Bay, while the architecture ranges from historic brown shingles to mid-century modern masterpieces. Proximity to UC Berkeley gives the area a distinct cultural depth, and the sprawling Regional Parks provide immediate access to nature.",
+    link: "/berkeley-hills-guide.html"
   },
   {
     name: "Trestle Glen",

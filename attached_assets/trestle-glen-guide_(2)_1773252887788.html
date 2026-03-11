@@ -10,8 +10,7 @@
 <meta property="og:type" content="article">
 <link rel="canonical" href="https://realtor510.com/neighborhoods/trestle-glen">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -57,105 +56,161 @@
   body {
     background: var(--white);
     color: var(--gray-body);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Jost', sans-serif;
     font-weight: 300;
     line-height: 1.7;
     font-size: 16px;
   }
 
   
-  /* ── Site Header (Exactly matches React) ── */
-  .react-header-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 50;
-    background-color: #ffffff;
-    border-bottom: 1px solid hsl(0, 0%, 90%);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    display: block;
-    height: 80px; /* 5rem */
-  }
-  
-  .react-header-inner {
-    max-width: 1280px; /* 80rem */
-    margin: 0 auto;
-    padding: 0 24px; /* 1.5rem */
-    height: 100%;
+  /* ── Site Header (matches realtor510.com) ── */
+  .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-sizing: border-box;
-  }
-  
-  .react-header-logo-link {
-    display: block;
-    text-decoration: none;
+    height: 68px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
   }
 
-  .react-header-logo-img {
-    height: 48px; /* 3rem */
-    width: auto;
-    cursor: pointer;
-    object-fit: contain;
-    display: block;
-  }
   
-  .react-header-links {
-    display: none;
-  }
+
   
-  @media (min-width: 768px) {
-    .react-header-links {
-      display: flex;
-      align-items: center;
-      gap: 32px; /* 2rem */
-      margin: 0;
-      padding: 0;
-    }
-  }
+
   
-  .react-header-link {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px; /* 0.875rem */
-    line-height: 20px; /* 1.25rem */
-    font-weight: 400;
-    letter-spacing: 0.1em;
+
+  .logo-first, .logo-last {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: .2em;
     text-transform: uppercase;
-    color: hsl(0, 0%, 15%);
-    text-decoration: none;
-    transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .react-header-link:hover {
-    color: hsl(355, 75%, 35%);
-  }
-  
-  .react-header-btn {
-    background-color: hsl(355, 75%, 35%);
-    color: #ffffff !important;
-    padding: 8px 24px; /* 0.5rem 1.5rem */
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px; /* 0.875rem */
-    line-height: 20px; /* 1.25rem */
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  }
-  
-  .react-header-btn:hover {
-    background-color: hsla(355, 75%, 35%, 0.9);
+    color: #1a1a1a;
+    font-family: 'Jost', sans-serif;
   }
 
-  .page-hero, .hero {
-    padding-top: 152px !important; /* 80px header + 72px padding */
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 0;
   }
+
+  .site-nav a {
+    font-family: 'Jost', sans-serif;
+    font-size: .62rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+    text-decoration: none;
+    padding: 0 16px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    transition: color .15s;
+  }
+
+  .site-nav a:hover { color: #8B1A1A; }
+
+  /* ── Neighborhood Sub-Nav ── */
+  .neigh-nav {
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 68px;
+    z-index: 190;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .neigh-nav::-webkit-scrollbar { display: none; }
+
+  .neigh-nav-inner {
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+    padding: 0 40px;
+  }
+
+  .neigh-nav a {
+    font-family: 'Jost', sans-serif;
+    font-size: .58rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #999;
+    text-decoration: none;
+    padding: 0 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+  }
+
+  .neigh-nav a:hover { color: #fff; }
+  .neigh-nav a.n-active { color: #fff; border-bottom-color: #8B1A1A; }
+
+  /* ── Footer (matches realtor510.com) ── */
+  .site-footer {
+    background: #2a2a2a;
+    padding: 52px 32px 40px;
+    text-align: center;
+  }
+
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+
+  .footer-name sup { font-size: .5em; letter-spacing: 0; vertical-align: super; }
+
+  .footer-dre {
+    font-size: .62rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 24px;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-family: 'Jost', sans-serif;
+    font-size: .6rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: #777;
+    text-decoration: none;
+    transition: color .15s;
+  }
+
+  .footer-links a:hover { color: #ffffff; }
+
+  @media (max-width: 680px) {
+    .site-header { padding: 0 20px; }
+    .site-nav a { padding: 0 10px; font-size: .55rem; }
+    .neigh-nav-inner { padding: 0 16px; }
+    .neigh-nav a { padding: 0 10px; }
+  }
+
+
   /* ── Page Hero ── */
   .page-hero {
     background: var(--crimson);
@@ -173,7 +228,7 @@
   }
 
   .page-hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 300;
     color: var(--white);
@@ -182,7 +237,7 @@
   }
 
   .page-hero .deck {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
     font-style: italic;
     color: rgba(255,255,255,.75);
@@ -199,7 +254,7 @@
   }
 
   h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.7rem;
     font-weight: 400;
     color: var(--black);
@@ -226,7 +281,7 @@
     border-left: 3px solid var(--crimson);
     margin: 40px 0;
     padding: 8px 0 8px 28px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.35rem;
     font-style: italic;
     color: var(--crimson-dark);
@@ -250,7 +305,7 @@
   }
 
   .stat-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 2.4rem;
     font-weight: 300;
     color: var(--crimson);
@@ -284,7 +339,7 @@
 
   .arch-item strong {
     display: block;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--black);
@@ -314,7 +369,7 @@
   .metric-card.accent { border-top-color: var(--crimson); }
 
   .metric-val {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 2.6rem;
     font-weight: 300;
     color: var(--gray-mid);
@@ -368,7 +423,7 @@
   }
 
   .trend-table td:not(:first-child) {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.05rem;
   }
 
@@ -389,7 +444,7 @@
   }
 
   .seg-card h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--black);
@@ -411,7 +466,7 @@
   }
 
   .driver-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 300;
     color: var(--crimson);
@@ -421,7 +476,7 @@
   }
 
   .driver-content h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--black);
@@ -448,7 +503,7 @@
   .faq-item:first-child { border-top: 1px solid var(--rule); }
 
   .faq-q {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--black);
@@ -476,7 +531,7 @@
   }
 
   .team-block h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--black);
@@ -495,7 +550,7 @@
   }
 
   .cta-block h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 300;
     color: var(--white);
@@ -528,7 +583,7 @@
   }
 
   .footer-name {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: .25em;
@@ -616,49 +671,36 @@
   }
 
 </style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6DDVCG0Q3F');
-</script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1438966301114887');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<meta property="og:image" content="https://realtor510.com/PM_LOGO_Red_1772927689333.png">
 </head>
 <body>
-<header class="react-header-wrapper">
-  <div class="react-header-inner">
-    <a href="/" class="react-header-logo-link">
-      <img src="/PM_LOGO_Red_1772927689333.png" alt="Patrick MacCartee Logo" class="react-header-logo-img">
-    </a>
-    <div class="react-header-links">
-      <a href="/buy" class="react-header-link">Buy</a>
-      <a href="/sell" class="react-header-link">Sell</a>
-      <a href="/answers" class="react-header-link">Answers</a>
-      <a href="/reviews" class="react-header-link">Reviews</a>
-      <a href="/neighborhoods" class="react-header-link">Neighborhoods</a>
-      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="react-header-btn">Contact</a>
+
+<header class="site-header">
+  <a href="https://realtor510.com" class="logo-mark">
+    <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="44" height="44" fill="white"/>
+  <!-- Stylized PM mark approximating the site logo -->
+  <path d="M6 8 L6 36 L10 36 L10 24 L18 24 C22 24 25 21 25 17 C25 13 22 10 18 10 L10 10 L10 8 Z M10 12 L18 12 C20 12 21 14 21 17 C21 20 20 22 18 22 L10 22 Z" fill="#1a1a1a"/>
+  <path d="M27 8 L27 36 L31 36 L31 16 L35 28 L39 28 L43 16 L43 36 L47 36" fill="none" stroke="#1a1a1a" stroke-width="0"/>
+  <path d="M27 8 L31 8 L37 24 L43 8 L47 8 L47 36 L43 36 L43 16 L37 32 L31 16 L31 36 L27 36 Z" fill="#1a1a1a"/>
+  <!-- Red accent bar -->
+  <rect x="6" y="38" width="41" height="3" fill="#8B1A1A"/>
+</svg>
+    <div class="logo-text">
+      <span class="first">PATRICK</span>
+      <span class="last">MacCARTEE</span>
     </div>
-  </div>
+  </a>
+  <nav class="site-nav-links">
+    <a href="crocker-highlands-guide.html">Crocker Highlands</a>
+    <a href="trestle-glen-guide.html" class="active">Trestle Glen</a>
+    <a href="sequoyah-hills-market-report.html">Sequoyah Hills</a>
+    <a href="piedmont-home-values.html">Piedmont</a>
+    <a href="rockridge-guide.html">Rockridge</a>
+    <a href="oakmore-glenview-guide.html">Oakmore–Glenview</a>
+    <a href="temescal-guide.html">Temescal</a>
+    <a href="montclair-guide.html">Montclair</a>
+    <a href="berkeley-hills-guide.html">Berkeley Hills</a>
+  </nav>
 </header>
 <nav class="neigh-nav">
   <div class="neigh-nav-inner">
@@ -669,8 +711,7 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
       <a href="rockridge-guide.html">Rockridge</a>
       <a href="oakmore-glenview-guide.html">Oakmore–Glenview</a>
       <a href="temescal-guide.html">Temescal</a>
-            <a href="montclair-guide.html">Montclair</a>
-      <a href="berkeley-hills-guide.html">Berkeley Hills</a>
+      <a href="montclair-guide.html">Montclair</a>
   </div>
 </nav>
 
