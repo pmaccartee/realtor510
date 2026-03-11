@@ -59,10 +59,9 @@
     font-size: 16px;
   }
 
-  /* ── Site Header ── */
-  .site-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--rule);
+    /* ── Site Nav ── */
+  .site-nav {
+    background: var(--black);
     padding: 0 48px;
     display: flex;
     align-items: center;
@@ -73,68 +72,43 @@
     z-index: 100;
   }
 
-  .logo-mark {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .site-nav a.nav-home {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white);
     text-decoration: none;
-  }
-
-  /* SVG PM mark */
-  .logo-svg { width: 44px; height: 44px; }
-
-  .logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-  }
-
-  .logo-text .first { 
-    font-size: 9px; 
-    font-weight: 700; 
-    letter-spacing: .18em; 
-    text-transform: uppercase; 
-    color: var(--black);
-  }
-
-  .logo-text .last { 
-    font-size: 9px; 
-    font-weight: 700; 
-    letter-spacing: .18em; 
-    text-transform: uppercase; 
-    color: var(--black);
-  }
-
-  .site-nav-links {
-    display: flex;
-    gap: 0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .site-nav-links::-webkit-scrollbar { display: none; }
-
-  .site-nav-links a {
-    font-size: .65rem;
-    font-weight: 500;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: var(--gray-mid);
-    text-decoration: none;
-    padding: 0 16px;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid transparent;
     white-space: nowrap;
-    transition: color .15s, border-color .15s;
+    letter-spacing: .02em;
   }
 
-  .site-nav-links a:hover { color: var(--black); }
-  .site-nav-links a.active { 
-    color: var(--crimson); 
-    border-bottom-color: var(--crimson); 
+  .site-nav a.nav-home span {
+    color: var(--crimson);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-links a {
+    font-size: .68rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #a09080;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--white);
+  }
+
+  @media (max-width: 768px) {
+    .site-nav { padding: 0 20px; }
+    .nav-links { display: none; } /* Simplified mobile for static pages */
   }
 
   /* ── Page Hero ── */
@@ -631,29 +605,15 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
 </head>
 <body>
 
-<header class="site-header">
-  <a href="https://realtor510.com" class="logo-mark">
-    <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="44" height="44" fill="white"/>
-  <!-- Stylized PM mark approximating the site logo -->
-  <path d="M6 8 L6 36 L10 36 L10 24 L18 24 C22 24 25 21 25 17 C25 13 22 10 18 10 L10 10 L10 8 Z M10 12 L18 12 C20 12 21 14 21 17 C21 20 20 22 18 22 L10 22 Z" fill="#1a1a1a"/>
-  <path d="M27 8 L27 36 L31 36 L31 16 L35 28 L39 28 L43 16 L43 36 L47 36" fill="none" stroke="#1a1a1a" stroke-width="0"/>
-  <path d="M27 8 L31 8 L37 24 L43 8 L47 8 L47 36 L43 36 L43 16 L37 32 L31 16 L31 36 L27 36 Z" fill="#1a1a1a"/>
-  <!-- Red accent bar -->
-  <rect x="6" y="38" width="41" height="3" fill="#8B1A1A"/>
-</svg>
-    <div class="logo-text">
-      <span class="first">PATRICK</span>
-      <span class="last">MacCARTEE</span>
-    </div>
-  </a>
-  <nav class="site-nav-links">
-    <a href="crocker-highlands-guide.html">Crocker Highlands</a>
-    <a href="trestle-glen-guide.html">Trestle Glen</a>
-    <a href="sequoyah-hills-market-report.html">Sequoyah Hills</a>
-    <a href="piedmont-home-values.html" class="active">Piedmont</a>
-  </nav>
-</header>
+<nav class="site-nav">
+  <a href="https://realtor510.com" class="nav-home">realtor510<span>.com</span></a>
+  <div class="nav-links">
+    <a href="https://realtor510.com/buy">Buy</a>
+    <a href="https://realtor510.com/sell">Sell</a>
+    <a href="https://realtor510.com/neighborhoods">Neighborhoods</a>
+    <a href="https://realtor510.com/insights">Insights</a>
+  </div>
+</nav>
 
 <div class="page-hero">
   <p class="eyebrow">Market Analysis &nbsp;·&nbsp; Piedmont, CA</p>
