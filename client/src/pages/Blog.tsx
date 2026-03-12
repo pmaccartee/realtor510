@@ -76,9 +76,9 @@ export default function Blog() {
                   );
                   
                   return insight.link ? (
-                    <a key={index} href={insight.link} className="group cursor-pointer flex flex-col h-full block">
+                    <Link key={index} href={insight.link} className="group cursor-pointer flex flex-col h-full block">
                       {content}
-                    </a>
+                    </Link>
                   ) : (
                     <Link key={index} href={`/blog/${insight.id}`} className="group cursor-pointer flex flex-col h-full block">
                       {content}

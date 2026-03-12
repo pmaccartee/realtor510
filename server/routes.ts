@@ -49,20 +49,16 @@ export async function registerRoutes(
     console.log("[routes] prodDir exists:", fs.existsSync(prodDir), prodDir);
   }
 
-  app.get("/neighborhood/:slug", (req, res) => {
+  app.get("/neighborhood-html/:slug", (req, res) => {
     const slug = req.params.slug;
     const htmlFile = neighborhoodMap[slug];
-    console.log(`[neighborhood] slug=${slug}, htmlFile=${htmlFile}`);
     if (!htmlFile) {
-      console.log(`[neighborhood] No mapping for slug: ${slug}`);
       return res.status(404).send("Neighborhood not found");
     }
     const filePath = findHtmlFile(htmlFile);
-    console.log(`[neighborhood] filePath=${filePath}`);
     if (filePath) {
       return res.sendFile(filePath);
     }
-    console.log(`[neighborhood] File not found for: ${htmlFile}`);
     return res.status(404).send("Neighborhood not found");
   });
 

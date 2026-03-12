@@ -15,6 +15,7 @@ import Trends from "@/pages/Trends";
 import Waters from "@/pages/Waters";
 import Julia from "@/pages/Julia";
 import Neighborhoods from "@/pages/Neighborhoods";
+import NeighborhoodDetail from "@/pages/NeighborhoodDetail";
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/waters" component={Waters}/>
       <Route path="/julia" component={Julia}/>
       <Route path="/neighborhoods" component={Neighborhoods}/>
+      <Route path="/neighborhood/:slug" component={NeighborhoodDetail}/>
       <Route path="/trends/waters" component={Waters}/>
       <Route path="/trends/julia" component={Julia}/>
       <Route component={NotFound} />
