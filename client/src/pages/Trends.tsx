@@ -1,7 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useTitle } from "@/hooks/useTitle";
 
 export default function Trends() {
+  useTitle("East Bay Market Trends | Patrick MacCartee");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />

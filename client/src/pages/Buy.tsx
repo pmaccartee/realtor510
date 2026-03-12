@@ -1,8 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroImg from "@assets/005-293-elysian-fields-drive_1772929219661.jpg";
+import { useTitle } from "@/hooks/useTitle";
 
 export default function Buy() {
+  useTitle("Buy a Home in Oakland & East Bay | Patrick MacCartee");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />

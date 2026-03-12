@@ -1,8 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroImg from "@assets/002-1015-warfield-avenue.80998.p4k.001.web_1772922978781.jpg";
+import { useTitle } from "@/hooks/useTitle";
 
 export default function Sell() {
+  useTitle("Sell Your East Bay Home | Patrick MacCartee");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />

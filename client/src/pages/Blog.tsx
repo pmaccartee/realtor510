@@ -3,9 +3,11 @@ import Footer from "@/components/Footer";
 import { useState } from "react";
 import { Search, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import { useTitle } from "@/hooks/useTitle";
 import { insights } from "../data/insights";
 
 export default function Blog() {
+  useTitle("East Bay Real Estate Blog | Patrick MacCartee");
   const [search, setSearch] = useState("");
 
   const filteredInsights = insights.filter((insight) => {

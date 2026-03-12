@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Star } from "lucide-react";
+import { useTitle } from "@/hooks/useTitle";
 
 const reviews = [
   {
@@ -56,6 +57,7 @@ const reviews = [
 ];
 
 export default function Reviews() {
+  useTitle("Client Reviews | Patrick MacCartee Realtor");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
