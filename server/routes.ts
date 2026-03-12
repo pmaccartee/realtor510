@@ -24,6 +24,16 @@ const neighborhoodMap: Record<string, string> = {
   "piedmont-luxury-market": "piedmont-luxury-market.html",
 };
 
+function findHtmlFile(htmlFile: string): string | null {
+  const devPath = path.join(process.cwd(), "client", "public", htmlFile);
+  if (fs.existsSync(devPath)) return devPath;
+
+  const prodPath = path.resolve(__dirname, "public", htmlFile);
+  if (fs.existsSync(prodPath)) return prodPath;
+
+  return null;
+}
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
@@ -34,8 +44,8 @@ export async function registerRoutes(
     if (!htmlFile) {
       return res.status(404).send("Neighborhood not found");
     }
-    const filePath = path.join(process.cwd(), "client", "public", htmlFile);
-    if (fs.existsSync(filePath)) {
+    const filePath = findHtmlFile(htmlFile);
+    if (filePath) {
       return res.sendFile(filePath);
     }
     return res.status(404).send("Neighborhood not found");
