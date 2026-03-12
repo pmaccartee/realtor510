@@ -56,8 +56,14 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  app.get("/neighborhood-html/:slug", (req, res) => {
+  app.get("/neighborhood/:slug", (req, res) => {
     const slug = req.params.slug;
+
+    const redirect = oldSlugRedirects[slug];
+    if (redirect) {
+      return res.redirect(301, redirect);
+    }
+
     const htmlFile = neighborhoodMap[slug];
     if (!htmlFile) {
       return res.status(404).send("Neighborhood not found");
@@ -67,15 +73,6 @@ export async function registerRoutes(
       return res.sendFile(filePath);
     }
     return res.status(404).send("Neighborhood not found");
-  });
-
-  app.get("/neighborhood/:slug", (req, res, next) => {
-    const slug = req.params.slug;
-    const redirect = oldSlugRedirects[slug];
-    if (redirect) {
-      return res.redirect(301, redirect);
-    }
-    next();
   });
 
   return httpServer;

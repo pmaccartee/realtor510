@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Link } from "wouter";
 import { useTitle } from "@/hooks/useTitle";
 import { useDescription } from "@/hooks/useDescription";
 
@@ -92,7 +91,7 @@ export default function Neighborhoods() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-16">
               {neighborhoods.map((n, i) => (
-                <Link key={i} href={n.link || "#"} className={`group block ${n.link ? 'cursor-pointer' : ''} ${i === 0 ? 'md:col-span-2 lg:col-span-2 grid md:grid-cols-2 gap-12 items-center bg-secondary/10 p-0 border border-border overflow-hidden shadow-sm hover:shadow-md transition-all' : ''}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <a key={i} href={n.link || undefined} className={`group block ${n.link ? 'cursor-pointer' : ''} ${i === 0 ? 'md:col-span-2 lg:col-span-2 grid md:grid-cols-2 gap-12 items-center bg-secondary/10 p-0 border border-border overflow-hidden shadow-sm hover:shadow-md transition-all' : ''}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className={`overflow-hidden shadow-md border border-border ${i === 0 ? 'h-[500px] mb-0 border-none shadow-none w-full' : 'h-[300px] mb-6'}`}>
                     <img 
                       src={n.image} 
@@ -117,7 +116,7 @@ export default function Neighborhoods() {
                       </span>
                     )}
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
