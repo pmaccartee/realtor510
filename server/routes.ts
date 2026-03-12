@@ -56,6 +56,14 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  app.get("/julia", (req, res) => {
+    const filePath = findHtmlFile("julia-morgan_(1).html");
+    if (filePath) {
+      return res.sendFile(filePath);
+    }
+    return res.status(404).send("Page not found");
+  });
+
   app.get("/neighborhood/:slug", (req, res) => {
     const slug = req.params.slug;
 
