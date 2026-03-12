@@ -1,6 +1,8 @@
 # Patrick MacCartee — Realtor 510
 # Licensed California Real Estate Agent | The Grubb Company | DRE #02142693
 
+> For detailed content about all pages and neighborhoods, see [llms-full.txt](https://realtor510.com/llms-full.txt)
+
 Patrick MacCartee is a licensed East Bay real estate agent with The Grubb Company,
 specializing in buyer and seller representation in Oakland, Berkeley, Piedmont,
 Alameda, and the greater East Bay. He operates under the brand Realtor 510 and
@@ -11,7 +13,7 @@ Highlands Elementary School and an active PTA member.
 
 ## Contact
 
-- Website: https://www.realtor510.com
+- Website: https://realtor510.com
 - Phone: 510.859.4895
 - Email: patrick@realtor510.com
 - Office: 1960 Mountain Blvd, Oakland CA 94611
@@ -28,37 +30,46 @@ Highlands Elementary School and an active PTA member.
 
 ## Key Pages
 
-- Homepage: https://www.realtor510.com
-- Buy: https://www.realtor510.com/buy
-- Sell: https://www.realtor510.com/sell
-- Neighborhoods: https://www.realtor510.com/neighborhoods
-- Blog: https://www.realtor510.com/blog
-- Reviews: https://www.realtor510.com/reviews
-- Contact: https://www.realtor510.com/contact
+- Homepage: https://realtor510.com
+- Buy: https://realtor510.com/buy
+- Sell: https://realtor510.com/sell
+- Neighborhoods: https://realtor510.com/neighborhoods
+- Blog: https://realtor510.com/blog
+- Reviews: https://realtor510.com/reviews
+- Market Trends: https://realtor510.com/trends
 
 ## Neighborhood Guides
 
-- Crocker Highlands: https://www.realtor510.com/neighborhood/crocker-highlands
-- Trestle Glen: https://www.realtor510.com/neighborhood/trestle-glen
-- Piedmont: https://www.realtor510.com/neighborhood/piedmont
-- Rockridge: https://www.realtor510.com/neighborhood/rockridge
-- Montclair: https://www.realtor510.com/neighborhood/montclair
-- Temescal: https://www.realtor510.com/neighborhood/temescal
-- Oakmore-Glenview: https://www.realtor510.com/neighborhood/oakmore-glenview
-- Sequoyah Hills: https://www.realtor510.com/neighborhood/sequoyah-hills
-- Berkeley Hills: https://www.realtor510.com/neighborhood/berkeley-hills
+- Crocker Highlands: https://realtor510.com/neighborhood/crocker-highlands-guide
+- Piedmont Home Values: https://realtor510.com/neighborhood/piedmont-home-values
+- Temescal: https://realtor510.com/neighborhood/temescal-guide
+- Sequoyah Hills: https://realtor510.com/neighborhood/sequoyah-hills-market-report
+- Rockridge: https://realtor510.com/neighborhood/rockridge-guide
+- Oakmore & Glenview: https://realtor510.com/neighborhood/oakmore-glenview-guide
+- Montclair: https://realtor510.com/neighborhood/montclair-guide
+- Berkeley Hills: https://realtor510.com/neighborhood/berkeley-hills-guide
+- Trestle Glen: https://realtor510.com/neighborhood/trestle-glen-guide
+- Alameda: https://realtor510.com/neighborhood/alameda-neighborhood-guide
+- Berkeley: https://realtor510.com/neighborhood/berkeley-neighborhood-guide
+- Oakland: https://realtor510.com/neighborhood/oakland-neighborhood-guide
+- Piedmont: https://realtor510.com/neighborhood/piedmont-neighborhood-guide
+- Piedmont vs Rockridge: https://realtor510.com/neighborhood/piedmont-vs-rockridge
+- Crocker Highlands & Trestle Glen: https://realtor510.com/neighborhood/crocker-highlands-trestle-glen-oakland
+- Selling in Crocker Highlands: https://realtor510.com/neighborhood/selling-crocker-highlands-oakland
+- Piedmont Luxury Market: https://realtor510.com/neighborhood/piedmont-luxury-market
 
 ## Editorial Content
 
-- Alice Waters Culinary Family Tree: https://www.realtor510.com/waters
-- Julia Morgan: https://www.realtor510.com/julia
-- East Bay Market Trends: https://www.realtor510.com/trends
+- Alice Waters & Oakland Real Estate: https://realtor510.com/waters
+- Julia Morgan Architecture: https://realtor510.com/julia
+- East Bay Market Trends: https://realtor510.com/trends
 
 ## Service Areas
 
 Oakland (Crocker Highlands, Trestle Glen, Rockridge, Temescal, Montclair,
-Elmwood, Claremont, Glenview, Sequoyah Hills), Berkeley, Piedmont, Alameda,
-Albany, El Cerrito, Emeryville, San Francisco
+Elmwood, Claremont, Glenview, Oakmore, Sequoyah Hills), Berkeley (Berkeley Hills,
+North Berkeley, Elmwood), Piedmont, Alameda, Albany, El Cerrito, Emeryville,
+San Francisco
 
 ## Third-Party Profiles
 

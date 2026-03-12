@@ -5,6 +5,7 @@
     "/neighborhood/*",
     "/assets/*",
     "/llms.txt",
+    "/llms-full.txt",
     "/robots.txt",
     "/sitemap.xml",
     "/favicon.png",
