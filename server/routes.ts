@@ -34,21 +34,27 @@ function findHtmlFile(htmlFile: string): string | null {
   return null;
 }
 
+function getAllHtmlFiles(): string[] {
+  const devDir = path.join(process.cwd(), "client", "public");
+  if (fs.existsSync(devDir)) {
+    try {
+      return fs.readdirSync(devDir).filter((f) => f.endsWith(".html") && f !== "index.html");
+    } catch {
+      return [];
+    }
+  }
+  try {
+    const prodDir = path.resolve(__dirname, "public");
+    return fs.readdirSync(prodDir).filter((f) => f.endsWith(".html") && f !== "index.html");
+  } catch {
+    return [];
+  }
+}
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  console.log("[routes] Registering /neighborhood/:slug route");
-  console.log("[routes] cwd:", process.cwd());
-  console.log("[routes] NODE_ENV:", process.env.NODE_ENV);
-
-  const devDir = path.join(process.cwd(), "client", "public");
-  console.log("[routes] devDir exists:", fs.existsSync(devDir), devDir);
-  if (typeof __dirname !== "undefined") {
-    const prodDir = path.resolve(__dirname, "public");
-    console.log("[routes] prodDir exists:", fs.existsSync(prodDir), prodDir);
-  }
-
   app.get("/neighborhood-html/:slug", (req, res) => {
     const slug = req.params.slug;
     const htmlFile = neighborhoodMap[slug];
@@ -61,6 +67,19 @@ export async function registerRoutes(
     }
     return res.status(404).send("Neighborhood not found");
   });
+
+  const htmlFiles = getAllHtmlFiles();
+  for (const htmlFile of htmlFiles) {
+    const baseName = htmlFile.replace(".html", "");
+    if (/[()[\]{}]/.test(baseName)) continue;
+    app.get(`/${baseName}`, (_req, res) => {
+      const filePath = findHtmlFile(htmlFile);
+      if (filePath) {
+        return res.sendFile(filePath);
+      }
+      return res.status(404).send("Page not found");
+    });
+  }
 
   return httpServer;
 }
