@@ -1,13 +1,13 @@
 const neighborhoods = [
-  { name: "Crocker Highlands", link: "/crocker-highlands-guide.html" },
-  { name: "Trestle Glen", link: "/trestle-glen-guide.html" },
-  { name: "Piedmont", link: "/piedmont-home-values.html" },
-  { name: "Rockridge", link: "/rockridge-guide.html" },
-  { name: "Temescal", link: "/temescal-guide.html" },
-  { name: "Montclair", link: "/montclair-guide.html" },
-  { name: "Oakmore–Glenview", link: "/oakmore-glenview-guide.html" },
-  { name: "Sequoyah Hills", link: "/sequoyah-hills-market-report.html" },
-  { name: "Berkeley Hills", link: "/berkeley-hills-guide.html" },
+  { name: "Crocker Highlands", link: "/neighborhood/crocker-highlands" },
+  { name: "Trestle Glen", link: "/neighborhood/trestle-glen" },
+  { name: "Piedmont", link: "/neighborhood/piedmont" },
+  { name: "Rockridge", link: "/neighborhood/rockridge" },
+  { name: "Temescal", link: "/neighborhood/temescal" },
+  { name: "Montclair", link: "/neighborhood/montclair" },
+  { name: "Oakmore–Glenview", link: "/neighborhood/oakmore-glenview" },
+  { name: "Sequoyah Hills", link: "/neighborhood/sequoyah-hills" },
+  { name: "Berkeley Hills", link: "/neighborhood/berkeley-hills" },
 ];
 
 export default function NeighborhoodBar() {

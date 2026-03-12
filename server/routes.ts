@@ -1,16 +1,45 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import path from "path";
+import fs from "fs";
+
+const neighborhoodMap: Record<string, string> = {
+  "crocker-highlands": "crocker-highlands-guide.html",
+  "piedmont": "piedmont-home-values.html",
+  "temescal": "temescal-guide.html",
+  "sequoyah-hills": "sequoyah-hills-market-report.html",
+  "rockridge": "rockridge-guide.html",
+  "oakmore-glenview": "oakmore-glenview-guide.html",
+  "montclair": "montclair-guide.html",
+  "berkeley-hills": "berkeley-hills-guide.html",
+  "trestle-glen": "trestle-glen-guide.html",
+  "alameda": "alameda-neighborhood-guide.html",
+  "berkeley": "berkeley-neighborhood-guide.html",
+  "oakland": "oakland-neighborhood-guide.html",
+  "piedmont-guide": "piedmont-neighborhood-guide.html",
+  "piedmont-vs-rockridge": "piedmont-vs-rockridge.html",
+  "crocker-highlands-trestle-glen": "crocker-highlands-trestle-glen-oakland.html",
+  "selling-crocker-highlands": "selling-crocker-highlands-oakland.html",
+  "piedmont-luxury-market": "piedmont-luxury-market.html",
+};
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // put application routes here
-  // prefix all routes with /api
-
-  // use storage to perform CRUD operations on the storage interface
-  // e.g. storage.insertUser(user) or storage.getUserByUsername(username)
+  app.get("/neighborhood/:slug", (req, res) => {
+    const slug = req.params.slug;
+    const htmlFile = neighborhoodMap[slug];
+    if (!htmlFile) {
+      return res.status(404).send("Neighborhood not found");
+    }
+    const filePath = path.join(process.cwd(), "client", "public", htmlFile);
+    if (fs.existsSync(filePath)) {
+      return res.sendFile(filePath);
+    }
+    return res.status(404).send("Neighborhood not found");
+  });
 
   return httpServer;
 }
