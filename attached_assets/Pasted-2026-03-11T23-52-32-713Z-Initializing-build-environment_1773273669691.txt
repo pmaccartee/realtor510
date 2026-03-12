@@ -1,0 +1,195 @@
+2026-03-11T23:52:32.713Z	Initializing build environment...
+2026-03-11T23:52:39.721Z	Success: Finished initializing build environment
+2026-03-11T23:52:40.473Z	Cloning repository...
+2026-03-11T23:52:43.444Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-11T23:52:43.446Z	Restoring from dependencies cache
+2026-03-11T23:52:43.448Z	Restoring from build output cache
+2026-03-11T23:52:43.597Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-11T23:52:47.177Z	npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-03-11T23:52:49.461Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-03-11T23:52:49.493Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-03-11T23:52:32.713Z	Initializing build environment...
+2026-03-11T23:52:39.721Z	Success: Finished initializing build environment
+2026-03-11T23:52:40.473Z	Cloning repository...
+2026-03-11T23:52:43.444Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-11T23:52:43.446Z	Restoring from dependencies cache
+2026-03-11T23:52:43.448Z	Restoring from build output cache
+2026-03-11T23:52:43.597Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-11T23:52:47.177Z	npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-03-11T23:52:49.461Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-03-11T23:52:49.493Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-03-11T23:52:57.842Z	
+2026-03-11T23:52:57.843Z	added 422 packages, and audited 423 packages in 13s
+2026-03-11T23:52:57.843Z	
+2026-03-11T23:52:57.843Z	69 packages are looking for funding
+2026-03-11T23:52:57.843Z	  run `npm fund` for details
+2026-03-11T23:52:57.878Z	
+2026-03-11T23:52:57.879Z	7 vulnerabilities (1 low, 5 moderate, 1 high)
+2026-03-11T23:52:57.879Z	
+2026-03-11T23:52:57.879Z	To address issues that do not require attention, run:
+2026-03-11T23:52:57.879Z	  npm audit fix
+2026-03-11T23:52:57.879Z	
+2026-03-11T23:52:57.880Z	To address all issues (including breaking changes), run:
+2026-03-11T23:52:57.881Z	  npm audit fix --force
+2026-03-11T23:52:57.882Z	
+2026-03-11T23:52:57.882Z	Run `npm audit` for details.
+2026-03-11T23:52:58.088Z	Executing user build command: npm run build
+2026-03-11T23:52:58.564Z	
+2026-03-11T23:52:58.564Z	> rest-express@1.0.0 build
+2026-03-11T23:52:58.564Z	> tsx script/build.ts
+2026-03-11T23:52:58.564Z	
+2026-03-11T23:53:00.849Z	building client...
+2026-03-11T23:53:01.413Z	vite v7.3.1 building client environment for production...
+2026-03-11T23:53:01.860Z	transforming...
+2026-03-11T23:53:07.044Z	✓ 1819 modules transformed.
+2026-03-11T23:53:07.333Z	rendering chunks...
+2026-03-11T23:53:07.850Z	computing gzip size...
+2026-03-11T23:53:07.967Z	../dist/public/buy/index.html                                                                    0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:07.967Z	../dist/public/sell/index.html                                                                   0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:07.967Z	../dist/public/answers/index.html                                                                0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:07.968Z	../dist/public/reviews/index.html                                                                0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:07.968Z	../dist/public/trends/index.html                                                                 0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:07.968Z	../dist/public/waters/index.html                                                                 0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:07.968Z	../dist/public/julia/index.html                                                                  0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:07.969Z	../dist/public/neighborhoods/index.html                                                          0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:07.971Z	../dist/public/index.html                                                                        3.44 kB │ gzip:     1.49 kB
+2026-03-11T23:53:07.972Z	../dist/public/assets/montclair-CtXIrI9J.jpeg                                                   46.44 kB
+2026-03-11T23:53:07.972Z	../dist/public/assets/piedmont-2NPXMwaP.jpeg                                                    50.69 kB
+2026-03-11T23:53:07.972Z	../dist/public/assets/oakmore-DFKzyOxX.jpg                                                      71.18 kB
+2026-03-11T23:53:07.977Z	../dist/public/assets/berkeley-hills-DwEBbX8A.webp                                             127.79 kB
+2026-03-11T23:53:07.977Z	../dist/public/assets/temescal-sRH_oFZq.jpg                                                    189.53 kB
+2026-03-11T23:53:07.977Z	../dist/public/assets/rockridge-BslofmMG.webp                                                  223.28 kB
+2026-03-11T23:53:07.977Z	../dist/public/assets/PM_LOGO_Red_1772927689333-CI21v__F.png                                   237.09 kB
+2026-03-11T23:53:07.978Z	../dist/public/assets/005-293-elysian-fields-drive_1772929219661-eRtxYQAN.jpg                  462.52 kB
+2026-03-11T23:53:07.978Z	../dist/public/assets/PJM_HEADSHOT_light_touch_1772926722025-RziWWBHk.png                      503.88 kB
+2026-03-11T23:53:07.978Z	../dist/public/assets/crocker-highlands-FcVvIJqF.jpg                                           597.57 kB
+2026-03-11T23:53:07.978Z	../dist/public/assets/002-1015-warfield-avenue.80998.p4k.001.web_1772922978781-zh89xEU-.jpg    814.22 kB
+2026-03-11T23:53:07.978Z	../dist/public/assets/oakland-hero-gen-DD78Rh9p.png                                          1,585.78 kB
+2026-03-11T23:53:07.978Z	../dist/public/assets/sequoyah-hills-BwXNv5mi.png                                            2,421.43 kB
+2026-03-11T23:53:07.979Z	../dist/public/assets/main-kR6mqckb.css                                                        100.83 kB │ gzip:    16.62 kB
+2026-03-11T23:53:07.981Z	../dist/public/assets/main-DTHXH13y.js                                                       2,562.60 kB │ gzip: 1,695.75 kB
+2026-03-11T23:53:07.981Z	✓ built in 6.19s
+2026-03-11T23:53:07.981Z	building server...
+2026-03-11T23:53:07.982Z	
+2026-03-11T23:53:07.982Z	(!) Some chunks are larger than 500 kB after minification. Consider:
+2026-03-11T23:53:07.982Z	- Using dynamic import() to code-split the application
+2026-03-11T23:53:07.986Z	- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-03-11T23:53:07.986Z	- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-03-11T23:53:08.137Z	
+2026-03-11T23:53:08.137Z	  dist/index.cjs  788.9kb
+2026-03-11T23:53:08.138Z	
+2026-03-11T23:53:08.138Z	⚡ Done in 139ms
+2026-03-11T23:53:08.268Z	Success: Build command completed
+2026-03-11T23:53:08.547Z	Executing user deploy command: npx wrangler deploy
+2026-03-11T23:53:10.319Z	npm warn exec The following package was not found and will be installed: wrangler@4.72.0
+2026-03-11T23:53:23.652Z	
+2026-03-11T23:53:23.652Z	 ⛅️ wrangler 4.72.0
+2026-03-11T23:53:23.652Z	───────────────────
+2026-03-11T23:53:23.904Z	
+2026-03-11T23:53:23.909Z	Detected Project Settings:
+2026-03-11T23:53:23.910Z	 - Worker Name: realtor510
+2026-03-11T23:53:23.910Z	 - Framework: Vite
+2026-03-11T23:53:23.910Z	 - Build Command: npm run build
+2026-03-11T23:53:23.910Z	 - Output Directory: dist
+2026-03-11T23:53:23.910Z	
+2026-03-11T23:53:23.910Z	? Do you want to modify these settings?
+2026-03-11T23:53:23.910Z	🤖 Using fallback value in non-interactive context: no
+2026-03-11T23:53:23.911Z	
+2026-03-11T23:53:23.911Z	📦 Install packages:
+2026-03-11T23:53:23.911Z	 - wrangler (devDependency)
+2026-03-11T23:53:23.911Z	
+2026-03-11T23:53:23.912Z	📝 Update package.json scripts:
+2026-03-11T23:53:23.912Z	 - "deploy": "npm run build && wrangler deploy"
+2026-03-11T23:53:23.917Z	 - "preview": "npm run build && wrangler dev"
+2026-03-11T23:53:23.917Z	
+2026-03-11T23:53:23.917Z	📄 Create wrangler.jsonc:
+2026-03-11T23:53:23.917Z	  {
+2026-03-11T23:53:23.917Z	    "$schema": "node_modules/wrangler/config-schema.json",
+2026-03-11T23:53:23.917Z	    "name": "realtor510",
+2026-03-11T23:53:23.917Z	    "compatibility_date": "2025-09-27",
+2026-03-11T23:53:23.917Z	    "observability": {
+2026-03-11T23:53:23.917Z	      "enabled": true
+2026-03-11T23:53:23.917Z	    },
+2026-03-11T23:53:23.918Z	    "assets": {
+2026-03-11T23:53:23.918Z	      "not_found_handling": "single-page-application"
+2026-03-11T23:53:23.918Z	    },
+2026-03-11T23:53:23.918Z	    "compatibility_flags": [
+2026-03-11T23:53:23.918Z	      "nodejs_compat"
+2026-03-11T23:53:23.918Z	    ]
+2026-03-11T23:53:23.918Z	  }
+2026-03-11T23:53:23.918Z	
+2026-03-11T23:53:23.938Z	🛠️  Configuring project for Vite
+2026-03-11T23:53:23.941Z	
+2026-03-11T23:53:23.941Z	? Proceed with setup?
+2026-03-11T23:53:23.941Z	🤖 Using fallback value in non-interactive context: yes
+2026-03-11T23:53:34.718Z	├ Adding Wrangler files to the .gitignore file
+2026-03-11T23:53:34.719Z	│ updated .gitignore file
+2026-03-11T23:53:34.719Z	│
+2026-03-11T23:53:34.720Z	[build] Running: npm run build
+2026-03-11T23:53:34.891Z	[build] 
+2026-03-11T23:53:34.891Z	[build] > rest-express@1.0.0 build
+2026-03-11T23:53:34.891Z	[build] > tsx script/build.ts
+2026-03-11T23:53:34.892Z	[build] 
+2026-03-11T23:53:34.892Z	[build] 
+2026-03-11T23:53:35.965Z	[build] building client...
+2026-03-11T23:53:35.966Z	[build] 
+2026-03-11T23:53:38.740Z	[build] vite v7.3.1 building client environment for production...
+2026-03-11T23:53:38.743Z	[build] 
+2026-03-11T23:53:39.188Z	[build] transforming...
+2026-03-11T23:53:39.188Z	[build] 
+2026-03-11T23:53:44.328Z	[build] ✓ 1819 modules transformed.
+2026-03-11T23:53:44.333Z	[build] 
+2026-03-11T23:53:44.610Z	[build] rendering chunks...
+2026-03-11T23:53:44.612Z	[build] 
+2026-03-11T23:53:45.169Z	[build] computing gzip size...
+2026-03-11T23:53:45.170Z	[build] 
+2026-03-11T23:53:45.284Z	[build] ../dist/public/.assetsignore                                                                     0.02 kB
+2026-03-11T23:53:45.284Z	[build] 
+2026-03-11T23:53:45.284Z	[build] ../dist/public/buy/index.html                                                                    0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:45.284Z	[build] ../dist/public/sell/index.html                                                                   0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:45.285Z	[build] ../dist/public/reviews/index.html                                                                0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:45.285Z	[build] ../dist/public/answers/index.html                                                                0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:45.285Z	[build] ../dist/public/trends/index.html                                                                 0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:45.285Z	[build] ../dist/public/waters/index.html                                                                 0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:45.285Z	[build] ../dist/public/julia/index.html                                                                  0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:45.286Z	[build] ../dist/public/neighborhoods/index.html                                                          0.90 kB │ gzip:     0.52 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/wrangler.json                                                                     0.96 kB │ gzip:     0.51 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/index.html                                                                        3.44 kB │ gzip:     1.49 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/assets/montclair-CtXIrI9J.jpeg                                                   46.44 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/assets/piedmont-2NPXMwaP.jpeg                                                    50.69 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/assets/oakmore-DFKzyOxX.jpg                                                      71.18 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/assets/berkeley-hills-DwEBbX8A.webp                                             127.79 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/assets/temescal-sRH_oFZq.jpg                                                    189.53 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/assets/rockridge-BslofmMG.webp                                                  223.28 kB
+2026-03-11T23:53:45.287Z	[build] ../dist/public/assets/PM_LOGO_Red_1772927689333-CI21v__F.png                                   237.09 kB
+2026-03-11T23:53:45.287Z	[build] 
+2026-03-11T23:53:45.289Z	[build] ../dist/public/assets/005-293-elysian-fields-drive_1772929219661-eRtxYQAN.jpg                  462.52 kB
+2026-03-11T23:53:45.289Z	[build] ../dist/public/assets/PJM_HEADSHOT_light_touch_1772926722025-RziWWBHk.png                      503.88 kB
+2026-03-11T23:53:45.289Z	[build] ../dist/public/assets/crocker-highlands-FcVvIJqF.jpg                                           597.57 kB
+2026-03-11T23:53:45.289Z	[build] ../dist/public/assets/002-1015-warfield-avenue.80998.p4k.001.web_1772922978781-zh89xEU-.jpg    814.22 kB
+2026-03-11T23:53:45.289Z	[build] ../dist/public/assets/oakland-hero-gen-DD78Rh9p.png                                          1,585.78 kB
+2026-03-11T23:53:45.289Z	[build] ../dist/public/assets/sequoyah-hills-BwXNv5mi.png                                            2,421.43 kB
+2026-03-11T23:53:45.289Z	[build] ../dist/public/assets/main-kR6mqckb.css                                                        100.83 kB │ gzip:    16.62 kB
+2026-03-11T23:53:45.289Z	[build] ../dist/public/assets/main-DTHXH13y.js                                                       2,562.60 kB │ gzip: 1,695.75 kB
+2026-03-11T23:53:45.289Z	[build] ✓ built in 6.20s
+2026-03-11T23:53:45.289Z	[build] building server...
+2026-03-11T23:53:45.289Z	[build] 
+2026-03-11T23:53:45.289Z	[build] 
+2026-03-11T23:53:45.289Z	[build] (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-03-11T23:53:45.289Z	[build] - Using dynamic import() to code-split the application
+2026-03-11T23:53:45.290Z	[build] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-03-11T23:53:45.290Z	[build] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-03-11T23:53:45.291Z	[build] 
+2026-03-11T23:53:45.467Z	[build] 
+2026-03-11T23:53:45.470Z	[build]   dist/index.cjs  791.0kb
+2026-03-11T23:53:45.470Z	[build] 
+2026-03-11T23:53:45.470Z	[build] ⚡ Done in 144ms
+2026-03-11T23:53:45.470Z	[build] 
+2026-03-11T23:53:45.669Z	
+2026-03-11T23:53:45.669Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2026-03-11T23:53:45.670Z	
+2026-03-11T23:53:45.742Z	✘ [ERROR] The `assets` property in your configuration is missing the required `directory` property.
+2026-03-11T23:53:45.742Z	
+2026-03-11T23:53:45.743Z	
+2026-03-11T23:53:45.793Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2026-03-11_23-53-22_875.log"
+2026-03-11T23:53:45.903Z	Failed: error occurred while running deploy command
