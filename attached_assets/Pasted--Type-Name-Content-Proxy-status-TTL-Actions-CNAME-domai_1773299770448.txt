@@ -1,0 +1,174 @@
+	
+Type
+
+Name
+
+Content
+
+Proxy status
+
+TTL
+
+Actions
+
+CNAME
+_domainconnect
+_domainconnect.domains.squarespace.com
+
+Proxied
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+CNAME
+imap
+us2.imap.mailhostbox.com
+
+Proxied
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+CNAME
+k2._domainkey
+dkim2.mcsv.net
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+CNAME
+k3._domainkey
+dkim3.mcsv.net
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+
+
+CNAME
+realtor510.com
+realtor510.pages.dev
+
+Proxied
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+CNAME
+smtp
+us2.smtp.mailhostbox.com
+
+Proxied
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+CNAME
+webmail
+us3.webmail.mailhostbox.com
+
+Proxied
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+CNAME
+www
+realtor510.pages.dev
+
+Proxied
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+MX
+realtor510.com
+alt4.aspmx.l.google.com
+
+10
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+MX
+realtor510.com
+alt3.aspmx.l.google.com
+
+10
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+MX
+realtor510.com
+alt2.aspmx.l.google.com
+
+5
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+MX
+realtor510.com
+alt1.aspmx.l.google.com
+
+5
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+MX
+realtor510.com
+aspmx.l.google.com
+
+1
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+TXT
+_dmarc
+"v=DMARC1; p=quarantine; rua=mailto:patrick@realtor510.com; pct=100"
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+TXT
+google._domainkey
+"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvn/rtQe2RaTwXlOZ0Dn9yFZIYnUN4c1DqF+eHszXRtDuvw/eNU8MUO5Muw5zZ/Jt84dAaiNYjTqkStgwqe9to4LB6Tm33X+kQewZznXW5R1Y1mAS6ydsVlutO/vUx2EtEXi9wVDStple90ETrLdXEGurPKIvz0LN/981u+U58FfDZz9lDOlz3dSxMOUxQ9uC" "PT0WPvQIY9TORE16TPBc5zVA2PK+hJa7Aq4C2kWIbMBvJB7VqDGtlXMRH7HLkD4u7e6CUqkBgfga2TphMab3X6iUrX+QZ062JxLfylk2v3NoA2r0OjkkQukktnHtJ6VTbf6mjiFWL1Wta85B95lmQIDAQAB"
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+TXT
+realtor510.com
+"v=spf1 include:_spf.google.com include:servers.mcsv.net ~all"
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+TXT
+realtor510.com
+"replit-verify=fb16415f-bfb2-4872-bae4-465ef85a9982"
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
+
+TXT
+realtor510.com
+"google-site-verification=muZcpwJEDk_8Bf0tFbfVejgIyInQZli94sshoCOl7_A"
+DNS only
+
+Auto
+EditWhen toggled open, an additional table row will be added below this row to enable editing DNS records.
