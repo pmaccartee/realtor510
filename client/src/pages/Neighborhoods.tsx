@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useTitle } from "@/hooks/useTitle";
+import { useDescription } from "@/hooks/useDescription";
 
 import crockerImg from "../assets/images/crocker-highlands.jpg";
 import piedmontImg from "../assets/images/piedmont.jpeg";
@@ -70,6 +71,7 @@ const neighborhoods = [
 
 export default function Neighborhoods() {
   useTitle("East Bay Neighborhoods Guide | Patrick MacCartee");
+  useDescription("Explore Oakland, Berkeley, Piedmont, and Alameda neighborhood guides from East Bay realtor Patrick MacCartee.");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />

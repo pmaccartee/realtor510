@@ -1,9 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useTitle } from "@/hooks/useTitle";
+import { useDescription } from "@/hooks/useDescription";
 
 export default function Trends() {
   useTitle("East Bay Market Trends | Patrick MacCartee");
+  useDescription("East Bay real estate market trends, data, and analysis from Oakland agent Patrick MacCartee.");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />

@@ -2,9 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroImg from "@assets/005-293-elysian-fields-drive_1772929219661.jpg";
 import { useTitle } from "@/hooks/useTitle";
+import { useDescription } from "@/hooks/useDescription";
 
 export default function Buy() {
   useTitle("Buy a Home in Oakland & East Bay | Patrick MacCartee");
+  useDescription("Work with Patrick MacCartee to find and win your East Bay home. Off-market access, strategic offers, and deep Oakland market expertise.");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />

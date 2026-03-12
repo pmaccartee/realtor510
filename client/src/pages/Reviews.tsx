@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Star } from "lucide-react";
 import { useTitle } from "@/hooks/useTitle";
+import { useDescription } from "@/hooks/useDescription";
 
 const reviews = [
   {
@@ -58,6 +59,7 @@ const reviews = [
 
 export default function Reviews() {
   useTitle("Client Reviews | Patrick MacCartee Realtor");
+  useDescription("See what clients say about working with Patrick MacCartee, East Bay realtor with The Grubb Company.");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />

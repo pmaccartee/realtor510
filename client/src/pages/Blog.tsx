@@ -4,10 +4,12 @@ import { useState } from "react";
 import { Search, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { useTitle } from "@/hooks/useTitle";
+import { useDescription } from "@/hooks/useDescription";
 import { insights } from "../data/insights";
 
 export default function Blog() {
   useTitle("East Bay Real Estate Blog | Patrick MacCartee");
+  useDescription("East Bay real estate insights, market updates, and neighborhood stories from Oakland realtor Patrick MacCartee.");
   const [search, setSearch] = useState("");
 
   const filteredInsights = insights.filter((insight) => {

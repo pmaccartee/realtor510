@@ -2,9 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroImg from "@assets/002-1015-warfield-avenue.80998.p4k.001.web_1772922978781.jpg";
 import { useTitle } from "@/hooks/useTitle";
+import { useDescription } from "@/hooks/useDescription";
 
 export default function Sell() {
   useTitle("Sell Your East Bay Home | Patrick MacCartee");
+  useDescription("Sell your East Bay home with Patrick MacCartee. Proven pricing strategy, staging guidance, and a track record of above-asking results in Oakland, Berkeley, and Piedmont.");
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
