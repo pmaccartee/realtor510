@@ -14,7 +14,7 @@ const inputs: Record<string, string> = {
 };
 
 // Create directories and HTML files for each page
-const dirs = ['buy', 'sell', 'answers', 'reviews', 'trends', 'waters', 'julia', 'neighborhoods'];
+const dirs = ['buy', 'sell', 'answers', 'reviews', 'trends', 'waters', 'neighborhoods'];
 
 const htmlContent = `<!DOCTYPE html>
 <html lang="en">

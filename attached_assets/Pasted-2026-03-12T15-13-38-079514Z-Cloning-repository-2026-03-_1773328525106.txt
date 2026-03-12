@@ -1,0 +1,77 @@
+2026-03-12T15:13:38.079514Z	Cloning repository...
+2026-03-12T15:13:40.269806Z	From https://github.com/pmaccartee/realtor510
+2026-03-12T15:13:40.270268Z	 * branch            cb17777cd95bbb024cd570d849e5098e6c4df2ad -> FETCH_HEAD
+2026-03-12T15:13:40.27038Z	
+2026-03-12T15:13:40.525234Z	HEAD is now at cb17777 Add /julia-morgan to _routes.json exclude list so Cloudflare serves static HTML
+2026-03-12T15:13:40.525764Z	
+2026-03-12T15:13:40.571187Z	
+2026-03-12T15:13:40.571772Z	Using v2 root directory strategy
+2026-03-12T15:13:40.585948Z	Success: Finished cloning repository files
+2026-03-12T15:13:43.174276Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-03-12T15:13:43.174681Z	
+2026-03-12T15:13:44.271781Z	No Wrangler configuration file found. Continuing.
+2026-03-12T15:13:44.460966Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-12T15:13:44.461408Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-12T15:13:46.980055Z	npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-03-12T15:13:48.531539Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-03-12T15:13:48.54851Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-03-12T15:13:54.128191Z	
+2026-03-12T15:13:54.128553Z	added 422 packages, and audited 423 packages in 9s
+2026-03-12T15:13:54.128729Z	
+2026-03-12T15:13:54.12891Z	69 packages are looking for funding
+2026-03-12T15:13:54.128957Z	  run `npm fund` for details
+2026-03-12T15:13:54.154592Z	
+2026-03-12T15:13:54.154888Z	7 vulnerabilities (1 low, 5 moderate, 1 high)
+2026-03-12T15:13:54.154954Z	
+2026-03-12T15:13:54.154996Z	To address issues that do not require attention, run:
+2026-03-12T15:13:54.15521Z	  npm audit fix
+2026-03-12T15:13:54.15528Z	
+2026-03-12T15:13:54.155446Z	To address all issues (including breaking changes), run:
+2026-03-12T15:13:54.156078Z	  npm audit fix --force
+2026-03-12T15:13:54.156212Z	
+2026-03-12T15:13:54.156413Z	Run `npm audit` for details.
+2026-03-12T15:13:54.243589Z	Executing user command: npx vite build
+2026-03-12T15:13:55.14787Z	[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+2026-03-12T15:13:55.248378Z	transforming...
+2026-03-12T15:13:58.254772Z	[32m✓[39m 1820 modules transformed.
+2026-03-12T15:13:58.426319Z	rendering chunks...
+2026-03-12T15:13:58.641057Z	computing gzip size...
+2026-03-12T15:13:58.665872Z	[2m../dist/public/[22m[32mbuy/index.html                                                                [39m[1m[2m    0.90 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-03-12T15:13:58.66625Z	[2m../dist/public/[22m[32msell/index.html                                                               [39m[1m[2m    0.90 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-03-12T15:13:58.666333Z	[2m../dist/public/[22m[32manswers/index.html                                                            [39m[1m[2m    0.90 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-03-12T15:13:58.666628Z	[2m../dist/public/[22m[32mtrends/index.html                                                             [39m[1m[2m    0.90 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-03-12T15:13:58.666729Z	[2m../dist/public/[22m[32mwaters/index.html                                                             [39m[1m[2m    0.90 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-03-12T15:13:58.666854Z	[2m../dist/public/[22m[32mreviews/index.html                                                            [39m[1m[2m    0.90 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-03-12T15:13:58.666922Z	[2m../dist/public/[22m[32mjulia/index.html                                                              [39m[1m[2m    0.90 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-03-12T15:13:58.667024Z	[2m../dist/public/[22m[32mneighborhoods/index.html                                                      [39m[1m[2m    0.90 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-03-12T15:13:58.66716Z	[2m../dist/public/[22m[32mindex.html                                                                    [39m[1m[2m    5.92 kB[22m[1m[22m[2m │ gzip:   2.18 kB[22m
+2026-03-12T15:13:58.667238Z	[2m../dist/public/[22m[2massets/[22m[32mmontclair-CtXIrI9J.jpeg                                                [39m[1m[2m   46.44 kB[22m[1m[22m
+2026-03-12T15:13:58.667286Z	[2m../dist/public/[22m[2massets/[22m[32mpiedmont-2NPXMwaP.jpeg                                                 [39m[1m[2m   50.69 kB[22m[1m[22m
+2026-03-12T15:13:58.667315Z	[2m../dist/public/[22m[2massets/[22m[32moakmore-DFKzyOxX.jpg                                                   [39m[1m[2m   71.18 kB[22m[1m[22m
+2026-03-12T15:13:58.667342Z	[2m../dist/public/[22m[2massets/[22m[32mberkeley-hills-DwEBbX8A.webp                                           [39m[1m[2m  127.79 kB[22m[1m[22m
+2026-03-12T15:13:58.667561Z	[2m../dist/public/[22m[2massets/[22m[32mtemescal-sRH_oFZq.jpg                                                  [39m[1m[2m  189.53 kB[22m[1m[22m
+2026-03-12T15:13:58.667621Z	[2m../dist/public/[22m[2massets/[22m[32mrockridge-BslofmMG.webp                                                [39m[1m[2m  223.28 kB[22m[1m[22m
+2026-03-12T15:13:58.668084Z	[2m../dist/public/[22m[2massets/[22m[32mPM_LOGO_Red_1772927689333-CI21v__F.png                                 [39m[1m[2m  237.09 kB[22m[1m[22m
+2026-03-12T15:13:58.668206Z	[2m../dist/public/[22m[2massets/[22m[32m005-293-elysian-fields-drive_1772929219661-eRtxYQAN.jpg                [39m[1m[2m  462.52 kB[22m[1m[22m
+2026-03-12T15:13:58.668272Z	[2m../dist/public/[22m[2massets/[22m[32mPJM_HEADSHOT_light_touch_1772926722025-RziWWBHk.png                    [39m[1m[2m  503.88 kB[22m[1m[22m
+2026-03-12T15:13:58.668517Z	[2m../dist/public/[22m[2massets/[22m[32mcrocker-highlands-FcVvIJqF.jpg                                         [39m[1m[2m  597.57 kB[22m[1m[22m
+2026-03-12T15:13:58.668566Z	[2m../dist/public/[22m[2massets/[22m[32m002-1015-warfield-avenue.80998.p4k.001.web_1772922978781-zh89xEU-.jpg  [39m[1m[2m  814.22 kB[22m[1m[22m
+2026-03-12T15:13:58.668603Z	[2m../dist/public/[22m[2massets/[22m[32moakland-hero-gen-DD78Rh9p.png                                          [39m[1m[2m1,585.78 kB[22m[1m[22m
+2026-03-12T15:13:58.668671Z	[2m../dist/public/[22m[2massets/[22m[32msequoyah-hills-BwXNv5mi.png                                            [39m[1m[2m2,421.43 kB[22m[1m[22m
+2026-03-12T15:13:58.668713Z	[2m../dist/public/[22m[2massets/[22m[35mmain-m8F93Vxo.css                                                      [39m[1m[2m  101.42 kB[22m[1m[22m[2m │ gzip:  16.67 kB[22m
+2026-03-12T15:13:58.668754Z	[2m../dist/public/[22m[2massets/[22m[36mmain-DhcZH644.js                                                       [39m[1m[2m  482.29 kB[22m[1m[22m[2m │ gzip: 150.43 kB[22m
+2026-03-12T15:13:58.668787Z	[32m✓ built in 3.47s[39m
+2026-03-12T15:13:58.75822Z	Finished
+2026-03-12T15:13:59.505896Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-03-12T15:13:59.50632Z	
+2026-03-12T15:14:00.600903Z	No Wrangler configuration file found. Continuing.
+2026-03-12T15:14:00.601812Z	Note: No functions dir at /functions found. Skipping.
+2026-03-12T15:14:00.60193Z	Validating asset output directory
+2026-03-12T15:14:03.969704Z	Deploying your site to Cloudflare's global network...
+2026-03-12T15:14:05.658642Z	Parsed 29 valid redirect rules.
+2026-03-12T15:14:07.043341Z	Uploading... (99/99)
+2026-03-12T15:14:07.046496Z	✨ Success! Uploaded 0 files (99 already uploaded) (0.41 sec)
+2026-03-12T15:14:07.046798Z	
+2026-03-12T15:14:07.528806Z	✨ Upload complete!
+2026-03-12T15:14:10.876785Z	Success: Assets published!
+2026-03-12T15:14:23.513455Z	Success: Your site was deployed!
