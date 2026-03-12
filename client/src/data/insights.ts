@@ -278,7 +278,7 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "The definitive guide to Alameda, CA — Victorian architecture, ferry commute, top schools, neighborhoods, real estate.",
     "content": "",
-    "link": "/neighborhood/alameda"
+    "link": "/neighborhood/alameda-neighborhood-guide"
   },
   {
     "id": "berkeley-neighborhood-guide",
@@ -286,7 +286,7 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "Everything buyers need to know about Berkeley, CA — Elmwood, Claremont, North Berkeley, schools, commute, real estate.",
     "content": "",
-    "link": "/neighborhood/berkeley"
+    "link": "/neighborhood/berkeley-neighborhood-guide"
   },
   {
     "id": "oakland-neighborhood-guide",
@@ -294,7 +294,7 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "The definitive guide to Oakland's premium neighborhoods — Rockridge, Upper Rockridge, Montclair, Crocker Highlands, Trestle Glen, and Glenview.",
     "content": "",
-    "link": "/neighborhood/oakland"
+    "link": "/neighborhood/oakland-neighborhood-guide"
   },
   {
     "id": "piedmont-neighborhood-guide",
@@ -302,7 +302,7 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "Everything you need to know about living in Piedmont, CA — schools, real estate, commute, architecture, and lifestyle.",
     "content": "",
-    "link": "/neighborhood/piedmont-guide"
+    "link": "/neighborhood/piedmont-neighborhood-guide"
   },
   {
     "id": "piedmont-vs-rockridge",
@@ -318,7 +318,7 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "Comprehensive buyer's guide to Crocker Highlands and Trestle Glen in Oakland, CA. Architecture, schools, lifestyle, and real estate market analysis.",
     "content": "",
-    "link": "/neighborhood/crocker-highlands-trestle-glen"
+    "link": "/neighborhood/crocker-highlands-trestle-glen-oakland"
   },
   {
     "id": "selling-crocker-highlands-oakland",
@@ -326,7 +326,7 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "Decades of equity. A home full of memories. And a process that feels like too much to take on alone. Patrick MacCartee specializes in helping long-term Crocker Highlands owners sell well and move forward with confidence.",
     "content": "",
-    "link": "/neighborhood/selling-crocker-highlands"
+    "link": "/neighborhood/selling-crocker-highlands-oakland"
   },
   {
     "id": "trestle-glen-guide",
@@ -334,7 +334,7 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "A complete guide to buying and selling in Trestle Glen, Oakland — architecture, market dynamics, and neighborhood character.",
     "content": "",
-    "link": "/neighborhood/trestle-glen"
+    "link": "/neighborhood/trestle-glen-guide"
   },
   {
     "id": "crocker-highlands-guide",
@@ -342,6 +342,6 @@ export const insights = [
     "category": "Neighborhood Guide",
     "description": "A comprehensive guide to buying and selling in Crocker Highlands, Oakland — one of the East Bay's most coveted historic neighborhoods.",
     "content": "",
-    "link": "/neighborhood/crocker-highlands"
+    "link": "/neighborhood/crocker-highlands-guide"
   }
 ];

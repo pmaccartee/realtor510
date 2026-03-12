@@ -47,69 +47,69 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Neighborhood Pages (served by Express /neighborhood/:slug) -->
+  <!-- Neighborhood Pages -->
   <url>
-    <loc>https://realtor510.com/neighborhood/crocker-highlands</loc>
+    <loc>https://realtor510.com/neighborhood/crocker-highlands-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/piedmont</loc>
+    <loc>https://realtor510.com/neighborhood/piedmont-home-values</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/temescal</loc>
+    <loc>https://realtor510.com/neighborhood/temescal-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/sequoyah-hills</loc>
+    <loc>https://realtor510.com/neighborhood/sequoyah-hills-market-report</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/rockridge</loc>
+    <loc>https://realtor510.com/neighborhood/rockridge-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/oakmore-glenview</loc>
+    <loc>https://realtor510.com/neighborhood/oakmore-glenview-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/montclair</loc>
+    <loc>https://realtor510.com/neighborhood/montclair-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/berkeley-hills</loc>
+    <loc>https://realtor510.com/neighborhood/berkeley-hills-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/trestle-glen</loc>
+    <loc>https://realtor510.com/neighborhood/trestle-glen-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/alameda</loc>
+    <loc>https://realtor510.com/neighborhood/alameda-neighborhood-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/berkeley</loc>
+    <loc>https://realtor510.com/neighborhood/berkeley-neighborhood-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/oakland</loc>
+    <loc>https://realtor510.com/neighborhood/oakland-neighborhood-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/piedmont-guide</loc>
+    <loc>https://realtor510.com/neighborhood/piedmont-neighborhood-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -119,12 +119,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/crocker-highlands-trestle-glen</loc>
+    <loc>https://realtor510.com/neighborhood/crocker-highlands-trestle-glen-oakland</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/neighborhood/selling-crocker-highlands</loc>
+    <loc>https://realtor510.com/neighborhood/selling-crocker-highlands-oakland</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

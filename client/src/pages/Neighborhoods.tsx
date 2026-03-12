@@ -18,55 +18,55 @@ const neighborhoods = [
     name: "Crocker Highlands",
     image: crockerImg,
     description: "One of Oakland's most beloved historic districts, Crocker Highlands was designed in the early 1900s as a model garden suburb — curving streets, mature trees, and handsome period architecture built to last. The neighborhood has kept its storybook character intact, and today it pairs that quiet beauty with top-rated schools, walkable access to Lakeshore and Grand Avenue, and a genuine sense of community.",
-    link: "/neighborhood/crocker-highlands"
+    link: "/neighborhood/crocker-highlands-guide"
   },
   {
     name: "Piedmont",
     image: piedmontImg,
     description: "Fully surrounded by Oakland yet governed entirely on its own terms, Piedmont has long been one of the East Bay's most coveted addresses. What began as a fashionable residential enclave remains just that — manicured streets, exceptional public schools, and a small-town atmosphere that somehow sits minutes from everything the city has to offer.",
-    link: "/neighborhood/piedmont"
+    link: "/neighborhood/piedmont-home-values"
   },
   {
     name: "Temescal",
     image: temescalImg,
     description: "Temescal has been reinventing itself since before Oakland was Oakland — from Peralta farmland to streetcar suburb to one of the East Bay's most energetic urban neighborhoods. Today it's all craft coffee, serious restaurants, indie retail, and BART access that makes leaving the car behind an easy choice.",
-    link: "/neighborhood/temescal"
+    link: "/neighborhood/temescal-guide"
   },
   {
     name: "Sequoyah Hills",
     image: sequoyahImg,
     description: "Tucked away in the hills above the Oak Knoll golf course, Sequoyah Hills is Oakland's hidden mid-century gem. Characterized by expansive lots, distinctive architecture, and sweeping bay views, this tranquil neighborhood feels worlds away from the city while maintaining easy access to major thoroughfares.",
-    link: "/neighborhood/sequoyah-hills"
+    link: "/neighborhood/sequoyah-hills-market-report"
   },
   {
     name: "Rockridge",
     image: rockridgeImg,
     description: "Named for the rocky outcrops left behind by the Hayward Fault, Rockridge has traded its industrial origins for one of the most livable streetscapes in the Bay Area. College Avenue anchors it all — cafés, boutiques, Market Hall, and BART — and the surrounding residential streets are as good as Oakland gets.",
-    link: "/neighborhood/rockridge"
+    link: "/neighborhood/rockridge-guide"
   },
   {
     name: "Oakmore-Glenview",
     image: oakmoreImg,
     description: "Oakmore feels like a secret the rest of Oakland hasn't fully discovered. Built in the 1920s and 30s as a hillside commuter retreat, it retains that tucked-away quality — quiet streets, charming architecture, and the landmark Leimert Bridge connecting it all. Glenview and Dimond dining are right next door, and Highway 13 keeps the rest of the region within easy reach.",
-    link: "/neighborhood/oakmore-glenview"
+    link: "/neighborhood/oakmore-glenview-guide"
   },
   {
     name: "Montclair",
     image: montclairImg,
     description: "Montclair's hills were once logged for redwood. Now they're shaded by it. What grew up in its place is a forested neighborhood centered on a genuine village — cafés, markets, and a pace of life that feels closer to a mountain town than a major city. The fact that downtown Oakland and the freeway are minutes away never quite feels real until you're already there.",
-    link: "/neighborhood/montclair"
+    link: "/neighborhood/montclair-guide"
   },
   {
     name: "Berkeley Hills",
     image: berkeleyImg,
     description: "The Berkeley Hills offer a unique blend of intellectual energy, architectural significance, and natural beauty. Winding streets reveal sweeping views of the San Francisco Bay, while the architecture ranges from historic brown shingles to mid-century modern masterpieces. Proximity to UC Berkeley gives the area a distinct cultural depth, and the sprawling Regional Parks provide immediate access to nature.",
-    link: "/neighborhood/berkeley-hills"
+    link: "/neighborhood/berkeley-hills-guide"
   },
   {
     name: "Trestle Glen",
     image: temescalImg,
     description: "Trestle Glen gives you the feel of Piedmont — the architecture, the quiet, the tree canopy — with the cultural access of Oakland. That combination is genuinely hard to find.",
-    link: "/neighborhood/trestle-glen"
+    link: "/neighborhood/trestle-glen-guide"
   }
 ];
 

@@ -5,23 +5,41 @@ import path from "path";
 import fs from "fs";
 
 const neighborhoodMap: Record<string, string> = {
-  "crocker-highlands": "crocker-highlands-guide.html",
-  "piedmont": "piedmont-home-values.html",
-  "temescal": "temescal-guide.html",
-  "sequoyah-hills": "sequoyah-hills-market-report.html",
-  "rockridge": "rockridge-guide.html",
-  "oakmore-glenview": "oakmore-glenview-guide.html",
-  "montclair": "montclair-guide.html",
-  "berkeley-hills": "berkeley-hills-guide.html",
-  "trestle-glen": "trestle-glen-guide.html",
-  "alameda": "alameda-neighborhood-guide.html",
-  "berkeley": "berkeley-neighborhood-guide.html",
-  "oakland": "oakland-neighborhood-guide.html",
-  "piedmont-guide": "piedmont-neighborhood-guide.html",
+  "crocker-highlands-guide": "crocker-highlands-guide.html",
+  "piedmont-home-values": "piedmont-home-values.html",
+  "temescal-guide": "temescal-guide.html",
+  "sequoyah-hills-market-report": "sequoyah-hills-market-report.html",
+  "rockridge-guide": "rockridge-guide.html",
+  "oakmore-glenview-guide": "oakmore-glenview-guide.html",
+  "montclair-guide": "montclair-guide.html",
+  "berkeley-hills-guide": "berkeley-hills-guide.html",
+  "trestle-glen-guide": "trestle-glen-guide.html",
+  "alameda-neighborhood-guide": "alameda-neighborhood-guide.html",
+  "berkeley-neighborhood-guide": "berkeley-neighborhood-guide.html",
+  "oakland-neighborhood-guide": "oakland-neighborhood-guide.html",
+  "piedmont-neighborhood-guide": "piedmont-neighborhood-guide.html",
   "piedmont-vs-rockridge": "piedmont-vs-rockridge.html",
-  "crocker-highlands-trestle-glen": "crocker-highlands-trestle-glen-oakland.html",
-  "selling-crocker-highlands": "selling-crocker-highlands-oakland.html",
+  "crocker-highlands-trestle-glen-oakland": "crocker-highlands-trestle-glen-oakland.html",
+  "selling-crocker-highlands-oakland": "selling-crocker-highlands-oakland.html",
   "piedmont-luxury-market": "piedmont-luxury-market.html",
+};
+
+const oldSlugRedirects: Record<string, string> = {
+  "crocker-highlands": "/neighborhood/crocker-highlands-guide",
+  "piedmont": "/neighborhood/piedmont-home-values",
+  "temescal": "/neighborhood/temescal-guide",
+  "sequoyah-hills": "/neighborhood/sequoyah-hills-market-report",
+  "rockridge": "/neighborhood/rockridge-guide",
+  "oakmore-glenview": "/neighborhood/oakmore-glenview-guide",
+  "montclair": "/neighborhood/montclair-guide",
+  "berkeley-hills": "/neighborhood/berkeley-hills-guide",
+  "trestle-glen": "/neighborhood/trestle-glen-guide",
+  "alameda": "/neighborhood/alameda-neighborhood-guide",
+  "berkeley": "/neighborhood/berkeley-neighborhood-guide",
+  "oakland": "/neighborhood/oakland-neighborhood-guide",
+  "piedmont-guide": "/neighborhood/piedmont-neighborhood-guide",
+  "crocker-highlands-trestle-glen": "/neighborhood/crocker-highlands-trestle-glen-oakland",
+  "selling-crocker-highlands": "/neighborhood/selling-crocker-highlands-oakland",
 };
 
 function findHtmlFile(htmlFile: string): string | null {
@@ -32,23 +50,6 @@ function findHtmlFile(htmlFile: string): string | null {
   if (fs.existsSync(prodPath)) return prodPath;
 
   return null;
-}
-
-function getAllHtmlFiles(): string[] {
-  const devDir = path.join(process.cwd(), "client", "public");
-  if (fs.existsSync(devDir)) {
-    try {
-      return fs.readdirSync(devDir).filter((f) => f.endsWith(".html") && f !== "index.html");
-    } catch {
-      return [];
-    }
-  }
-  try {
-    const prodDir = path.resolve(__dirname, "public");
-    return fs.readdirSync(prodDir).filter((f) => f.endsWith(".html") && f !== "index.html");
-  } catch {
-    return [];
-  }
 }
 
 export async function registerRoutes(
@@ -68,18 +69,14 @@ export async function registerRoutes(
     return res.status(404).send("Neighborhood not found");
   });
 
-  const htmlFiles = getAllHtmlFiles();
-  for (const htmlFile of htmlFiles) {
-    const baseName = htmlFile.replace(".html", "");
-    if (/[()[\]{}]/.test(baseName)) continue;
-    app.get(`/${baseName}`, (_req, res) => {
-      const filePath = findHtmlFile(htmlFile);
-      if (filePath) {
-        return res.sendFile(filePath);
-      }
-      return res.status(404).send("Page not found");
-    });
-  }
+  app.get("/neighborhood/:slug", (req, res, next) => {
+    const slug = req.params.slug;
+    const redirect = oldSlugRedirects[slug];
+    if (redirect) {
+      return res.redirect(301, redirect);
+    }
+    next();
+  });
 
   return httpServer;
 }
