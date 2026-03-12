@@ -88,7 +88,7 @@ export default function Neighborhoods() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-16">
               {neighborhoods.map((n, i) => (
-                <div key={i} onClick={() => n.link && window.open(n.link, '_blank')} className={`group ${n.link ? 'cursor-pointer' : ''} ${i === 0 ? 'md:col-span-2 lg:col-span-2 grid md:grid-cols-2 gap-12 items-center bg-secondary/10 p-0 border border-border overflow-hidden shadow-sm hover:shadow-md transition-all' : ''}`}>
+                <a key={i} href={n.link || undefined} className={`group block ${n.link ? 'cursor-pointer' : ''} ${i === 0 ? 'md:col-span-2 lg:col-span-2 grid md:grid-cols-2 gap-12 items-center bg-secondary/10 p-0 border border-border overflow-hidden shadow-sm hover:shadow-md transition-all' : ''}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className={`overflow-hidden shadow-md border border-border ${i === 0 ? 'h-[500px] mb-0 border-none shadow-none w-full' : 'h-[300px] mb-6'}`}>
                     <img 
                       src={n.image} 
@@ -104,22 +104,16 @@ export default function Neighborhoods() {
                       {n.description}
                     </p>
                     {n.link ? (
-                      <a 
-                        href={n.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block text-sm font-bold border-b-2 border-primary pb-1 text-primary uppercase tracking-widest hover:text-primary/70 hover:border-primary/70 transition-colors"
-                        onClick={(e) => e.stopPropagation()}
-                      >
+                      <span className="inline-block text-sm font-bold border-b-2 border-primary pb-1 text-primary uppercase tracking-widest group-hover:text-primary/70 group-hover:border-primary/70 transition-colors">
                         Explore {n.name}
-                      </a>
+                      </span>
                     ) : (
                       <span className="inline-block text-sm font-bold border-b-2 border-transparent pb-1 text-muted-foreground uppercase tracking-widest">
                         More info coming soon
                       </span>
                     )}
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

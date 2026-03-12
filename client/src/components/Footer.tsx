@@ -1,7 +1,10 @@
 import { Link } from "wouter";
+import NeighborhoodBar from "./NeighborhoodBar";
 
 export default function Footer() {
   return (
+    <>
+    <NeighborhoodBar />
     <footer className="bg-foreground border-t border-white/10 text-white/50 py-16 text-center text-sm">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
         <div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
@@ -21,5 +24,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }
