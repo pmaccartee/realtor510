@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Patrick MacCartee | Oakland Real Estate Agent | East Bay Homes</title>
+    <meta name="description" content="Patrick MacCartee is a licensed East Bay real estate agent with The Grubb Company, specializing in Oakland, Berkeley, Piedmont, and Alameda home sales." />
+    <meta property="og:title" content="Patrick MacCartee | The Grubb Company" />
+    <meta property="og:description" content="Your partner in East Bay Real Estate." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://realtor510.com/PM_LOGO_Red_1772927689333.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@patrickmaccartee" />
+    <meta name="twitter:title" content="Patrick MacCartee | The Grubb Company" />
+    <meta name="twitter:description" content="Your partner in East Bay Real Estate." />
+    <meta name="twitter:image" content="https://realtor510.com/PM_LOGO_Red_1772927689333.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+    <style>
+      realscout-your-listings {
+        --rs-listing-divider-color: rgb(101, 141, 172);
+        width: 100%;
+      }
+    </style>
+
+    <!-- Schema.org: RealEstateAgent -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Patrick MacCartee – Realtor 510",
+      "url": "https://www.realtor510.com",
+      "image": "https://realtor510.com/PM_LOGO_Red_1772927689333.png",
+      "description": "Patrick MacCartee is a licensed California real estate agent with The Grubb Company, specializing in buyer and seller representation across Oakland, Berkeley, Piedmont, Alameda, and the greater East Bay.",
+      "telephone": "+15108594895",
+      "email": "patrick@realtor510.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1960 Mountain Blvd",
+        "addressLocality": "Oakland",
+        "addressRegion": "CA",
+        "postalCode": "94611",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.8219,
+        "longitude": -122.2111
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Oakland" },
+        { "@type": "City", "name": "Berkeley" },
+        { "@type": "City", "name": "Piedmont" },
+        { "@type": "City", "name": "Alameda" },
+        { "@type": "City", "name": "Emeryville" },
+        { "@type": "City", "name": "Albany" },
+        { "@type": "City", "name": "El Cerrito" }
+      ],
+      "knowsAbout": [
+        "East Bay real estate",
+        "Oakland home sales",
+        "Piedmont luxury homes",
+        "Berkeley real estate",
+        "Alameda homes",
+        "home staging",
+        "listing agent services",
+        "buyer representation"
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "The Grubb Company",
+        "url": "https://www.grubbco.com"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "California DRE",
+        "value": "02142693"
+      },
+      "sameAs": [
+        "https://www.zillow.com/profile/pmaccartee",
+        "https://www.yelp.com/biz/patrick-maccartee-realtor510-oakland-4",
+        "https://www.facebook.com/Realtor510/"
+      ]
+    }
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1438966301114887');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6DDVCG0Q3F');
+    </script>
+
+    <script>
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      function forceScrollToTop() {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        setTimeout(function() { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, 10);
+        setTimeout(function() { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, 50);
+      }
+      window.addEventListener('load', forceScrollToTop);
+      window.addEventListener('DOMContentLoaded', forceScrollToTop);
+      window.scrollTo(0, 0);
+    </script>
+
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  </head>
+  <body>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1" /></noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
