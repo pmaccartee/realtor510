@@ -5,7 +5,7 @@ import { Search, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { insights } from "../data/insights";
 
-export default function Answers() {
+export default function Blog() {
   const [search, setSearch] = useState("");
 
   const filteredInsights = insights.filter((insight) => {
@@ -76,7 +76,7 @@ export default function Answers() {
                       {content}
                     </a>
                   ) : (
-                    <Link key={index} href={`/answers/${insight.id}`} className="group cursor-pointer flex flex-col h-full block">
+                    <Link key={index} href={`/blog/${insight.id}`} className="group cursor-pointer flex flex-col h-full block">
                       {content}
                     </Link>
                   );

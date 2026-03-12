@@ -19,7 +19,7 @@ export default function Navigation() {
           <Link href="/sell" className="hover:text-primary transition-colors">Sell</Link>
           <Link href="/reviews" className="hover:text-primary transition-colors">Reviews</Link>
           <Link href="/neighborhoods" className="hover:text-primary transition-colors">Neighborhoods</Link>
-          <Link href="/answers" className="hover:text-primary transition-colors">Answers</Link>
+          <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
           <a href="mailto:patrick@realtor510.com" className="bg-primary text-primary-foreground px-6 py-2 hover:bg-primary/90 transition-colors shadow-sm inline-block">
             Contact
           </a>
@@ -43,7 +43,7 @@ export default function Navigation() {
             <Link href="/sell" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Sell</Link>
             <Link href="/reviews" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Reviews</Link>
             <Link href="/neighborhoods" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Neighborhoods</Link>
-            <Link href="/answers" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Answers</Link>
+            <Link href="/blog" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
             <a 
               href="mailto:patrick@realtor510.com" 
               className="bg-primary text-primary-foreground px-6 py-3 text-center mt-4 shadow-sm"

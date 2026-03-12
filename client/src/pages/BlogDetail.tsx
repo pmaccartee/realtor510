@@ -6,8 +6,8 @@ import { insights } from "../data/insights";
 import { Link } from "wouter";
 import { useEffect } from "react";
 
-export default function AnswerDetail() {
-  const [, params] = useRoute("/answers/:id");
+export default function BlogDetail() {
+  const [, params] = useRoute("/blog/:id");
   const id = params?.id;
   
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function AnswerDetail() {
         <Navigation />
         <main className="flex-1 pt-40 text-center">
           <h1 className="text-3xl font-serif mb-4">Insight not found</h1>
-          <Link href="/answers" className="text-primary hover:underline flex items-center justify-center gap-2">
+          <Link href="/blog" className="text-primary hover:underline flex items-center justify-center gap-2">
             <ArrowLeft className="h-4 w-4" /> Back to all insights
           </Link>
         </main>
@@ -31,7 +31,6 @@ export default function AnswerDetail() {
     );
   }
 
-  // Split content by newlines to render paragraphs
   const paragraphs = insight.content.split('\n').filter((p: string) => p.trim() !== '');
 
   return (
@@ -40,8 +39,8 @@ export default function AnswerDetail() {
       <main className="flex-1 pt-32 pb-24 bg-white">
         <article className="max-w-4xl mx-auto px-6">
           <div className="mb-12">
-            <Link href="/answers" className="inline-flex items-center text-sm font-bold text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest mb-8">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Answers
+            <Link href="/blog" className="inline-flex items-center text-sm font-bold text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest mb-8">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
             </Link>
             
             <div className="text-sm font-bold text-primary mb-4 uppercase tracking-wider">
