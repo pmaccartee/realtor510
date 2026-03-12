@@ -1,0 +1,154 @@
+2026-03-12T03:24:24.350Z	Initializing build environment...
+2026-03-12T03:24:26.991Z	Success: Finished initializing build environment
+2026-03-12T03:24:27.913Z	Cloning repository...
+2026-03-12T03:24:30.269Z	Restoring from dependencies cache
+2026-03-12T03:24:30.271Z	Restoring from build output cache
+2026-03-12T03:24:30.276Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-12T03:24:31.750Z	Success: Dependencies restored from build cache.
+2026-03-12T03:24:31.752Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-12T03:24:36.530Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-03-12T03:24:36.571Z	npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-03-12T03:24:36.682Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-03-12T03:24:41.940Z	
+2026-03-12T03:24:41.941Z	added 422 packages, and audited 423 packages in 10s
+2026-03-12T03:24:41.941Z	
+2026-03-12T03:24:41.941Z	69 packages are looking for funding
+2026-03-12T03:24:41.942Z	  run `npm fund` for details
+2026-03-12T03:24:41.975Z	
+2026-03-12T03:24:41.975Z	7 vulnerabilities (1 low, 5 moderate, 1 high)
+2026-03-12T03:24:41.975Z	
+2026-03-12T03:24:41.975Z	To address issues that do not require attention, run:
+2026-03-12T03:24:41.976Z	  npm audit fix
+2026-03-12T03:24:41.976Z	
+2026-03-12T03:24:41.976Z	To address all issues (including breaking changes), run:
+2026-03-12T03:24:41.976Z	  npm audit fix --force
+2026-03-12T03:24:41.976Z	
+2026-03-12T03:24:41.976Z	Run `npm audit` for details.
+2026-03-12T03:24:42.283Z	Executing user build command: npm run build
+2026-03-12T03:24:42.650Z	
+2026-03-12T03:24:42.650Z	> rest-express@1.0.0 build
+2026-03-12T03:24:42.650Z	> tsx script/build.ts
+2026-03-12T03:24:42.650Z	
+2026-03-12T03:24:43.855Z	building client...
+2026-03-12T03:24:44.134Z	vite v7.3.1 building client environment for production...
+2026-03-12T03:24:44.449Z	transforming...
+2026-03-12T03:24:48.927Z	✓ 1820 modules transformed.
+2026-03-12T03:24:49.158Z	rendering chunks...
+2026-03-12T03:24:49.661Z	computing gzip size...
+2026-03-12T03:24:49.770Z	../dist/public/buy/index.html                                                                    0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/sell/index.html                                                                   0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/answers/index.html                                                                0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/reviews/index.html                                                                0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/trends/index.html                                                                 0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/waters/index.html                                                                 0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/julia/index.html                                                                  0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/neighborhoods/index.html                                                          0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.772Z	../dist/public/index.html                                                                        3.44 kB │ gzip:     1.49 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/montclair-CtXIrI9J.jpeg                                                   46.44 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/piedmont-2NPXMwaP.jpeg                                                    50.69 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/oakmore-DFKzyOxX.jpg                                                      71.18 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/berkeley-hills-DwEBbX8A.webp                                             127.79 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/temescal-sRH_oFZq.jpg                                                    189.53 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/rockridge-BslofmMG.webp                                                  223.28 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/PM_LOGO_Red_1772927689333-CI21v__F.png                                   237.09 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/005-293-elysian-fields-drive_1772929219661-eRtxYQAN.jpg                  462.52 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/PJM_HEADSHOT_light_touch_1772926722025-RziWWBHk.png                      503.88 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/crocker-highlands-FcVvIJqF.jpg                                           597.57 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/002-1015-warfield-avenue.80998.p4k.001.web_1772922978781-zh89xEU-.jpg    814.22 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/oakland-hero-gen-DD78Rh9p.png                                          1,585.78 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/sequoyah-hills-BwXNv5mi.png                                            2,421.43 kB
+2026-03-12T03:24:49.773Z	../dist/public/assets/main-m8F93Vxo.css                                                        101.42 kB │ gzip:    16.67 kB
+2026-03-12T03:24:49.773Z	../dist/public/assets/main-CNGtXl6R.js                                                       2,563.63 kB │ gzip: 1,696.06 kB
+2026-03-12T03:24:49.773Z	
+2026-03-12T03:24:49.773Z	(!) Some chunks are larger than 500 kB after minification. Consider:
+2026-03-12T03:24:49.773Z	- Using dynamic import() to code-split the application
+2026-03-12T03:24:49.773Z	- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-03-12T03:24:49.773Z	- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-03-12T03:24:49.773Z	✓ built in 5.38s
+2026-03-12T03:24:49.774Z	building server...
+2026-03-12T03:24:49.906Z	
+2026-03-12T03:24:49.906Z	  dist/index.cjs  788.9kb
+2026-03-12T03:24:49.907Z	
+2026-03-12T03:24:49.907Z	⚡ Done in 114ms
+2026-03-12T03:24:50.055Z	Success: Build command completed
+2026-03-12T03:24:50.224Z	Executing user deploy command:  
+2026-03-12T03:24:50.231Z	Success: Deploy command completed
+2026-03-12T03:24:50.234Z	Skipping build output cache as it's not supported for your project
+2026-03-12T03:24:50.381Z	✨ Success! Build completed.
+2026-03-12T03:24:24.350Z	Initializing build environment...
+2026-03-12T03:24:26.991Z	Success: Finished initializing build environment
+2026-03-12T03:24:27.913Z	Cloning repository...
+2026-03-12T03:24:30.269Z	Restoring from dependencies cache
+2026-03-12T03:24:30.271Z	Restoring from build output cache
+2026-03-12T03:24:30.276Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-12T03:24:31.750Z	Success: Dependencies restored from build cache.
+2026-03-12T03:24:31.752Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-12T03:24:36.530Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-03-12T03:24:36.571Z	npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-03-12T03:24:36.682Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-03-12T03:24:41.940Z	
+2026-03-12T03:24:41.941Z	added 422 packages, and audited 423 packages in 10s
+2026-03-12T03:24:41.941Z	
+2026-03-12T03:24:41.941Z	69 packages are looking for funding
+2026-03-12T03:24:41.942Z	  run `npm fund` for details
+2026-03-12T03:24:41.975Z	
+2026-03-12T03:24:41.975Z	7 vulnerabilities (1 low, 5 moderate, 1 high)
+2026-03-12T03:24:41.975Z	
+2026-03-12T03:24:41.975Z	To address issues that do not require attention, run:
+2026-03-12T03:24:41.976Z	  npm audit fix
+2026-03-12T03:24:41.976Z	
+2026-03-12T03:24:41.976Z	To address all issues (including breaking changes), run:
+2026-03-12T03:24:41.976Z	  npm audit fix --force
+2026-03-12T03:24:41.976Z	
+2026-03-12T03:24:41.976Z	Run `npm audit` for details.
+2026-03-12T03:24:42.283Z	Executing user build command: npm run build
+2026-03-12T03:24:42.650Z	
+2026-03-12T03:24:42.650Z	> rest-express@1.0.0 build
+2026-03-12T03:24:42.650Z	> tsx script/build.ts
+2026-03-12T03:24:42.650Z	
+2026-03-12T03:24:43.855Z	building client...
+2026-03-12T03:24:44.134Z	vite v7.3.1 building client environment for production...
+2026-03-12T03:24:44.449Z	transforming...
+2026-03-12T03:24:48.927Z	✓ 1820 modules transformed.
+2026-03-12T03:24:49.158Z	rendering chunks...
+2026-03-12T03:24:49.661Z	computing gzip size...
+2026-03-12T03:24:49.770Z	../dist/public/buy/index.html                                                                    0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/sell/index.html                                                                   0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/answers/index.html                                                                0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/reviews/index.html                                                                0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/trends/index.html                                                                 0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/waters/index.html                                                                 0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/julia/index.html                                                                  0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.771Z	../dist/public/neighborhoods/index.html                                                          0.90 kB │ gzip:     0.52 kB
+2026-03-12T03:24:49.772Z	../dist/public/index.html                                                                        3.44 kB │ gzip:     1.49 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/montclair-CtXIrI9J.jpeg                                                   46.44 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/piedmont-2NPXMwaP.jpeg                                                    50.69 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/oakmore-DFKzyOxX.jpg                                                      71.18 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/berkeley-hills-DwEBbX8A.webp                                             127.79 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/temescal-sRH_oFZq.jpg                                                    189.53 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/rockridge-BslofmMG.webp                                                  223.28 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/PM_LOGO_Red_1772927689333-CI21v__F.png                                   237.09 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/005-293-elysian-fields-drive_1772929219661-eRtxYQAN.jpg                  462.52 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/PJM_HEADSHOT_light_touch_1772926722025-RziWWBHk.png                      503.88 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/crocker-highlands-FcVvIJqF.jpg                                           597.57 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/002-1015-warfield-avenue.80998.p4k.001.web_1772922978781-zh89xEU-.jpg    814.22 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/oakland-hero-gen-DD78Rh9p.png                                          1,585.78 kB
+2026-03-12T03:24:49.772Z	../dist/public/assets/sequoyah-hills-BwXNv5mi.png                                            2,421.43 kB
+2026-03-12T03:24:49.773Z	../dist/public/assets/main-m8F93Vxo.css                                                        101.42 kB │ gzip:    16.67 kB
+2026-03-12T03:24:49.773Z	../dist/public/assets/main-CNGtXl6R.js                                                       2,563.63 kB │ gzip: 1,696.06 kB
+2026-03-12T03:24:49.773Z	
+2026-03-12T03:24:49.773Z	(!) Some chunks are larger than 500 kB after minification. Consider:
+2026-03-12T03:24:49.773Z	- Using dynamic import() to code-split the application
+2026-03-12T03:24:49.773Z	- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-03-12T03:24:49.773Z	- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-03-12T03:24:49.773Z	✓ built in 5.38s
+2026-03-12T03:24:49.774Z	building server...
+2026-03-12T03:24:49.906Z	
+2026-03-12T03:24:49.906Z	  dist/index.cjs  788.9kb
+2026-03-12T03:24:49.907Z	
+2026-03-12T03:24:49.907Z	⚡ Done in 114ms
+2026-03-12T03:24:50.055Z	Success: Build command completed
+2026-03-12T03:24:50.224Z	Executing user deploy command:  
+2026-03-12T03:24:50.231Z	Success: Deploy command completed
+2026-03-12T03:24:50.234Z	Skipping build output cache as it's not supported for your project
+2026-03-12T03:24:50.381Z	✨ Success! Build completed.
