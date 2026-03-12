@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Julia Morgan — Architect of California</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -24,7 +24,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Playfair Display', Georgia, serif;
     background: var(--cream);
     color: var(--ink);
     overflow-x: hidden;
@@ -629,6 +629,62 @@
     .legacy-grid { grid-template-columns: 1fr; }
     .container { padding: 0 28px; }
   }
+
+    .react-header-wrapper {
+      position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 50;
+      background-color: #ffffff; border-bottom: 1px solid hsl(0, 0%, 90%);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); display: block; height: 80px;
+    }
+    .react-header-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 100%;
+      display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;
+    }
+    .react-header-logo-link { display: block; text-decoration: none; }
+    .react-header-logo-img { height: 48px; width: auto; cursor: pointer; object-fit: contain; display: block; }
+    .react-header-links { display: none; }
+    @media (min-width: 768px) {
+      .react-header-links { display: flex; align-items: center; gap: 32px; margin: 0; padding: 0; }
+    }
+    .react-header-link {
+      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase; color: hsl(0, 0%, 15%);
+      text-decoration: none; transition: color 0.15s;
+    }
+    .react-header-link:hover { color: hsl(355, 75%, 35%); }
+    .react-header-btn {
+      background-color: hsl(355, 75%, 35%); color: #ffffff !important;
+      padding: 8px 24px; text-decoration: none; font-family: 'Montserrat', sans-serif;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: background-color 0.15s; display: inline-block;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+    .react-header-btn:hover { background-color: hsla(355, 75%, 35%, 0.9); }
+    .mobile-menu-btn {
+      display: none; background: none; border: none; cursor: pointer;
+      color: hsl(0, 0%, 15%); padding: 8px;
+    }
+    .mobile-menu-overlay {
+      position: fixed; top: 80px; left: 0; width: 100%; height: calc(100vh - 80px);
+      background-color: white; z-index: 40; overflow-y: auto; border-top: 1px solid hsl(0, 0%, 90%);
+    }
+    .mobile-menu-overlay.hidden { display: none; }
+    .mobile-menu-content { display: flex; flex-direction: column; padding: 24px; gap: 24px; }
+    .mobile-nav-link {
+      font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; color: hsl(0, 0%, 15%);
+      text-decoration: none; display: block;
+    }
+    .mobile-nav-btn {
+      background-color: hsl(355, 75%, 35%); color: white !important;
+      padding: 12px 24px; text-align: center; text-decoration: none;
+      font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 8px;
+    }
+    @media (max-width: 767px) {
+      .desktop-only { display: none !important; }
+      .mobile-menu-btn { display: block; }
+    }
+  
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
@@ -657,6 +713,7 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <meta property="og:image" content="https://realtor510.com/PM_LOGO_Red_1772927689333.png">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </head>
 <body>
 
@@ -828,10 +885,17 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
 </section>
 
 <!-- ── FOOTER ── -->
-<footer>
-  <p>Julia Morgan &nbsp;·&nbsp; 1872–1957 &nbsp;·&nbsp; San Francisco, California</p>
-  <p style="margin-top:8px;">First Woman Licensed Architect in California &nbsp;·&nbsp; AIA Gold Medal 2014</p>
-</footer>
+<footer class="site-footer" style="background:#2a2a2a;padding:52px 32px 40px;text-align:center;margin-top:0;">
+    <p style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:#fff;margin-bottom:6px;">Patrick MacCartee</p>
+    <p style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#888;margin-bottom:24px;">DRE #02142693 · The Grubb Company</p>
+    <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;">
+      <a href="/buy" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Buy</a>
+      <a href="/sell" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Sell</a>
+      <a href="/reviews" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Reviews</a>
+      <a href="/neighborhoods" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Neighborhoods</a>
+      <a href="/blog" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Blog</a>
+    </div>
+  </footer>
 
 <script>
 // ── EMBEDDED IMAGES (base64) ──
@@ -966,5 +1030,17 @@ document.querySelectorAll('.stat-block, .tl-item, .legacy-card').forEach((el, i)
 });
 
 </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function() {
+          menu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
 </body>
 </html>

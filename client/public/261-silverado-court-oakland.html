@@ -9,7 +9,7 @@
 <meta property="og:description" content="Single-level living, a chef's kitchen that's a true showpiece, and the quiet confidence of a home done right. Joaquin Miller, Oakland.">
 <meta property="og:type" content="article">
 <link rel="canonical" href="https://realtor510.com/261-silverado-court-oakland.html">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -34,16 +34,16 @@
 
 <style>
   :root {
-    --sage: #4A7C59;
-    --sage-light: #EAF0EC;
-    --sage-mid: #C5D9CA;
-    --parchment: #F9F6F0;
+    --crimson: hsl(355, 75%, 35%);
+    --crimson-light: hsl(355, 20%, 95%);
+    --crimson-mid: hsl(355, 40%, 75%);
+    --parchment: #ffffff;
     --ink: #1A1A1A;
     --ink-mid: #3D3D3D;
     --ink-light: #6B6B6B;
     --rule: #E0D9CE;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'DM Sans', sans-serif;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Montserrat', sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -55,27 +55,12 @@
     line-height: 1.7;
   }
 
-  /* MASTHEAD */
-  .masthead {
-    background: var(--ink);
-    color: white;
-    padding: 14px 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-  .masthead a { color: white; text-decoration: none; opacity: 0.8; }
-  .masthead a:hover { opacity: 1; }
-  .masthead-right { opacity: 0.6; }
+  /* HEADER - see below */
 
   /* HERO */
-  .hero {
-    background: var(--ink);
+  .hero { background: var(--ink);
     color: white;
-    padding: 88px 48px 80px;
+    padding: 168px 48px 80px;
     position: relative;
     overflow: hidden;
   }
@@ -92,7 +77,7 @@
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--sage-mid);
+    color: var(--crimson-mid);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -103,7 +88,7 @@
     display: block;
     width: 32px;
     height: 1px;
-    background: var(--sage);
+    background: var(--crimson);
   }
   .hero h1 {
     font-family: var(--serif);
@@ -201,8 +186,8 @@
   .pull-quote {
     margin: 40px 0;
     padding: 32px 36px;
-    border-left: 3px solid var(--sage);
-    background: var(--sage-light);
+    border-left: 3px solid var(--crimson);
+    background: var(--crimson-light);
   }
   .pull-quote p {
     font-family: var(--serif);
@@ -231,7 +216,7 @@
     content: '—';
     position: absolute;
     left: 0;
-    color: var(--sage);
+    color: var(--crimson);
   }
 
   /* SIDEBAR */
@@ -247,7 +232,7 @@
     font-size: 10px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--sage-mid);
+    color: var(--crimson-mid);
     margin-bottom: 20px;
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -265,9 +250,9 @@
   .sidebar-row-value { font-family: var(--serif); font-size: 1rem; }
 
   .sidebar-cta {
-    background: var(--sage-light);
+    background: var(--crimson-light);
     padding: 28px;
-    border: 1px solid var(--sage-mid);
+    border: 1px solid var(--crimson-mid);
   }
   .sidebar-cta-title {
     font-family: var(--serif);
@@ -284,7 +269,7 @@
   }
   .btn-sage {
     display: block;
-    background: var(--sage);
+    background: var(--crimson);
     color: white;
     padding: 12px 0;
     text-align: center;
@@ -294,7 +279,7 @@
     text-transform: uppercase;
     transition: background 0.2s;
   }
-  .btn-sage:hover { background: #3A6647; }
+  .btn-sage:hover { background: hsl(355, 75%, 28%); }
 
   .neighborhood-box {
     margin-top: 48px;
@@ -351,7 +336,7 @@
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--sage-mid);
+    color: var(--crimson-mid);
     margin-bottom: 20px;
   }
   .cta-title {
@@ -371,7 +356,7 @@
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
   .btn-primary {
     display: inline-block;
-    background: var(--sage);
+    background: var(--crimson);
     color: white;
     padding: 14px 36px;
     text-decoration: none;
@@ -380,7 +365,7 @@
     text-transform: uppercase;
     transition: background 0.2s;
   }
-  .btn-primary:hover { background: #3A6647; }
+  .btn-primary:hover { background: hsl(355, 75%, 28%); }
   .btn-secondary {
     display: inline-block;
     border: 1px solid rgba(255,255,255,0.3);
@@ -411,12 +396,68 @@
   @media (max-width: 900px) {
     .content-wrap { grid-template-columns: 1fr; gap: 48px; }
     .sidebar { position: static; }
-    .masthead, .hero, .facts-strip, .cta-section, .footer { padding-left: 24px; padding-right: 24px; }
+    .hero, .facts-strip, .cta-section, .footer { padding-left: 24px; padding-right: 24px; }
     .content-wrap { padding: 48px 24px; }
     .facts-inner { flex-wrap: wrap; }
     .fact { padding: 16px 24px 16px 0; }
     .feature-list { grid-template-columns: 1fr; }
   }
+
+    .react-header-wrapper {
+      position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 50;
+      background-color: #ffffff; border-bottom: 1px solid hsl(0, 0%, 90%);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); display: block; height: 80px;
+    }
+    .react-header-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 100%;
+      display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;
+    }
+    .react-header-logo-link { display: block; text-decoration: none; }
+    .react-header-logo-img { height: 48px; width: auto; cursor: pointer; object-fit: contain; display: block; }
+    .react-header-links { display: none; }
+    @media (min-width: 768px) {
+      .react-header-links { display: flex; align-items: center; gap: 32px; margin: 0; padding: 0; }
+    }
+    .react-header-link {
+      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase; color: hsl(0, 0%, 15%);
+      text-decoration: none; transition: color 0.15s;
+    }
+    .react-header-link:hover { color: hsl(355, 75%, 35%); }
+    .react-header-btn {
+      background-color: hsl(355, 75%, 35%); color: #ffffff !important;
+      padding: 8px 24px; text-decoration: none; font-family: 'Montserrat', sans-serif;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: background-color 0.15s; display: inline-block;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+    .react-header-btn:hover { background-color: hsla(355, 75%, 35%, 0.9); }
+    .mobile-menu-btn {
+      display: none; background: none; border: none; cursor: pointer;
+      color: hsl(0, 0%, 15%); padding: 8px;
+    }
+    .mobile-menu-overlay {
+      position: fixed; top: 80px; left: 0; width: 100%; height: calc(100vh - 80px);
+      background-color: white; z-index: 40; overflow-y: auto; border-top: 1px solid hsl(0, 0%, 90%);
+    }
+    .mobile-menu-overlay.hidden { display: none; }
+    .mobile-menu-content { display: flex; flex-direction: column; padding: 24px; gap: 24px; }
+    .mobile-nav-link {
+      font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; color: hsl(0, 0%, 15%);
+      text-decoration: none; display: block;
+    }
+    .mobile-nav-btn {
+      background-color: hsl(355, 75%, 35%); color: white !important;
+      padding: 12px 24px; text-align: center; text-decoration: none;
+      font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 8px;
+    }
+    @media (max-width: 767px) {
+      .desktop-only { display: none !important; }
+      .mobile-menu-btn { display: block; }
+    }
+  
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
@@ -445,14 +486,41 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <meta property="og:image" content="https://realtor510.com/PM_LOGO_Red_1772927689333.png">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </head>
 <body>
 
 <!-- MASTHEAD -->
-<header class="masthead">
-  <a href="https://realtor510.com">realtor510.com</a>
-  <span class="masthead-right">Patrick MacCartee · The Grubb Company · DRE #02142693</span>
-</header>
+<header class="react-header-wrapper">
+    <div class="react-header-inner">
+      <a href="/" class="react-header-logo-link">
+        <img src="/PM_LOGO_Red_1772927689333.png" alt="Patrick MacCartee Logo" class="react-header-logo-img">
+      </a>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="react-header-links desktop-only">
+        <a href="/buy" class="react-header-link">Buy</a>
+        <a href="/sell" class="react-header-link">Sell</a>
+        <a href="/reviews" class="react-header-link">Reviews</a>
+        <a href="/neighborhoods" class="react-header-link">Neighborhoods</a>
+        <a href="/blog" class="react-header-link">Blog</a>
+        <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="react-header-btn">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu-overlay hidden">
+      <div class="mobile-menu-content">
+        <a href="/buy" class="mobile-nav-link">Buy</a>
+        <a href="/sell" class="mobile-nav-link">Sell</a>
+        <a href="/reviews" class="mobile-nav-link">Reviews</a>
+        <a href="/neighborhoods" class="mobile-nav-link">Neighborhoods</a>
+        <a href="/blog" class="mobile-nav-link">Blog</a>
+        <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="mobile-nav-btn">Contact</a>
+      </div>
+    </div>
+  </header>
 
 <!-- HERO -->
 <section class="hero">
@@ -664,10 +732,29 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <span>© 2025 Patrick MacCartee · The Grubb Company · DRE #02142693</span>
-  <span><a href="mailto:patrick@realtor510.com">patrick@realtor510.com</a></span>
-</footer>
+<footer class="site-footer" style="background:#2a2a2a;padding:52px 32px 40px;text-align:center;margin-top:0;">
+    <p style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:#fff;margin-bottom:6px;">Patrick MacCartee</p>
+    <p style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#888;margin-bottom:24px;">DRE #02142693 · The Grubb Company</p>
+    <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;">
+      <a href="/buy" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Buy</a>
+      <a href="/sell" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Sell</a>
+      <a href="/reviews" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Reviews</a>
+      <a href="/neighborhoods" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Neighborhoods</a>
+      <a href="/blog" style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#888;text-decoration:none;">Blog</a>
+    </div>
+  </footer>
 
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function() {
+          menu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
 </body>
 </html>

@@ -8,19 +8,19 @@
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://realtor510.com/PM_LOGO_Red_1772927689333.png">
 <link rel="canonical" href="https://realtor510.com/neighborhood/oakland">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --sage: #4A7C59;
-    --sage-light: #EAF0EC;
-    --sage-mid: #C5D9CA;
-    --parchment: #F9F6F0;
+    --crimson: hsl(355, 75%, 35%);
+    --crimson-light: hsl(355, 20%, 95%);
+    --crimson-mid: hsl(355, 40%, 75%);
+    --parchment: #ffffff;
     --ink: #1A1A1A;
     --ink-mid: #3D3D3D;
     --ink-light: #6B6B6B;
     --rule: #E0D9CE;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'DM Sans', sans-serif;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Montserrat', sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,28 +32,12 @@
     line-height: 1.7;
   }
 
-  /* MASTHEAD */
-  .masthead {
-    background: var(--ink);
-    color: white;
-    padding: 14px 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--sans);
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-  .masthead a { color: white; text-decoration: none; opacity: 0.8; }
-  .masthead a:hover { opacity: 1; }
-  .masthead-right { opacity: 0.6; }
+  /* HEADER - see below */
 
   /* HERO */
-  .hero {
-    background: var(--ink);
+  .hero { background: var(--ink);
     color: white;
-    padding: 80px 48px 72px;
+    padding: 160px 48px 72px;
     position: relative;
     overflow: hidden;
   }
@@ -70,7 +54,7 @@
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--sage-mid);
+    color: var(--crimson-mid);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -81,7 +65,7 @@
     display: block;
     width: 32px;
     height: 1px;
-    background: var(--sage);
+    background: var(--crimson);
   }
   .hero h1 {
     font-family: var(--serif);
@@ -95,7 +79,7 @@
     font-family: var(--serif);
     font-size: 1.25rem;
     font-style: italic;
-    color: var(--sage-mid);
+    color: var(--crimson-mid);
     margin-bottom: 32px;
   }
   .hero-copy {
@@ -132,7 +116,7 @@
     white-space: nowrap;
     transition: all 0.2s;
   }
-  .nav-link:hover { color: var(--ink); border-bottom-color: var(--sage); }
+  .nav-link:hover { color: var(--ink); border-bottom-color: var(--crimson); }
 
   /* CONTENT */
   .content-wrapper {
@@ -155,7 +139,7 @@
   }
   .section-icon {
     font-size: 1.5rem;
-    color: var(--sage);
+    color: var(--crimson);
     flex-shrink: 0;
   }
   .section-header h2 {
@@ -210,11 +194,11 @@
     font-size: 0.9rem !important;
     color: var(--ink-light) !important;
     font-style: italic;
-    border-left: 2px solid var(--sage);
+    border-left: 2px solid var(--crimson);
     padding-left: 16px;
     max-width: 600px;
   }
-  .agent-note a { color: var(--sage); }
+  .agent-note a { color: var(--crimson); }
 
   /* BOTTOM LINE */
   .bottom-line {
@@ -229,7 +213,7 @@
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--sage);
+    color: var(--crimson);
     margin-bottom: 20px;
   }
   .bottom-line h2 {
@@ -248,9 +232,9 @@
 
   /* CTA */
   .cta-section {
-    background: var(--sage-light);
+    background: var(--crimson-light);
     padding: 64px 48px;
-    border-top: 1px solid var(--sage-mid);
+    border-top: 1px solid var(--crimson-mid);
   }
   .cta-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 48px; flex-wrap: wrap; }
   .cta-text h3 {
@@ -291,7 +275,7 @@
   .cta-btn {
     display: inline-block;
     margin-top: 12px;
-    background: var(--sage);
+    background: var(--crimson);
     color: white;
     text-decoration: none;
     padding: 12px 28px;
@@ -330,7 +314,7 @@
     align-items: center;
   }
   .breadcrumb a { color: var(--ink-light); text-decoration: none; }
-  .breadcrumb a:hover { color: var(--sage); }
+  .breadcrumb a:hover { color: var(--crimson); }
   .breadcrumb-sep { color: var(--rule); }
 
   /* UPDATED STAMP */
@@ -346,7 +330,7 @@
   }
 
   @media (max-width: 768px) {
-    .masthead, .hero, .content-wrapper, .section-nav, .bottom-line, .cta-section, footer, .breadcrumb {
+    .hero, .content-wrapper, .section-nav, .bottom-line, .cta-section, footer, .breadcrumb {
       padding-left: 24px;
       padding-right: 24px;
     }
@@ -360,6 +344,63 @@
   .btn-red:hover { background: hsl(355, 75%, 25%); color: white; }
   .text-red { color: hsl(355, 75%, 35%); text-decoration: underline; cursor: pointer; }
   .text-red:hover { color: hsl(355, 75%, 25%); }
+
+    /* ── Site Header (Matches React) ── */
+    .react-header-wrapper {
+      position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 50;
+      background-color: #ffffff; border-bottom: 1px solid hsl(0, 0%, 90%);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); display: block; height: 80px;
+    }
+    .react-header-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 100%;
+      display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;
+    }
+    .react-header-logo-link { display: block; text-decoration: none; }
+    .react-header-logo-img { height: 48px; width: auto; cursor: pointer; object-fit: contain; display: block; }
+    .react-header-links { display: none; }
+    @media (min-width: 768px) {
+      .react-header-links { display: flex; align-items: center; gap: 32px; margin: 0; padding: 0; }
+    }
+    .react-header-link {
+      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase; color: hsl(0, 0%, 15%);
+      text-decoration: none; transition: color 0.15s;
+    }
+    .react-header-link:hover { color: hsl(355, 75%, 35%); }
+    .react-header-btn {
+      background-color: hsl(355, 75%, 35%); color: #ffffff !important;
+      padding: 8px 24px; text-decoration: none; font-family: 'Montserrat', sans-serif;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: background-color 0.15s; display: inline-block;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+    .react-header-btn:hover { background-color: hsla(355, 75%, 35%, 0.9); }
+    .mobile-menu-btn {
+      display: none; background: none; border: none; cursor: pointer;
+      color: hsl(0, 0%, 15%); padding: 8px;
+    }
+    .mobile-menu-overlay {
+      position: fixed; top: 80px; left: 0; width: 100%; height: calc(100vh - 80px);
+      background-color: white; z-index: 40; overflow-y: auto; border-top: 1px solid hsl(0, 0%, 90%);
+    }
+    .mobile-menu-overlay.hidden { display: none; }
+    .mobile-menu-content { display: flex; flex-direction: column; padding: 24px; gap: 24px; }
+    .mobile-nav-link {
+      font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; color: hsl(0, 0%, 15%);
+      text-decoration: none; display: block;
+    }
+    .mobile-nav-btn {
+      background-color: hsl(355, 75%, 35%); color: white !important;
+      padding: 12px 24px; text-align: center; text-decoration: none;
+      font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 8px;
+    }
+    @media (max-width: 767px) {
+      .desktop-only { display: none !important; }
+      .mobile-menu-btn { display: block; }
+    }
+  
 </style>
 
 <!-- Meta Pixel Code -->
@@ -386,14 +427,41 @@ fbq('track', 'PageView');
 
   gtag('config', 'G-6DDVCG0Q3F');
 </script>
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1" /></noscript>
 
-<header class="masthead">
-  <a href="https://realtor510.com">realtor510.com</a>
-  <span class="masthead-right">Patrick MacCartee · The Grubb Company · DRE #02142693</span>
-</header>
+<header class="react-header-wrapper">
+    <div class="react-header-inner">
+      <a href="/" class="react-header-logo-link">
+        <img src="/PM_LOGO_Red_1772927689333.png" alt="Patrick MacCartee Logo" class="react-header-logo-img">
+      </a>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="react-header-links desktop-only">
+        <a href="/buy" class="react-header-link">Buy</a>
+        <a href="/sell" class="react-header-link">Sell</a>
+        <a href="/reviews" class="react-header-link">Reviews</a>
+        <a href="/neighborhoods" class="react-header-link">Neighborhoods</a>
+        <a href="/blog" class="react-header-link">Blog</a>
+        <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="react-header-btn">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu-overlay hidden">
+      <div class="mobile-menu-content">
+        <a href="/buy" class="mobile-nav-link">Buy</a>
+        <a href="/sell" class="mobile-nav-link">Sell</a>
+        <a href="/reviews" class="mobile-nav-link">Reviews</a>
+        <a href="/neighborhoods" class="mobile-nav-link">Neighborhoods</a>
+        <a href="/blog" class="mobile-nav-link">Blog</a>
+        <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5, 1, 0].join('') + [8, 5, 9].join('') + [4, 8, 9, 5].join('')" class="mobile-nav-btn">Contact</a>
+      </div>
+    </div>
+  </header>
 
 <nav class="breadcrumb">
   <a href="https://realtor510.com">Home</a>
@@ -444,37 +512,37 @@ fbq('track', 'PageView');
             <div style="margin-top:32px; display:grid; grid-template-columns:1fr 1fr; gap:24px;">
 
               <div style="padding:24px; background:white; border:1px solid var(--rule);">
-                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--sage); margin-bottom:8px;">Rockridge</div>
+                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--crimson); margin-bottom:8px;">Rockridge</div>
                 <p style="font-family:var(--serif); font-size:1.05rem; font-weight:500; margin-bottom:8px; line-height:1.3;">College Avenue's anchor neighborhood</p>
                 <p style="font-size:0.875rem; color:var(--ink-mid); line-height:1.75; margin:0;">The East Bay's most walkable residential neighborhood. Craftsman bungalows line tree-canopied streets; Market Hall anchors a College Avenue corridor that rivals any urban retail strip in the region. Rockridge BART puts San Francisco's Embarcadero at 20 minutes. Consistently one of Oakland's highest-demand ZIP codes.</p>
               </div>
 
               <div style="padding:24px; background:white; border:1px solid var(--rule);">
-                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--sage); margin-bottom:8px;">Upper Rockridge</div>
+                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--crimson); margin-bottom:8px;">Upper Rockridge</div>
                 <p style="font-family:var(--serif); font-size:1.05rem; font-weight:500; margin-bottom:8px; line-height:1.3;">The hills above, with views to match</p>
                 <p style="font-size:0.875rem; color:var(--ink-mid); line-height:1.75; margin:0;">Where Rockridge climbs into the Oakland Hills, lots widen, views open up, and the architecture shifts toward mid-century moderns and larger Colonials. Hillcrest K–8 is one of Oakland Unified's most sought-after schools. Buyers here are trading density for elevation — and getting both Bay views and College Avenue access in return.</p>
               </div>
 
               <div style="padding:24px; background:white; border:1px solid var(--rule);">
-                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--sage); margin-bottom:8px;">Montclair</div>
+                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--crimson); margin-bottom:8px;">Montclair</div>
                 <p style="font-family:var(--serif); font-size:1.05rem; font-weight:500; margin-bottom:8px; line-height:1.3;">The hills village, self-contained</p>
                 <p style="font-size:0.875rem; color:var(--ink-mid); line-height:1.75; margin:0;">Montclair has its own village center — Montclair Village — with independent restaurants, a weekly farmers market, and boutique retail that makes car-free errands genuinely possible at elevation. Wooded lots, estate-scale homes, and Montclair Elementary draw families who want Oakland Hills living with a true neighborhood center beneath them.</p>
               </div>
 
               <div style="padding:24px; background:white; border:1px solid var(--rule);">
-                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--sage); margin-bottom:8px;">Crocker Highlands</div>
+                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--crimson); margin-bottom:8px;">Crocker Highlands</div>
                 <p style="font-family:var(--serif); font-size:1.05rem; font-weight:500; margin-bottom:8px; line-height:1.3;">Period architecture, Grand Lake adjacency</p>
                 <p style="font-size:0.875rem; color:var(--ink-mid); line-height:1.75; margin:0;">Bordered by Grand Lake to the west and Piedmont to the east, Crocker Highlands is defined by its architecture: Spanish Eclectic, Mediterranean Revival, and Tudor Revival homes on landscaped lots, built in the 1920s and 1930s and meticulously maintained. One of Oakland's most visually cohesive neighborhoods, and one of the most consistently appreciated.</p>
               </div>
 
               <div style="padding:24px; background:white; border:1px solid var(--rule);">
-                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--sage); margin-bottom:8px;">Trestle Glen</div>
+                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--crimson); margin-bottom:8px;">Trestle Glen</div>
                 <p style="font-family:var(--serif); font-size:1.05rem; font-weight:500; margin-bottom:8px; line-height:1.3;">Quiet, architecturally rich, Piedmont-adjacent</p>
                 <p style="font-size:0.875rem; color:var(--ink-mid); line-height:1.75; margin:0;">Trestle Glen sits between Crocker Highlands and the Piedmont border — a small, residential neighborhood of period homes with unusually quiet streets and a strong sense of enclave. Buyers here are often Piedmont-curious but prefer Oakland's price profile and urban character. The architectural quality is exceptional, the demand is persistent, and the supply is very limited.</p>
               </div>
 
               <div style="padding:24px; background:white; border:1px solid var(--rule);">
-                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--sage); margin-bottom:8px;">Glenview</div>
+                <div style="font-family:var(--sans); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--crimson); margin-bottom:8px;">Glenview</div>
                 <p style="font-family:var(--serif); font-size:1.05rem; font-weight:500; margin-bottom:8px; line-height:1.3;">Park Boulevard living, bungalow character</p>
                 <p style="font-size:0.875rem; color:var(--ink-mid); line-height:1.75; margin:0;">Glenview's Park Boulevard corridor is one of Oakland's most pleasant neighborhood main streets — lined with early 20th century Craftsman bungalows, Colonial Revivals, and Spanish Eclectics. The neighborhood draws buyers who want architectural character and community at a price point slightly below Rockridge and Crocker Highlands. A consistent performer and an undervalued address to those paying attention.</p>
               </div>
