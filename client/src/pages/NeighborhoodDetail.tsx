@@ -21,10 +21,34 @@ const neighborhoodTitles: Record<string, string> = {
   "piedmont-luxury-market": "Piedmont Luxury Market",
 };
 
+function extractParts(html: string): { styles: string; body: string; links: string[]; scripts: string[] } {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  const styleEls = doc.querySelectorAll("style");
+  const styles = Array.from(styleEls).map((s) => s.textContent || "").join("\n");
+
+  const linkEls = doc.querySelectorAll('link[rel="stylesheet"], link[href*="fonts.googleapis.com"]');
+  const links = Array.from(linkEls).map((l) => l.getAttribute("href") || "").filter(Boolean);
+
+  const scriptEls = doc.querySelectorAll("script:not([type='application/ld+json'])");
+  const scripts: string[] = [];
+  scriptEls.forEach((s) => {
+    if (s.textContent && !s.getAttribute("src")) {
+      scripts.push(s.textContent);
+    }
+  });
+
+  const body = doc.body ? doc.body.innerHTML : "";
+
+  return { styles, body, links, scripts };
+}
+
 export default function NeighborhoodDetail() {
   const params = useParams<{ slug: string }>();
   const slug = params.slug || "";
-  const [html, setHtml] = useState("");
+  const [bodyHtml, setBodyHtml] = useState("");
+  const [cssText, setCssText] = useState("");
   const [loading, setLoading] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const [, navigate] = useLocation();
@@ -39,12 +63,35 @@ export default function NeighborhoodDetail() {
         if (!res.ok) throw new Error("Not found");
         return res.text();
       })
-      .then((text) => {
-        setHtml(text);
+      .then((rawHtml) => {
+        const { styles, body, links, scripts } = extractParts(rawHtml);
+        setCssText(styles);
+        setBodyHtml(body);
+
+        links.forEach((href) => {
+          if (!document.querySelector(`link[href="${href}"]`)) {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = href;
+            document.head.appendChild(link);
+          }
+        });
+
         setLoading(false);
+
+        setTimeout(() => {
+          scripts.forEach((code) => {
+            try {
+              const fn = new Function(code);
+              fn();
+            } catch (e) {
+              // ignore script errors
+            }
+          });
+        }, 100);
       })
       .catch(() => {
-        setHtml("<h1>Page not found</h1>");
+        setBodyHtml("<h1>Page not found</h1>");
         setLoading(false);
       });
   }, [slug]);
@@ -56,7 +103,12 @@ export default function NeighborhoodDetail() {
       const href = target.getAttribute("href");
       if (!href) return;
 
-      if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("javascript:")) {
+      if (
+        href.startsWith("http") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:") ||
+        href.startsWith("javascript:")
+      ) {
         return;
       }
 
@@ -71,24 +123,7 @@ export default function NeighborhoodDetail() {
     if (!container) return;
     container.addEventListener("click", handleClick);
     return () => container.removeEventListener("click", handleClick);
-  }, [handleClick, html]);
-
-  useEffect(() => {
-    if (!html || loading) return;
-    const container = containerRef.current;
-    if (!container) return;
-
-    const scripts = container.querySelectorAll("script");
-    scripts.forEach((oldScript) => {
-      const newScript = document.createElement("script");
-      if (oldScript.src) {
-        newScript.src = oldScript.src;
-      } else {
-        newScript.textContent = oldScript.textContent;
-      }
-      oldScript.parentNode?.replaceChild(newScript, oldScript);
-    });
-  }, [html, loading]);
+  }, [handleClick, bodyHtml]);
 
   if (loading) {
     return (
@@ -113,10 +148,12 @@ export default function NeighborhoodDetail() {
   }
 
   return (
-    <div
-      ref={containerRef}
-      dangerouslySetInnerHTML={{ __html: html }}
-      style={{ isolation: "isolate" }}
-    />
+    <>
+      {cssText && <style dangerouslySetInnerHTML={{ __html: cssText }} />}
+      <div
+        ref={containerRef}
+        dangerouslySetInnerHTML={{ __html: bodyHtml }}
+      />
+    </>
   );
 }
