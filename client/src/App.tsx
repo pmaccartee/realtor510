@@ -13,7 +13,7 @@ import BlogDetail from "./pages/BlogDetail";
 import Reviews from "@/pages/Reviews";
 import Trends from "@/pages/Trends";
 import Waters from "@/pages/Waters";
-import Julia from "@/pages/Julia";
+
 import Neighborhoods from "@/pages/Neighborhoods";
 
 function Router() {
@@ -27,10 +27,8 @@ function Router() {
       <Route path="/reviews" component={Reviews}/>
       <Route path="/trends" component={Trends}/>
       <Route path="/waters" component={Waters}/>
-      <Route path="/julia" component={Julia}/>
       <Route path="/neighborhoods" component={Neighborhoods}/>
       <Route path="/trends/waters" component={Waters}/>
-      <Route path="/trends/julia" component={Julia}/>
       <Route component={NotFound} />
     </Switch>
   );
