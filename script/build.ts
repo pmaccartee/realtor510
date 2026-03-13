@@ -95,6 +95,10 @@ async function buildAll() {
   ];
   const externals = allDeps.filter((dep) => !allowlist.includes(dep));
 
+  console.log("\n=== HTML files in dist/public/ ===");
+  execSync('find dist/public -name "*.html" -exec ls -lh {} \\;', { stdio: "inherit" });
+  console.log("=== end HTML listing ===\n");
+
   await esbuild({
     entryPoints: ["server/index.ts"],
     platform: "node",
