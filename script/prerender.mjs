@@ -16,11 +16,10 @@ const template = await readFile(templatePath, "utf-8");
 
 for (const route of ROUTES) {
   const appHtml = render(route);
-  const buildStamp = `<!-- built ${new Date().toISOString()} -->`;
-  const html = template.replace(
-    '<div id="root"></div>',
-    `<div id="root">${appHtml}</div>${buildStamp}`
-  );
+  const buildStamp = `<!-- built: ${new Date().toISOString()} -->`;
+  const html = template
+    .replace('</head>', `${buildStamp}\n</head>`)
+    .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
 
   let outPath;
   if (route === "/") {
