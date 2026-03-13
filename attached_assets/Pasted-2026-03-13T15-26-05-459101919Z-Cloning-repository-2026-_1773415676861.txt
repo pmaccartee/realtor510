@@ -1,0 +1,35 @@
+2026-03-13T15:26:05.459101919Z	Cloning repository...
+2026-03-13T15:26:53.501656461Z	From https://github.com/pmaccartee/realtor510
+2026-03-13T15:26:53.502016798Z	 * branch            c0bec938b2e98f5d9141bcf9a36456fba65c306d -> FETCH_HEAD
+2026-03-13T15:26:53.502116138Z	
+2026-03-13T15:26:53.710690385Z	HEAD is now at c0bec93 Update build process to ensure unique file uploads
+2026-03-13T15:26:59.643636731Z	
+2026-03-13T15:27:00.7525749Z	No Wrangler configuration file found. Continuing.
+2026-03-13T15:27:00.822430767Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-13T15:27:00.822807741Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-13T15:27:03.057455252Z	npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-03-13T15:27:04.623069423Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-03-13T15:27:10.303766463Z	added 422 packages, and audited 423 packages in 9s
+2026-03-13T15:27:10.304011Z	
+2026-03-13T15:27:10.304057005Z	69 packages are looking for funding
+2026-03-13T15:27:10.304196232Z	  run `npm fund` for details
+2026-03-13T15:27:10.329407945Z	
+2026-03-13T15:27:10.329739631Z	7 vulnerabilities (1 low, 5 moderate, 1 high)
+2026-03-13T15:27:10.329755021Z	
+2026-03-13T15:27:10.329967151Z	To address issues that do not require attention, run:
+2026-03-13T15:27:10.330128543Z	  npm audit fix
+2026-03-13T15:27:10.330376816Z	
+2026-03-13T15:27:10.330442714Z	To address all issues (including breaking changes), run:
+2026-03-13T15:27:10.330579878Z	  npm audit fix --force
+2026-03-13T15:27:10.330934444Z	
+2026-03-13T15:27:10.331092594Z	Run `npm audit` for details.
+2026-03-13T15:27:10.354590249Z	Executing user command: npm run build
+2026-03-13T15:27:10.709755706Z	
+2026-03-13T15:27:10.70999243Z	> rest-express@1.0.0 build
+2026-03-13T15:27:10.710154183Z	> tsx script/build.ts
+2026-03-13T15:27:10.710298523Z	
+2026-03-13T15:27:14.449359196Z	[32m✓[39m 1803 modules transformed.
+2026-03-13T15:27:16.111072191Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-03-13T15:27:20.521235646Z	Deploying your site to Cloudflare's global network...
+2026-03-13T15:27:23.27732106Z	Uploading... (92/99)
+2026-03-13T15:27:24.022416912Z	Uploading... (95/99)
