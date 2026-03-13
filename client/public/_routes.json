@@ -4,6 +4,13 @@
   "exclude": [
     "/assets/*",
     "/neighborhood/*",
+    "/buy/*",
+    "/sell/*",
+    "/reviews/*",
+    "/waters/*",
+    "/blog/*",
+    "/neighborhoods/*",
+    "/julia-morgan/*",
     "/*.html",
     "/*.js",
     "/*.css",
