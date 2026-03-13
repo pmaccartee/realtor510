@@ -1,5 +1,5 @@
 const neighborhoods = [
-  { name: "Crocker Highlands", link: "/neighborhood/crocker-highlands-guide" },
+  { name: "Crocker Highlands", link: "/neighborhood/crocker-highlands" },
   { name: "Trestle Glen", link: "/neighborhood/trestle-glen-guide" },
   { name: "Piedmont", link: "/neighborhood/piedmont-home-values" },
   { name: "Rockridge", link: "/neighborhood/rockridge-guide" },

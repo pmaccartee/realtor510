@@ -5,7 +5,7 @@ import path from "path";
 import fs from "fs";
 
 const neighborhoodMap: Record<string, string> = {
-  "crocker-highlands-guide": "crocker-highlands-guide.html",
+  "crocker-highlands": "crocker-highlands-guide.html",
   "piedmont-home-values": "piedmont-home-values.html",
   "temescal-guide": "temescal-guide.html",
   "sequoyah-hills-market-report": "sequoyah-hills-market-report.html",
@@ -25,7 +25,7 @@ const neighborhoodMap: Record<string, string> = {
 };
 
 const oldSlugRedirects: Record<string, string> = {
-  "crocker-highlands": "/neighborhood/crocker-highlands-guide",
+  "crocker-highlands-guide": "/neighborhood/crocker-highlands",
   "piedmont": "/neighborhood/piedmont-home-values",
   "temescal": "/neighborhood/temescal-guide",
   "sequoyah-hills": "/neighborhood/sequoyah-hills-market-report",
