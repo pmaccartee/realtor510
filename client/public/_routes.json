@@ -1,15 +1,18 @@
 {
   "version": 1,
-  "include": [
-    "/",
-    "/buy",
-    "/sell",
-    "/reviews",
-    "/neighborhoods",
-    "/answers",
-    "/waters",
-    "/blog",
-    "/blog/*"
-  ],
-  "exclude": [  ]
+  "include": ["/*"],
+  "exclude": [
+    "/assets/*",
+    "/neighborhood/*",
+    "/*.html",
+    "/*.js",
+    "/*.css",
+    "/*.png",
+    "/*.jpg",
+    "/*.jpeg",
+    "/*.webp",
+    "/*.ico",
+    "/*.txt",
+    "/*.xml"
+  ]
 }
