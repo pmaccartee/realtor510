@@ -1,9 +1,9 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile, mkdir, copyFile, readdir } from "fs/promises";
+import { rm, readFile, mkdir, copyFile, writeFile } from "fs/promises";
+import path from "path";
+import { pathToFileURL } from "url";
 
-// server deps to bundle to reduce openat(2) syscalls
-// which helps cold start times
 const allowlist = [
   "@google/generative-ai",
   "axios",
@@ -32,19 +32,32 @@ const allowlist = [
   "zod-validation-error",
 ];
 
+const PRERENDER_ROUTES = ["/", "/buy", "/sell", "/reviews", "/waters", "/blog", "/neighborhoods"];
+
 async function buildAll() {
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");
   await viteBuild();
 
-  console.log("building server...");
-  const pkg = JSON.parse(await readFile("package.json", "utf-8"));
-  const allDeps = [
-    ...Object.keys(pkg.dependencies || {}),
-    ...Object.keys(pkg.devDependencies || {}),
-  ];
-  const externals = allDeps.filter((dep) => !allowlist.includes(dep));
+  console.log("building SSR bundle...");
+  await viteBuild({
+    build: {
+      ssr: true,
+      outDir: path.resolve("dist/server"),
+      rollupOptions: {
+        input: path.resolve("client/src/entry-server.tsx"),
+        output: {
+          format: "es",
+          entryFileNames: "entry-server.js",
+        },
+      },
+    },
+  });
+
+  console.log("pre-rendering pages...");
+  const { execSync } = await import("child_process");
+  execSync("node script/prerender.mjs", { stdio: "inherit" });
 
   console.log("creating neighborhood static routes...");
   const neighborhoodMap: Record<string, string> = {
@@ -75,6 +88,13 @@ async function buildAll() {
   }
 
   console.log("building server...");
+  const pkg = JSON.parse(await readFile("package.json", "utf-8"));
+  const allDeps = [
+    ...Object.keys(pkg.dependencies || {}),
+    ...Object.keys(pkg.devDependencies || {}),
+  ];
+  const externals = allDeps.filter((dep) => !allowlist.includes(dep));
+
   await esbuild({
     entryPoints: ["server/index.ts"],
     platform: "node",
