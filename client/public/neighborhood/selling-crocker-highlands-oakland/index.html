@@ -31,7 +31,6 @@
 
   /* HERO */
   .hero { background: var(--ink); color: white; padding: 180px 48px 88px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(74,124,89,0.12) 0%, transparent 55%); pointer-events: none; }
   .hero-inner { max-width: 780px; position: relative; }
   .hero-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson-mid); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
   .hero-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--crimson); }
@@ -383,7 +382,7 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
       </div>
       <div class="sidebar-row">
         <span class="sidebar-row-label">YOY Appreciation</span>
-        <span class="sidebar-row-value" style="color:#7BC995">+5.7%</span>
+        <span class="sidebar-row-value" style="color:var(--crimson-mid)">+5.7%</span>
       </div>
       <div class="sidebar-row">
         <span class="sidebar-row-label">Days on Market</span>
