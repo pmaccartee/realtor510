@@ -11,7 +11,6 @@ import Sell from "@/pages/Sell";
 import Blog from "@/pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import Reviews from "@/pages/Reviews";
-import Trends from "@/pages/Trends";
 import Waters from "@/pages/Waters";
 
 import Neighborhoods from "@/pages/Neighborhoods";
@@ -25,10 +24,8 @@ function Router() {
       <Route path="/blog" component={Blog}/>
       <Route path="/blog/:id" component={BlogDetail}/>
       <Route path="/reviews" component={Reviews}/>
-      <Route path="/trends" component={Trends}/>
       <Route path="/waters" component={Waters}/>
       <Route path="/neighborhoods" component={Neighborhoods}/>
-      <Route path="/trends/waters" component={Waters}/>
       <Route component={NotFound} />
     </Switch>
   );
