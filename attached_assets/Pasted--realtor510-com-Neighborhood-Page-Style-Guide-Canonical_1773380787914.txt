@@ -1,0 +1,304 @@
+# realtor510.com — Neighborhood Page Style Guide
+## Canonical Template: Crocker Highlands Guide
+
+Use the Crocker Highlands page (`/neighborhood/crocker-highlands`) as the reference implementation for all neighborhood and market report pages. When restyling any existing page, rebuild it using the Crocker template's CSS and structural conventions below.
+
+---
+
+## Color Palette — Use These Values Only
+
+```css
+:root {
+  --crimson: hsl(355, 75%, 35%);
+  --crimson-dark: hsl(355, 75%, 28%);
+  --black: #1a1a1a;
+  --gray-body: #3a3a3a;
+  --gray-mid: #6b6b6b;
+  --gray-light: #e8e8e8;
+  --gray-bg: #f5f5f5;
+  --white: #ffffff;
+  --rule: #d8d8d8;
+}
+```
+
+**No greens. No golds. No tans. No custom hex colors outside this palette.**
+
+---
+
+## Typography
+
+- **Body:** `'Montserrat', sans-serif`, weight 300, 16px, color `var(--gray-body)`
+- **Headings / display:** `'Playfair Display', serif`
+- **h2:** 1.7rem, weight 400, color `var(--black)`, always preceded by a 28px × 2px crimson rule
+- **Eyebrows / labels:** Montserrat, 0.65rem, weight 500, letter-spacing 0.2em, uppercase, color `var(--crimson)` or `var(--gray-mid)`
+- **Blockquotes:** Playfair Display, 1.35rem, italic, color `var(--crimson-dark)`, left border 3px `var(--crimson)`
+
+---
+
+## Page Structure (in order)
+
+```
+1. <head>         — meta, canonical, GA, Meta Pixel, Cloudflare beacon
+2. .react-header-wrapper  — fixed white header, 80px tall
+3. .page-hero     — CRIMSON background, centered, Playfair h1
+4. .page-wrap     — max-width 780px, centered, white background
+   - .stat-row    — light gray stat cells (3-col grid)
+   - body copy    — Montserrat paragraphs, h2 sections
+   - .comps-table — if data-heavy (market reports)
+   - blockquote   — pull quotes
+   - .cta-block   — dark (#1a1a1a) CTA, centered
+5. .neighborhood-bar  — #f0f0f0 strip with links to other guides
+6. .site-footer   — #2a2a2a, Playfair name, DRE, nav links
+```
+
+---
+
+## Hero: ALWAYS Crimson, Never Dark
+
+```html
+<div class="page-hero">
+  <p class="eyebrow">Neighborhood Guide · Oakland, CA</p>
+  <h1>Page Title Here</h1>
+  <p class="deck">Italic supporting tagline in Playfair.</p>
+</div>
+```
+
+```css
+.page-hero {
+  background: var(--crimson);   /* NOT var(--black), NOT #1a1a1a */
+  padding: 152px 48px 72px;     /* 152px = 80px header + 72px breathing room */
+  text-align: center;
+}
+.page-hero h1  { font-family: 'Playfair Display', serif; color: var(--white); font-weight: 300; }
+.page-hero .eyebrow { color: rgba(255,255,255,0.6); }
+.page-hero .deck    { color: rgba(255,255,255,0.75); font-style: italic; }
+```
+
+---
+
+## Stat Cells: Always Light Gray
+
+```css
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* or repeat(4, 1fr) for 4 stats */
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 48px 0;
+}
+.stat-cell {
+  background: var(--gray-bg);  /* #f5f5f5 — NEVER var(--black) or dark */
+  padding: 28px 20px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--crimson);       /* NEVER green (#7BC995, #7EC8A0) */
+  display: block;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label {
+  font-size: .65rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+}
+```
+
+---
+
+## Comps / Data Tables
+
+```css
+.comps-table th  { color: var(--gray-mid); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; }
+.comps-table td  { color: var(--gray-body); border-bottom: 1px solid var(--rule); }
+.comp-highlight  { background: hsl(355, 20%, 96%); }  /* pale crimson tint — NOT tan #F5EDD6 */
+.standout-badge  { background: var(--crimson); color: white; }
+```
+
+---
+
+## h2 Headings
+
+```css
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--black);
+  margin: 52px 0 16px;
+}
+h2::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--crimson);
+  margin-bottom: 12px;
+}
+```
+
+---
+
+## Delta / Percentage Values
+
+- **Positive (over ask):** `color: var(--crimson)` — NOT green
+- **Negative (under ask):** `color: var(--gray-mid)` — NOT red, NOT green
+- Never use `#7BC995`, `#7EC8A0`, `#2a6e3a`, or any green for data values
+
+---
+
+## CTA Block (dark, intentional)
+
+The only place `var(--black)` background is used in the body is the CTA block. This is correct and intentional.
+
+```css
+.cta-block {
+  background: var(--black);   /* #1a1a1a — intentional, matches Crocker */
+  padding: 48px 36px;
+  text-align: center;
+}
+.cta-block h3 { color: var(--white); font-family: 'Playfair Display', serif; font-weight: 300; }
+.cta-btn      { color: var(--white); border: 1px solid rgba(255,255,255,0.4); }
+```
+
+---
+
+## What to Remove / Fix When Restyling
+
+| Find this | Replace with |
+|---|---|
+| `hero::before { background: linear-gradient(...rgba(74,124` | Delete entire rule |
+| `hero::before { background: linear-gradient(...rgba(184,150` | Delete entire rule |
+| `.stats-box { background: var(--ink)` or `background: #1a1a1a` | Use `.stat-cell { background: var(--gray-bg) }` pattern |
+| `.delta-up { color: #7BC995 }` | `color: var(--crimson)` |
+| `.stats-value.positive { color: #7EC8A0 }` | `color: var(--crimson-mid)` or `color: var(--crimson)` |
+| `.comp-highlight { background: #F5EDD6 }` (tan) | `background: hsl(355, 20%, 96%)` |
+| `.standout-badge { background: var(--gold) }` | `background: var(--crimson)` |
+| `--gold`, `--gold-light` variables | Remove from `:root`, replace uses with crimson equivalents |
+| `btn-primary:hover { background: #A07C20 }` | `background: var(--crimson-dark)` |
+| `.over-ask { color: #7BC995 }` | `color: var(--crimson)` |
+| `background: var(--ink)` in stat boxes | `background: var(--gray-bg)` |
+| `.hero { background: var(--ink) }` (dark hero) | `background: var(--crimson)` |
+
+---
+
+## Hero Padding Note
+
+All pages need `padding-top: 152px` on the hero to clear the 80px fixed header. The pattern used in Crocker:
+
+```css
+.page-hero {
+  padding: 152px 48px 72px;
+}
+```
+
+On mobile (`max-width: 767px`): reduce to `padding: 120px 24px 52px`.
+
+---
+
+## Standard Header Block (copy verbatim)
+
+```html
+<header class="react-header-wrapper">
+  <div class="react-header-inner">
+    <a href="/" class="react-header-logo-link">
+      <img src="/PM_LOGO_Red_1772927689333.png" alt="Patrick MacCartee Logo" class="react-header-logo-img">
+    </a>
+    <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="react-header-links desktop-only">
+      <a href="/buy" class="react-header-link">Buy</a>
+      <a href="/sell" class="react-header-link">Sell</a>
+      <a href="/reviews" class="react-header-link">Reviews</a>
+      <a href="/neighborhoods" class="react-header-link">Neighborhoods</a>
+      <a href="/blog" class="react-header-link">Blog</a>
+      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5,1,0].join('') + [8,5,9].join('') + [4,8,9,5].join('')" class="react-header-btn">Contact</a>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu-overlay hidden">
+    <div class="mobile-menu-content">
+      <a href="/buy" class="mobile-nav-link">Buy</a>
+      <a href="/sell" class="mobile-nav-link">Sell</a>
+      <a href="/reviews" class="mobile-nav-link">Reviews</a>
+      <a href="/neighborhoods" class="mobile-nav-link">Neighborhoods</a>
+      <a href="/blog" class="mobile-nav-link">Blog</a>
+      <a href="javascript:void(0)" onclick="window.location.href='tel:' + [5,1,0].join('') + [8,5,9].join('') + [4,8,9,5].join('')" class="mobile-nav-btn">Contact</a>
+    </div>
+  </div>
+</header>
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+```
+
+---
+
+## Standard Footer Block (copy verbatim)
+
+```html
+<footer class="site-footer">
+  <p class="footer-name">PATRICK M<sup>ac</sup>CARTEE</p>
+  <p class="footer-dre">DRE# 02142693</p>
+  <nav class="footer-links">
+    <a href="https://realtor510.com/waters">Alice Waters</a>
+    <a href="https://realtor510.com/julia-morgan/">Julia Morgan</a>
+    <a href="https://realtor510.com/privacy">Privacy</a>
+    <a href="https://realtor510.com/terms">Terms</a>
+    <a href="https://realtor510.com/contact">Contact</a>
+  </nav>
+</footer>
+```
+
+---
+
+## Analytics Tags (include on every page)
+
+```html
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6DDVCG0Q3F');
+</script>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1438966301114887');fbq('track','PageView');
+</script>
+
+<!-- Cloudflare Beacon -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+  data-cf-beacon='{"token":"7790379adaac4fcbbd5f81c0d86b8412"}'
+  crossorigin="anonymous"></script>
+```
+
+---
+
+## Pages Known to Need This Treatment
+
+All files in `client/public/neighborhood/` and `client/public/` — check each for:
+- Dark hero (`background: var(--ink)` or `background: #1a1a1a` on `.hero`)
+- Dark stat boxes
+- Green delta values (`#7BC995`, `#7EC8A0`, `#2a6e3a`)
+- Gold/tan highlights (`#F5EDD6`, `rgba(184,150`, `--gold`)
+- Missing `padding-top: 152px` on hero
+
+Priority pages flagged: `piedmont-vs-rockridge`, `selling-crocker-highlands-oakland`, `piedmont-neighborhood-guide`, `oakland-neighborhood-guide`, `berkeley-neighborhood-guide`, `alameda-neighborhood-guide`, `261-silverado-court-oakland`, `crocker-highlands-trestle-glen-oakland`.
