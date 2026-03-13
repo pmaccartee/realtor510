@@ -1,0 +1,99 @@
+2026-03-13T15:56:27.839338Z	Cloning repository...
+2026-03-13T15:56:32.633101Z	From https://github.com/pmaccartee/realtor510
+2026-03-13T15:56:32.633656Z	 * branch            dac18ba66817ab1b418a7f0efd1ca221703f4186 -> FETCH_HEAD
+2026-03-13T15:56:32.633848Z	
+2026-03-13T15:56:32.838475Z	HEAD is now at dac18ba Update pre-render script to insert build timestamp into HTML head
+2026-03-13T15:56:32.838974Z	
+2026-03-13T15:56:32.905784Z	
+2026-03-13T15:56:32.906191Z	Using v2 root directory strategy
+2026-03-13T15:56:32.92501Z	Success: Finished cloning repository files
+2026-03-13T15:56:34.521393Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-03-13T15:56:34.522387Z	
+2026-03-13T15:56:35.648991Z	No Wrangler configuration file found. Continuing.
+2026-03-13T15:56:35.711866Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-13T15:56:35.712551Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-13T15:56:37.76946Z	npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-03-13T15:56:39.329017Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-03-13T15:56:39.329331Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-03-13T15:56:44.515301Z	
+2026-03-13T15:56:44.515497Z	added 422 packages, and audited 423 packages in 8s
+2026-03-13T15:56:44.515586Z	
+2026-03-13T15:56:44.515651Z	69 packages are looking for funding
+2026-03-13T15:56:44.516023Z	  run `npm fund` for details
+2026-03-13T15:56:44.539535Z	
+2026-03-13T15:56:44.539747Z	7 vulnerabilities (1 low, 5 moderate, 1 high)
+2026-03-13T15:56:44.539914Z	
+2026-03-13T15:56:44.540038Z	To address issues that do not require attention, run:
+2026-03-13T15:56:44.54019Z	  npm audit fix
+2026-03-13T15:56:44.540342Z	
+2026-03-13T15:56:44.540461Z	To address all issues (including breaking changes), run:
+2026-03-13T15:56:44.540586Z	  npm audit fix --force
+2026-03-13T15:56:44.540705Z	
+2026-03-13T15:56:44.540835Z	Run `npm audit` for details.
+2026-03-13T15:56:44.564873Z	Executing user command: npm run build
+2026-03-13T15:56:44.909484Z	
+2026-03-13T15:56:44.909682Z	> rest-express@1.0.0 build
+2026-03-13T15:56:44.909806Z	> tsx script/build.ts
+2026-03-13T15:56:44.909934Z	
+2026-03-13T15:56:45.711296Z	building client...
+2026-03-13T15:56:45.88733Z	[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+2026-03-13T15:56:46.103946Z	transforming...
+2026-03-13T15:56:48.45407Z	[32m✓[39m 1803 modules transformed.
+2026-03-13T15:56:48.669609Z	rendering chunks...
+2026-03-13T15:56:48.684722Z	computing gzip size...
+2026-03-13T15:56:48.699949Z	[2m../dist/public/[22m[32mindex.html                                                                    [39m[1m[2m    5.93 kB[22m[1m[22m[2m │ gzip:   2.19 kB[22m
+2026-03-13T15:56:48.700437Z	[2m../dist/public/[22m[2massets/[22m[32mmontclair-CtXIrI9J.jpeg                                                [39m[1m[2m   46.44 kB[22m[1m[22m
+2026-03-13T15:56:48.70065Z	[2m../dist/public/[22m[2massets/[22m[32mpiedmont-2NPXMwaP.jpeg                                                 [39m[1m[2m   50.69 kB[22m[1m[22m
+2026-03-13T15:56:48.70074Z	[2m../dist/public/[22m[2massets/[22m[32moakmore-DFKzyOxX.jpg                                                   [39m[1m[2m   71.18 kB[22m[1m[22m
+2026-03-13T15:56:48.700842Z	[2m../dist/public/[22m[2massets/[22m[32mberkeley-hills-DwEBbX8A.webp                                           [39m[1m[2m  127.79 kB[22m[1m[22m
+2026-03-13T15:56:48.700955Z	[2m../dist/public/[22m[2massets/[22m[32mtemescal-sRH_oFZq.jpg                                                  [39m[1m[2m  189.53 kB[22m[1m[22m
+2026-03-13T15:56:48.701052Z	[2m../dist/public/[22m[2massets/[22m[32mrockridge-BslofmMG.webp                                                [39m[1m[2m  223.28 kB[22m[1m[22m
+2026-03-13T15:56:48.70119Z	[2m../dist/public/[22m[2massets/[22m[32mPM_LOGO_Red_1772927689333-CI21v__F.png                                 [39m[1m[2m  237.09 kB[22m[1m[22m
+2026-03-13T15:56:48.701292Z	[2m../dist/public/[22m[2massets/[22m[32m005-293-elysian-fields-drive_1772929219661-eRtxYQAN.jpg                [39m[1m[2m  462.52 kB[22m[1m[22m
+2026-03-13T15:56:48.701394Z	[2m../dist/public/[22m[2massets/[22m[32mPJM_HEADSHOT_light_touch_1772926722025-RziWWBHk.png                    [39m[1m[2m  503.88 kB[22m[1m[22m
+2026-03-13T15:56:48.701466Z	[2m../dist/public/[22m[2massets/[22m[32mcrocker-highlands-FcVvIJqF.jpg                                         [39m[1m[2m  597.57 kB[22m[1m[22m
+2026-03-13T15:56:48.701541Z	[2m../dist/public/[22m[2massets/[22m[32m002-1015-warfield-avenue.80998.p4k.001.web_1772922978781-zh89xEU-.jpg  [39m[1m[2m  814.22 kB[22m[1m[22m
+2026-03-13T15:56:48.701633Z	[2m../dist/public/[22m[2massets/[22m[32moakland-hero-gen-DD78Rh9p.png                                          [39m[1m[2m1,585.78 kB[22m[1m[22m
+2026-03-13T15:56:48.701731Z	[2m../dist/public/[22m[2massets/[22m[32msequoyah-hills-BwXNv5mi.png                                            [39m[1m[2m2,421.43 kB[22m[1m[22m
+2026-03-13T15:56:48.701835Z	[2m../dist/public/[22m[2massets/[22m[35mmain-CY3rMQ40.css                                                      [39m[1m[2m  101.18 kB[22m[1m[22m[2m │ gzip:  16.60 kB[22m
+2026-03-13T15:56:48.702033Z	[2m../dist/public/[22m[2massets/[22m[36mmain-vMV7M3hb.js                                                       [39m[1m[2m  479.12 kB[22m[1m[22m[2m │ gzip: 149.76 kB[22m
+2026-03-13T15:56:48.702243Z	[32m✓ built in 2.64s[39m
+2026-03-13T15:56:48.70233Z	building SSR bundle...
+2026-03-13T15:56:48.714762Z	[36mvite v7.3.1 [32mbuilding ssr environment for production...[36m[39m
+2026-03-13T15:56:48.718957Z	transforming...
+2026-03-13T15:56:48.783749Z	[32m✓[39m 36 modules transformed.
+2026-03-13T15:56:48.827079Z	rendering chunks...
+2026-03-13T15:56:48.828705Z	[2m../dist/server/[22m[36mentry-server.js  [39m[1m[2m179.65 kB[22m[1m[22m
+2026-03-13T15:56:48.829036Z	[32m✓ built in 113ms[39m
+2026-03-13T15:56:48.829165Z	pre-rendering pages...
+2026-03-13T15:56:49.042342Z	  ✓ / → /opt/buildhome/repo/dist/public/index.html (20.1 kB)
+2026-03-13T15:56:49.044494Z	  ✓ /buy → /opt/buildhome/repo/dist/public/buy/index.html (16.0 kB)
+2026-03-13T15:56:49.046232Z	  ✓ /sell → /opt/buildhome/repo/dist/public/sell/index.html (15.6 kB)
+2026-03-13T15:56:49.051875Z	  ✓ /reviews → /opt/buildhome/repo/dist/public/reviews/index.html (53.1 kB)
+2026-03-13T15:56:49.058428Z	  ✓ /waters → /opt/buildhome/repo/dist/public/waters/index.html (99.2 kB)
+2026-03-13T15:56:49.062555Z	  ✓ /blog → /opt/buildhome/repo/dist/public/blog/index.html (66.3 kB)
+2026-03-13T15:56:49.071997Z	  ✓ /neighborhoods → /opt/buildhome/repo/dist/public/neighborhoods/index.html (21.7 kB)
+2026-03-13T15:56:49.072196Z	pre-rendering complete
+2026-03-13T15:56:49.079457Z	creating neighborhood static routes...
+2026-03-13T15:56:49.085268Z	building server...
+2026-03-13T15:56:49.147961Z	
+2026-03-13T15:56:49.148228Z	  dist/index.cjs  791.2kb
+2026-03-13T15:56:49.148359Z	
+2026-03-13T15:56:49.148448Z	⚡ Done in 49ms
+2026-03-13T15:56:49.216686Z	Finished
+2026-03-13T15:56:50.069283Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-03-13T15:56:50.06975Z	
+2026-03-13T15:56:51.179411Z	No Wrangler configuration file found. Continuing.
+2026-03-13T15:56:51.180183Z	Note: No functions dir at /functions found. Skipping.
+2026-03-13T15:56:51.180347Z	Validating asset output directory
+2026-03-13T15:56:53.926537Z	Deploying your site to Cloudflare's global network...
+2026-03-13T15:56:55.58189Z	Parsed 30 valid redirect rules.
+2026-03-13T15:56:56.80709Z	Uploading... (92/99)
+2026-03-13T15:56:57.410871Z	Uploading... (95/99)
+2026-03-13T15:56:57.447614Z	Uploading... (97/99)
+2026-03-13T15:57:01.3279Z	Uploading... (99/99)
+2026-03-13T15:57:01.328232Z	✨ Success! Uploaded 7 files (92 already uploaded) (4.80 sec)
+2026-03-13T15:57:01.328402Z	
+2026-03-13T15:57:01.729124Z	✨ Upload complete!
+2026-03-13T15:57:08.746857Z	Success: Assets published!
+2026-03-13T15:57:11.279122Z	Success: Your site was deployed!
