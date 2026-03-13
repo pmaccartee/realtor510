@@ -1,13 +1,17 @@
-import { readFile, writeFile, mkdir } from "fs/promises";
+import { readFile, writeFile, mkdir, stat } from "fs/promises";
 import path from "path";
-import { pathToFileURL } from "url";
+import { pathToFileURL, fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const PROJECT_ROOT = path.resolve(__dirname, "..");
 
 const ROUTES = ["/", "/buy", "/sell", "/reviews", "/waters", "/blog", "/neighborhoods"];
 
-const ssrPath = path.resolve("dist/server/entry-server.js");
+const ssrPath = path.join(PROJECT_ROOT, "dist", "server", "entry-server.js");
 const { render } = await import(pathToFileURL(ssrPath).href);
 
-const templatePath = path.resolve("dist/public/index.html");
+const templatePath = path.join(PROJECT_ROOT, "dist", "public", "index.html");
 const template = await readFile(templatePath, "utf-8");
 
 for (const route of ROUTES) {
@@ -17,16 +21,19 @@ for (const route of ROUTES) {
     `<div id="root">${appHtml}</div>`
   );
 
+  let outPath;
   if (route === "/") {
-    await writeFile(templatePath, html);
-    console.log(`  ✓ /`);
+    outPath = templatePath;
   } else {
     const slug = route.slice(1);
-    const dir = path.resolve(`dist/public/${slug}`);
+    const dir = path.join(PROJECT_ROOT, "dist", "public", slug);
     await mkdir(dir, { recursive: true });
-    await writeFile(path.resolve(dir, "index.html"), html);
-    console.log(`  ✓ ${route}`);
+    outPath = path.join(dir, "index.html");
   }
+
+  await writeFile(outPath, html);
+  const info = await stat(outPath);
+  console.log(`  ✓ ${route} → ${outPath} (${(info.size / 1024).toFixed(1)} kB)`);
 }
 
 console.log("pre-rendering complete");
