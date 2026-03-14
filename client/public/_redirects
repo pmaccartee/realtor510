@@ -28,3 +28,9 @@
 /julia-morgan /julia-morgan/index.html 200
 /julia /julia-morgan/index.html 301
 /morgan /julia-morgan/index.html 301
+/waters /waters/index.html 200
+/buy /buy/index.html 200
+/sell /sell/index.html 200
+/reviews /reviews/index.html 200
+/blog /blog/index.html 200
+/neighborhoods /neighborhoods/index.html 200
