@@ -51,7 +51,7 @@
   /* HEADER - see below */
 
   /* HERO */
-  .hero { background: var(--ink);
+  .hero { background: #8B1A1A;
     color: white;
     padding: 168px 48px 80px;
     position: relative;
@@ -232,8 +232,8 @@
 
   /* STATS BOX */
   .stats-box {
-    background: var(--ink);
-    color: white;
+    background: #f5f3ef;
+    color: var(--ink);
     padding: 32px;
     position: sticky;
     top: 24px;
@@ -246,14 +246,14 @@
     color: hsl(355, 75%, 35%);
     margin-bottom: 24px;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
   }
   .stats-row {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
   }
   .stats-row:last-child { border-bottom: none; padding-bottom: 0; }
   .stats-label {
@@ -261,16 +261,16 @@
     font-size: 11px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
+    color: var(--ink-light);
   }
   .stats-value {
     font-family: var(--serif);
     font-size: 1.3rem;
     font-weight: 600;
-    color: white;
+    color: var(--ink);
   }
-  .stats-value.positive { color: #7EC8A0; }
-  .stats-value.negative { color: #E07070; }
+  .stats-value.positive { color: #2a7a4a; }
+  .stats-value.negative { color: #c03030; }
 
   /* COMPS TABLE */
   .comps-section { margin-top: 40px; }
@@ -442,7 +442,7 @@
 
   /* FOOTER */
   .footer {
-    background: #111;
+    background: #2a2a2a;
     color: rgba(255,255,255,0.4);
     padding: 28px 48px;
     display: flex;
