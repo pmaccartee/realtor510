@@ -30,13 +30,13 @@
   /* HEADER - see below */
 
   /* HERO */
-  .hero { background: white; color: var(--ink); padding: 96px 48px 48px; position: relative; overflow: hidden; }
+  .hero { background: var(--crimson); color: white; padding: 96px 48px 48px; position: relative; overflow: hidden; }
   .hero-inner { max-width: 780px; position: relative; }
-  .hero-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
-  .hero-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--crimson); }
-  .hero h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 500; line-height: 1.08; margin-bottom: 28px; letter-spacing: -0.01em; color: var(--ink); }
-  .hero-deck { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: var(--ink-light); line-height: 1.7; max-width: 580px; margin-bottom: 44px; }
-  .hero-cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson-mid); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+  .hero-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--crimson-mid); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 500; line-height: 1.08; margin-bottom: 28px; letter-spacing: -0.01em; }
+  .hero-deck { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: rgba(255,255,255,0.62); line-height: 1.7; max-width: 580px; margin-bottom: 0; }
+  .hero-cta-row { display: flex; gap: 16px; flex-wrap: wrap; padding: 36px 48px; background: white; max-width: 780px; }
   .btn-hero { display: inline-block; background: var(--crimson); color: white; padding: 15px 36px; text-decoration: none; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.2s; }
   .btn-hero:hover { background: hsl(355, 75%, 28%); }
   .btn-hero-outline { display: inline-block; border: 1px solid var(--ink); color: var(--ink); padding: 14px 36px; text-decoration: none; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; transition: all 0.2s; }
@@ -256,12 +256,12 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
     <div class="hero-label">Crocker Highlands &amp; Trestle Glen · Oakland, CA 94610</div>
     <h1>You've Built Something<br>Valuable Here.</h1>
     <p class="hero-deck">Decades of ownership in one of Oakland's most sought-after neighborhoods. When the time comes to sell, the process doesn't have to be as overwhelming as it feels.</p>
-    <div class="hero-cta-row">
-      <a href="mailto:patrick@realtor510.com" class="btn-hero">Talk to Patrick</a>
-      <a href="#process" class="btn-hero-outline">How It Works →</a>
-    </div>
   </div>
 </section>
+<div class="hero-cta-row">
+  <a href="mailto:patrick@realtor510.com" class="btn-hero">Talk to Patrick</a>
+  <a href="#process" class="btn-hero-outline">How It Works →</a>
+</div>
 
 <div class="equity-strip">
   <div class="equity-strip-inner">
