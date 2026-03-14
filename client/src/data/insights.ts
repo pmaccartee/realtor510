@@ -1,38 +1,10 @@
 export const insights = [
   {
-    "id": "whats-your-approach-when-a-high-end-buyer-requests-excessive-credits-or-concessions",
-    "title": "What’s your approach when a high-end buyer requests excessive credits or concessions?",
-    "category": "Buyer/Seller Dynamics",
-    "description": "Discover how to respond to large credit requests without sacrificing your \nseller’s leverage.",
-    "content": "High-end buyers often test boundaries—it’s part of negotiation culture at this level. I respond with firm grace.\n\nFirst, I reframe the conversation: “Let’s focus on what the inspection actually supports.” Grounding in facts removes emotion.\n\nIf the requests feel inflated, I counter with partial credits or targeted repairs—enough to maintain goodwill but protect net value.\n\nI also evaluate psychology: sometimes buyers want reassurance, not a discount. A small gesture often preserves momentum toward close.\n\nNegotiation isn’t combat—it’s choreography. The best agents protect relationships and results."
-  },
-  {
     "id": "how-do-you-create-leverage-when-theres-only-one-offer",
     "title": "How do you create leverage when there’s only one offer?",
     "category": "Negotiation",
     "description": "Only one offer? Learn how strategic timing and confidence build negotiating \npower.",
     "content": "One offer doesn’t mean no leverage — it just means you have to manufacture confidence.\n\nI emphasize the property’s unique appeal and remind the buyer’s agent of comparable competition or showing traffic. Sometimes I quietly reference ongoing interest (if true), which nudges urgency.\n\nI also control the narrative on timing: “We’re reviewing offers tomorrow morning” signals scarcity and structure.\n\nLastly, I strengthen my seller’s position with clean terms—tight timelines, clear expectations, and data-backed pricing.\n\nLeverage isn’t about volume—it’s about perception. In skilled hands, one offer can feel like three."
-  },
-  {
-    "id": "how-do-you-negotiate-with-agents-who-rely-heavily-on-mismatched-comps",
-    "title": "How do you negotiate with agents who rely heavily on mismatched comps?",
-    "category": "Negotiation",
-    "description": "Master the art of correcting mismatched comps to protect your seller’s \nvalue.",
-    "content": "When another agent cites irrelevant comps (“but that house two miles away sold for X”), I pivot to education, not argument.\n\nI calmly highlight distinctions: lot size, view, layout, condition, or micro-neighborhood. I support my stance with appraiser-style data—DOM, price-per-square-foot trends, and demand tiers.\n\nTone is key: professionalism earns credibility. I invite them to walk through my property to see the differences firsthand.\n\nReal expertise isn’t defensive—it’s persuasive. Teaching another agent how to see value often gets your client the result you want."
-  },
-  {
-    "id": "whats-your-approach-to-managing-escalation-clauses-in-a-luxury-deal",
-    "title": "What’s your approach to managing escalation clauses in a luxury deal?",
-    "category": "Negotiation",
-    "description": "Master the art of correcting mismatched comps to protect your seller’s \nvalue.",
-    "content": "Escalation clauses — where a buyer automatically increases their offer to outbid competitors — can be both a gift and a gamble.\n\nI begin by clarifying terms upfront: maximum cap, increment size, and proof of funds. Transparency prevents confusion or resentment later.\n\nFor sellers, escalation clauses can create momentum but must be verified with real value. I cross-check comparable offers to ensure increases are legitimate.\n\nUsed correctly, they can simplify bidding wars. Used poorly, they sow mistrust.\n\nMy rule: clarity first, competition second. The cleanest offers usually create the best outcomes."
-  },
-  {
-    "id": "how-do-you-coach-sellers-to-stay-rational-in-emotional-negotiations",
-    "title": "How do you coach sellers to stay rational in emotional negotiations?",
-    "category": "Buyer/Seller Dynamics",
-    "description": "Learn how to guide sellers through emotional high-value negotiations with \ncalm clarity.",
-    "content": "Even the calmest sellers can become emotional when real money and memories are involved. My role is to be the anchor of logic.\n\nFirst, I normalize the feelings — it’s natural to react when your home’s value is challenged or a buyer nitpicks your design choices. Then I shift the focus to data: comps, inspection reports, and net proceeds.\n\nI also reframe negotiations as strategy, not conflict. Every counteroffer is simply communication — not rejection. That perspective keeps sellers objective and forward-focused.\n\nNegotiations work best when emotion fuels purpose, not reaction. A calm seller is a powerful one."
   },
   {
     "id": "how-do-you-help-relocation-buyers-fall-in-love-with-the-east-bay-lifestyle",
@@ -47,27 +19,6 @@ export const insights = [
     "category": "Buyer/Seller Dynamics",
     "description": "Find out what today’s East Bay luxury buyers value most in high-end homes.",
     "content": "In today’s East Bay luxury market, location still leads, but it’s no longer enough. The hierarchy now looks like this:\n\nLocation (walkability, schools, community identity)\n\nArchitecture (authentic design, natural light, floor plan)\n\nFinishes (quality and cohesion over trendiness)\n\nBuyers will stretch budget for timeless architecture or a soulful neighborhood. A well-built Tudor on a quiet Crocker street often outperforms a flashier remodel elsewhere.\n\nFinishes matter — but only when they align with the home’s DNA. A $30K Italian range means little if the design feels forced.\n\nIn short: buyers want substance and story, not just sparkle. The best listings balance all three in harmony."
-  },
-  {
-    "id": "what-emotional-triggers-influence-luxury-buyer-decisions",
-    "title": "What emotional triggers influence luxury buyer decisions?",
-    "category": "Buyer/Seller Dynamics",
-    "description": "Luxury buyers buy feelings, not data—discover what sparks emotion in East \nBay homes.",
-    "content": "Luxury buyers don’t fall in love with data — they fall in love with moments. The scent of cedar, the morning light through picture windows, the view that tells a story.\n\nEmotion is always the closer. Data just justifies it later.\n\nIn the East Bay, those triggers often connect to lifestyle and authenticity: walkable neighborhoods, architecture with soul, and outdoor spaces that feel private yet social.\n\nAs a listing agent, I stage for feeling, not furniture. I want buyers to imagine experiences — breakfast on the deck, friends gathered around the island, a golden-hour glass of wine on the patio.\n\nEmotion sells faster than logic — especially in the $2M+ market. Our job is to choreograph that emotional connection from the first photo to the final showing."
-  },
-  {
-    "id": "how-do-you-handle-multiple-offer-situations-on-luxury-homes-without-creating-fatigue",
-    "title": "How do you handle multiple-offer situations on luxury homes without creating fatigue?",
-    "category": "Negotiation",
-    "description": "See how clear communication keeps multi-offer luxury deals fair, calm, and \nprofitable.",
-    "content": "In the high-end market, multiple offers are both a blessing and a balancing act. While competition drives price, managing tone and transparency ensures the process stays productive.\n\nI start by setting expectations before offers arrive — sellers understand the evaluation process, and agents know timelines and decision criteria. Clarity prevents chaos.\n\nNext, I focus on quality over quantity. Not every offer deserves the same attention; I filter for motivation, financing strength, and contingencies.\n\nI also maintain respect for all parties — clear communication builds reputation and ensures agents continue bringing their best clients to your listings.\n\nIn luxury real estate, professionalism is leverage. Managing multiple offers with grace earns stronger outcomes — and long-term credibility."
-  },
-  {
-    "id": "what-do-affluent-buyers-expect-in-terms-of-discretion-and-privacy",
-    "title": "What do affluent buyers expect in terms of discretion and privacy?",
-    "category": "Buyer/Seller Dynamics",
-    "description": "Learn how top-tier East Bay buyers value privacy, confidentiality, and \noff-market representation.",
-    "content": "In the East Bay luxury market, privacy is a form of currency. Affluent buyers don’t just seek beautiful homes — they seek control over visibility, access, and information flow.\n\nMany clients operate in public or high-profile professions. They expect their agent to manage communication discreetly — from off-market previews to controlled showings. That means no casual “coming soon” buzz without consent and no oversharing details about offers or motivation.\n\nPrivacy also extends to physical property features: gated entries, mature landscaping, and layered security systems now rank as desirable as quartzite countertops or spa baths.\n\nI often coordinate private, appointment-only showings and maintain strict confidentiality during negotiations. Sellers who offer this elevated level of discretion — through limited marketing or private showings — attract more qualified, serious buyers.\n\nLuxury service is about comfort and control. Protecting a client’s privacy is the first step in earning their trust."
   },
   {
     "id": "how-do-you-measure-the-success-of-a-pre-market-marketing-campaign",
@@ -89,20 +40,6 @@ export const insights = [
     "category": "Buyer/Seller Dynamics",
     "description": "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers.",
     "content": "Many homeowners worry that pre-sale improvements are wasted money—but in the Bay Area luxury segment, presentation is everything. My job is to show data, not opinion.\n\nFirst, we review neighborhood comps: staged, turnkey homes consistently outperform “as-is” listings by 8–12%. When sellers see those numbers, investment decisions become logical, not emotional.\n\nSecond, I recommend a tiered approach:\n\nTier 1 (must-do): Paint, lighting, landscaping touch-up.\n\nTier 2 (value-boost): Minor kitchen or bath refresh.\n\nTier 3 (optional): Larger remodels only if timeline allows.\n\nWe prioritize what delivers maximum ROI with minimal disruption.\n\nFinally, I emphasize control. By making repairs upfront, sellers avoid post-inspection renegotiations or buyer credits that can cost double later.\n\nMost skeptics change their minds after seeing before-and-after photos of recent Crocker Highlands listings that sold well above ask due to modest, smart updates.\n\nUnsure what’s worth doing? Let’s walk your property together—I’ll show exactly where strategic tweaks create maximum buyer impact."
-  },
-  {
-    "id": "what-defines-a-luxury-buyer-in-todays-east-bay-market",
-    "title": "What Defines a Luxury Buyer in Today’s East Bay Market?",
-    "category": "Buyer/Seller Dynamics",
-    "description": "Explore who today’s East Bay luxury buyers are and what lifestyle factors \ndrive their decisions.",
-    "content": "Today’s East Bay luxury buyer is more sophisticated than ever—savvy about architecture, design, and long-term value.\n\nThey’re not just purchasing property; they’re curating lifestyle. Many are Bay Area professionals balancing remote flexibility with community and character. They value privacy, walkability, and a home that feels authentic—not over-produced.\n\nPost-pandemic, luxury is less about size and more about quality of experience: natural light, indoor-outdoor flow, spa-level bathrooms, and thoughtful craftsmanship.\n\nThese buyers research neighborhoods deeply—school districts, commute options, and even microclimates. And they expect polished service from their agent: data-backed insights plus taste-level curation.\n\nUnderstanding what defines luxury today helps sellers align presentation with buyer psychology—and achieve stronger outcomes."
-  },
-  {
-    "id": "what-percentage-of-your-luxury-buyers-come-from-outside-the-bay-area",
-    "title": "What percentage of your luxury buyers come from outside the Bay Area?",
-    "category": "Buyer/Seller Dynamics",
-    "description": "Earn trust from discerning luxury clients through transparency, data, and \nhigh-touch service.",
-    "content": "High-net-worth buyers are used to being pitched—but they rarely feel genuinely advised. I build trust through transparency and efficiency.\n\nThat means showing I’ve done the homework before they ask. When I present properties, I highlight not just features but risk factors: inspection nuances, resale potential, and neighborhood trajectories.\n\nSophisticated clients respect candor over hype. I also respect their time—concise communication, data visualizations, and high-touch logistics (private showings, streamlined paperwork).\n\nConsistency cements trust: delivering small promises (a follow-up, a data point) on time creates momentum for the big ones.\n\nTrust isn’t built in a contract—it’s built in the details. And in the luxury space, details are currency."
   },
   {
     "id": "are-downsizers-or-upgraders-driving-more-activity-in-your-area-this-year",
@@ -140,32 +77,11 @@ export const insights = [
     "content": "Not all improvements are equal. The smartest East Bay sellers focus on strategic upgrades—changes that directly influence perceived value and emotional connection.\n\nCosmetic upgrades (fresh paint, new lighting, updated hardware) improve first impressions but don’t change functionality. They’re quick and impactful for marketing.\n\nStrategic upgrades, on the other hand, fix friction points. Think: creating indoor-outdoor flow with French doors, converting an unused basement to a media room, or adding a powder bath near entertaining areas. These amplify livability.\n\nWhen advising clients, I consider cost, disruption, and ROI. A $15K investment that removes a buyer objection (like dated kitchen counters) can yield $50K+ in additional value.\n\nBefore investing in upgrades, let’s define what moves your buyer emotionally—and delivers measurable return."
   },
   {
-    "id": "cu8r8ggrr240dr5e5m2ewkauz5b0xj",
-    "title": "How do you handle competing listings on the same block?",
-    "category": "Insights",
-    "description": "Competing homes nearby? Learn how smart timing and storytelling create \nadvantage in the East Bay.",
-    "content": "Competing listings can actually be an opportunity—if positioned wisely.\n\nI start by defining contrast, not competition. If the home down the street is a modern remodel, I emphasize my property’s craftsmanship, lot, or outdoor living. The goal is to own a unique story within the same price tier.\n\nNext, I time strategically—launching a week earlier or later can change perception. Staggering listings avoids direct comparisons during the same broker tour cycle.\n\nI also monitor both agent feedback and online traffic in real time. If the other home receives multiple offers, that demand can spill over to yours.\n\nIn markets like Crocker Highlands, where inventory is scarce, “competition” often drives awareness. The key is staying distinct and confident in your positioning."
-  },
-  {
-    "id": "how-do-you-differentiate-between-cosmetic-and-strategic-upgrades-1",
-    "title": "How do you differentiate between cosmetic and strategic upgrades?",
-    "category": "Insights",
-    "description": "Discover which upgrades deliver ROI before selling your East Bay luxury \nhome.",
-    "content": "Not all improvements are equal. The smartest East Bay sellers focus on strategic upgrades—changes that directly influence perceived value and emotional connection.\n\nCosmetic upgrades (fresh paint, new lighting, updated hardware) improve first impressions but don’t change functionality. They’re quick and impactful for marketing.\n\nStrategic upgrades, on the other hand, fix friction points. Think: creating indoor-outdoor flow with French doors, converting an unused basement to a media room, or adding a powder bath near entertaining areas. These amplify livability.\n\nWhen advising clients, I consider cost, disruption, and ROI. A $15K investment that removes a buyer objection (like dated kitchen counters) can yield $50K+ in additional value.\n\nBefore investing in upgrades, let’s define what moves your buyer emotionally—and delivers measurable return."
-  },
-  {
     "id": "how-are-affluent-buyers-preferences-changing-post-2020",
     "title": "How are affluent buyers’ preferences changing post-2020?",
     "category": "Buyer/Seller Dynamics",
     "description": "Post-2020, luxury buyers seek wellness, flexibility, and calm. See what’s \nin demand now.",
     "content": "Since 2020, “home” has become multi-purpose: office, gym, retreat, and social hub. Affluent buyers in the East Bay now prioritize flexibility and wellness as core luxuries.\n\nThey want private outdoor space, ADU potential, and layouts adaptable to evolving needs. Open concept still matters, but separation between living and work zones has regained importance.\n\nDesign preferences lean warm and natural—less gray, more texture. Eco-conscious materials and energy efficiency are increasingly on trend.\n\nAnd the emotional layer? Buyers crave calm. The most successful listings feel grounded—lush landscaping, abundant light, and indoor-outdoor harmony.\n\nIf you’re planning improvements, invest in tranquility and versatility. That’s what today’s buyers will pay a premium for."
-  },
-  {
-    "id": "understanding-high-end-buyer-psychology-in-east-bay-real-estate",
-    "title": "What percentage of your luxury buyers come from outside the Bay Area?",
-    "category": "Buyer/Seller Dynamics",
-    "description": "Many East Bay luxury buyers come from SF or Silicon Valley—see how that \naffects pricing and demand.",
-    "content": "Roughly 25–35% of my luxury transactions now involve out-of-area buyers. Many come from San Francisco, Silicon Valley, or Los Angeles seeking value and livability.\n\nThe East Bay offers space, architecture, and community at a better lifestyle-to-price ratio. Remote work has amplified this migration—executives can now prioritize neighborhood charm over commute distance.\n\nFor these buyers, local guidance is everything. They need orientation on microclimates, school boundaries, and city nuances (Piedmont vs. Oakland permits, for example).\n\nMy marketing reflects that—neighborhood video tours, relocation guides, and private previews designed for remote engagement.\n\nThe luxury market is increasingly regional. Sellers who appeal to relocation buyers open themselves to the deepest pool of demand."
   },
   {
     "id": "how-are-fire-insurance-constraints-affecting-buyer-psychology",
@@ -180,41 +96,6 @@ export const insights = [
     "category": "Insights",
     "description": "Learn why luxury buyers respond to curated simplicity when viewing East Bay \nhomes.",
     "content": "Luxury buyers aren’t just purchasing square footage—they’re buying identity and possibility. Clutter and personal items interrupt that fantasy.\n\nDepersonalizing a home creates space for imagination. I tell sellers: “You want buyers picturing their art, their gatherings, their routines.”\n\nBut in the East Bay, it’s not about stripping personality—it’s about curating it. Keep a few well-styled moments that hint at lifestyle: a bar tray, a record player, or coffee-table books that reflect local culture.\n\nFor larger homes, professional organizers can turn pre-listing cleanup into stress-free efficiency. And for long-time residents, it’s often the emotional bridge that makes moving forward easier.\n\nDecluttering isn’t just prep—it’s marketing psychology. A calm, open environment sells both space and serenity."
-  },
-  {
-    "id": "how-to-uncover-a-high-net-worth-buyers-true-motivation",
-    "title": "How to Uncover a High-Net-Worth Buyer’s True Motivation",
-    "category": "Buyer/Seller Dynamics",
-    "description": "Learn how to uncover emotional motivations that drive luxury home purchases \nin the East Bay.",
-    "content": "Luxury buyers rarely say their deepest motivation out loud. My approach is part detective, part listener.\n\nIn initial conversations, I ask lifestyle-oriented questions: “What do you want to feel when you come home?” or “What’s missing in your current space?” Those answers reveal priorities—privacy, prestige, convenience, or legacy.\n\nBody language and tone are also clues. A buyer who lights up about outdoor dining probably values entertaining. One who talks schools or multi-gen living has family-centered motivations.\n\nOnce I identify the “why,” I tailor the property narrative accordingly. Every showing and follow-up reinforces that core desire.\n\nIn luxury real estate, success isn’t about selling features—it’s about fulfilling intent. Discover the why, and the deal follows naturally."
-  },
-  {
-    "id": "blog-post-title-three-dce3r",
-    "title": "What’s your staging philosophy for luxury homes with strong architectural character?",
-    "category": "Property Preparation",
-    "description": "Learn how expert staging highlights period architecture and elevates buyer \nemotion in East Bay luxury homes.",
-    "content": "Staging in the East Bay’s architectural homes is about interpretation, not disguise. You’re not hiding flaws—you’re telling the story of the space.\n\nHomes in Crocker Highlands, Piedmont, or Berkeley Hills often feature period woodwork, dramatic windows, and built-ins. The staging should highlight craftsmanship while adding light and scale.\n\nMy approach:\n\nEdit, don’t overfill. Let architecture be the star.\n\nBlend eras: A mid-century home sings with contemporary art and minimal lines; a Tudor comes alive with softer textiles and warm metals.\n\nUse color strategically: Accent the home’s natural palette—greenery against oak trim, matte black fixtures against white plaster walls.\n\nThe goal is emotional connection. Buyers should walk in and feel an elevated lifestyle: curated yet comfortable.\n\nGreat staging isn’t decoration—it’s storytelling. When done right, it can add 10–15% to your final sale price and shorten market time dramatically. Rule of thumb - you can’t overspend on great staging."
-  },
-  {
-    "id": "blog-post-title-two-bfyt7",
-    "title": "How do you advise clients on timing a spring vs. fall listing?",
-    "category": "Insights",
-    "description": "Timing your East Bay home sale right can mean tens of thousands more. Learn \nhow spring and fall markets differ.",
-    "content": "Timing the market in the East Bay isn’t just about weather—it’s about buyer psychology. Spring typically brings the highest concentration of active, qualified buyers, while fall offers less competition and more serious intent.\n\nSpring advantages:\n\nFamilies are planning moves before the next school year.\n\nFresh inventory creates buzz, leading to stronger open-house traffic.\n\nLonger days mean better natural-light photography and showings.\n\nFall opportunities:\n\nInventory tightens, reducing competition.\n\nBuyers who missed spring often increase urgency.\n\nHomes show beautifully amid seasonal landscaping and softer light.\n\nFor Crocker Highlands and Piedmont, early March to mid-May is prime. Alameda and Berkeley often stretch later due to micro-climates and university calendars.\n\nI recommend starting prep 3–4 months in advance—contractors and stagers book fast.\n\nIf you’re eyeing a spring 2026 sale, now’s the time to plan. Let’s create a timeline that positions your home perfectly for market momentum."
-  },
-  {
-    "id": "blog-post-title-four-ndatt",
-    "title": "How far in advance should a seller begin prep for a spring launch?",
-    "category": "Buyer/Seller Dynamics",
-    "description": "A complete timeline for prepping your East Bay home for a successful spring \nsale — from updates to staging.",
-    "content": "Ideally, 90–120 days before list date. Luxury listings require coordination among painters, landscapers, handymen, photographers, and stagers—all of whom book early.\n\nThe timeline:\n\nJanuary: Pre-inspection, project bids, and cosmetic upgrades.\n\nFebruary: Staging consult, photography scheduling, marketing prep.\n\nMarch: Launch.\n\nThis buffer allows flexibility if weather delays exterior work or supply issues arise. Sellers also appreciate time to declutter thoughtfully—especially long-term homeowners downsizing after decades.\n\nFor example, in Crocker Highlands, where many homes exceed 3,000 sq ft, two full weekends may be needed just to sort storage and personal items.\n\nBonus: Early prep lets you list off-market for agent previews or “coming soon” buzz, creating pent-up demand before you go live.\n\nThe earlier we start, the smoother—and more profitable—your sale will be. Let’s map your personalized spring prep calendar."
-  },
-  {
-    "id": "blog-post-title-one-l7z86",
-    "title": "What are the three most valuable pre-sale updates for ROI in the East Bay?",
-    "category": "Market Intelligence",
-    "description": "Simple pre-sale updates that yield the highest return in East Bay luxury \nlistings — from kitchens to lighting and floors",
-    "content": "In the East Bay luxury market, not every dollar spent before selling delivers equal return. The key is focusing on visible impact and buyer emotion—the details that make someone fall in love before they finish the tour.\n\n1. Refresh the kitchen and baths without a full gut. New cabinet hardware, stone counters, modern plumbing fixtures, and updated lighting go a long way. East Bay buyers—especially in Crocker Highlands and Piedmont—value homes that feel “move-in ready” but retain architectural charm.\n\n2. Refinish or replace flooring. Clean, cohesive floors signal quality. Wide-plank oak or freshly refinished hardwood elevates the entire home and photographs beautifully, which is crucial in your digital marketing rollout.\n\n3. Paint and lighting updates. A fresh, neutral palette paired with layered lighting instantly modernizes an older home. Avoid “builder white”; warm whites or soft hues showcase wood trim and natural light.\n\nBeyond aesthetics, ensure your systems (roof, sewer lateral, electrical) are in good condition—buyers in the $2M+ range expect transparency.\n\nThinking of selling in 2026? Let’s review which upgrades will net the highest return for your specific property."
   },
   {
     "id": "1297-sunnyhills-road-oakland",
