@@ -188,27 +188,7 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://realtor510.com/blog/whats-your-approach-when-a-high-end-buyer-requests-excessive-credits-or-concessions</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://realtor510.com/blog/how-do-you-create-leverage-when-theres-only-one-offer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/how-do-you-negotiate-with-agents-who-rely-heavily-on-mismatched-comps</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/whats-your-approach-to-managing-escalation-clauses-in-a-luxury-deal</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/how-do-you-coach-sellers-to-stay-rational-in-emotional-negotiations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -219,21 +199,6 @@
   </url>
   <url>
     <loc>https://realtor510.com/blog/what-are-buyers-valuing-more-architecture-finishes-or-location</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/what-emotional-triggers-influence-luxury-buyer-decisions</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/how-do-you-handle-multiple-offer-situations-on-luxury-homes-without-creating-fatigue</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/what-do-affluent-buyers-expect-in-terms-of-discretion-and-privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -249,16 +214,6 @@
   </url>
   <url>
     <loc>https://realtor510.com/blog/how-do-you-handle-seller-hesitation-about-pre-market-improvements</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/what-defines-a-luxury-buyer-in-todays-east-bay-market</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/what-percentage-of-your-luxury-buyers-come-from-outside-the-bay-area</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -288,22 +243,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://realtor510.com/blog/cu8r8ggrr240dr5e5m2ewkauz5b0xj</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/how-do-you-differentiate-between-cosmetic-and-strategic-upgrades-1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://realtor510.com/blog/how-are-affluent-buyers-preferences-changing-post-2020</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/understanding-high-end-buyer-psychology-in-east-bay-real-estate</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -317,31 +257,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://realtor510.com/blog/how-to-uncover-a-high-net-worth-buyers-true-motivation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/blog-post-title-three-dce3r</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/blog-post-title-two-bfyt7</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/blog-post-title-four-ndatt</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/blog-post-title-one-l7z86</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
+  <!-- Sold/Active Listings on Blog -->
   <url>
     <loc>https://realtor510.com/blog/1297-sunnyhills-road-oakland</loc>
     <changefreq>monthly</changefreq>
