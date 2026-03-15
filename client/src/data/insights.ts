@@ -296,5 +296,13 @@ export const insights = [
     "description": "Two of Oakland's most walkable, most sought-after neighborhoods — compared honestly on price, lifestyle, architecture, and what daily life actually looks like.",
     "content": "",
     "link": "/blog/grand-lake-vs-rockridge/"
+  },
+  {
+    "id": "what-does-1-5m-buy-in-oakland",
+    "title": "What Does $1.5M Actually Buy in Oakland Right Now?",
+    "category": "Buyer Guide",
+    "description": "A neighborhood-by-neighborhood breakdown of what $1.5M buys in Oakland in 2026 — Crocker Highlands, Rockridge, Montclair, and beyond.",
+    "content": "",
+    "link": "/blog/what-does-1-5m-buy-in-oakland/"
   }
 ];
