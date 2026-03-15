@@ -1,0 +1,19 @@
+I'll add a "Related Reading" block with contextual inline links. Here's the exact HTML to paste into the file — four insertions:
+Insertion 1: After the Market Dynamics section (after the second </p> in Market Dynamics, before <h2>What Buyers Should Know</h2>):
+html<div style="border-left:3px solid var(--crimson);padding:12px 20px;margin:32px 0;background:var(--gray-bg)">
+  <p style="font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);margin-bottom:6px">Related Reading</p>
+  <p style="margin-bottom:0;font-size:.9rem"><a href="/blog/what-127-percent-sold-to-list-means-for-buyers/" style="color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--crimson)">What a 127% sold-to-list ratio actually means for buyers →</a></p>
+</div>
+Insertion 2: After "What Buyers Should Know" section (after the second </p> in What Buyers Should Know):
+html<div style="border-left:3px solid var(--crimson);padding:12px 20px;margin:32px 0;background:var(--gray-bg)">
+  <p style="font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);margin-bottom:6px">Related Reading</p>
+  <p style="margin-bottom:6px;font-size:.9rem"><a href="/blog/what-to-expect-crocker-highlands-piedmont-open-house/" style="color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--crimson)">What to expect at a Crocker Highlands open house →</a></p>
+  <p style="margin-bottom:0;font-size:.9rem"><a href="/blog/how-to-read-east-bay-disclosure-package/" style="color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--crimson)">How to read an East Bay disclosure package →</a></p>
+</div>
+Insertion 3: After "What Sellers Should Know" section (after the second </p> in What Sellers Should Know):
+html<div style="border-left:3px solid var(--crimson);padding:12px 20px;margin:32px 0;background:var(--gray-bg)">
+  <p style="font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);margin-bottom:6px">Related Reading</p>
+  <p style="margin-bottom:0;font-size:.9rem"><a href="/neighborhood/selling-crocker-highlands-oakland/" style="color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--crimson)">Selling your Crocker Highlands home — a guide for long-term owners →</a></p>
+</div>
+Insertion 4: In the "How is Crocker Highlands different from Piedmont?" FAQ answer — at the end of that <p class="faq-a">, add:
+html <a href="/blog/crocker-highlands-vs-piedmont/" style="color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--crimson)">Read the full comparison →</a>
