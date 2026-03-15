@@ -224,5 +224,77 @@ export const insights = [
     "description": "A comprehensive guide to buying and selling in Crocker Highlands, Oakland — one of the East Bay's most coveted historic neighborhoods.",
     "content": "",
     "link": "/neighborhood/crocker-highlands-guide"
+  },
+  {
+    "id": "oakland-hillside-fire-zones-mortgage-insurance",
+    "title": "How Oakland's Hillside Fire Zones Affect Your Mortgage and Insurance",
+    "category": "Buyer Guide",
+    "description": "Buying in the Oakland hills? Here's what fire zone designation actually means for your loan, your insurance, and your due diligence.",
+    "content": "",
+    "link": "/blog/oakland-hillside-fire-zones-mortgage-insurance/"
+  },
+  {
+    "id": "the-case-for-alameda",
+    "title": "The Case for Alameda: Why Buyers Who Almost Bought in Oakland Ended Up Happier",
+    "category": "Neighborhood Guide",
+    "description": "Alameda keeps surprising buyers who discover it late. Here's why it deserves to be on your list earlier.",
+    "content": "",
+    "link": "/blog/the-case-for-alameda/"
+  },
+  {
+    "id": "berkeley-hills-vs-oakland-hills",
+    "title": "Berkeley Hills vs. Oakland Hills: What the Price Difference Buys You",
+    "category": "Neighborhood Guide",
+    "description": "The Berkeley Hills premium is real — but so is what you get on the Oakland side. A clear-eyed comparison for buyers weighing both.",
+    "content": "",
+    "link": "/blog/berkeley-hills-vs-oakland-hills/"
+  },
+  {
+    "id": "what-to-expect-crocker-highlands-piedmont-open-house",
+    "title": "What to Expect at a Crocker Highlands or Piedmont Open House",
+    "category": "Buyer Guide",
+    "description": "Open houses in Crocker Highlands and Piedmont are not casual browsing. Here's how to show up prepared and make the most of the time you have.",
+    "content": "",
+    "link": "/blog/what-to-expect-crocker-highlands-piedmont-open-house/"
+  },
+  {
+    "id": "what-127-percent-sold-to-list-means-for-buyers",
+    "title": "What a 127% Sold-to-List Ratio Actually Means for Buyers",
+    "category": "Buyer Guide",
+    "description": "When a home sells for 127% of its list price, what does that number actually tell you — and how should it change how you make offers?",
+    "content": "",
+    "link": "/blog/what-127-percent-sold-to-list-means-for-buyers/"
+  },
+  {
+    "id": "how-to-read-east-bay-disclosure-package",
+    "title": "How to Read an East Bay Disclosure Package",
+    "category": "Buyer Guide",
+    "description": "Disclosure packages in the East Bay can run 200+ pages. Here's what actually matters, what to read carefully, and what to hand to your inspector.",
+    "content": "",
+    "link": "/blog/how-to-read-east-bay-disclosure-package/"
+  },
+  {
+    "id": "prop-19-playbook-east-bay-homeowners",
+    "title": "The Prop 19 Playbook for Long-Term East Bay Homeowners",
+    "category": "Seller Guide",
+    "description": "Prop 19 changed the calculus for long-term California homeowners thinking about selling. Here's what it means in practice for East Bay sellers.",
+    "content": "",
+    "link": "/blog/prop-19-playbook-east-bay-homeowners/"
+  },
+  {
+    "id": "crocker-highlands-vs-piedmont",
+    "title": "Crocker Highlands vs. Piedmont: The Honest Comparison",
+    "category": "Neighborhood Guide",
+    "description": "Schools, price, architecture, taxes, and lifestyle — a clear-eyed comparison of two of the East Bay's most sought-after neighborhoods.",
+    "content": "",
+    "link": "/blog/crocker-highlands-vs-piedmont/"
+  },
+  {
+    "id": "grand-lake-vs-rockridge",
+    "title": "Grand Lake vs. Rockridge: Which Neighborhood Fits Your Life?",
+    "category": "Neighborhood Guide",
+    "description": "Two of Oakland's most walkable, most sought-after neighborhoods — compared honestly on price, lifestyle, architecture, and what daily life actually looks like.",
+    "content": "",
+    "link": "/blog/grand-lake-vs-rockridge/"
   }
 ];
