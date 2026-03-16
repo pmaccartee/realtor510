@@ -46,11 +46,6 @@ const reviews = [
     location: "San Francisco, CA"
   },
   {
-    text: "Patrick was great to work with. He knew his markets and was very strategic with getting the best buyer for our home.",
-    name: "Redfin User",
-    location: "Rancho Santa Fe, CA"
-  },
-  {
     text: "Patrick was undisputedly the best agent I worked with. He was able to get my place sold in no time respecting my time and preferences. Was always available and in contact and worked his best for the process to go as smooth as possible. Would 1000% recommend him.",
     name: "Heron R.",
     location: "Oakland, CA"
