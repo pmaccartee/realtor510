@@ -1,0 +1,183 @@
+2026-03-16T06:15:44.367429Z	Cloning repository...
+2026-03-16T06:15:46.005972Z	From https://github.com/pmaccartee/realtor510
+2026-03-16T06:15:46.006461Z	 * branch            6c1afa0c176c712ad082255013b35c0ee51140f8 -> FETCH_HEAD
+2026-03-16T06:15:46.006535Z	
+2026-03-16T06:15:46.234609Z	HEAD is now at 6c1afa0 Add static homepage by copying it after the build
+2026-03-16T06:15:46.235055Z	
+2026-03-16T06:15:46.275061Z	
+2026-03-16T06:15:46.275447Z	Using v2 root directory strategy
+2026-03-16T06:15:46.287464Z	Success: Finished cloning repository files
+2026-03-16T06:15:48.173661Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-03-16T06:15:48.17407Z	
+2026-03-16T06:15:49.268769Z	No Wrangler configuration file found. Continuing.
+2026-03-16T06:15:49.435754Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-03-16T06:15:49.4362Z	Installing project dependencies: npm clean-install --progress=false
+2026-03-16T06:15:51.745157Z	npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-03-16T06:15:53.22851Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-03-16T06:15:53.243442Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-03-16T06:15:58.55819Z	
+2026-03-16T06:15:58.558488Z	added 422 packages, and audited 423 packages in 9s
+2026-03-16T06:15:58.558545Z	
+2026-03-16T06:15:58.558578Z	69 packages are looking for funding
+2026-03-16T06:15:58.558608Z	  run `npm fund` for details
+2026-03-16T06:15:58.586565Z	
+2026-03-16T06:15:58.586998Z	8 vulnerabilities (1 low, 5 moderate, 2 high)
+2026-03-16T06:15:58.587086Z	
+2026-03-16T06:15:58.587138Z	To address issues that do not require attention, run:
+2026-03-16T06:15:58.587181Z	  npm audit fix
+2026-03-16T06:15:58.587218Z	
+2026-03-16T06:15:58.587247Z	To address all issues (including breaking changes), run:
+2026-03-16T06:15:58.587292Z	  npm audit fix --force
+2026-03-16T06:15:58.587333Z	
+2026-03-16T06:15:58.587388Z	Run `npm audit` for details.
+2026-03-16T06:15:58.655121Z	Executing user command: npm run build
+2026-03-16T06:15:58.897876Z	
+2026-03-16T06:15:58.898096Z	> rest-express@1.0.0 build
+2026-03-16T06:15:58.898142Z	> tsx script/build.ts
+2026-03-16T06:15:58.89883Z	
+2026-03-16T06:15:59.866955Z	building client...
+2026-03-16T06:16:00.07167Z	[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+2026-03-16T06:16:00.369546Z	transforming...
+2026-03-16T06:16:03.251619Z	[32m✓[39m 1803 modules transformed.
+2026-03-16T06:16:03.598905Z	rendering chunks...
+2026-03-16T06:16:03.617145Z	computing gzip size...
+2026-03-16T06:16:03.635057Z	[2m../dist/public/[22m[32mindex.html                                                                    [39m[1m[2m    5.93 kB[22m[1m[22m[2m │ gzip:   2.19 kB[22m
+2026-03-16T06:16:03.635284Z	[2m../dist/public/[22m[2massets/[22m[32mmontclair-CtXIrI9J.jpeg                                                [39m[1m[2m   46.44 kB[22m[1m[22m
+2026-03-16T06:16:03.635373Z	[2m../dist/public/[22m[2massets/[22m[32mpiedmont-2NPXMwaP.jpeg                                                 [39m[1m[2m   50.69 kB[22m[1m[22m
+2026-03-16T06:16:03.635427Z	[2m../dist/public/[22m[2massets/[22m[32moakmore-DFKzyOxX.jpg                                                   [39m[1m[2m   71.18 kB[22m[1m[22m
+2026-03-16T06:16:03.635467Z	[2m../dist/public/[22m[2massets/[22m[32mberkeley-hills-DwEBbX8A.webp                                           [39m[1m[2m  127.79 kB[22m[1m[22m
+2026-03-16T06:16:03.635501Z	[2m../dist/public/[22m[2massets/[22m[32mtemescal-sRH_oFZq.jpg                                                  [39m[1m[2m  189.53 kB[22m[1m[22m
+2026-03-16T06:16:03.635532Z	[2m../dist/public/[22m[2massets/[22m[32mrockridge-BslofmMG.webp                                                [39m[1m[2m  223.28 kB[22m[1m[22m
+2026-03-16T06:16:03.635559Z	[2m../dist/public/[22m[2massets/[22m[32mPM_LOGO_Red_1772927689333-CI21v__F.png                                 [39m[1m[2m  237.09 kB[22m[1m[22m
+2026-03-16T06:16:03.635585Z	[2m../dist/public/[22m[2massets/[22m[32m005-293-elysian-fields-drive_1772929219661-eRtxYQAN.jpg                [39m[1m[2m  462.52 kB[22m[1m[22m
+2026-03-16T06:16:03.635611Z	[2m../dist/public/[22m[2massets/[22m[32mPJM_HEADSHOT_light_touch_1772926722025-RziWWBHk.png                    [39m[1m[2m  503.88 kB[22m[1m[22m
+2026-03-16T06:16:03.635636Z	[2m../dist/public/[22m[2massets/[22m[32mcrocker-highlands-FcVvIJqF.jpg                                         [39m[1m[2m  597.57 kB[22m[1m[22m
+2026-03-16T06:16:03.635662Z	[2m../dist/public/[22m[2massets/[22m[32m002-1015-warfield-avenue.80998.p4k.001.web_1772922978781-zh89xEU-.jpg  [39m[1m[2m  814.22 kB[22m[1m[22m
+2026-03-16T06:16:03.635688Z	[2m../dist/public/[22m[2massets/[22m[32moakland-hero-gen-DD78Rh9p.png                                          [39m[1m[2m1,585.78 kB[22m[1m[22m
+2026-03-16T06:16:03.635717Z	[2m../dist/public/[22m[2massets/[22m[32msequoyah-hills-BwXNv5mi.png                                            [39m[1m[2m2,421.43 kB[22m[1m[22m
+2026-03-16T06:16:03.635749Z	[2m../dist/public/[22m[2massets/[22m[35mmain-DjfWaE47.css                                                      [39m[1m[2m  101.20 kB[22m[1m[22m[2m │ gzip:  16.61 kB[22m
+2026-03-16T06:16:03.6358Z	[2m../dist/public/[22m[2massets/[22m[36mmain-JsAdlqRK.js                                                       [39m[1m[2m  457.84 kB[22m[1m[22m[2m │ gzip: 141.10 kB[22m
+2026-03-16T06:16:03.635849Z	[32m✓ built in 3.31s[39m
+2026-03-16T06:16:03.63588Z	building SSR bundle...
+2026-03-16T06:16:03.651483Z	[36mvite v7.3.1 [32mbuilding ssr environment for production...[36m[39m
+2026-03-16T06:16:03.655299Z	transforming...
+2026-03-16T06:16:03.733517Z	[32m✓[39m 36 modules transformed.
+2026-03-16T06:16:03.822644Z	rendering chunks...
+2026-03-16T06:16:03.825121Z	[2m../dist/server/[22m[36mentry-server.js  [39m[1m[2m158.03 kB[22m[1m[22m
+2026-03-16T06:16:03.825245Z	[32m✓ built in 173ms[39m
+2026-03-16T06:16:03.8253Z	pre-rendering pages...
+2026-03-16T06:16:04.133535Z	  ✓ / → /opt/buildhome/repo/dist/public/index.html (20.1 kB)
+2026-03-16T06:16:04.136124Z	  ✓ /buy → /opt/buildhome/repo/dist/public/buy/index.html (16.0 kB)
+2026-03-16T06:16:04.137791Z	  ✓ /sell → /opt/buildhome/repo/dist/public/sell/index.html (15.6 kB)
+2026-03-16T06:16:04.140631Z	  ✓ /reviews → /opt/buildhome/repo/dist/public/reviews/index.html (53.9 kB)
+2026-03-16T06:16:04.149438Z	  ✓ /waters → /opt/buildhome/repo/dist/public/waters/index.html (99.2 kB)
+2026-03-16T06:16:04.156261Z	  ✓ /blog → /opt/buildhome/repo/dist/public/blog/index.html (61.0 kB)
+2026-03-16T06:16:04.157889Z	  ✓ /neighborhoods → /opt/buildhome/repo/dist/public/neighborhoods/index.html (21.7 kB)
+2026-03-16T06:16:04.158022Z	pre-rendering complete
+2026-03-16T06:16:04.166138Z	creating neighborhood static routes...
+2026-03-16T06:16:04.172083Z	building server...
+2026-03-16T06:16:04.17274Z	copying static homepage...
+2026-03-16T06:16:04.173288Z	✓ Static homepage copied to dist/public/index.html
+2026-03-16T06:16:04.17342Z	
+2026-03-16T06:16:04.173585Z	=== HTML files in dist/public/ ===
+2026-03-16T06:16:04.188398Z	-rw-rw-r-- 1 buildbot buildbot 35K Mar 16 06:16 dist/public/piedmont-luxury-market.html
+2026-03-16T06:16:04.19015Z	-rw-rw-r-- 1 buildbot buildbot 35K Mar 16 06:16 dist/public/piedmont-home-values.html
+2026-03-16T06:16:04.191699Z	-rw-rw-r-- 1 buildbot buildbot 30K Mar 16 06:16 dist/public/oakland-neighborhood-guide.html
+2026-03-16T06:16:04.193087Z	-rw-rw-r-- 1 buildbot buildbot 22K Mar 16 06:16 dist/public/neighborhoods/index.html
+2026-03-16T06:16:04.194803Z	-rw-rw-r-- 1 buildbot buildbot 54K Mar 16 06:16 dist/public/reviews/index.html
+2026-03-16T06:16:04.196205Z	-rw-rw-r-- 1 buildbot buildbot 33K Mar 16 06:16 dist/public/615-western-drive-richmond.html
+2026-03-16T06:16:04.197748Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/temescal-guide.html
+2026-03-16T06:16:04.199355Z	-rw-rw-r-- 1 buildbot buildbot 69K Mar 16 06:16 dist/public/alice-waters-family-tree_(3).html
+2026-03-16T06:16:04.200628Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/oakmore-glenview-guide.html
+2026-03-16T06:16:04.202004Z	-rw-rw-r-- 1 buildbot buildbot 1.2K Mar 16 06:16 dist/public/404.html
+2026-03-16T06:16:04.203331Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/selling-crocker-highlands-oakland.html
+2026-03-16T06:16:04.2048Z	-rw-rw-r-- 1 buildbot buildbot 74K Mar 16 06:16 dist/public/alice-waters-family-tree_(4).html
+2026-03-16T06:16:04.206244Z	-rw-rw-r-- 1 buildbot buildbot 24K Mar 16 06:16 dist/public/berkeley-neighborhood-guide.html
+2026-03-16T06:16:04.208199Z	-rw-rw-r-- 1 buildbot buildbot 16K Mar 16 06:16 dist/public/buy/index.html
+2026-03-16T06:16:04.209978Z	-rw-rw-r-- 1 buildbot buildbot 19K Mar 16 06:16 dist/public/blog/how-do-you-differentiate-between-cosmetic-and-strategic-upgrades/index.html
+2026-03-16T06:16:04.211407Z	-rw-rw-r-- 1 buildbot buildbot 13K Mar 16 06:16 dist/public/blog/the-case-for-alameda/index.html
+2026-03-16T06:16:04.212585Z	-rw-rw-r-- 1 buildbot buildbot 14K Mar 16 06:16 dist/public/blog/berkeley-hills-vs-oakland-hills/index.html
+2026-03-16T06:16:04.214387Z	-rw-rw-r-- 1 buildbot buildbot 20K Mar 16 06:16 dist/public/blog/how-are-fire-insurance-constraints-affecting-buyer-psychology/index.html
+2026-03-16T06:16:04.215957Z	-rw-rw-r-- 1 buildbot buildbot 12K Mar 16 06:16 dist/public/blog/what-127-percent-sold-to-list-means-for-buyers/index.html
+2026-03-16T06:16:04.217881Z	-rw-rw-r-- 1 buildbot buildbot 12K Mar 16 06:16 dist/public/blog/prop-19-playbook-east-bay-homeowners/index.html
+2026-03-16T06:16:04.219414Z	-rw-rw-r-- 1 buildbot buildbot 25K Mar 16 06:16 dist/public/blog/how-pricing-works-east-bay-list-price-strategy/index.html
+2026-03-16T06:16:04.221175Z	-rw-rw-r-- 1 buildbot buildbot 13K Mar 16 06:16 dist/public/blog/crocker-highlands-vs-piedmont/index.html
+2026-03-16T06:16:04.222418Z	-rw-rw-r-- 1 buildbot buildbot 19K Mar 16 06:16 dist/public/blog/how-is-inventory-trending-for-homes-over-2-million.html
+2026-03-16T06:16:04.223521Z	-rw-rw-r-- 1 buildbot buildbot 19K Mar 16 06:16 dist/public/blog/how-is-inventory-trending-for-homes-over-2-million/index.html
+2026-03-16T06:16:04.225058Z	-rw-rw-r-- 1 buildbot buildbot 13K Mar 16 06:16 dist/public/blog/what-does-1-5m-buy-in-oakland/index.html
+2026-03-16T06:16:04.226825Z	-rw-rw-r-- 1 buildbot buildbot 19K Mar 16 06:16 dist/public/blog/are-downsizers-or-upgraders-driving-more-activity-in-your-area-this-year/index.html
+2026-03-16T06:16:04.228489Z	-rw-rw-r-- 1 buildbot buildbot 19K Mar 16 06:16 dist/public/blog/what-impact-is-the-tech-sector-recovery-having-on-east-bay-luxury-demand/index.html
+2026-03-16T06:16:04.22992Z	-rw-rw-r-- 1 buildbot buildbot 12K Mar 16 06:16 dist/public/blog/grand-lake-vs-rockridge/index.html
+2026-03-16T06:16:04.236493Z	-rw-rw-r-- 1 buildbot buildbot 13K Mar 16 06:16 dist/public/blog/oakland-hillside-fire-zones-mortgage-insurance/index.html
+2026-03-16T06:16:04.237998Z	-rw-rw-r-- 1 buildbot buildbot 20K Mar 16 06:16 dist/public/blog/what-local-micro-markets-are-quietly-heating-up-for-2026.html
+2026-03-16T06:16:04.239386Z	-rw-rw-r-- 1 buildbot buildbot 20K Mar 16 06:16 dist/public/blog/how-do-you-create-leverage-when-theres-only-one-offer/index.html
+2026-03-16T06:16:04.240913Z	-rw-rw-r-- 1 buildbot buildbot 18K Mar 16 06:16 dist/public/blog/what-are-buyers-valuing-more-architecture-finishes-or-location/index.html
+2026-03-16T06:16:04.242176Z	-rw-rw-r-- 1 buildbot buildbot 19K Mar 16 06:16 dist/public/blog/what-impact-is-the-tech-sector-recovery-having-on-east-bay-luxury-demand.html
+2026-03-16T06:16:04.2437Z	-rw-rw-r-- 1 buildbot buildbot 13K Mar 16 06:16 dist/public/blog/how-to-read-east-bay-disclosure-package/index.html
+2026-03-16T06:16:04.245131Z	-rw-rw-r-- 1 buildbot buildbot 18K Mar 16 06:16 dist/public/blog/how-do-you-measure-the-success-of-a-pre-market-marketing-campaign/index.html
+2026-03-16T06:16:04.246536Z	-rw-rw-r-- 1 buildbot buildbot 19K Mar 16 06:16 dist/public/blog/how-do-you-help-relocation-buyers-fall-in-love-with-the-east-bay-lifestyle/index.html
+2026-03-16T06:16:04.2479Z	-rw-rw-r-- 1 buildbot buildbot 20K Mar 16 06:16 dist/public/blog/how-are-fire-insurance-constraints-affecting-buyer-psychology.html
+2026-03-16T06:16:04.249429Z	-rw-rw-r-- 1 buildbot buildbot 23K Mar 16 06:16 dist/public/blog/what-ai-wealth-wave-means-for-east-bay-buyers-sellers/index.html
+2026-03-16T06:16:04.25105Z	-rw-rw-r-- 1 buildbot buildbot 18K Mar 16 06:16 dist/public/blog/what-role-does-decluttering-and-depersonalization-play-in-a-luxury-listing/index.html
+2026-03-16T06:16:04.25249Z	-rw-rw-r-- 1 buildbot buildbot 62K Mar 16 06:16 dist/public/blog/index.html
+2026-03-16T06:16:04.254261Z	-rw-rw-r-- 1 buildbot buildbot 20K Mar 16 06:16 dist/public/blog/what-local-micro-markets-are-quietly-heating-up-for-2026/index.html
+2026-03-16T06:16:04.255634Z	-rw-rw-r-- 1 buildbot buildbot 18K Mar 16 06:16 dist/public/blog/whats-your-process-for-pricing-strategy-in-low-inventory-high-demand-zones/index.html
+2026-03-16T06:16:04.257035Z	-rw-rw-r-- 1 buildbot buildbot 19K Mar 16 06:16 dist/public/blog/how-do-you-handle-seller-hesitation-about-pre-market-improvements/index.html
+2026-03-16T06:16:04.258491Z	-rw-rw-r-- 1 buildbot buildbot 18K Mar 16 06:16 dist/public/blog/how-are-affluent-buyers-preferences-changing-post-2020/index.html
+2026-03-16T06:16:04.259772Z	-rw-rw-r-- 1 buildbot buildbot 13K Mar 16 06:16 dist/public/blog/what-to-expect-crocker-highlands-piedmont-open-house/index.html
+2026-03-16T06:16:04.261223Z	-rw-rw-r-- 1 buildbot buildbot 30K Mar 16 06:16 dist/public/293-elysian-fields-drive-oakland.html
+2026-03-16T06:16:04.262572Z	-rw-rw-r-- 1 buildbot buildbot 40K Mar 16 06:16 dist/public/crocker-highlands-trestle-glen-oakland.html
+2026-03-16T06:16:04.263983Z	-rw-rw-r-- 1 buildbot buildbot 2.0M Mar 16 06:16 dist/public/julia-morgan/index.html
+2026-03-16T06:16:04.265326Z	-rw-rw-r-- 1 buildbot buildbot 77K Mar 16 06:16 dist/public/alice-waters.html
+2026-03-16T06:16:04.2666Z	-rw-rw-r-- 1 buildbot buildbot 31K Mar 16 06:16 dist/public/1297-sunnyhills-road-oakland.html
+2026-03-16T06:16:04.26813Z	-rw-rw-r-- 1 buildbot buildbot 23K Mar 16 06:16 dist/public/piedmont-neighborhood-guide.html
+2026-03-16T06:16:04.269397Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/sequoyah-hills-market-report.html
+2026-03-16T06:16:04.27088Z	-rw-rw-r-- 1 buildbot buildbot 33K Mar 16 06:16 dist/public/261-silverado-court-oakland.html
+2026-03-16T06:16:04.272033Z	-rw-rw-r-- 1 buildbot buildbot 28K Mar 16 06:16 dist/public/1015-warfield-avenue-oakland.html
+2026-03-16T06:16:04.273316Z	-rw-rw-r-- 1 buildbot buildbot 16K Mar 16 06:16 dist/public/sell/index.html
+2026-03-16T06:16:04.274508Z	-rw-rw-r-- 1 buildbot buildbot 2.0M Mar 16 06:16 dist/public/julia-morgan_(1).html
+2026-03-16T06:16:04.275878Z	-rw-rw-r-- 1 buildbot buildbot 41K Mar 16 06:16 dist/public/crocker-highlands-trestle-glen-oakland_(1).html
+2026-03-16T06:16:04.277319Z	-rw-rw-r-- 1 buildbot buildbot 100K Mar 16 06:16 dist/public/waters/index.html
+2026-03-16T06:16:04.278639Z	-rw-rw-r-- 1 buildbot buildbot 37K Mar 16 06:16 dist/public/berkeley-hills-guide.html
+2026-03-16T06:16:04.279965Z	-rw-rw-r-- 1 buildbot buildbot 28K Mar 16 06:16 dist/public/oakland-neighborhood-guide_(1).html
+2026-03-16T06:16:04.281351Z	-rw-rw-r-- 1 buildbot buildbot 33K Mar 16 06:16 dist/public/neighborhood/montclair-guide/index.html
+2026-03-16T06:16:04.282539Z	-rw-rw-r-- 1 buildbot buildbot 24K Mar 16 06:16 dist/public/neighborhood/alameda-neighborhood-guide/index.html
+2026-03-16T06:16:04.283717Z	-rw-rw-r-- 1 buildbot buildbot 24K Mar 16 06:16 dist/public/neighborhood/berkeley-neighborhood-guide/index.html
+2026-03-16T06:16:04.285183Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/neighborhood/temescal-guide/index.html
+2026-03-16T06:16:04.286541Z	-rw-rw-r-- 1 buildbot buildbot 37K Mar 16 06:16 dist/public/neighborhood/berkeley-hills-guide/index.html
+2026-03-16T06:16:04.287878Z	-rw-rw-r-- 1 buildbot buildbot 35K Mar 16 06:16 dist/public/neighborhood/trestle-glen-guide/index.html
+2026-03-16T06:16:04.289206Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/neighborhood/sequoyah-hills-market-report/index.html
+2026-03-16T06:16:04.290473Z	-rw-rw-r-- 1 buildbot buildbot 30K Mar 16 06:16 dist/public/neighborhood/oakland-neighborhood-guide/index.html
+2026-03-16T06:16:04.291645Z	-rw-rw-r-- 1 buildbot buildbot 40K Mar 16 06:16 dist/public/neighborhood/crocker-highlands-trestle-glen-oakland/index.html
+2026-03-16T06:16:04.293079Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/neighborhood/oakmore-glenview-guide/index.html
+2026-03-16T06:16:04.294395Z	-rw-rw-r-- 1 buildbot buildbot 23K Mar 16 06:16 dist/public/neighborhood/piedmont-neighborhood-guide/index.html
+2026-03-16T06:16:04.295865Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/neighborhood/rockridge-guide/index.html
+2026-03-16T06:16:04.297589Z	-rw-rw-r-- 1 buildbot buildbot 39K Mar 16 06:16 dist/public/neighborhood/crocker-highlands/index.html
+2026-03-16T06:16:04.299274Z	-rw-rw-r-- 1 buildbot buildbot 35K Mar 16 06:16 dist/public/neighborhood/piedmont-luxury-market/index.html
+2026-03-16T06:16:04.300556Z	-rw-rw-r-- 1 buildbot buildbot 35K Mar 16 06:16 dist/public/neighborhood/piedmont-home-values/index.html
+2026-03-16T06:16:04.301874Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/neighborhood/selling-crocker-highlands-oakland/index.html
+2026-03-16T06:16:04.303475Z	-rw-rw-r-- 1 buildbot buildbot 24K Mar 16 06:16 dist/public/neighborhood/piedmont-vs-rockridge/index.html
+2026-03-16T06:16:04.304741Z	-rw-rw-r-- 1 buildbot buildbot 41K Mar 16 06:16 dist/public/neighborhood/crocker-highlands-guide/index.html
+2026-03-16T06:16:04.306038Z	-rw-rw-r-- 1 buildbot buildbot 76K Mar 16 06:16 dist/public/alice-waters-family-tree_(5).html
+2026-03-16T06:16:04.307646Z	-rw-rw-r-- 1 buildbot buildbot 33K Mar 16 06:16 dist/public/montclair-guide.html
+2026-03-16T06:16:04.309242Z	-rw-rw-r-- 1 buildbot buildbot 48K Mar 16 06:16 dist/public/index.html
+2026-03-16T06:16:04.310587Z	-rw-rw-r-- 1 buildbot buildbot 35K Mar 16 06:16 dist/public/trestle-glen-guide.html
+2026-03-16T06:16:04.312007Z	-rw-rw-r-- 1 buildbot buildbot 24K Mar 16 06:16 dist/public/piedmont-vs-rockridge.html
+2026-03-16T06:16:04.3134Z	-rw-rw-r-- 1 buildbot buildbot 28K Mar 16 06:16 dist/public/298-elysian-fields-drive-oakland.html
+2026-03-16T06:16:04.315231Z	-rw-rw-r-- 1 buildbot buildbot 41K Mar 16 06:16 dist/public/crocker-highlands-guide.html
+2026-03-16T06:16:04.316555Z	-rw-rw-r-- 1 buildbot buildbot 32K Mar 16 06:16 dist/public/rockridge-guide.html
+2026-03-16T06:16:04.318231Z	-rw-rw-r-- 1 buildbot buildbot 24K Mar 16 06:16 dist/public/alameda-neighborhood-guide.html
+2026-03-16T06:16:04.319295Z	=== end HTML listing ===
+2026-03-16T06:16:04.319393Z	
+2026-03-16T06:16:04.403647Z	
+2026-03-16T06:16:04.403897Z	  dist/index.cjs  791.2kb
+2026-03-16T06:16:04.40394Z	
+2026-03-16T06:16:04.403983Z	⚡ Done in 66ms
+2026-03-16T06:16:04.507039Z	Finished
+2026-03-16T06:16:05.128764Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-03-16T06:16:05.129231Z	
+2026-03-16T06:16:06.210954Z	No Wrangler configuration file found. Continuing.
+2026-03-16T06:16:06.211698Z	Note: No functions dir at /functions found. Skipping.
+2026-03-16T06:16:06.211805Z	Validating asset output directory
+2026-03-16T06:16:24.487764Z	Success: Assets published!
+2026-03-16T06:16:26.907941Z	Success: Your site was deployed!
