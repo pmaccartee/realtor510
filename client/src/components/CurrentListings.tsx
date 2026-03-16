@@ -20,8 +20,10 @@ export default function CurrentListings() {
           <realscout-your-listings 
             agent-encoded-id="QWdlbnQtMjUyMzU1" 
             sort-order="STATUS_AND_SIGNIFICANT_CHANGE" 
-            listing-status="For Sale" 
-            property-types="SFR,MF,TC,LAL,MOBILE,OTHER"
+            listing-status=",For Sale,In Contract" 
+            property-types="SFR,MF"
+            include-co-listings
+            include-seller-listings
           ></realscout-your-listings>
         </div>
       </div>
