@@ -54,6 +54,11 @@ const reviews = [
     text: "Patrick was undisputedly the best agent I worked with. He was able to get my place sold in no time respecting my time and preferences. Was always available and in contact and worked his best for the process to go as smooth as possible. Would 1000% recommend him.",
     name: "Heron R.",
     location: "Oakland, CA"
+  },
+  {
+    text: "Patrick is extremely hard working, responsive, knowledgable. He stands out among other realtors with his finance background, and his ability to problem solve any situation. What can seem like an impossibility is always met with optimism and creativity. On top of all that, he manages to keep you laughing during what could otherwise be one of the most stressful decisions you make in your life.",
+    name: "Chris G.",
+    location: "Oakland, CA"
   }
 ];
 
