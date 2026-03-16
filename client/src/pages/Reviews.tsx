@@ -27,7 +27,7 @@ const reviews = [
   },
   {
     text: "Patrick was hands-on without being pushy in helping me get the house ready to go on the market. He guided me with decision-making, and had the best resources for cleaning, clearing, landscaping support, staging & whatever else was needed.",
-    name: "Zillow User",
+    name: "Rizal V.",
     location: "Oakland, CA"
   },
   {
