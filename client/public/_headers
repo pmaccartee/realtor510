@@ -1,0 +1,11 @@
+/blog/*
+  Cache-Control: no-cache, must-revalidate
+
+/buy
+  Cache-Control: no-cache, must-revalidate
+
+/sell
+  Cache-Control: no-cache, must-revalidate
+
+/
+  Cache-Control: no-cache, must-revalidate
