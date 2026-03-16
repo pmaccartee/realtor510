@@ -54,6 +54,11 @@ const reviews = [
     text: "Patrick did an amazing job with my purchase! I'd recommend him to anyone!",
     name: "Redfin User",
     location: "Oakland, CA"
+  },
+  {
+    text: "Patrick was undisputedly the best agent I worked with. He was able to get my place sold in no time respecting my time and preferences. Was always available and in contact and worked his best for the process to go as smooth as possible. Would 1000% recommend him.",
+    name: "Heron R.",
+    location: "Oakland, CA"
   }
 ];
 
