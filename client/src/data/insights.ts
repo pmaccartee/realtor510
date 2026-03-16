@@ -4,28 +4,32 @@ export const insights = [
     "title": "How do you create leverage when there’s only one offer?",
     "category": "Negotiation",
     "description": "Only one offer? Learn how strategic timing and confidence build negotiating \npower.",
-    "content": "One offer doesn’t mean no leverage — it just means you have to manufacture confidence.\n\nI emphasize the property’s unique appeal and remind the buyer’s agent of comparable competition or showing traffic. Sometimes I quietly reference ongoing interest (if true), which nudges urgency.\n\nI also control the narrative on timing: “We’re reviewing offers tomorrow morning” signals scarcity and structure.\n\nLastly, I strengthen my seller’s position with clean terms—tight timelines, clear expectations, and data-backed pricing.\n\nLeverage isn’t about volume—it’s about perception. In skilled hands, one offer can feel like three."
+    "content": "",
+    "link": "/blog/how-do-you-create-leverage-when-theres-only-one-offer/"
   },
   {
     "id": "how-do-you-help-relocation-buyers-fall-in-love-with-the-east-bay-lifestyle",
     "title": "How do you help relocation buyers fall in love with the East Bay lifestyle?",
     "category": "Buyer/Seller Dynamics",
     "description": "Show relocation buyers why East Bay neighborhoods offer charm, community, \nand value.",
-    "content": "Selling the East Bay lifestyle is equal parts tour guide, storyteller, and connector.\n\nI go beyond MLS stats and introduce out-of-area buyers to what makes the region magnetic — our Saturday farmers’ markets, Lake Merritt walks, and wine nights in Alameda. I curate experiences: coffee at Timeless, dinner at Shakewell, or sunset drives through Joaquin Miller Park.\n\nThese touches humanize the move. When buyers can feel the rhythm of the community, they start picturing themselves here.\n\nDigital tools help too — video tours, Google Map walk-throughs, and neighborhood guides bridge the distance for remote clients.\n\nSelling a home is easy. Selling belonging is the art — and that’s what turns browsers into buyers."
+    "content": "",
+    "link": "/blog/how-do-you-help-relocation-buyers-fall-in-love-with-the-east-bay-lifestyle/"
   },
   {
     "id": "what-are-buyers-valuing-more-architecture-finishes-or-location",
     "title": "What are buyers valuing more: architecture, finishes, or location?",
     "category": "Buyer/Seller Dynamics",
     "description": "Find out what today’s East Bay luxury buyers value most in high-end homes.",
-    "content": "In today’s East Bay luxury market, location still leads, but it’s no longer enough. The hierarchy now looks like this:\n\nLocation (walkability, schools, community identity)\n\nArchitecture (authentic design, natural light, floor plan)\n\nFinishes (quality and cohesion over trendiness)\n\nBuyers will stretch budget for timeless architecture or a soulful neighborhood. A well-built Tudor on a quiet Crocker street often outperforms a flashier remodel elsewhere.\n\nFinishes matter — but only when they align with the home’s DNA. A $30K Italian range means little if the design feels forced.\n\nIn short: buyers want substance and story, not just sparkle. The best listings balance all three in harmony."
+    "content": "",
+    "link": "/blog/what-are-buyers-valuing-more-architecture-finishes-or-location/"
   },
   {
     "id": "how-do-you-measure-the-success-of-a-pre-market-marketing-campaign",
     "title": "How do you measure the success of a pre-market marketing campaign?",
     "category": "Market Intelligence",
     "description": "The best luxury listings start strong. Learn what metrics define a winning \npre-launch strategy.",
-    "content": "Pre-market campaigns—teasers, “coming soon” emails, and agent previews—are the secret sauce in top-tier listings.\n\nSuccess isn’t just measured in clicks or open-house attendance; it’s about momentum before launch.\n\nI look for three indicators:\n\nAgent engagement: private inquiries or showing requests before list date.\n\nDigital analytics: strong click-through rates on email and social ads (above 10% is exceptional in real estate).\n\nMarket chatter: other agents asking, “When’s it going live?” means anticipation is working.\n\nBy the time a listing hits MLS, we should already have buyers emotionally pre-qualified.\n\nThe best launches start long before “Active” status. Let’s create buzz that builds offers before your first open house."
+    "content": "",
+    "link": "/blog/how-do-you-measure-the-success-of-a-pre-market-marketing-campaign/"
   },
   {
     "id": "how-is-inventory-trending-for-homes-over-2-million",
@@ -39,14 +43,16 @@ export const insights = [
     "title": "How do you handle seller hesitation about pre-market improvements?",
     "category": "Buyer/Seller Dynamics",
     "description": "A practical, East Bay–specific breakdown for Oakland, Piedmont, Berkeley, and Alameda sellers and buyers.",
-    "content": "Many homeowners worry that pre-sale improvements are wasted money—but in the Bay Area luxury segment, presentation is everything. My job is to show data, not opinion.\n\nFirst, we review neighborhood comps: staged, turnkey homes consistently outperform “as-is” listings by 8–12%. When sellers see those numbers, investment decisions become logical, not emotional.\n\nSecond, I recommend a tiered approach:\n\nTier 1 (must-do): Paint, lighting, landscaping touch-up.\n\nTier 2 (value-boost): Minor kitchen or bath refresh.\n\nTier 3 (optional): Larger remodels only if timeline allows.\n\nWe prioritize what delivers maximum ROI with minimal disruption.\n\nFinally, I emphasize control. By making repairs upfront, sellers avoid post-inspection renegotiations or buyer credits that can cost double later.\n\nMost skeptics change their minds after seeing before-and-after photos of recent Crocker Highlands listings that sold well above ask due to modest, smart updates.\n\nUnsure what’s worth doing? Let’s walk your property together—I’ll show exactly where strategic tweaks create maximum buyer impact."
+    "content": "",
+    "link": "/blog/how-do-you-handle-seller-hesitation-about-pre-market-improvements/"
   },
   {
     "id": "are-downsizers-or-upgraders-driving-more-activity-in-your-area-this-year",
     "title": "Are downsizers or upgraders driving more activity in your area this year?",
     "category": "Buyer/Seller Dynamics",
     "description": "Learn why downsizers with decades of equity are shaping the East Bay luxury \nreal estate market in 2025.",
-    "content": "Both are active, but downsizers are driving this market.\n\nThe typical East Bay luxury downsizer is 65+, has 20+ years of equity, and wants lower maintenance without sacrificing quality or location. They’re selling larger homes in Crocker Highlands or Piedmont and seeking turnkey properties in Alameda, Temescal, or LaMorInda.\n\nThese sellers often become buyers again — creating a full-circle transaction flow that keeps mid- to high-end inventory circulating.\n\nUpgraders, meanwhile, are younger families moving within the East Bay. They’re leveraging equity from starter homes in Glenview or Maxwell Park to buy $2–$3M properties in better school districts.\n\nThe result: a rare overlap where both segments are motivated — one unlocking equity, the other ready to spend it.\n\nUnderstanding who’s driving demand helps sellers position pricing, staging, and marketing to target the right buyer profile — not just any buyer."
+    "content": "",
+    "link": "/blog/are-downsizers-or-upgraders-driving-more-activity-in-your-area-this-year/"
   },
   {
     "id": "what-local-micro-markets-are-quietly-heating-up-for-2026",
@@ -60,7 +66,8 @@ export const insights = [
     "title": "What’s your process for pricing strategy in low-inventory, high-demand zones?",
     "category": "Market Intelligence",
     "description": "Learn how to price your East Bay luxury home for maximum demand and \ncompetition in tight markets.",
-    "content": "Pricing a luxury home in the East Bay is both art and analytics. When inventory is tight, as it often is in Crocker Highlands or Piedmont, the right pricing strategy can mean the difference between a weekend frenzy and a stale listing.\n\nMy approach begins with real-time data, not lagging comps. I evaluate active listings and pending sales—what’s actually attracting offers today. Then, I layer in buyer psychology: people tend to shop in round-number price bands ($1.995M vs. $2.05M can change who sees your listing online).\n\nWe also factor emotional value—architectural pedigree, lot orientation, or custom craftsmanship can justify a premium even when comps don’t fully capture it.\n\nFinally, I align pricing with momentum. In a low-inventory zone, I often price below the aspirational mark to generate multiple offers and drive competition upward.\n\nSmart pricing is strategic, not defensive. Let’s position your home to invite energy, not negotiation fatigue."
+    "content": "",
+    "link": "/blog/whats-your-process-for-pricing-strategy-in-low-inventory-high-demand-zones/"
   },
   {
     "id": "what-impact-is-the-tech-sector-recovery-having-on-east-bay-luxury-demand",
@@ -74,14 +81,16 @@ export const insights = [
     "title": "How do you differentiate between cosmetic and strategic upgrades?",
     "category": "Insights",
     "description": "Discover which upgrades deliver ROI before selling your East Bay luxury \nhome.",
-    "content": "Not all improvements are equal. The smartest East Bay sellers focus on strategic upgrades—changes that directly influence perceived value and emotional connection.\n\nCosmetic upgrades (fresh paint, new lighting, updated hardware) improve first impressions but don’t change functionality. They’re quick and impactful for marketing.\n\nStrategic upgrades, on the other hand, fix friction points. Think: creating indoor-outdoor flow with French doors, converting an unused basement to a media room, or adding a powder bath near entertaining areas. These amplify livability.\n\nWhen advising clients, I consider cost, disruption, and ROI. A $15K investment that removes a buyer objection (like dated kitchen counters) can yield $50K+ in additional value.\n\nBefore investing in upgrades, let’s define what moves your buyer emotionally—and delivers measurable return."
+    "content": "",
+    "link": "/blog/how-do-you-differentiate-between-cosmetic-and-strategic-upgrades/"
   },
   {
     "id": "how-are-affluent-buyers-preferences-changing-post-2020",
     "title": "How are affluent buyers’ preferences changing post-2020?",
     "category": "Buyer/Seller Dynamics",
     "description": "Post-2020, luxury buyers seek wellness, flexibility, and calm. See what’s \nin demand now.",
-    "content": "Since 2020, “home” has become multi-purpose: office, gym, retreat, and social hub. Affluent buyers in the East Bay now prioritize flexibility and wellness as core luxuries.\n\nThey want private outdoor space, ADU potential, and layouts adaptable to evolving needs. Open concept still matters, but separation between living and work zones has regained importance.\n\nDesign preferences lean warm and natural—less gray, more texture. Eco-conscious materials and energy efficiency are increasingly on trend.\n\nAnd the emotional layer? Buyers crave calm. The most successful listings feel grounded—lush landscaping, abundant light, and indoor-outdoor harmony.\n\nIf you’re planning improvements, invest in tranquility and versatility. That’s what today’s buyers will pay a premium for."
+    "content": "",
+    "link": "/blog/how-are-affluent-buyers-preferences-changing-post-2020/"
   },
   {
     "id": "how-are-fire-insurance-constraints-affecting-buyer-psychology",
@@ -95,7 +104,8 @@ export const insights = [
     "title": "What role does decluttering and depersonalization play in a luxury listing?",
     "category": "Insights",
     "description": "Learn why luxury buyers respond to curated simplicity when viewing East Bay \nhomes.",
-    "content": "Luxury buyers aren’t just purchasing square footage—they’re buying identity and possibility. Clutter and personal items interrupt that fantasy.\n\nDepersonalizing a home creates space for imagination. I tell sellers: “You want buyers picturing their art, their gatherings, their routines.”\n\nBut in the East Bay, it’s not about stripping personality—it’s about curating it. Keep a few well-styled moments that hint at lifestyle: a bar tray, a record player, or coffee-table books that reflect local culture.\n\nFor larger homes, professional organizers can turn pre-listing cleanup into stress-free efficiency. And for long-time residents, it’s often the emotional bridge that makes moving forward easier.\n\nDecluttering isn’t just prep—it’s marketing psychology. A calm, open environment sells both space and serenity."
+    "content": "",
+    "link": "/blog/what-role-does-decluttering-and-depersonalization-play-in-a-luxury-listing/"
   },
   {
     "id": "1297-sunnyhills-road-oakland",
