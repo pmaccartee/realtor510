@@ -95,6 +95,10 @@ async function buildAll() {
   ];
   const externals = allDeps.filter((dep) => !allowlist.includes(dep));
 
+  console.log("copying static homepage...");
+  await copyFile("index.html", "dist/public/index.html");
+  console.log("✓ Static homepage copied to dist/public/index.html");
+
   console.log("\n=== HTML files in dist/public/ ===");
   execSync('find dist/public -name "*.html" -exec ls -lh {} \\;', { stdio: "inherit" });
   console.log("=== end HTML listing ===\n");
