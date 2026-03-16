@@ -1,0 +1,16 @@
+Now I can see exactly what's happening. That's the old React app version rendering — look at the layout: "Back to Blog" link, "Buyer/Seller Dynamics" category, old Q&A content, "Have a specific question? Call Me / Email Me" CTA. That's the React-rendered page, not our static HTML file.
+The problem is clear: the React app is still handling this route. Even though the static index.html exists in dist/public/blog/how-are-fire-insurance-constraints-affecting-buyer-psychology/, the React app's server-side rendering is intercepting the request first and serving its own version.
+Look back at the build log — it says:
+✓ / → /opt/buildhome/repo/dist/public/index.html (20.1 kB)
+The React app pre-renders the homepage (which we override), but it also has these blog routes registered in its router. When the request comes in, the React SSR is serving its version before Cloudflare even gets to look at the static file.
+The fix: these blog posts need to be excluded from the React router, or the static files need to be copied into the React build's output after the SSR pre-render step — same way we handled the homepage.
+In your script/build.ts, add copy commands for these four files after the pre-rendering step:
+typescriptcopyFileSync('./client/public/blog/how-are-fire-insurance-constraints-affecting-buyer-psychology/index.html', 
+  './dist/public/blog/how-are-fire-insurance-constraints-affecting-buyer-psychology/index.html');
+copyFileSync('./client/public/blog/what-impact-is-the-tech-sector-recovery-having-on-east-bay-luxury-demand/index.html',
+  './dist/public/blog/what-impact-is-the-tech-sector-recovery-having-on-east-bay-luxury-demand/index.html');
+copyFileSync('./client/public/blog/what-local-micro-markets-are-quietly-heating-up-for-2026/index.html',
+  './dist/public/blog/what-local-micro-markets-are-quietly-heating-up-for-2026/index.html');
+copyFileSync('./client/public/blog/how-is-inventory-trending-for-homes-over-2-million/index.html',
+  './dist/public/blog/how-is-inventory-trending-for-homes-over-2-million/index.html');
+This is the same solution that fixed the homepage — force copy after the React build overwrites with its SSR version.

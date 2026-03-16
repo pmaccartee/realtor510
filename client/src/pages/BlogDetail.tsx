@@ -10,11 +10,15 @@ export default function BlogDetail() {
   const [, params] = useRoute("/blog/:id");
   const id = params?.id;
   
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
-  
   const insight = insights.find(i => i.id === id);
+
+  useEffect(() => {
+    if (insight?.link) {
+      window.location.replace(insight.link);
+      return;
+    }
+    window.scrollTo(0, 0);
+  }, [id, insight]);
 
   if (!insight) {
     return (
