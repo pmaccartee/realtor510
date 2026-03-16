@@ -95,9 +95,15 @@ async function buildAll() {
   ];
   const externals = allDeps.filter((dep) => !allowlist.includes(dep));
 
-  console.log("copying static homepage...");
+  console.log("copying static pages...");
   await copyFile("index.html", "dist/public/index.html");
   console.log("✓ Static homepage copied to dist/public/index.html");
+  await mkdir("dist/public/buy", { recursive: true });
+  await copyFile("buy.html", "dist/public/buy/index.html");
+  console.log("✓ Static buy page copied to dist/public/buy/index.html");
+  await mkdir("dist/public/sell", { recursive: true });
+  await copyFile("sell.html", "dist/public/sell/index.html");
+  console.log("✓ Static sell page copied to dist/public/sell/index.html");
 
   console.log("\n=== HTML files in dist/public/ ===");
   execSync('find dist/public -name "*.html" -exec ls -lh {} \\;', { stdio: "inherit" });
