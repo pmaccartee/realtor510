@@ -391,4 +391,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://realtor510.com/blog/what-ai-wealth-wave-means-for-east-bay-buyers-sellers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/blog/how-pricing-works-east-bay-list-price-strategy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

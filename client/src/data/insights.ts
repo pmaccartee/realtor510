@@ -304,5 +304,21 @@ export const insights = [
     "description": "A neighborhood-by-neighborhood breakdown of what $1.5M buys in Oakland in 2026 — Crocker Highlands, Rockridge, Montclair, and beyond.",
     "content": "",
     "link": "/blog/what-does-1-5m-buy-in-oakland/"
+  },
+  {
+    "id": "what-ai-wealth-wave-means-for-east-bay-buyers-sellers",
+    "title": "What the AI Wealth Wave Actually Means for East Bay Buyers and Sellers",
+    "category": "Market Intelligence",
+    "description": "Deferred demand, AI migration, and rate sensitivity are reshaping the East Bay housing market. Here's what it actually looks like in Oakland, Berkeley, Piedmont, and Alameda — and what buyers and sellers should do about it.",
+    "content": "",
+    "link": "/blog/what-ai-wealth-wave-means-for-east-bay-buyers-sellers/"
+  },
+  {
+    "id": "how-pricing-works-east-bay-list-price-strategy",
+    "title": "How Pricing Actually Works in the East Bay — and Why the List Price Isn't What You Think",
+    "category": "Seller Strategy",
+    "description": "In the East Bay, the list price is a marketing tool, not a market assessment. Here's how pricing strategy actually works in Oakland, Berkeley, and Piedmont — and what buyers and sellers need to understand about it.",
+    "content": "",
+    "link": "/blog/how-pricing-works-east-bay-list-price-strategy/"
   }
 ];
