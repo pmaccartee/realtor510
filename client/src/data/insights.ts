@@ -36,7 +36,8 @@ export const insights = [
     "title": "How is inventory trending for homes over $2 million?",
     "category": "Market Intelligence",
     "description": "See how tight inventory and rising demand are shaping the East Bay’s $2M+ \nreal estate market in 2025–2026.",
-    "content": "Luxury inventory across the East Bay remains tight — but it’s not just about how many homes are listed, it’s about who is listing.\n\nIn early 2025, the $2–3 million range saw a 15% drop in new listings year-over-year, as many potential sellers held onto low mortgage rates. Yet demand has rebounded faster than supply, particularly in Crocker Highlands, Piedmont, and Rockridge.\n\nThis imbalance is creating a selective, story-driven market. Homes with architectural distinction, turn-key finishes, or exceptional outdoor flow continue to sell quickly and near (or above) list.\n\nAs rates ease into 2026, we anticipate a pent-up seller wave—especially from long-term owners eyeing downsizing moves. That’s why staging, timing, and pricing precision will matter more than ever.\n\nThe sellers who prepare now will capture the first wave of demand as rates fall. Let’s make sure your home is positioned to lead, not follow, the market."
+    "content": "",
+    "link": "/blog/how-is-inventory-trending-for-homes-over-2-million"
   },
   {
     "id": "how-do-you-handle-seller-hesitation-about-pre-market-improvements",
@@ -59,7 +60,8 @@ export const insights = [
     "title": "What local micro-markets are quietly heating up for 2026",
     "category": "Market Intelligence",
     "description": "Discover the East Bay neighborhoods heating up for 2026 luxury buyers — \nfrom Upper Rockridge to Alameda’s West End.",
-    "content": "The East Bay luxury market is never one monolith — it’s a tapestry of micro-markets that rise and cool at different rhythms. As we head into 2026, a few pockets are showing unmistakable momentum beneath the headlines.\n\nUpper Rockridge has quietly regained traction among tech buyers who want architectural homes with views but quicker commutes to SF. Renovated mid-century homes are commanding over $1,100/sq ft again, driven by low inventory and school proximity.\n\nAdams Point and Cleveland Heights are surging thanks to hybrid work culture. Condos and smaller single-families with style and walkability are being rediscovered by San Francisco transplants seeking value within 10 minutes of Lake Merritt.\n\nWest End Alameda is also experiencing a renaissance — with its Craftsman bungalows and ferry access, it’s hitting that perfect mix of community charm and urban convenience.\n\nAnd Berkeley Hills, especially around Grizzly Peak, continues to attract buyers craving privacy and architectural pedigree.\n\nThe micro-markets shifting today will be tomorrow’s comps. Knowing them before they pop is what gives sellers a strategic edge."
+    "content": "",
+    "link": "/blog/what-local-micro-markets-are-quietly-heating-up-for-2026"
   },
   {
     "id": "whats-your-process-for-pricing-strategy-in-low-inventory-high-demand-zones",
@@ -74,7 +76,8 @@ export const insights = [
     "title": "What impact is the tech sector recovery having on East Bay luxury demand?",
     "category": "Local Expertise",
     "description": "Bay Area tech’s rebound is reigniting East Bay luxury demand. Here’s how \nIPOs and hybrid work are driving high-end housing.",
-    "content": "After two years of volatility, the Bay Area’s tech rebound is once again reshaping East Bay real estate. IPO activity, renewed hiring, and the hybrid-work reset are driving liquidity back into housing — especially the $2M–$4M range.\n\nBuyers who paused in 2023 are back, and they’re prioritizing lifestyle over commute. They want views, outdoor space, and architecturally significant homes — all of which the East Bay delivers better than SF.\n\nCrocker Highlands, Piedmont, Rockridge, and Berkeley Hills are benefiting most because they offer family-friendly layouts with fast access to urban amenities.\n\nWhat’s different this cycle: buyers are more selective and financially savvy. They’re looking for move-in-ready homes and strong resale potential, not just prestige.\n\nThe East Bay’s luxury market has always mirrored Silicon Valley’s energy. With tech confidence returning, we’re poised for one of the most active spring markets in years."
+    "content": "",
+    "link": "/blog/what-impact-is-the-tech-sector-recovery-having-on-east-bay-luxury-demand"
   },
   {
     "id": "how-do-you-differentiate-between-cosmetic-and-strategic-upgrades",
@@ -97,7 +100,8 @@ export const insights = [
     "title": "How are fire insurance constraints affecting buyer psychology?",
     "category": "Buyer/Seller Dynamics",
     "description": "Insurance limits and risk zones are shifting how East Bay buyers evaluate \nhillside homes. Learn how to prepare as a seller.",
-    "content": "Insurance is now one of the most under-discussed forces shaping East Bay real estate. With several carriers scaling back in California, fire-risk perception has become a key decision factor, especially in hillside areas.\n\nBuyers are asking early about insurability and premiums — sometimes before touring. Properties within state-designated fire zones face extra scrutiny, even if they’ve mitigated risk.\n\nFor sellers, that means two things:\n\nProactive disclosure and documentation are essential. Show proof of defensible space, Class-A roofing, and recent mitigation work.\n\nWork with a knowledgeable insurance broker early to confirm coverage options.\n\nThe silver lining: the market is adapting. The FAIR Plan and select private carriers still provide coverage, and buyers’ focus has shifted toward value-to-premium ratio rather than avoidance.\n\nTransparency builds trust. Sellers who can confidently address insurance questions stand out as credible, prepared, and low-risk — which is exactly what today’s buyers want."
+    "content": "",
+    "link": "/blog/how-are-fire-insurance-constraints-affecting-buyer-psychology"
   },
   {
     "id": "what-role-does-decluttering-and-depersonalization-play-in-a-luxury-listing",
