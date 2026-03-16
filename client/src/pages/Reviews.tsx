@@ -31,9 +31,9 @@ const reviews = [
     location: "Oakland, CA"
   },
   {
-    text: "I couldn't be more pleased with my experience with Patrick. Patrick is great to work with. He's super responsive, fun to work with and has a great eye for value. He is a good, respectful negotiator and really cares about finding the right house.",
-    name: "Zillow User",
-    location: "Sacramento, CA"
+    text: "I couldn't be more pleased with my experience with Patrick. Every category is a clear and obvious 5 stars for me. He knows his stuff in terms of the market, neighborhoods, and trends, but also the little things like the details in a house when you're doing a tour. He guided us through the process with grace, skill, and experience. He always responds incredibly quickly (including from a Hollywood Bowl concert!). And finally, he really helped us nail down a good deal and navigate closing with a difficult seller. AND, he saved us a ton of money by directing us to a much better mortgage provider. I could go on and on, but just work with him. You won't be sorry.",
+    name: "Dinosf",
+    location: "San Francisco, CA"
   },
   {
     text: "Patrick was a tremendous help as we navigated the market for several years providing insights and guidance along the way. He's direct, honest, and easy to work with.",
