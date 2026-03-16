@@ -9,14 +9,14 @@ export default function Navigation() {
   return (
     <nav className="fixed w-full z-50 bg-white border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/">
+        <a href="/">
           <img src={logo} alt="Patrick MacCartee Logo" className="h-12 w-auto cursor-pointer object-contain" />
-        </Link>
+        </a>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8 text-sm tracking-widest uppercase">
-          <Link href="/buy" className="hover:text-primary transition-colors">Buy</Link>
-          <Link href="/sell" className="hover:text-primary transition-colors">Sell</Link>
+          <a href="/buy" className="hover:text-primary transition-colors">Buy</a>
+          <a href="/sell" className="hover:text-primary transition-colors">Sell</a>
           <Link href="/reviews" className="hover:text-primary transition-colors">Reviews</Link>
           <Link href="/neighborhoods" className="hover:text-primary transition-colors">Neighborhoods</Link>
           <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
@@ -39,8 +39,8 @@ export default function Navigation() {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-20 left-0 w-full h-[calc(100vh-80px)] bg-white border-t border-border overflow-y-auto">
           <div className="flex flex-col p-6 space-y-6 text-lg tracking-widest uppercase font-medium">
-            <Link href="/buy" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Buy</Link>
-            <Link href="/sell" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Sell</Link>
+            <a href="/buy" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Buy</a>
+            <a href="/sell" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Sell</a>
             <Link href="/reviews" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Reviews</Link>
             <Link href="/neighborhoods" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Neighborhoods</Link>
             <Link href="/blog" className="hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
