@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Updated 2026-03-15 -->
+<!-- Updated 2026-03-18 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core React Pages -->
+  <!-- Core Pages -->
   <url>
     <loc>https://realtor510.com/</loc>
     <changefreq>weekly</changefreq>
@@ -31,11 +31,6 @@
     <loc>https://realtor510.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/trends</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://realtor510.com/waters</loc>
@@ -134,8 +129,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://realtor510.com/piedmont-luxury-market</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <!-- Static HTML Pages (property listings, etc.) -->
+  <!-- Static HTML Pages (property listings) -->
   <url>
     <loc>https://realtor510.com/1015-warfield-avenue-oakland.html</loc>
     <changefreq>monthly</changefreq>
@@ -163,26 +163,6 @@
   </url>
   <url>
     <loc>https://realtor510.com/615-western-drive-richmond.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/alice-waters.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/alice-waters-family-tree_%283%29.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/alice-waters-family-tree_%284%29.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/alice-waters-family-tree_%285%29.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -258,7 +238,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://realtor510.com/blog/oakland-hillside-fire-zones-mortgage-insurance</loc>
     <changefreq>monthly</changefreq>
@@ -309,6 +288,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://realtor510.com/blog/what-ai-wealth-wave-means-for-east-bay-buyers-sellers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://realtor510.com/blog/how-pricing-works-east-bay-list-price-strategy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- Sold/Active Listings on Blog -->
   <url>
@@ -338,66 +327,6 @@
   </url>
   <url>
     <loc>https://realtor510.com/blog/261-silverado-court-oakland</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/piedmont-luxury-market</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/alameda-neighborhood-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/berkeley-neighborhood-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/oakland-neighborhood-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/piedmont-neighborhood-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/piedmont-vs-rockridge</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/crocker-highlands-trestle-glen-oakland</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/selling-crocker-highlands-oakland</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/trestle-glen-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/crocker-highlands-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/what-ai-wealth-wave-means-for-east-bay-buyers-sellers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://realtor510.com/blog/how-pricing-works-east-bay-list-price-strategy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
