@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Updated 2026-03-17 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core Pages -->
+  <url><loc>https://realtor510.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://realtor510.com/buy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realtor510.com/sell</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realtor510.com/reviews</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realtor510.com/neighborhoods</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://realtor510.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realtor510.com/waters</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/julia-morgan/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Neighborhood Pages -->
+  <url><loc>https://realtor510.com/neighborhood/crocker-highlands</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/crocker-highlands-trestle-glen-oakland</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/trestle-glen-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/piedmont-home-values</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/piedmont-neighborhood-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/piedmont-vs-rockridge</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/rockridge-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/temescal-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/montclair-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/oakmore-glenview-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/sequoyah-hills-market-report</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/berkeley-hills-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/alameda-neighborhood-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/berkeley-neighborhood-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/oakland-neighborhood-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realtor510.com/neighborhood/selling-crocker-highlands-oakland</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Property Listings -->
+  <url><loc>https://realtor510.com/261-silverado-court-oakland.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://realtor510.com/1015-warfield-avenue-oakland.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://realtor510.com/1297-sunnyhills-road-oakland.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://realtor510.com/293-elysian-fields-drive-oakland.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://realtor510.com/298-elysian-fields-drive-oakland.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://realtor510.com/615-western-drive-richmond.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Blog Posts -->
+  <url><loc>https://realtor510.com/blog/how-do-you-create-leverage-when-theres-only-one-offer</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-do-you-help-relocation-buyers-fall-in-love-with-the-east-bay-lifestyle</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/what-are-buyers-valuing-more-architecture-finishes-or-location</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-do-you-measure-the-success-of-a-pre-market-marketing-campaign</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-is-inventory-trending-for-homes-over-2-million</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-do-you-handle-seller-hesitation-about-pre-market-improvements</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/are-downsizers-or-upgraders-driving-more-activity-in-your-area-this-year</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/what-local-micro-markets-are-quietly-heating-up-for-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/whats-your-process-for-pricing-strategy-in-low-inventory-high-demand-zones</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/what-impact-is-the-tech-sector-recovery-having-on-east-bay-luxury-demand</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-do-you-differentiate-between-cosmetic-and-strategic-upgrades</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-are-affluent-buyers-preferences-changing-post-2020</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-are-fire-insurance-constraints-affecting-buyer-psychology</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/what-role-does-decluttering-and-depersonalization-play-in-a-luxury-listing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/oakland-hillside-fire-zones-mortgage-insurance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/the-case-for-alameda</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/berkeley-hills-vs-oakland-hills</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/what-to-expect-crocker-highlands-piedmont-open-house</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/what-127-percent-sold-to-list-means-for-buyers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-to-read-east-bay-disclosure-package</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/prop-19-playbook-east-bay-homeowners</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/crocker-highlands-vs-piedmont</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/grand-lake-vs-rockridge</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/what-does-1-5m-buy-in-oakland</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/what-ai-wealth-wave-means-for-east-bay-buyers-sellers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realtor510.com/blog/how-pricing-works-east-bay-list-price-strategy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>
