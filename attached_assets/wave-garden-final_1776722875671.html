@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Garden Residence, Point Richmond | Sold by Patrick MacCartee</title>
+    <meta name="description" content="A 5,027 sq ft Bayfront compound featuring the nationally renowned Smithsonian-listed Wave Garden. Sold by Patrick MacCartee, Realtor 510.">
+    
+    <!-- Fonts to match realtor510.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-red: #dc2626;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --background: #ffffff;
+            --border-light: #f3f4f6;
+            --border-gray: #e5e7eb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* Header Navigation */
+        .nav {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-gray);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('./images/hero-exterior.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .sold-badge {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section:not(:last-child) {
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .section-header {
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+        
+        /* Property Overview */
+        .property-overview {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .property-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-gray);
+        }
+        
+        .property-description p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight {
+            color: var(--primary-red);
+            font-weight: 500;
+        }
+        
+        .property-stats {
+            background: var(--border-light);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+        
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .stat-value {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--border-light);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        .gallery-caption h4 {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+        
+        .gallery-caption p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Features List */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .feature-icon {
+            width: 6px;
+            height: 6px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            margin-top: 0.75rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-text {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        
+        /* Sale Information */
+        .sale-info {
+            background: var(--border-light);
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .sale-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .sale-details {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Market Data */
+        .market-data {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .market-item {
+            text-align: center;
+            padding: 1.5rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+        }
+        
+        .market-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+        
+        .market-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        /* Neighborhood */
+        .neighborhood-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+        
+        .neighborhood-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-gray);
+        }
+        
+        .neighborhood-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .neighborhood-list {
+            list-style: none;
+        }
+        
+        .neighborhood-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-gray);
+        }
+        
+        .neighborhood-list li::before {
+            content: '•';
+            color: var(--primary-red);
+            font-weight: bold;
+            margin-top: 0.1rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: var(--text-dark);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
+        
+        .contact-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .contact-value a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .contact-value a:hover {
+            color: var(--primary-red);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .property-overview,
+            .neighborhood-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero-content {
+                padding: 1rem;
+            }
+            
+            .property-stats,
+            .sale-info {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <img src="https://realtor510.com/PM_LOGO_Red_1772927689333.png" alt="Patrick MacCartee Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="https://realtor510.com/">Home</a></li>
+                <li><a href="https://realtor510.com/buy">Buy</a></li>
+                <li><a href="https://realtor510.com/sell">Sell</a></li>
+                <li><a href="https://realtor510.com/neighborhoods">Neighborhoods</a></li>
+                <li><a href="https://realtor510.com/blog">Blog</a></li>
+                <li><a href="mailto:patrick@realtor510.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="sold-badge">SOLD</div>
+            <h1 class="hero-title">Wave Garden Residence</h1>
+            <p class="hero-subtitle">615 Western Drive, Point Richmond</p>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Property Overview -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">A Smithsonian-Listed Bayfront Compound</h2>
+                    <p class="section-subtitle">One of Point Richmond's most extraordinary residential offerings</p>
+                </div>
+                
+                <div class="property-overview">
+                    <div class="property-description">
+                        <p>This <span class="highlight">5,027 square foot Bayfront compound</span> represents a rare combination of architectural significance and natural beauty. Home to the nationally renowned <span class="highlight">Wave Garden</span> — a <span class="highlight">Smithsonian-listed garden</span> featuring art, sculptures, and exceptional Bay views — this property has been cherished by the same prominent family for over four decades.</p>
+                        
+                        <p><span class="highlight">Featured on Dwell.com</span>, the residence seamlessly blends modern architectural elements with the natural beauty of its hillside setting. The property offers mesmerizing views across the San Francisco Bay while providing intimate spaces for both grand entertaining and quiet contemplation.</p>
+                        
+                        <p>The residence itself spans two complete levels: the main floor features 3 bedrooms and 2 bathrooms, while the garden level offers an additional 3 bedrooms, 1 bathroom, plus a complete kitchen, living, and dining area. An elevator connects all floors, and the <span class="highlight">7,000 square foot private park</span> provides a truly unique setting in the East Bay market.</p>
+                    </div>
+                    
+                    <div class="property-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Bedrooms</span>
+                            <span class="stat-value">6</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Bathrooms</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Square Feet</span>
+                            <span class="stat-value">5,027</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Lot Size</span>
+                            <span class="stat-value">7,000 sq ft</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Year Built</span>
+                            <span class="stat-value">Mid-Century</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">List Price</span>
+                            <span class="stat-value">$2,699,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Property Gallery</h2>
+                    <p class="section-subtitle">A visual tour of this extraordinary compound</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="./images/living-room.jpg" alt="Living Room with Bay Views">
+                        <div class="gallery-caption">
+                            <h4>Main Living Area</h4>
+                            <p>Open-plan living with floor-to-ceiling windows</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/kitchen.jpg" alt="Modern Kitchen">
+                        <div class="gallery-caption">
+                            <h4>Kitchen</h4>
+                            <p>Contemporary design with premium finishes</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/dining-room.jpg" alt="Dining Room">
+                        <div class="gallery-caption">
+                            <h4>Dining Room</h4>
+                            <p>Elegant dining space with garden views</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/master-bedroom.jpg" alt="Master Bedroom">
+                        <div class="gallery-caption">
+                            <h4>Master Bedroom</h4>
+                            <p>Serene bedroom with panoramic views</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/fireplace-room.jpg" alt="Fireplace Living Room">
+                        <div class="gallery-caption">
+                            <h4>Fireplace Room</h4>
+                            <p>Cozy gathering space with fireplace</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/library-study.jpg" alt="Library Study">
+                        <div class="gallery-caption">
+                            <h4>Study/Library</h4>
+                            <p>Quiet workspace with built-in shelving</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/garden-level-kitchen.jpg" alt="Garden Level Kitchen">
+                        <div class="gallery-caption">
+                            <h4>Garden Level Kitchen</h4>
+                            <p>Complete second kitchen with dining area</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/garden-level-living.jpg" alt="Garden Level Living">
+                        <div class="gallery-caption">
+                            <h4>Garden Level Living</h4>
+                            <p>Additional living space opening to gardens</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/wave-garden-sculptures.jpg" alt="Wave Garden Sculptures">
+                        <div class="gallery-caption">
+                            <h4>The Wave Garden</h4>
+                            <p>Smithsonian-listed garden with sculptures</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/garden-art-installation.jpg" alt="Garden Art Installation">
+                        <div class="gallery-caption">
+                            <h4>Garden Art Installation</h4>
+                            <p>Curated art throughout the landscape</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/bay-views-panoramic.jpg" alt="Bay Views Panoramic">
+                        <div class="gallery-caption">
+                            <h4>Panoramic Bay Views</h4>
+                            <p>Sweeping vistas across San Francisco Bay</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/garden-pathways.jpg" alt="Garden Pathways">
+                        <div class="gallery-caption">
+                            <h4>Garden Pathways</h4>
+                            <p>Winding paths through landscaped grounds</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/exterior-front.jpg" alt="Front Exterior">
+                        <div class="gallery-caption">
+                            <h4>Front Exterior</h4>
+                            <p>Distinctive architectural entrance</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/exterior-rear.jpg" alt="Rear Exterior">
+                        <div class="gallery-caption">
+                            <h4>Rear Exterior</h4>
+                            <p>Garden-facing facade with terraces</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/outdoor-terraces.jpg" alt="Outdoor Terraces">
+                        <div class="gallery-caption">
+                            <h4>Outdoor Terraces</h4>
+                            <p>Multiple levels for outdoor entertaining</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/garden-seating-areas.jpg" alt="Garden Seating">
+                        <div class="gallery-caption">
+                            <h4>Garden Seating Areas</h4>
+                            <p>Intimate spaces throughout the grounds</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/bay-bridge-views.jpg" alt="Bay Bridge Views">
+                        <div class="gallery-caption">
+                            <h4>Bay Bridge Views</h4>
+                            <p>Iconic bridge views from multiple vantages</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/sunset-views.jpg" alt="Sunset Views">
+                        <div class="gallery-caption">
+                            <h4>Sunset Views</h4>
+                            <p>Spectacular evening light over the Bay</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/floor-plan-main.jpg" alt="Main Level Floor Plan">
+                        <div class="gallery-caption">
+                            <h4>Main Level Floor Plan</h4>
+                            <p>Layout showing 3 bedrooms and 2 baths</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/floor-plan-garden.jpg" alt="Garden Level Floor Plan">
+                        <div class="gallery-caption">
+                            <h4>Garden Level Floor Plan</h4>
+                            <p>Additional 3 bedrooms and complete living space</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Distinctive Features</h2>
+                    <p class="section-subtitle">What sets this property apart in the market</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Nationally recognized Smithsonian-listed Wave Garden with curated art and sculptures</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Featured on Dwell.com for architectural and design significance</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Mesmerizing San Francisco Bay views from multiple rooms and outdoor spaces</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Elevator connecting all floors for accessibility and convenience</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Two complete living levels with separate kitchens and living areas</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">7,000 square foot private park setting with mature landscaping</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Historic Point Richmond hillside location with privacy and tranquility</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Same family ownership for over 40 years, meticulously maintained</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sale Information -->
+        <section class="section">
+            <div class="container">
+                <div class="sale-info">
+                    <div class="sale-price">Successfully Sold</div>
+                    <div class="sale-details">
+                        Listed at $2,699,000 • Represented the seller<br>
+                        Closed 2023 • Point Richmond
+                    </div>
+                </div>
+                
+                <div class="market-data">
+                    <div class="market-item">
+                        <div class="market-value">$2.7M</div>
+                        <div class="market-label">List Price</div>
+                    </div>
+                    <div class="market-item">
+                        <div class="market-value">2023</div>
+                        <div class="market-label">Year Sold</div>
+                    </div>
+                    <div class="market-item">
+                        <div class="market-value">$536</div>
+                        <div class="market-label">Price per Sq Ft</div>
+                    </div>
+                    <div class="market-item">
+                        <div class="market-value">Point Richmond</div>
+                        <div class="market-label">Location</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Point Richmond Context -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Historic Point Richmond</h2>
+                    <p class="section-subtitle">A waterfront village with deep character and emerging tech presence</p>
+                </div>
+                
+                <div class="neighborhood-content">
+                    <div class="neighborhood-text">
+                        <p>Tucked into the hills above historic Point Richmond, this unique residence sits in one of the Bay Area's most charming neighborhoods. Point Richmond offers a perfect blend of small-town character and urban sophistication — a village atmosphere that has attracted everyone from longtime residents to <span class="highlight">OpenAI, which recently leased a 202,000-square-foot facility</span> on the waterfront, bringing an estimated 730 jobs to the area.</p>
+                        
+                        <p>The neighborhood's walkable downtown centers around the <span class="highlight">historic Hotel Mac</span> (built 1911) with its Italian restaurant Biancoverde, while the <span class="highlight">Masquers Playhouse</span> — a community theater operating for over 60 years — anchors the cultural scene. Local institutions like Up & Under Pub and Little Louie's reflect the maritime heritage of this former company town, while the village's proximity to both San Francisco Ferry service and Richmond's expanding tech corridor creates a unique investment dynamic.</p>
+                        
+                        <p>With its walkable scale, established character, and emerging economic drivers, Point Richmond represents one of the East Bay's most distinctive residential markets — authentic village life with genuine appreciation potential.</p>
+                    </div>
+                    
+                    <div>
+                        <ul class="neighborhood-list">
+                            <li>Historic downtown village with Hotel Mac and Masquers Playhouse</li>
+                            <li><span class="highlight">OpenAI's new 202,000 sq ft campus</span> bringing 730 tech jobs</li>
+                            <li>San Francisco Ferry service direct from Point Richmond</li>
+                            <li>Walkable restaurants: Biancoverde, Up & Under, Little Louie's</li>
+                            <li>The Plunge — historic municipal swimming facility</li>
+                            <li>Bay Trail access and waterfront recreation</li>
+                            <li>Strong community events and neighborhood engagement</li>
+                            <li>Richmond Bridge access (15 minutes to Marin)</li>
+                            <li>Keller Beach and regional park connections</li>
+                            <li>Marina access and recreational boating</li>
+                            <li>BART connections via Richmond station</li>
+                            <li>Emerging tech corridor with major AI presence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Market Dynamics -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Market Context</h2>
+                    <p class="section-subtitle">Point Richmond's evolving investment landscape</p>
+                </div>
+                
+                <div class="property-overview">
+                    <div class="property-description">
+                        <p>Point Richmond's real estate market reflects both its historic character and emerging economic drivers. <span class="highlight">OpenAI's recent commitment to a 202,000-square-foot waterfront facility</span> represents the largest tech investment in the area's modern history, with <span class="cite">Mayor Eduardo Martinez projecting <span class="highlight">$75 million in annual economic benefits</span> and 730 new jobs</span>.</p>
+                        
+                        <p>This institutional validation of Point Richmond as a tech-accessible location — combined with direct ferry service to San Francisco and established village character — creates a unique value proposition. Properties with architectural distinction and Bay views, like the Wave Garden Residence, represent the premium tier of this evolving market.</p>
+                        
+                        <p>For sellers of distinctive homes, Point Richmond offers the rare combination of authentic character and genuine appreciation drivers — a market positioned for continued strength as the East Bay attracts tech workers seeking alternatives to traditional Peninsula commutes.</p>
+                    </div>
+                    
+                    <div class="property-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">OpenAI Investment</span>
+                            <span class="stat-value">202K sq ft</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">New Tech Jobs</span>
+                            <span class="stat-value">730</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Annual Economic Impact</span>
+                            <span class="stat-value">$75M</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Ferry to SF</span>
+                            <span class="stat-value">35 min</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Richmond Bridge</span>
+                            <span class="stat-value">15 min</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Market Position</span>
+                            <span class="stat-value">Premium Tier</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Thinking of Selling Your Distinctive East Bay Home?</h2>
+            <p class="cta-text">I specialize in marketing unique properties that deserve exceptional presentation. Let's discuss how to showcase your home's special character to the right buyers.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value"><a href="tel:+15108594895">510.859.4895</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value"><a href="mailto:patrick@realtor510.com">patrick@realtor510.com</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">License</div>
+                    <div class="contact-value">DRE# 02142693</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
