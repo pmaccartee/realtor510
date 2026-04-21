@@ -103,6 +103,13 @@
   .cta-btn:hover{background:var(--ink);}
   .cta-btn-outline{display:inline-block;margin-top:8px;border:1px solid var(--crimson);color:var(--crimson);padding:12px 28px;font-family:var(--sans);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:all 0.2s;}
   .cta-btn-outline:hover{background:var(--crimson);color:#fff;}
+  .cta-block{background:var(--crimson-light);border-top:1px solid var(--crimson-mid);border-bottom:1px solid var(--crimson-mid);padding:72px 48px;text-align:center;}
+  .cta-block-inner{max-width:720px;margin:0 auto;}
+  .cta-label{font-family:var(--sans);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--crimson);margin-bottom:16px;font-weight:500;}
+  .cta-heading{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--ink);margin-bottom:18px;line-height:1.2;}
+  .cta-body{font-size:1.05rem;color:var(--ink-mid);font-weight:300;line-height:1.6;margin-bottom:28px;max-width:600px;margin-left:auto;margin-right:auto;}
+  .cta-button{display:inline-block;background:var(--crimson);color:#fff;padding:14px 32px;font-family:var(--sans);font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:background 0.2s;}
+  .cta-button:hover{background:var(--ink);}
 
   .neighborhood-bar{background:#f0f0f0;border-top:1px solid var(--rule);padding:16px 24px;}
   .neighborhood-bar-inner{max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 0;}
@@ -119,7 +126,8 @@
   .footer-links a:hover{color:var(--crimson);}
 
   @media(max-width:768px){
-    .hero-text,.content-wrapper,.cta-section{padding-left:24px;padding-right:24px;}
+    .hero-text,.content-wrapper,.cta-section,.cta-block{padding-left:24px;padding-right:24px;}
+    .cta-heading{font-size:1.6rem;}
     .hero-text{padding-top:48px;padding-bottom:48px;}
     .process-step{grid-template-columns:40px 1fr;gap:16px;}
     .cta-inner{flex-direction:column;}.cta-contact{text-align:left;}
@@ -165,6 +173,15 @@
     </div>
   </div>
 </main>
+
+<section class="cta-block">
+  <div class="cta-block-inner">
+    <p class="cta-label">Free · No Obligation</p>
+    <h2 class="cta-heading">Get a Private Home Evaluation</h2>
+    <p class="cta-body">Find out what your home is worth in today's market — and what it would take to maximize the outcome. A focused, no-pressure conversation on your timeline.</p>
+    <a href="https://calendly.com/patrick-realtor510/60min" class="cta-button">Schedule with Patrick →</a>
+  </div>
+</section>
 
 <div class="content-wrapper">
 
