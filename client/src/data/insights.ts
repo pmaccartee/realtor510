@@ -128,6 +128,38 @@ export const insights = [
     "link": "/1015-warfield-avenue-oakland.html"
   },
   {
+    "id": "224-mountain-avenue-piedmont",
+    "title": "224 Mountain Avenue, Piedmont — Interiors by Chloe Warner",
+    "category": "Notable Transaction",
+    "description": "Featured in the New York Times. Jewel box Piedmont home with interiors by Chloe Warner — described as \"Little Women on acid.\" Buyer representation. Sold $7,500,000.",
+    "content": "",
+    "link": "/224-mountain-avenue-piedmont"
+  },
+  {
+    "id": "9359-ladera-glen-ellen",
+    "title": "9359 Ladera Road, Glen Ellen — Sonoma Wine Country Estate",
+    "category": "Notable Transaction",
+    "description": "5,800 sq ft Wine Country estate on 14 private acres — pool, spa, and designer interiors in Glen Ellen, Sonoma. Buyer representation. Sold $3,592,000.",
+    "content": "",
+    "link": "/9359-ladera-glen-ellen"
+  },
+  {
+    "id": "4451-saint-andrews-oakland",
+    "title": "4451 Saint Andrews Road, Oakland — Sequoyah Hills Compound",
+    "category": "Notable Transaction",
+    "description": "Gated compound on 0.65 acres in Sequoyah Hills. 4,593 sq ft with Bay and SF skyline views and two self-contained living environments. Seller representation. Sold $1,650,000.",
+    "content": "",
+    "link": "/4451-saint-andrews-oakland"
+  },
+  {
+    "id": "1019-trestle-glen-crocker-highlands",
+    "title": "1019 Trestle Glen Road, Oakland — First-Time Buyers in Crocker Highlands",
+    "category": "Notable Transaction",
+    "description": "First-time buyers Jose and Grant close on their first home in Crocker Highlands — one of Oakland's most competitive neighborhoods. Buyer representation.",
+    "content": "",
+    "link": "/1019-trestle-glen-crocker-highlands"
+  },
+  {
     "id": "615-western-drive-richmond",
     "title": "615 Western Drive, Point Richmond — The Wave Garden Residence",
     "category": "Active Listing",
