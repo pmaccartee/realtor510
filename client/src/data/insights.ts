@@ -1,13 +1,5 @@
 export const insights = [
   {
-    "id": "east-bay-school-guide",
-    "title": "East Bay School Guide 2026: GreatSchools Ratings & Home Prices by Neighborhood",
-    "category": "Buyer Resources",
-    "description": "GreatSchools ratings for every level across Oakland, Berkeley, Albany, Piedmont, Alameda, Orinda, Lafayette, Moraga, El Cerrito, and Kensington — with Spring 2026 median sale prices.",
-    "content": "",
-    "link": "/east-bay-school-guide"
-  },
-  {
     "id": "how-do-you-create-leverage-when-theres-only-one-offer",
     "title": "How do you create leverage when there’s only one offer?",
     "category": "Negotiation",
