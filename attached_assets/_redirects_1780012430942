@@ -1,0 +1,2 @@
+# Clean URL redirect — serves the file without .html extension
+/east-bay-school-guide  /east-bay-school-guide.html  200
