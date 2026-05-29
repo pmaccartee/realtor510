@@ -16,12 +16,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="space-x-8 text-xs tracking-widest uppercase font-medium">
+          <Link href="/buy" className="hover:text-primary transition-colors">Buy</Link>
+          <Link href="/sell" className="hover:text-primary transition-colors">Sell</Link>
+          <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
+          <Link href="/neighborhoods" className="hover:text-primary transition-colors">Neighborhoods</Link>
+          <a href="/east-bay-school-guide" className="hover:text-primary transition-colors">Schools</a>
           <Link href="/waters" className="hover:text-primary transition-colors">Alice Waters</Link>
           <a href="/julia-morgan" className="hover:text-primary transition-colors">Julia Morgan</a>
-          <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-          <a href="#" className="hover:text-primary transition-colors">Terms</a>
-          <a href="/east-bay-school-guide" className="hover:text-primary transition-colors">Schools</a>
-          <a href="mailto:patrick@realtor510.com" className="hover:text-primary transition-colors">Contact</a>
+          <a href="mailto:patrick@grubbco.com" className="hover:text-primary transition-colors">Contact</a>
         </div>
       </div>
     </footer>
