@@ -20,8 +20,9 @@ export default function Sell() {
             <img src={heroImg} alt="Beautiful classic home exterior" className="w-full h-full object-cover object-center" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+            <p className="text-xs tracking-widest uppercase text-white/70 mb-4">Seller Representation · East Bay</p>
             <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight drop-shadow-md">
-              Selling Your Home
+              Selling Your Home.
             </h1>
           </div>
         </section>
@@ -30,16 +31,13 @@ export default function Sell() {
           <div className="max-w-4xl mx-auto px-6 text-center mb-24">
             <h2 className="text-4xl md:text-6xl font-serif text-foreground mb-6 leading-tight">
               Smart pricing.<br />
-              <span className="italic text-primary">Thoughtful negotiation.</span>
+              <span className="italic text-primary">Thoughtful preparation.</span>
             </h2>
-            <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed mb-16 max-w-3xl mx-auto">
-              Strategic pricing, data-driven marketing, and expert negotiation to get the highest possible return for your East Bay property.
+            <p className="text-sm tracking-widest uppercase text-muted-foreground mb-10">
+              Oakland · Berkeley · Piedmont · Alameda
             </p>
-            <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed mb-8">
-              I am committed to exceeding my sellers' expectations. My comprehensive marketing strategy is built to position your home for maximum value—achieving the highest possible price in the shortest amount of time, with the strongest terms.
-            </p>
-            <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed">
-              With discretion, diligence, and careful attention to detail, I manage every step of the process with intention and precision.
+            <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Every dollar left on the table at closing was earned over years of ownership. A disciplined pricing strategy, targeted pre-market preparation, and the right buyer at the right price — that's what seller representation should deliver.
             </p>
           </div>
 
