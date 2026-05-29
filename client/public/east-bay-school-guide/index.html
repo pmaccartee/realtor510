@@ -217,37 +217,55 @@ fbq('track', 'PageView');
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── NAV ── */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--bg);
-    border-bottom: 1px solid var(--rule);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    height: 68px;
+  /* ── Site Header (matches React) ── */
+  .react-header-wrapper {
+    position: fixed; top: 0; left: 0; right: 0; width: 100%;
+    z-index: 50; background-color: #ffffff;
+    border-bottom: 1px solid hsl(0,0%,90%);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+    height: 80px;
   }
-  nav a.logo img { height: 36px; display: block; }
-  nav ul { list-style: none; display: flex; gap: 28px; }
-  nav ul a {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: .03em;
-    text-decoration: none;
-    color: var(--mid);
-    transition: color .2s;
+  .react-header-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 24px;
+    height: 100%; display: flex; align-items: center;
+    justify-content: space-between; box-sizing: border-box;
   }
-  nav ul a:hover { color: var(--red); }
+  .react-header-logo-link { display: block; text-decoration: none; }
+  .react-header-logo-img { height: 48px; width: auto; object-fit: contain; display: block; }
+  .react-header-links { display: none; }
+  @media (min-width: 768px) {
+    .react-header-links { display: flex; align-items: center; gap: 32px; margin: 0; padding: 0; }
+  }
+  .react-header-link {
+    font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 400;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: hsl(0,0%,15%); text-decoration: none;
+    transition: color .15s;
+  }
+  .react-header-link:hover { color: hsl(355,75%,35%); }
+  .react-header-btn {
+    background-color: hsl(355,75%,35%); color: #fff !important;
+    padding: 8px 24px; text-decoration: none;
+    font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 400;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    transition: background-color .15s; display: inline-block;
+  }
+  .react-header-btn:hover { background-color: hsla(355,75%,35%,.9); }
+  .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; color: hsl(0,0%,15%); padding: 8px; }
+  .mobile-menu-overlay { position: fixed; top: 80px; left: 0; width: 100%; height: calc(100vh - 80px); background: #fff; z-index: 40; overflow-y: auto; border-top: 1px solid hsl(0,0%,90%); }
+  .mobile-menu-overlay.hidden { display: none; }
+  .mobile-menu-content { display: flex; flex-direction: column; padding: 24px; gap: 24px; }
+  .mobile-nav-link { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: hsl(0,0%,15%); text-decoration: none; display: block; }
+  .mobile-nav-btn { background-color: hsl(355,75%,35%); color: #fff !important; padding: 12px 24px; text-align: center; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 8px; }
+  @media (max-width: 767px) {
+    .desktop-only { display: none !important; }
+    .mobile-menu-btn { display: block; }
+  }
 
   /* ── HERO ── */
   .hero {
-    background: var(--bg-section);
-    border-bottom: 1px solid var(--rule);
-    padding: 72px 40px 60px;
+    background: var(--bg-section); border-bottom: 1px solid var(--rule);
+    padding: 152px 40px 60px;
     max-width: 900px;
     margin: 0 auto;
   }
@@ -541,19 +559,36 @@ fbq('track', 'PageView');
 <body>
 
 <!-- NAV -->
-<nav>
-  <a class="logo" href="https://realtor510.com">
-    <img src="https://realtor510.com/PM_LOGO_Red_1772927689333.png" alt="Patrick MacCartee">
-  </a>
-  <ul>
-    <li><a href="https://realtor510.com/buy">Buy</a></li>
-    <li><a href="https://realtor510.com/sell">Sell</a></li>
-    <li><a href="https://realtor510.com/reviews">Reviews</a></li>
-    <li><a href="https://realtor510.com/neighborhoods">Neighborhoods</a></li>
-    <li><a href="https://realtor510.com/blog">Blog</a></li>
-    <li><a href="mailto:patrick@grubbco.com">Contact</a></li>
-  </ul>
-</nav>
+<header class="react-header-wrapper">
+  <div class="react-header-inner">
+    <a href="/" class="react-header-logo-link">
+      <img src="/PM_LOGO_Red_1772927689333.png" alt="Patrick MacCartee Logo" class="react-header-logo-img">
+    </a>
+    <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="react-header-links desktop-only">
+      <a href="/buy" class="react-header-link">Buy</a>
+      <a href="/sell" class="react-header-link">Sell</a>
+      <a href="/reviews" class="react-header-link">Reviews</a>
+      <a href="/neighborhoods" class="react-header-link">Neighborhoods</a>
+      <a href="/blog" class="react-header-link">Blog</a>
+      <a href="javascript:void(0)" onclick="window.location.href='tel:'+[5,1,0].join('')+[8,5,9].join('')+[4,8,9,5].join('')" class="react-header-btn">Contact</a>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu-overlay hidden">
+    <div class="mobile-menu-content">
+      <a href="/buy" class="mobile-nav-link">Buy</a>
+      <a href="/sell" class="mobile-nav-link">Sell</a>
+      <a href="/reviews" class="mobile-nav-link">Reviews</a>
+      <a href="/neighborhoods" class="mobile-nav-link">Neighborhoods</a>
+      <a href="/blog" class="mobile-nav-link">Blog</a>
+      <a href="javascript:void(0)" onclick="window.location.href='tel:'+[5,1,0].join('')+[8,5,9].join('')+[4,8,9,5].join('')" class="mobile-nav-btn">Contact</a>
+    </div>
+  </div>
+</header>
 
 <!-- HERO -->
 <div style="background: var(--bg-section); border-bottom: 1px solid var(--rule);">
@@ -1116,5 +1151,15 @@ fbq('track', 'PageView');
   </nav>
 </footer>
 
+
+<script>
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
 </body>
 </html>
