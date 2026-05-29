@@ -505,20 +505,26 @@ fbq('track', 'PageView');
   .btn-ghost:hover { border-color: rgba(255,255,255,.7); }
 
   /* ── FOOTER ── */
-  footer {
-    background: var(--bg-section);
-    border-top: 1px solid var(--rule);
-    padding: 24px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
+  .site-footer {
+    background: #1a1a1a;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 52px 40px 40px;
+    text-align: center;
   }
-  footer p { font-size: 12px; color: var(--muted); }
-  footer nav { border: none; height: auto; padding: 0; position: static; background: transparent; }
-  footer nav ul { gap: 20px; }
-  footer nav ul a { font-size: 12px; color: var(--muted); }
+  .footer-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .footer-name sup { font-size: .5em; letter-spacing: 0; vertical-align: super; }
+  .footer-dre { font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: #888; margin-bottom: 24px; }
+  .footer-links { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+  .footer-links a { font-size: .6rem; letter-spacing: .15em; text-transform: uppercase; color: #888; text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: #C01C2C; }
 
   /* ── MOBILE ── */
   @media (max-width: 720px) {
@@ -1096,17 +1102,17 @@ fbq('track', 'PageView');
 </div>
 
 <!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 Patrick MacCartee &nbsp;&middot;&nbsp; DRE 02142693 &nbsp;&middot;&nbsp; The Grubb Company</p>
-  <nav>
-    <ul>
-      <li><a href="https://realtor510.com/buy">Buy</a></li>
-      <li><a href="https://realtor510.com/sell">Sell</a></li>
-      <li><a href="https://realtor510.com/blog">Blog</a></li>
-      <li><a href="https://realtor510.com/neighborhoods">Neighborhoods</a></li>
-      <li><a href="https://realtor510.com/east-bay-school-guide">Schools</a></li>
-    </ul>
-  </nav>
+<footer class="site-footer">
+  <div class="footer-name">PATRICK M<sup>AC</sup>CARTEE</div>
+  <div class="footer-dre">DRE# 02142693 &nbsp;&middot;&nbsp; The Grubb Company</div>
+  <div class="footer-links">
+    <a href="https://realtor510.com/buy">Buy</a>
+    <a href="https://realtor510.com/sell">Sell</a>
+    <a href="https://realtor510.com/blog">Blog</a>
+    <a href="https://realtor510.com/neighborhoods">Neighborhoods</a>
+    <a href="https://realtor510.com/east-bay-school-guide">Schools</a>
+    <a href="mailto:patrick@grubbco.com">Contact</a>
+  </div>
 </footer>
 
 </body>
