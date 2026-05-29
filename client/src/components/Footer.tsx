@@ -20,6 +20,7 @@ export default function Footer() {
           <a href="/julia-morgan" className="hover:text-primary transition-colors">Julia Morgan</a>
           <a href="#" className="hover:text-primary transition-colors">Privacy</a>
           <a href="#" className="hover:text-primary transition-colors">Terms</a>
+          <a href="/east-bay-school-guide" className="hover:text-primary transition-colors">Schools</a>
           <a href="mailto:patrick@realtor510.com" className="hover:text-primary transition-colors">Contact</a>
         </div>
       </div>
