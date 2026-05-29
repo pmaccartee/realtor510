@@ -1,34 +1,21 @@
-import { Link } from "wouter";
 import NeighborhoodBar from "./NeighborhoodBar";
 
 export default function Footer() {
   return (
     <>
-    <NeighborhoodBar />
-    <footer style={{background:"#1a1a1a",borderTop:"1px solid rgba(255,255,255,0.08)",padding:"52px 40px 40px",textAlign:"center"}}>
-      <div style={{fontFamily:"'Montserrat',sans-serif",fontSize:"0.95rem",fontWeight:400,letterSpacing:".25em",textTransform:"uppercase",color:"#fff",marginBottom:"6px"}}>
-        PATRICK M<sup style={{fontSize:".55em",letterSpacing:0,verticalAlign:"super"}}>AC</sup>CARTEE
-      </div>
-      <div style={{fontSize:".65rem",letterSpacing:".15em",textTransform:"uppercase",color:"#888",marginBottom:"28px"}}>
-        DRE# 02142693 &nbsp;&middot;&nbsp; The Grubb Company
-      </div>
-      <div style={{display:"flex",justifyContent:"center",gap:"28px",flexWrap:"wrap"}}>
-        {[
-          {href:"/buy",label:"Buy"},
-          {href:"/sell",label:"Sell"},
-          {href:"/blog",label:"Blog"},
-          {href:"/neighborhoods",label:"Neighborhoods"},
-          {href:"/east-bay-school-guide",label:"Schools"},
-          {href:"/waters",label:"Alice Waters"},
-          {href:"/julia-morgan",label:"Julia Morgan"},
-          {href:"mailto:patrick@grubbco.com",label:"Contact"},
-        ].map(({href,label}) => (
-          <a key={label} href={href} style={{fontSize:".6rem",letterSpacing:".15em",textTransform:"uppercase",color:"#888",textDecoration:"none"}}>
-            {label}
-          </a>
-        ))}
-      </div>
-    </footer>
+      <NeighborhoodBar />
+      <footer style={{padding:"40px",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:"16px",borderTop:"1px solid #e5e5e5",background:"#fff",fontFamily:"sans-serif"}}>
+        <div>
+          <div style={{fontSize:"11px",fontWeight:600,letterSpacing:"0.1em",textTransform:"uppercase",color:"#111",marginBottom:"4px"}}>Patrick MacCartee</div>
+          <div style={{fontSize:"11px",color:"#888"}}>DRE# 02142693</div>
+        </div>
+        <nav style={{display:"flex",gap:"24px",flexWrap:"wrap",alignItems:"center"}}>
+          <a href="/east-bay-school-guide" style={{fontSize:"12px",color:"#555",textDecoration:"none"}}>Schools</a>
+          <a href="/waters" style={{fontSize:"12px",color:"#555",textDecoration:"none"}}>Alice Waters</a>
+          <a href="/julia-morgan" style={{fontSize:"12px",color:"#555",textDecoration:"none"}}>Julia Morgan</a>
+          <a href="mailto:patrick@realtor510.com" style={{fontSize:"12px",color:"#555",textDecoration:"none"}}>Contact</a>
+        </nav>
+      </footer>
     </>
   );
 }

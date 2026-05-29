@@ -1,0 +1,57 @@
+I need you to standardize the footer across all static HTML pages in this repo. The footer should contain:
+
+PATRICK MACCARTEE (all caps)
+DRE# 02142693
+Four links only: Schools · Alice Waters · Julia Morgan · Contact
+
+Do not include Buy, Sell, Blog, or Neighborhoods — those are already in the site header. Do not include the Facebook pixel tag.
+Here is the canonical footer HTML block:
+html<!-- ── FOOTER ── -->
+<footer style="padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-top: 1px solid #e5e5e5; background: #fff; font-family: sans-serif;">
+  <div>
+    <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #111; margin-bottom: 4px;">Patrick MacCartee</div>
+    <div style="font-size: 11px; color: #888;">DRE# 02142693</div>
+  </div>
+  <nav style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
+    <a href="/east-bay-school-guide" style="font-size: 12px; color: #555; text-decoration: none;">Schools</a>
+    <a href="/waters" style="font-size: 12px; color: #555; text-decoration: none;">Alice Waters</a>
+    <a href="/julia-morgan" style="font-size: 12px; color: #555; text-decoration: none;">Julia Morgan</a>
+    <a href="mailto:patrick@realtor510.com" style="font-size: 12px; color: #555; text-decoration: none;">Contact</a>
+  </nav>
+</footer>
+Please update the following files, replacing whatever <footer>...</footer> block currently exists with the canonical block above. Do not change anything else.
+Blog posts — every index.html inside client/public/blog/, including:
+
+blog/what-does-1-5m-buy-in-oakland/index.html
+blog/oakland-hillside-fire-zones-mortgage-insurance/index.html
+blog/prop-19-playbook-east-bay-homeowners/index.html
+All other files inside client/public/blog/
+
+School guide — client/public/east-bay-school-guide/index.html
+Static neighborhood and listing pages — every .html file at the root of client/public/ that contains a <footer> tag, including:
+
+rockridge-guide.html
+crocker-highlands-guide.html
+alameda-neighborhood-guide.html
+berkeley-neighborhood-guide.html
+montclair-guide.html
+trestle-glen-guide.html
+piedmont-neighborhood-guide.html
+oakmore-glenview-guide.html
+sequoyah-hills-market-report.html
+berkeley-hills-guide.html
+crocker-highlands-trestle-glen-oakland.html
+Any other static .html file with a <footer> tag
+
+For each file:
+
+Find the <footer opening tag and its matching </footer> closing tag
+Replace the entire block with the canonical footer above
+Save the file
+
+Do not touch anything inside client/src/. Only edit static HTML files.
+Also update the React Footer component (somewhere in client/src/) to remove Buy, Sell, Blog, and Neighborhoods from the footer links, keeping only: Schools · Alice Waters · Julia Morgan · Contact. The Schools link should point to /east-bay-school-guide.ShareContentSchool district home price stats.xlsxxlsx2026-05-29T00:06:51.731504Z	Cloning repository...
+2026-05-29T00:06:59.541525Z	From https://github.com/pmaccartee/realtor510
+2026-05-29T00:06:59.541996Z	 * branch            c31bc67f9ef1992c0c5b6fcd5f8084ae372bb6b1 -> FETCH_HEAD
+2026-05-29T00:06:59.542151Z	
+2026-05-29T00:07:00.998958Z	HEAD is now at pasted
