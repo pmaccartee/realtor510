@@ -119,6 +119,44 @@ export default function Buy() {
             </div>
           </div>
         </section>
+
+        {/* School Guide Callout */}
+        <div style={{
+          background: '#f5f3ef',
+          borderLeft: '3px solid #C01C2C',
+          padding: '24px 28px',
+          margin: '48px 0',
+        }}>
+          <p style={{
+            fontSize: '11px',
+            fontWeight: 500,
+            letterSpacing: '.08em',
+            textTransform: 'uppercase',
+            color: '#888',
+            margin: '0 0 8px',
+          }}>Buyer Resource</p>
+          <p style={{
+            fontSize: '20px',
+            fontWeight: 500,
+            color: '#111',
+            margin: '0 0 8px',
+            fontFamily: 'inherit',
+          }}>Buying with schools in mind?</p>
+          <p style={{
+            fontSize: '14px',
+            color: '#4a4a4a',
+            margin: '0 0 16px',
+            lineHeight: 1.6,
+          }}>
+            GreatSchools ratings and Spring 2026 home prices for every East Bay neighborhood — Rockridge, Crocker Highlands, Orinda, Albany, Piedmont, Alameda and more. One page, every district.
+          </p>
+          <a href="/east-bay-school-guide" style={{
+            color: '#C01C2C',
+            fontSize: '14px',
+            fontWeight: 500,
+            textDecoration: 'none',
+          }}>East Bay School Guide →</a>
+        </div>
       </main>
       <Footer />
     </div>
