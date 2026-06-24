@@ -1,5 +1,13 @@
 export const insights = [
   {
+    "id": "real-estate-decoded-june-2026",
+    "title": "Real Estate Decoded — June 2026",
+    "category": "Market Update",
+    "description": "Spring 2026 was one of the most competitive East Bay markets in years. Here's what the data actually says — market timing for buyers and sellers, neighborhood prices, and what's coming next.",
+    "content": "",
+    "link": "/blog/real-estate-decoded-june-2026/"
+  },
+  {
     "id": "how-do-you-create-leverage-when-theres-only-one-offer",
     "title": "How do you create leverage when there’s only one offer?",
     "category": "Negotiation",
