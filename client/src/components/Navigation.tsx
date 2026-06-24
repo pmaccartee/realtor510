@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useState } from "react";
-import logo from "@assets/PM_LOGO_Red_1772927689333.png";
+import logo from "@assets/PM_LOGO_Banner.png";
 import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
