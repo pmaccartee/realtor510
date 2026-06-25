@@ -24,7 +24,7 @@ const pointsFC = JSON.parse(pointsRaw);
 const LEVELS: { key: Level; label: string; color: string; fc: any }[] = [
   { key: "elementary", label: "Elementary", color: "#2E7D32", fc: elementaryFC }, // green
   { key: "middle", label: "Middle", color: "#1565C0", fc: middleFC }, // blue
-  { key: "high", label: "High", color: "#14216B", fc: highFC }, // navy
+  { key: "high", label: "High", color: "#C62828", fc: highFC }, // red
 ];
 
 // GeoJSON Polygon/MultiPolygon -> array of Google Maps paths ([lng,lat] -> {lat,lng}).
@@ -95,6 +95,22 @@ export default function SchoolMap() {
       mapTypeControl: false,
       streetViewControl: false,
       fullscreenControl: false,
+      // Muted grey basemap so the colored attendance outlines stand out.
+      styles: [
+        { elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
+        { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+        { elementType: "labels.text.fill", stylers: [{ color: "#9e9e9e" }] },
+        { elementType: "labels.text.stroke", stylers: [{ color: "#f5f5f5" }] },
+        { featureType: "administrative", elementType: "geometry", stylers: [{ visibility: "off" }] },
+        { featureType: "administrative.land_parcel", stylers: [{ visibility: "off" }] },
+        { featureType: "poi", stylers: [{ visibility: "off" }] },
+        { featureType: "road", elementType: "geometry", stylers: [{ color: "#ffffff" }] },
+        { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#bdbdbd" }] },
+        { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#e0e0e0" }] },
+        { featureType: "transit", stylers: [{ visibility: "off" }] },
+        { featureType: "water", elementType: "geometry", stylers: [{ color: "#e3e8ea" }] },
+        { featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#9e9e9e" }] },
+      ],
     });
     geocoderRef.current = new g.maps.Geocoder();
     infoWindowRef.current = new g.maps.InfoWindow();
@@ -112,10 +128,10 @@ export default function SchoolMap() {
         const polygon = new g.maps.Polygon({
           paths: toPaths(feature.geometry),
           strokeColor: level.color,
-          strokeOpacity: 0.85,
-          strokeWeight: 1.5,
+          strokeOpacity: 0.95,
+          strokeWeight: 2.5,
           fillColor: level.color,
-          fillOpacity: 0.25,
+          fillOpacity: 0, // outline only — interior stays clickable
           map: mapInstanceRef.current,
         });
         polygon.addListener("click", (e: any) => {
