@@ -9,6 +9,7 @@ import Blog from "@/pages/Blog";
 import Reviews from "@/pages/Reviews";
 import Waters from "@/pages/Waters";
 import Neighborhoods from "@/pages/Neighborhoods";
+import EastBayGuide from "@/pages/EastBayGuide";
 import NotFound from "@/pages/not-found";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ function AppRoutes() {
       <Route path="/reviews" component={Reviews} />
       <Route path="/waters" component={Waters} />
       <Route path="/neighborhoods" component={Neighborhoods} />
+      <Route path="/east-bay-guide" component={EastBayGuide} />
       <Route component={NotFound} />
     </Switch>
   );

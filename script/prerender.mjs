@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, "..");
 
-const ROUTES = ["/", "/buy", "/sell", "/reviews", "/waters", "/blog", "/neighborhoods"];
+const ROUTES = ["/", "/buy", "/sell", "/reviews", "/waters", "/blog", "/neighborhoods", "/east-bay-guide"];
 
 const ssrPath = path.join(PROJECT_ROOT, "dist", "server", "entry-server.js");
 const { render } = await import(pathToFileURL(ssrPath).href);
