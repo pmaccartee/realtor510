@@ -751,99 +751,83 @@ function lookupWCStreet(streetName: string, houseNumber: number): string | null 
 
 
 // ============================================================
-// DISTRICT BOUNDARIES (approximate, for visual reference)
+// DISTRICT METADATA
+// Geometry (paths) is fetched at runtime from the US Census TIGERweb API
+// (see the boundary-fetch useEffect below). `census` is the Census BASENAME
+// used to match each metadata entry to its returned boundary polygon.
 // ============================================================
-const districtBoundaries = [
+const districtMeta = [
   {
     name: "Piedmont Unified",
+    census: "Piedmont",
     color: "#B22222",
     description: "Independent city district. All Piedmont addresses attend Piedmont Unified schools — one of California's top-ranked public school districts.",
     finderUrl: "https://www.piedmont.k12.ca.us",
     finderLabel: "Piedmont Unified Website",
-    paths: [
-      { lat: 37.8344, lng: -122.2412 },
-      { lat: 37.8344, lng: -122.2180 },
-      { lat: 37.8120, lng: -122.2180 },
-      { lat: 37.8120, lng: -122.2412 },
-    ]
   },
   {
     name: "Albany Unified",
+    census: "Albany",
     color: "#2255B2",
     description: "City of Albany. All Albany addresses attend Albany Unified schools — exceptional K–12 outcomes at a value price point.",
     finderUrl: "https://www.ausdk8.org",
     finderLabel: "Albany Unified Website",
-    paths: [
-      { lat: 37.9020, lng: -122.3120 },
-      { lat: 37.9020, lng: -122.2820 },
-      { lat: 37.8780, lng: -122.2820 },
-      { lat: 37.8780, lng: -122.3120 },
-    ]
   },
   {
     name: "Berkeley Unified",
+    census: "Berkeley",
     color: "#228B22",
     description: "City of Berkeley. School assignment varies by neighborhood — use Berkeley's enrollment finder for your specific address.",
     finderUrl: "https://www.berkeleyschools.net/enrollment/",
     finderLabel: "Berkeley Unified Enrollment",
-    paths: [
-      { lat: 37.9060, lng: -122.3240 },
-      { lat: 37.9060, lng: -122.2340 },
-      { lat: 37.8520, lng: -122.2340 },
-      { lat: 37.8520, lng: -122.3240 },
-    ]
   },
   {
     name: "Alameda Unified",
+    census: "Alameda",
     color: "#8B5CF6",
     description: "City of Alameda (island). All Alameda addresses attend Alameda Unified schools.",
     finderUrl: "https://www.alamedausd.net",
     finderLabel: "Alameda Unified Website",
-    paths: [
-      { lat: 37.7900, lng: -122.3200 },
-      { lat: 37.7900, lng: -122.2200 },
-      { lat: 37.7580, lng: -122.2200 },
-      { lat: 37.7580, lng: -122.3200 },
-    ]
   },
   {
-    name: "Oakland Unified (Hills)",
+    name: "Oakland Unified",
+    census: "Oakland",
     color: "#D97706",
-    description: "Oakland Hills west of I-580. School assignment is highly address-specific within OUSD — use their official interactive map for accurate assignment.",
+    description: "City of Oakland. School assignment within OUSD is highly address-specific — use the district's official interactive map for accurate assignment.",
     finderUrl: "https://ousd.maps.arcgis.com/apps/View/index.html?appid=e2d956e81eaf4a45b24b705e76b7871e",
     finderLabel: "OUSD School Finder Map →",
-    paths: [
-      { lat: 37.8450, lng: -122.2500 },
-      { lat: 37.8450, lng: -122.1900 },
-      { lat: 37.7900, lng: -122.1900 },
-      { lat: 37.7900, lng: -122.2500 },
-    ]
-  },
-  {
-    name: "Acalanes Union (LaMorinda)",
-    color: "#0891B2",
-    description: "Orinda, Lafayette, Moraga. One of California's top-ranked high school districts. Elementary schools are managed by separate feeder districts.",
-    finderUrl: "https://www.acalanes.k12.ca.us",
-    finderLabel: "Acalanes Union Website",
-    paths: [
-      { lat: 37.9200, lng: -122.1800 },
-      { lat: 37.9200, lng: -122.0400 },
-      { lat: 37.8400, lng: -122.0400 },
-      { lat: 37.8400, lng: -122.1800 },
-    ]
   },
   {
     name: "Walnut Creek Elementary",
+    census: "Walnut Creek",
     color: "#059669",
     description: "Walnut Creek has 5 elementary schools with attendance zones by street. Enter your address below for an exact school assignment based on the district's official December 2025 street listing.",
     finderUrl: "https://www.walnutcreekschooldistrict.org",
     finderLabel: "Walnut Creek School District",
-    paths: [
-      { lat: 37.9300, lng: -122.0950 },
-      { lat: 37.9300, lng: -122.0100 },
-      { lat: 37.8700, lng: -122.0100 },
-      { lat: 37.8700, lng: -122.0950 },
-    ]
+  },
+  {
+    name: "Orinda (Acalanes Union HS)",
+    census: "Orinda",
+    color: "#0891B2",
+    description: "Orinda feeds into Miramonte High — Acalanes Union, one of California's top-ranked high school districts. Elementary is handled by the Orinda Union School District.",
+    finderUrl: "https://www.acalanes.k12.ca.us",
+    finderLabel: "Acalanes Union Website",
+  },
+  {
+    name: "Lafayette (Acalanes Union HS)",
+    census: "Lafayette",
+    color: "#0E7490",
+    description: "Lafayette feeds into Acalanes High — Acalanes Union, one of California's top-ranked high school districts. Elementary is handled by the Lafayette School District.",
+    finderUrl: "https://www.acalanes.k12.ca.us",
+    finderLabel: "Acalanes Union Website",
+  },
+  {
+    name: "Moraga (Acalanes Union HS)",
+    census: "Moraga",
+    color: "#155E75",
+    description: "Moraga feeds into Campolindo High — Acalanes Union, one of California's top-ranked high school districts. Elementary is handled by the Moraga School District.",
+    finderUrl: "https://www.acalanes.k12.ca.us",
+    finderLabel: "Acalanes Union Website",
   },
 ];
 
@@ -908,20 +892,45 @@ const levelLabels: Record<string, string> = {
   high: "High Schools"
 };
 
-function pointInPolygon(lat: number, lng: number, paths: {lat: number, lng: number}[]) {
+type LatLng = { lat: number; lng: number };
+
+// Convert one GeoJSON ring ([lng, lat] pairs) to Google Maps {lat, lng} points.
+function ringToPath(ring: number[][]): LatLng[] {
+  return ring.map(([lng, lat]) => ({ lat, lng }));
+}
+
+// Convert a GeoJSON Polygon or MultiPolygon into an array of rings (paths).
+function geometryToPaths(geom: any): LatLng[][] {
+  if (!geom) return [];
+  if (geom.type === "Polygon") return geom.coordinates.map(ringToPath);
+  if (geom.type === "MultiPolygon") return geom.coordinates.flat().map(ringToPath);
+  return [];
+}
+
+// Ray-casting point-in-ring test.
+function pointInRing(lat: number, lng: number, ring: LatLng[]) {
   let inside = false;
-  for (let i = 0, j = paths.length - 1; i < paths.length; j = i++) {
-    const xi = paths[i].lng, yi = paths[i].lat;
-    const xj = paths[j].lng, yj = paths[j].lat;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i].lng, yi = ring[i].lat;
+    const xj = ring[j].lng, yj = ring[j].lat;
     const intersect = ((yi > lat) !== (yj > lat)) && (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi);
     if (intersect) inside = !inside;
   }
   return inside;
 }
 
-function findDistrict(lat: number, lng: number) {
-  for (const district of districtBoundaries) {
-    if (pointInPolygon(lat, lng, district.paths)) return district;
+// Even-odd across all rings: islands count as inside, holes as outside.
+function pointInPaths(lat: number, lng: number, paths: LatLng[][]) {
+  let inside = false;
+  for (const ring of paths) {
+    if (pointInRing(lat, lng, ring)) inside = !inside;
+  }
+  return inside;
+}
+
+function findDistrict(lat: number, lng: number, districts: any[]) {
+  for (const district of districts) {
+    if (district.paths && pointInPaths(lat, lng, district.paths)) return district;
   }
   return null;
 }
@@ -944,6 +953,8 @@ export default function SchoolMap() {
   const markersRef = useRef<any[]>([]);
   const polygonsRef = useRef<any[]>([]);
   const geocoderRef = useRef<any>(null);
+  const [districts, setDistricts] = useState<any[]>([]);
+  const districtsRef = useRef<any[]>([]);
 
   useEffect(() => {
     if ((window as any).google) { initMap(); return; }
@@ -957,6 +968,31 @@ export default function SchoolMap() {
   useEffect(() => {
     if (mapInstanceRef.current) updateMarkers();
   }, [activeLevel]);
+
+  // Fetch real city/district boundary polygons from the US Census TIGERweb API.
+  // Layer 4 = Incorporated Places; BASENAME is the clean city name (the NAME
+  // field carries a legal suffix, e.g. "Berkeley city").
+  useEffect(() => {
+    const where = `STATE='06' AND BASENAME IN (${districtMeta.map(m => `'${m.census}'`).join(",")})`;
+    const url =
+      "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4/query" +
+      `?where=${encodeURIComponent(where)}&outFields=BASENAME&f=geojson&outSR=4326`;
+    fetch(url)
+      .then(r => r.json())
+      .then(geo => {
+        const pathsByCity: Record<string, LatLng[][]> = {};
+        (geo.features || []).forEach((f: any) => {
+          pathsByCity[f.properties.BASENAME] = geometryToPaths(f.geometry);
+        });
+        const merged = districtMeta
+          .map(m => ({ ...m, paths: pathsByCity[m.census] }))
+          .filter(d => d.paths && d.paths.length > 0);
+        districtsRef.current = merged;
+        setDistricts(merged);
+        if (mapInstanceRef.current) drawDistrictBoundaries();
+      })
+      .catch(() => { /* network/API failure: map still renders without boundary overlays */ });
+  }, []);
 
   function initMap() {
     if (!mapRef.current) return;
@@ -975,7 +1011,7 @@ export default function SchoolMap() {
   function drawDistrictBoundaries() {
     polygonsRef.current.forEach(p => p.setMap(null));
     polygonsRef.current = [];
-    districtBoundaries.forEach(district => {
+    districtsRef.current.forEach(district => {
       const polygon = new (window as any).google.maps.Polygon({
         paths: district.paths,
         strokeColor: district.color,
@@ -1075,7 +1111,7 @@ export default function SchoolMap() {
       }
 
       // For all other addresses, use district polygon lookup
-      const district = findDistrict(lat, lng);
+      const district = findDistrict(lat, lng, districtsRef.current);
       setReport({ address: formattedAddress, type: "district", district });
     });
   }
@@ -1094,7 +1130,7 @@ export default function SchoolMap() {
 
       {/* Legend */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "16px" }}>
-        {districtBoundaries.map(d => (
+        {districts.map(d => (
           <div key={d.name} style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "11px", color: "#555" }}>
             <div style={{ width: "12px", height: "12px", borderRadius: "2px", background: d.color, opacity: 0.8 }} />
             {d.name}
