@@ -27,7 +27,7 @@ function Router() {
       <Route path="/reviews" component={Reviews}/>
       <Route path="/waters" component={Waters}/>
       <Route path="/neighborhoods" component={Neighborhoods}/>
-      <Route path="/east-bay-guide" component={EastBayGuide}/>
+      <Route path="/schools" component={EastBayGuide}/>
       <Route component={NotFound} />
     </Switch>
   );

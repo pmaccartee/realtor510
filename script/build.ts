@@ -32,7 +32,7 @@ const allowlist = [
   "zod-validation-error",
 ];
 
-const PRERENDER_ROUTES = ["/", "/buy", "/sell", "/reviews", "/waters", "/blog", "/neighborhoods", "/east-bay-guide"];
+const PRERENDER_ROUTES = ["/", "/buy", "/sell", "/reviews", "/waters", "/blog", "/neighborhoods", "/schools"];
 
 async function buildAll() {
   await rm("dist", { recursive: true, force: true });
