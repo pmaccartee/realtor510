@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { sabsAttendance, type SabsZone } from "@/data/sabsAttendance";
 
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY;
 
@@ -750,86 +751,9 @@ function lookupWCStreet(streetName: string, houseNumber: number): string | null 
 }
 
 
-// ============================================================
-// DISTRICT METADATA
-// Geometry (paths) is fetched at runtime from the US Census TIGERweb API
-// (see the boundary-fetch useEffect below). `census` is the Census BASENAME
-// used to match each metadata entry to its returned boundary polygon.
-// ============================================================
-const districtMeta = [
-  {
-    name: "Piedmont Unified",
-    census: "Piedmont",
-    color: "#B22222",
-    description: "Independent city district. All Piedmont addresses attend Piedmont Unified schools — one of California's top-ranked public school districts.",
-    finderUrl: "https://www.piedmont.k12.ca.us",
-    finderLabel: "Piedmont Unified Website",
-  },
-  {
-    name: "Albany Unified",
-    census: "Albany",
-    color: "#2255B2",
-    description: "City of Albany. All Albany addresses attend Albany Unified schools — exceptional K–12 outcomes at a value price point.",
-    finderUrl: "https://www.ausdk8.org",
-    finderLabel: "Albany Unified Website",
-  },
-  {
-    name: "Berkeley Unified",
-    census: "Berkeley",
-    color: "#228B22",
-    description: "City of Berkeley. School assignment varies by neighborhood — use Berkeley's enrollment finder for your specific address.",
-    finderUrl: "https://www.berkeleyschools.net/enrollment/",
-    finderLabel: "Berkeley Unified Enrollment",
-  },
-  {
-    name: "Alameda Unified",
-    census: "Alameda",
-    color: "#8B5CF6",
-    description: "City of Alameda (island). All Alameda addresses attend Alameda Unified schools.",
-    finderUrl: "https://www.alamedausd.net",
-    finderLabel: "Alameda Unified Website",
-  },
-  {
-    name: "Oakland Unified",
-    census: "Oakland",
-    color: "#D97706",
-    description: "City of Oakland. School assignment within OUSD is highly address-specific — use the district's official interactive map for accurate assignment.",
-    finderUrl: "https://ousd.maps.arcgis.com/apps/View/index.html?appid=e2d956e81eaf4a45b24b705e76b7871e",
-    finderLabel: "OUSD School Finder Map →",
-  },
-  {
-    name: "Walnut Creek Elementary",
-    census: "Walnut Creek",
-    color: "#059669",
-    description: "Walnut Creek has 5 elementary schools with attendance zones by street. Enter your address below for an exact school assignment based on the district's official December 2025 street listing.",
-    finderUrl: "https://www.walnutcreekschooldistrict.org",
-    finderLabel: "Walnut Creek School District",
-  },
-  {
-    name: "Orinda (Acalanes Union HS)",
-    census: "Orinda",
-    color: "#0891B2",
-    description: "Orinda feeds into Miramonte High — Acalanes Union, one of California's top-ranked high school districts. Elementary is handled by the Orinda Union School District.",
-    finderUrl: "https://www.acalanes.k12.ca.us",
-    finderLabel: "Acalanes Union Website",
-  },
-  {
-    name: "Lafayette (Acalanes Union HS)",
-    census: "Lafayette",
-    color: "#0E7490",
-    description: "Lafayette feeds into Acalanes High — Acalanes Union, one of California's top-ranked high school districts. Elementary is handled by the Lafayette School District.",
-    finderUrl: "https://www.acalanes.k12.ca.us",
-    finderLabel: "Acalanes Union Website",
-  },
-  {
-    name: "Moraga (Acalanes Union HS)",
-    census: "Moraga",
-    color: "#155E75",
-    description: "Moraga feeds into Campolindo High — Acalanes Union, one of California's top-ranked high school districts. Elementary is handled by the Moraga School District.",
-    finderUrl: "https://www.acalanes.k12.ca.us",
-    finderLabel: "Acalanes Union Website",
-  },
-];
+// District boundaries were replaced by per-school attendance zones sourced from
+// the NCES School Attendance Boundary Survey (see @/data/sabsAttendance and the
+// zone helpers below).
 
 // ============================================================
 // SCHOOLS DATA
@@ -928,9 +852,39 @@ function pointInPaths(lat: number, lng: number, paths: LatLng[][]) {
   return inside;
 }
 
-function findDistrict(lat: number, lng: number, districts: any[]) {
-  for (const district of districts) {
-    if (district.paths && pointInPaths(lat, lng, district.paths)) return district;
+// Per-school attendance zones (NCES SABS 2015-16), prepared once for drawing.
+type PreparedZone = { name: string; level: string; district: string; paths: LatLng[][]; color: string };
+
+// Stable per-school color so neighboring zones are distinguishable.
+function zoneColor(name: string): string {
+  let h = 0;
+  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) % 360;
+  return `hsl(${h}, 60%, 45%)`;
+}
+
+const attendanceZones: PreparedZone[] = (sabsAttendance as SabsZone[]).map(z => ({
+  name: z.name,
+  level: z.level,
+  district: z.district,
+  paths: z.rings.map(ringToPath),
+  color: zoneColor(z.name),
+}));
+
+// Map a UI tab to SABS level codes ("4" = combined 6-12, shown for middle and high).
+const tabLevels: Record<string, string[]> = {
+  elementary: ["1"],
+  middle: ["2", "4"],
+  high: ["3", "4"],
+};
+
+function zonesForLevel(level: string): PreparedZone[] {
+  const codes = tabLevels[level] || [];
+  return attendanceZones.filter(z => codes.includes(z.level));
+}
+
+function findZone(lat: number, lng: number, level: string): PreparedZone | null {
+  for (const z of zonesForLevel(level)) {
+    if (pointInPaths(lat, lng, z.paths)) return z;
   }
   return null;
 }
@@ -944,7 +898,7 @@ function getRatingColor(rating: number) {
 export default function SchoolMap() {
   const [activeLevel, setActiveLevel] = useState<"elementary" | "middle" | "high">("high");
   const [selectedSchool, setSelectedSchool] = useState<any>(null);
-  const [selectedDistrict, setSelectedDistrict] = useState<any>(null);
+  const [selectedZone, setSelectedZone] = useState<any>(null);
   const [address, setAddress] = useState("");
   const [report, setReport] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -953,8 +907,6 @@ export default function SchoolMap() {
   const markersRef = useRef<any[]>([]);
   const polygonsRef = useRef<any[]>([]);
   const geocoderRef = useRef<any>(null);
-  const [districts, setDistricts] = useState<any[]>([]);
-  const districtsRef = useRef<any[]>([]);
 
   useEffect(() => {
     if ((window as any).google) { initMap(); return; }
@@ -966,33 +918,8 @@ export default function SchoolMap() {
   }, []);
 
   useEffect(() => {
-    if (mapInstanceRef.current) updateMarkers();
+    if (mapInstanceRef.current) { updateMarkers(); drawZones(); }
   }, [activeLevel]);
-
-  // Fetch real city/district boundary polygons from the US Census TIGERweb API.
-  // Layer 4 = Incorporated Places; BASENAME is the clean city name (the NAME
-  // field carries a legal suffix, e.g. "Berkeley city").
-  useEffect(() => {
-    const where = `STATE='06' AND BASENAME IN (${districtMeta.map(m => `'${m.census}'`).join(",")})`;
-    const url =
-      "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4/query" +
-      `?where=${encodeURIComponent(where)}&outFields=BASENAME&f=geojson&outSR=4326`;
-    fetch(url)
-      .then(r => r.json())
-      .then(geo => {
-        const pathsByCity: Record<string, LatLng[][]> = {};
-        (geo.features || []).forEach((f: any) => {
-          pathsByCity[f.properties.BASENAME] = geometryToPaths(f.geometry);
-        });
-        const merged = districtMeta
-          .map(m => ({ ...m, paths: pathsByCity[m.census] }))
-          .filter(d => d.paths && d.paths.length > 0);
-        districtsRef.current = merged;
-        setDistricts(merged);
-        if (mapInstanceRef.current) drawDistrictBoundaries();
-      })
-      .catch(() => { /* network/API failure: map still renders without boundary overlays */ });
-  }, []);
 
   function initMap() {
     if (!mapRef.current) return;
@@ -1004,24 +931,24 @@ export default function SchoolMap() {
       fullscreenControl: false,
     });
     geocoderRef.current = new (window as any).google.maps.Geocoder();
-    drawDistrictBoundaries();
+    drawZones();
     updateMarkers();
   }
 
-  function drawDistrictBoundaries() {
+  function drawZones() {
     polygonsRef.current.forEach(p => p.setMap(null));
     polygonsRef.current = [];
-    districtsRef.current.forEach(district => {
+    zonesForLevel(activeLevel).forEach(zone => {
       const polygon = new (window as any).google.maps.Polygon({
-        paths: district.paths,
-        strokeColor: district.color,
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: district.color,
-        fillOpacity: 0.12,
+        paths: zone.paths,
+        strokeColor: zone.color,
+        strokeOpacity: 0.7,
+        strokeWeight: 1,
+        fillColor: zone.color,
+        fillOpacity: 0.3,
         map: mapInstanceRef.current,
       });
-      polygon.addListener("click", () => { setSelectedDistrict(district); setSelectedSchool(null); });
+      polygon.addListener("click", () => { setSelectedZone(zone); setSelectedSchool(null); });
       polygonsRef.current.push(polygon);
     });
   }
@@ -1046,7 +973,7 @@ export default function SchoolMap() {
         },
         label: { text: school.rating.toString(), color: "#fff", fontSize: "10px", fontWeight: "bold" }
       });
-      marker.addListener("click", () => { setSelectedSchool(school); setSelectedDistrict(null); });
+      marker.addListener("click", () => { setSelectedSchool(school); setSelectedZone(null); });
       markersRef.current.push(marker);
     });
   }
@@ -1110,9 +1037,16 @@ export default function SchoolMap() {
         }
       }
 
-      // For all other addresses, use district polygon lookup
-      const district = findDistrict(lat, lng, districtsRef.current);
-      setReport({ address: formattedAddress, type: "district", district });
+      // For all other addresses, resolve the assigned school at each level from
+      // the NCES attendance zones.
+      const elementary = findZone(lat, lng, "elementary");
+      const middle = findZone(lat, lng, "middle");
+      const high = findZone(lat, lng, "high");
+      if (elementary || middle || high) {
+        setReport({ address: formattedAddress, type: "schools", elementary, middle, high });
+      } else {
+        setReport({ address: formattedAddress, type: "none" });
+      }
     });
   }
 
@@ -1122,26 +1056,16 @@ export default function SchoolMap() {
         East Bay School Explorer
       </h2>
       <p style={{ fontSize: "14px", color: "#666", marginBottom: "8px", lineHeight: 1.6 }}>
-        Colored zones show approximate school district boundaries. Numbers on markers show GreatSchools ratings (1–10). Click any zone or marker for details. Enter a Walnut Creek address for an exact elementary school assignment.
+        Each shaded area is one school's attendance zone for the selected grade level — switch tabs for elementary, middle, and high. Numbers on markers show GreatSchools ratings (1–10). Click a zone or marker for details, or enter an address below to find your assigned schools.
       </p>
       <p style={{ fontSize: "11px", color: "#aaa", marginBottom: "20px" }}>
-        ⚠️ District boundaries shown are approximate and for general reference only. Walnut Creek elementary assignments are sourced from the district's official December 2025 street listing. Always verify with the district before purchasing.
+        ⚠️ Attendance zones are from the NCES School Attendance Boundary Survey (2015–16), the most recent national dataset; boundaries may have changed since. Walnut Creek elementary assignments use the district's official December 2025 street listing. Always verify with the district before purchasing.
       </p>
-
-      {/* Legend */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "16px" }}>
-        {districts.map(d => (
-          <div key={d.name} style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "11px", color: "#555" }}>
-            <div style={{ width: "12px", height: "12px", borderRadius: "2px", background: d.color, opacity: 0.8 }} />
-            {d.name}
-          </div>
-        ))}
-      </div>
 
       {/* Level Tabs */}
       <div style={{ display: "flex", gap: "8px", marginBottom: "16px" }}>
         {(["elementary", "middle", "high"] as const).map(level => (
-          <button key={level} onClick={() => { setActiveLevel(level); setSelectedSchool(null); }}
+          <button key={level} onClick={() => { setActiveLevel(level); setSelectedSchool(null); setSelectedZone(null); }}
             style={{
               padding: "10px 20px", border: "none", borderRadius: "4px", cursor: "pointer",
               fontSize: "13px", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase",
@@ -1173,15 +1097,14 @@ export default function SchoolMap() {
         </div>
       )}
 
-      {/* Selected District Info */}
-      {selectedDistrict && !selectedSchool && (
-        <div style={{ background: "#FAFAFA", border: `2px solid ${selectedDistrict.color}`, borderRadius: "8px", padding: "16px 20px", marginBottom: "16px" }}>
-          <h3 style={{ margin: "0 0 8px 0", fontSize: "18px", fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400, color: selectedDistrict.color }}>{selectedDistrict.name}</h3>
-          <p style={{ margin: "0 0 12px 0", fontSize: "13px", color: "#555", lineHeight: 1.6 }}>{selectedDistrict.description}</p>
-          <a href={selectedDistrict.finderUrl} target="_blank" rel="noopener noreferrer"
-            style={{ display: "inline-block", padding: "8px 16px", background: selectedDistrict.color, color: "#fff", borderRadius: "4px", fontSize: "12px", fontWeight: 600, textDecoration: "none", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-            {selectedDistrict.finderLabel}
-          </a>
+      {/* Selected Attendance Zone Info */}
+      {selectedZone && !selectedSchool && (
+        <div style={{ background: "#FAFAFA", border: `2px solid ${selectedZone.color}`, borderRadius: "8px", padding: "16px 20px", marginBottom: "16px" }}>
+          <h3 style={{ margin: "0 0 4px 0", fontSize: "18px", fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400, color: selectedZone.color }}>{selectedZone.name}</h3>
+          <p style={{ margin: "0 0 8px 0", fontSize: "12px", color: "#888", textTransform: "uppercase", letterSpacing: "0.1em" }}>{selectedZone.district}</p>
+          <p style={{ margin: 0, fontSize: "12px", color: "#aaa", lineHeight: 1.5 }}>
+            Attendance zone per NCES 2015–16 data. Boundaries may have changed — verify current assignment with the district.
+          </p>
         </div>
       )}
 
@@ -1189,7 +1112,7 @@ export default function SchoolMap() {
       <div style={{ background: "#fff", border: "1px solid #EBEBEB", borderRadius: "8px", padding: "20px", marginTop: "8px" }}>
         <h3 style={{ margin: "0 0 4px 0", fontSize: "16px", fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}>Find Your School</h3>
         <p style={{ margin: "0 0 12px 0", fontSize: "13px", color: "#888" }}>
-          Enter a Walnut Creek address for an exact elementary school assignment. For other cities, we'll show you which district you're in and link to their official finder.
+          Enter an address to see its assigned elementary, middle, and high school. Walnut Creek uses the district's current street listing; elsewhere uses NCES 2015–16 attendance zones.
         </p>
         <div style={{ display: "flex", gap: "8px" }}>
           <input type="text" value={address} onChange={e => setAddress(e.target.value)}
@@ -1234,22 +1157,24 @@ export default function SchoolMap() {
                   </div>
                 </div>
               </div>
-            ) : report.district ? (
+            ) : report.type === "schools" ? (
               <div>
-                <p style={{ fontSize: "12px", color: "#888", margin: "0 0 12px 0" }}>Results for: <strong>{report.address}</strong></p>
-                <div style={{ background: "#FAFAFA", border: `2px solid ${report.district.color}`, borderRadius: "8px", padding: "16px 20px" }}>
-                  <h4 style={{ margin: "0 0 6px 0", fontSize: "16px", color: report.district.color }}>{report.district.name}</h4>
-                  <p style={{ margin: "0 0 12px 0", fontSize: "13px", color: "#555", lineHeight: 1.6 }}>{report.district.description}</p>
-                  <a href={report.district.finderUrl} target="_blank" rel="noopener noreferrer"
-                    style={{ display: "inline-block", padding: "8px 16px", background: report.district.color, color: "#fff", borderRadius: "4px", fontSize: "12px", fontWeight: 600, textDecoration: "none", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                    {report.district.finderLabel}
-                  </a>
+                <p style={{ fontSize: "12px", color: "#888", margin: "0 0 6px 0" }}>Results for: <strong>{report.address}</strong></p>
+                <p style={{ fontSize: "11px", color: "#aaa", margin: "0 0 12px 0" }}>Assigned schools per NCES 2015–16 attendance boundaries. Verify current assignment with the district.</p>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }}>
+                  {([["Elementary", "#B22222", "elementary"], ["Middle School", "#2255B2", "middle"], ["High School", "#228B22", "high"]] as const).map(([label, color, key]) => (
+                    <div key={key} style={{ background: "#FAFAFA", border: `2px solid ${color}`, borderRadius: "6px", padding: "12px" }}>
+                      <div style={{ fontSize: "10px", color, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "6px" }}>{label}</div>
+                      <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A" }}>{report[key] ? report[key].name : "—"}</div>
+                      {report[key] && <div style={{ fontSize: "11px", color: "#888", marginTop: "4px" }}>{report[key].district}</div>}
+                    </div>
+                  ))}
                 </div>
               </div>
             ) : (
               <div>
                 <p style={{ fontSize: "12px", color: "#888", margin: "0 0 8px 0" }}>Results for: <strong>{report.address}</strong></p>
-                <p style={{ fontSize: "13px", color: "#555" }}>This address falls outside our mapped district boundaries. Contact the relevant school district directly for enrollment information.</p>
+                <p style={{ fontSize: "13px", color: "#555" }}>This address falls outside our mapped attendance zones (NCES 2015–16 data). Contact the relevant school district directly for enrollment information.</p>
               </div>
             )}
           </div>
