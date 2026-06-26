@@ -5,7 +5,7 @@ export const insights = [
     "category": "Market Update",
     "description": "Spring 2026 was one of the most competitive East Bay markets in years. Here's what the data actually says — market timing for buyers and sellers, neighborhood prices, and what's coming next.",
     "content": "",
-    "link": "/blog/real-estate-decoded-june-2026/"
+    "link": "/june26"
   },
   {
     "id": "how-do-you-create-leverage-when-theres-only-one-offer",
