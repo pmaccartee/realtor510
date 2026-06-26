@@ -1,7 +1,8 @@
-// OUSD (Oakland Unified) attendance map.
-// Boundary + point data: official OUSD 2025-26 ArcGIS FeatureServer, fetched and
-// bundled by script/fetch-ousd.mjs into the .geojson files imported below.
-// Scope: OUSD only. Piedmont / Berkeley / Alameda USD are phase 2.
+// East Bay school attendance map.
+// Oakland (OUSD) boundaries: official 2025-26 ArcGIS FeatureServer, bundled by
+// script/fetch-ousd.mjs into the .geojson files below. Non-Oakland districts:
+// NCES School Attendance Boundary Survey (SABS) 2015-16, bundled by
+// script/fetch-sabs.mjs into sabsAttendance.ts.
 
 import { useState, useEffect, useRef } from "react";
 import { booleanPointInPolygon } from "@turf/boolean-point-in-polygon";
@@ -10,6 +11,7 @@ import elemRaw from "@/data/ousd-elementary-boundaries.geojson?raw";
 import midRaw from "@/data/ousd-middle-boundaries.geojson?raw";
 import highRaw from "@/data/ousd-high-boundaries.geojson?raw";
 import schoolDataRaw from "@/data/east-bay-schools.json?raw";
+import { sabsAttendance } from "@/data/sabsAttendance";
 
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY;
 
@@ -38,6 +40,14 @@ const RATED_SCHOOLS: any[] = JSON.parse(schoolDataRaw).districts.flatMap((d: any
   d.schools.map((s: any) => ({ ...s, district: d.name, finderUrl: d.finderUrl }))
 );
 
+// NCES SABS level code -> our toggle level. "4" (combined 6-12, e.g. Encinal
+// Jr/Sr) is shown with the high layer.
+const SABS_LEVEL: Record<string, Level> = { "1": "elementary", "2": "middle", "3": "high", "4": "high" };
+
+// Non-Oakland attendance zones, tagged with our level so the same toggles drive
+// them. (Oakland keeps its newer 2025-26 OUSD boundaries above.)
+const SABS_ZONES = sabsAttendance.map(z => ({ ...z, lvl: SABS_LEVEL[z.level] ?? "high" }));
+
 // GeoJSON Polygon/MultiPolygon -> array of Google Maps paths ([lng,lat] -> {lat,lng}).
 function toPaths(geometry: any): LatLng[][] {
   if (!geometry) return [];
@@ -63,6 +73,18 @@ function titleCase(s: string): string {
 
 function greatSchoolsUrl(name: string): string {
   return `https://www.greatschools.org/search/search.page?q=${encodeURIComponent(titleCase(name) + " Oakland CA")}`;
+}
+
+// Best-effort city from a SABS district name, for the GreatSchools search query.
+function districtCity(district: string): string {
+  if (district === "West Contra Costa Unified") return "El Cerrito";
+  if (district === "Acalanes Union High") return ""; // spans Lamorinda
+  return district.replace(/\s+(City\s+)?(Unified|Union Elementary|Union High|Elementary).*$/i, "").trim();
+}
+
+function sabsSchoolUrl(name: string, district: string): string {
+  const q = `${titleCase(name)} ${districtCity(district)} CA`.replace(/\s+/g, " ").trim();
+  return `https://www.greatschools.org/search/search.page?q=${encodeURIComponent(q)}`;
 }
 
 // City for a rated school — explicit field, else parsed from its address.
@@ -197,6 +219,36 @@ export default function SchoolMap() {
         polygonsRef.current.push(polygon);
       }
     }
+
+    // Non-Oakland district attendance zones (NCES SABS 2015-16).
+    for (const z of SABS_ZONES) {
+      if (!visible[z.lvl]) continue;
+      const color = LEVEL_COLOR[z.lvl];
+      const paths = z.rings.map(ring => ring.map(([lng, lat]) => ({ lat, lng })));
+      const polygon = new g.maps.Polygon({
+        paths,
+        strokeColor: color,
+        strokeOpacity: 0.9,
+        strokeWeight: 2,
+        fillColor: color,
+        fillOpacity: 0, // outline only
+        map: mapInstanceRef.current,
+      });
+      polygon.addListener("click", (e: any) => {
+        const levelLabel = z.lvl.charAt(0).toUpperCase() + z.lvl.slice(1);
+        infoWindowRef.current.setContent(
+          `<div style="font-family:Arial,sans-serif;max-width:230px">
+             <div style="font-weight:700;font-size:14px;margin-bottom:2px">${titleCase(z.name)}</div>
+             <div style="font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px">${levelLabel} attendance area</div>
+             <div style="font-size:11px;color:#999;margin-bottom:6px">${z.district}</div>
+             <a href="${sabsSchoolUrl(z.name, z.district)}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:${color};font-weight:600">GreatSchools profile →</a>
+           </div>`
+        );
+        infoWindowRef.current.setPosition(e.latLng);
+        infoWindowRef.current.open(mapInstanceRef.current);
+      });
+      polygonsRef.current.push(polygon);
+    }
   }
 
   function drawPins() {
@@ -281,10 +333,10 @@ export default function SchoolMap() {
         East Bay School Ratings Map
       </h2>
       <p style={{ fontSize: "14px", color: "#666", marginBottom: "8px", lineHeight: 1.6 }}>
-        Every dot is a school, labeled with its <strong>GreatSchools rating (1–10)</strong> and colored by level — <span style={{ color: "#2E7D32", fontWeight: 600 }}>elementary</span>, <span style={{ color: "#1565C0", fontWeight: 600 }}>middle</span>, <span style={{ color: "#C62828", fontWeight: 600 }}>high</span>. Click any dot for details and a link to its full GreatSchools profile. Toggle the Oakland Unified (OUSD) attendance boundaries below, or enter an address to find its assigned OUSD schools.
+        Every dot is a school, labeled with its <strong>GreatSchools rating (1–10)</strong> and colored by level — <span style={{ color: "#2E7D32", fontWeight: 600 }}>elementary</span>, <span style={{ color: "#1565C0", fontWeight: 600 }}>middle</span>, <span style={{ color: "#C62828", fontWeight: 600 }}>high</span>. Click any dot for details and a link to its full GreatSchools profile. Toggle the attendance boundaries below to see which school serves which area, or enter an Oakland address to find its assigned OUSD schools.
       </p>
       <p style={{ fontSize: "11px", color: "#aaa", marginBottom: "20px" }}>
-        ⚠️ Ratings from GreatSchools.org; OUSD attendance boundaries are official 2025–26 data. Ratings and assignments change over time and some addresses have options/exceptions — always confirm directly with the school or district before relying on this.
+        ⚠️ Ratings from GreatSchools.org. Boundaries: Oakland (OUSD) is official 2025–26 data; other districts are from the NCES School Attendance Boundary Survey (2015–16) and may be out of date. Ratings and assignments change over time and some addresses have options/exceptions — always confirm directly with the school or district before relying on this.
       </p>
 
       {/* Numbered-dot legend */}
