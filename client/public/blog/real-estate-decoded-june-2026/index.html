@@ -11,158 +11,410 @@
   <meta property="og:image" content="https://realtor510.com/PM_OG_Card.png">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://realtor510.com/blog/real-estate-decoded-june-2026/">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6DDVCG0Q3F');</script>
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1438966301114887');fbq('track','PageView');</script>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"7790379adaac4fcbbd5f81c0d86b8412"}'></script>
   <style>
-    :root { --crimson: hsl(355,75%,35%); --ink: #1A1A1A; --ink-mid: #3D3D3D; --ink-light: #6B6B6B; --gray-bg: #f5f5f5; --serif: 'Playfair Display',Georgia,serif; --sans: 'Montserrat',sans-serif; }
-    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:var(--sans); background:#fff; color:var(--ink); line-height:1.7; }
+    :root { --crimson:#B22222; --ink:#1A1A1A; --sans:'Montserrat',sans-serif; }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background:#F0EEEB;
+      font-family:'Montserrat', system-ui, sans-serif;
+      color:#1A1A1A;
+      -webkit-text-size-adjust:100%;
+    }
+
+    /* SITE NAV (site chrome — kept) */
     .site-nav {
-        position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
-        background: #fff; border-bottom: 1px solid #e5e0d8; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        padding: 0 24px; height: 80px;
-        display: flex; align-items: center; justify-content: space-between;
-        font-family: var(--sans); max-width: 100%;
-      }
-      .site-nav a { text-decoration: none; }
-      .nav-inner { max-width: 1280px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
-      .nav-logo { height: 48px; width: auto; object-fit: contain; }
-      .nav-links { display: flex; align-items: center; gap: 32px; }
-      .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: var(--ink); text-transform: uppercase; transition: color 0.2s; }
-      .nav-links a:hover { color: var(--crimson); }
-      .nav-contact { background: var(--crimson); color: white !important; padding: 8px 24px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-      .nav-contact:hover { opacity: 0.9; }
-      .page-spacer { height: 80px; }
-    .article-header { max-width:780px; margin:0 auto; padding:64px 24px 0; }
-    .back-link { display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; margin-bottom:32px; }
-    .back-link:hover { color:var(--crimson); }
-    .back-link svg { width:14px; height:14px; }
-    .article-category { font-size:11px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--crimson); margin-bottom:16px; }
-    .article-title { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); font-weight:500; line-height:1.15; color:var(--ink); margin-bottom:16px; }
-    .article-subtitle { font-family:var(--serif); font-style:italic; font-size:clamp(1.1rem,2vw,1.4rem); font-weight:400; line-height:1.4; color:var(--ink-light); margin-bottom:24px; }
-    .article-rule { width:64px; height:3px; background:var(--crimson); opacity:0.25; margin-bottom:48px; }
-    .article-body { max-width:700px; margin:0 auto; padding:0 24px 80px; }
-    .article-body p { font-size:1.05rem; line-height:1.85; color:var(--ink-mid); margin-bottom:1.5em; font-weight:300; }
-    .article-body h2 { font-family:var(--serif); font-size:1.4rem; font-weight:500; color:var(--ink); margin:2em 0 0.75em; }
-    .article-img { display:block; width:100%; height:auto; border-radius:6px; margin:0.5em 0 2em; box-shadow:0 1px 8px rgba(0,0,0,0.08); }
-    .article-img-link { display:block; margin:0.5em 0 0.75em; }
-    .article-img-link img { display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 1px 8px rgba(0,0,0,0.08); }
-    .cta-section { max-width:700px; margin:0 auto; padding:0 24px 80px; }
-    .cta-box { background:var(--gray-bg); padding:48px; text-align:center; }
-    .cta-box h3 { font-family:var(--serif); font-size:1.5rem; font-weight:500; margin-bottom:12px; }
-    .cta-box p { font-size:0.95rem; color:var(--ink-light); margin-bottom:24px; max-width:440px; margin-left:auto; margin-right:auto; }
-    .cta-buttons { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-    .btn-cta { display:inline-block; padding:14px 32px; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:all 0.2s; }
-    .btn-cta-primary { background:var(--crimson); color:white; }
-    .btn-cta-outline { border:1px solid var(--ink); color:var(--ink); }
-    .btn-cta-outline:hover { background:var(--ink); color:white; }
-    .site-footer { background:#2a2a2a; color:rgba(255,255,255,0.4); padding:28px 48px; display:flex; justify-content:space-between; align-items:center; font-size:11px; letter-spacing:0.08em; flex-wrap:wrap; gap:12px; }
-    .site-footer a { color:rgba(255,255,255,0.4); text-decoration:none; }
-    .footer-links { display:flex; gap:24px; }
-    @media(max-width:768px) { .nav-links{display:none;} .article-header{padding:48px 20px 0;} .article-body,.cta-section{padding-left:20px;padding-right:20px;} .cta-box{padding:32px 20px;} .site-footer{padding:20px 24px;flex-direction:column;text-align:center;} }
+      position:fixed; top:0; left:0; right:0; z-index:9999;
+      background:#fff; border-bottom:1px solid #e5e0d8; box-shadow:0 1px 3px rgba(0,0,0,0.05);
+      padding:0 24px; height:80px;
+      display:flex; align-items:center; justify-content:space-between;
+      font-family:var(--sans); max-width:100%;
+    }
+    .site-nav a { text-decoration:none; }
+    .nav-inner { max-width:1280px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { height:48px; width:auto; object-fit:contain; }
+    .nav-links { display:flex; align-items:center; gap:32px; }
+    .nav-links a { font-size:11px; font-weight:500; letter-spacing:0.08em; color:var(--ink); text-transform:uppercase; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--crimson); }
+    .nav-contact { background:var(--crimson); color:white !important; padding:8px 24px; box-shadow:0 1px 2px rgba(0,0,0,0.1); }
+    .nav-contact:hover { opacity:0.9; }
+    .page-spacer { height:80px; }
+
+    /* NEWSLETTER LAYOUT */
+    .wrapper { max-width:600px; margin:0 auto; background:#FFFFFF; }
+
+    /* TOP BAR */
+    .topbar {
+      background:#B22222; padding:10px 32px;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .topbar-brand { font-size:10px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.9); }
+    .topbar-date { font-size:10px; color:rgba(255,255,255,0.65); }
+
+    /* HEADER */
+    .header { padding:36px 32px 28px; border-bottom:3px solid #B22222; }
+    .header-kicker { font-size:9px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:#B22222; margin-bottom:14px; }
+    .header-headline {
+      font-family:'Cormorant Garamond', Georgia, serif;
+      font-size:34px; font-weight:400; line-height:1.15; color:#1A1A1A; margin-bottom:16px;
+    }
+    .header-headline em { font-style:italic; font-weight:400; color:#B22222; }
+    .header-deck { font-size:14px; line-height:1.8; color:#666; }
+
+    /* STAT ROW */
+    .statrow { display:flex; border-bottom:1px solid #EBEBEB; border-top:1px solid #EBEBEB; background:#FAFAFA; }
+    .statrow-item { flex:1; text-align:center; padding:18px 8px; border-right:1px solid #EBEBEB; }
+    .statrow-item:last-child { border-right:none; }
+    .statrow-num { font-family:'Cormorant Garamond', Georgia, serif; font-size:30px; font-weight:600; color:#B22222; line-height:1; }
+    .statrow-label { font-size:9px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#999; margin-top:5px; }
+
+    /* BODY */
+    .section { padding:32px 32px 0; }
+    .section-tag {
+      font-size:9px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#B22222;
+      display:flex; align-items:center; gap:10px; margin-bottom:16px;
+    }
+    .section-tag::after { content:''; display:block; width:28px; height:1px; background:#B22222; }
+
+    h2 { font-family:'Cormorant Garamond', Georgia, serif; font-size:26px; font-weight:600; color:#1A1A1A; line-height:1.25; margin-bottom:14px; }
+    h2 em { font-style:italic; font-weight:400; }
+
+    p { font-size:14px; line-height:1.85; color:#444; margin-bottom:12px; }
+    p strong { color:#1A1A1A; font-weight:600; }
+    p em { font-style:italic; }
+    p:last-child { margin-bottom:0; }
+
+    .divider { margin:32px 32px 0; height:1px; background:#EBEBEB; }
+
+    /* CALLOUT */
+    .callout { margin:24px 32px 0; background:#FFF5F5; border-left:3px solid #B22222; padding:16px 20px; }
+    .callout-label { font-size:9px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#B22222; margin-bottom:8px; }
+    .callout p { font-size:14px; color:#444; margin:0; line-height:1.75; }
+
+    /* DATA TABLE */
+    .table-wrap { margin:24px 32px 0; }
+    .table-kicker { font-size:9px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#B22222; margin-bottom:12px; }
+
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    thead th {
+      font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+      color:#FFFFFF; background:#B22222; padding:9px 10px; text-align:right;
+    }
+    thead th:first-child { text-align:left; border-radius:0; }
+    tbody tr:nth-child(odd) { background:#FAFAFA; }
+    tbody tr:nth-child(even) { background:#FFFFFF; }
+    tbody tr { border-bottom:1px solid #F0F0F0; }
+    tbody td { padding:9px 10px; text-align:right; color:#555; font-size:14px; }
+    tbody td:first-child { text-align:left; font-weight:400; color:#1A1A1A; }
+    .up { color:#2A6B3C; font-weight:600; }
+    .dn { color:#B22222; font-weight:600; }
+    .table-note { font-size:10px; color:#BBBBBB; margin-top:10px; font-style:italic; line-height:1.6; }
+
+    /* CHART */
+    .chart-wrap { margin:0 32px; border:1px solid #EBEBEB; overflow:hidden; }
+    .chart-wrap img { width:100%; display:block; }
+    .chart-note { padding:10px 32px 0; }
+    .chart-note p { font-size:10px; color:#BBBBBB; font-style:italic; line-height:1.6; margin:0; }
+
+    /* SALES */
+    .sales { margin:0 32px; }
+    .sale { padding:16px 0; border-bottom:1px solid #EBEBEB; }
+    .sale:last-child { border-bottom:none; }
+    .sale a img { width:100%; display:block; margin-bottom:10px; border-radius:4px; }
+    .sale-address { font-size:11px; font-weight:600; color:#B22222; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:5px; }
+    .sale-address a { color:#B22222; text-decoration:underline; }
+    .sale p { font-size:13px; color:#555; line-height:1.7; margin:0; }
+
+    /* LOCAL */
+    .local-grid { display:flex; gap:12px; margin:0 32px; }
+    .local-card { flex:1; border:1px solid #EBEBEB; padding:16px; }
+    .local-card-label { font-size:9px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#B22222; margin-bottom:8px; }
+    .local-card p { font-size:12px; line-height:1.7; color:#555; margin:0; text-align:left; }
+    .local-card p a { color:#B22222; text-decoration:none; }
+    .local-card img { width:100%; height:200px; object-fit:cover; display:block; margin-bottom:10px; }
+
+    /* SIGNOFF */
+    .signoff { margin:32px 32px 0; display:flex; gap:20px; align-items:flex-start; padding-bottom:32px; }
+    .signoff-photo { width:72px; height:72px; border-radius:50%; overflow:hidden; flex-shrink:0; border:2px solid #EBEBEB; }
+    .signoff-photo img { width:100%; height:100%; object-fit:cover; }
+    .signoff-text p { font-size:13px; line-height:1.75; color:#444; margin-bottom:8px; }
+
+    /* CTA */
+    .cta { background:#B22222; padding:28px 32px; text-align:center; }
+    .cta p { font-size:14px; color:rgba(255,255,255,0.88); line-height:1.7; max-width:380px; margin:0 auto 18px; }
+    .cta-btn { display:inline-block; background:#FFFFFF; color:#B22222; font-family:'Montserrat', sans-serif; font-size:10px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; text-decoration:none; padding:12px 28px; }
+
+    /* FOOTER */
+    .footer { padding:24px 32px; background:#FAFAFA; border-top:1px solid #EBEBEB; text-align:center; }
+    .footer img.footer-logo { width:240px; max-width:100%; display:block; margin:0 auto 16px; }
+    .footer p { font-size:10px; color:#BBBBBB; line-height:1.8; margin:0; }
+    .footer p.footer-contact { font-size:13px; margin-bottom:8px; }
+    .footer a { color:#B22222; text-decoration:none; }
+
+    @media (max-width:768px) { .nav-links { display:none; } }
+    @media (max-width:600px) {
+      .local-grid { flex-direction:column; margin:0 16px; }
+      .local-card { margin-bottom:16px; }
+      .local-card img { height:220px; }
+      .section, .sales, .signoff, .cta, .footer, .callout, .table-wrap, .chart-wrap, .divider { margin-left:12px !important; margin-right:12px !important; }
+      .signoff { flex-direction:column; }
+      .signoff-photo { width:80px !important; height:80px !important; margin-bottom:12px; }
+      .statrow { flex-wrap:wrap; }
+      .statrow-item { flex:1 1 40%; }
+      .header-headline { font-size:28px; }
+    }
   </style>
 </head>
 <body>
   <nav class="site-nav">
-      <div class="nav-inner">
-        <a href="/">
-          <img src="/PM_LOGO_Banner.png" alt="Patrick MacCartee" class="nav-logo">
-        </a>
-        <div class="nav-links">
-          <a href="/buy">Buy</a>
-          <a href="/sell">Sell</a>
-          <a href="/reviews">Reviews</a>
-          <a href="/neighborhoods">Neighborhoods</a>
-          <a href="/blog">Blog</a>
-          <a href="javascript:void(0)" onclick="window.location.href='mailto:' + ['patrick','realtor510.com'].join('@')" class="nav-contact">Contact</a>
-        </div>
-      </div>
-    </nav>
-  <div class="page-spacer"></div>
-
-  <header class="article-header">
-    <a href="/blog" class="back-link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-      Back to Blog
-    </a>
-    <div class="article-category">Market Update</div>
-    <h1 class="article-title">Real Estate Decoded — June 2026</h1>
-    <p class="article-subtitle">The media said free fall. The market said No Ma'am.</p>
-    <div class="article-rule"></div>
-  </header>
-
-  <article class="article-body">
-    <p>Spring 2026 was one of the most competitive markets I've seen in years. Agents on the ground knew it. The headlines didn't. Here's what the data actually says — and what's coming next.</p>
-
-    <h2>The Fabled Free Fall</h2>
-    <p>Earlier this year, several outlets ran stories about Oakland's real estate market in "free fall." I'll be charitable and call it lazy reporting. Every agent I know on the ground was watching the opposite — a spring market that was cut-throat, especially in the Hills neighborhoods east of the 580. The only thing falling was the number of homes available.</p>
-    <p>Here's what actually happened. After a strong fall 2025 with rates dropping and pent-up demand building, we all expected a big spring. It started that way. Then geopolitical uncertainty pushed rates back up — and sellers with 2.9% mortgages suddenly had very good reasons to stay put. Golden handcuffs. Buyers showed up. Sellers didn't. Supply got crushed, and prices went the only direction they could: up. Solidly, stubbornly, defiantly up.</p>
-
-    <h2>The Oakland Narrative vs. Reality</h2>
-    <p>The media reports Oakland in aggregate — which includes neighborhoods and price points that behave very differently from the areas I work. Filter to Montclair, Rockridge, Crocker Highlands, and Grand Lake, and the story is completely different. The numbers don't lie; the headlines often do. Oakland's median crossed $1M this spring. Not exactly free-fall territory.</p>
-    <img class="article-img" src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/bf3c47a7-52e4-5306-6be5-d91cd07ac3cf.png" alt="East Bay median sale price — Spring 2026" loading="lazy">
-
-    <h2>Market Timing: A Reprieve for Exhausted Buyers</h2>
-    <p>Every June the same thing happens. Graduations. Juneteenth. Pride. Fourth of July. Buyers get distracted, sellers get nervous, and the market exhales. Homes that drew ten offers in April start sitting for two weeks, and sellers start doing something they haven't done in months — negotiating.</p>
-    <p>Every year, buyers hear the same advice: wait until September when there's more inventory. And every year, that advice costs them. By September every buyer who "waited" shows up at the same time, inventory collapses, and the window slams shut. The deals are in July, not September. Watch the data and you'll see 2026 already running about 25% below last year. The summer bump is coming — it just won't be as warm as people think.</p>
-    <img class="article-img" src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/bd633c21-94e1-32a9-7f5b-f59cc6f3fd72.png" alt="Months of inventory (MOI) — 2026 vs. prior year" loading="lazy">
-
-    <h2>Three Secret Pockets for Sellers</h2>
-    <p>Many sellers list when they feel ready — but the market rewards timing, not readiness. Anyone savvy to Bay Area market cycles knows the two best times to sell are the spring and fall markets. What many don't know is that there are three micro-pockets outside those windows that consistently tilt the odds in a seller's favor:</p>
-    <p><strong>Mid-January to early February</strong> — when inventory hits its annual floor and hungry, focused buyers have almost nothing to compete over. <strong>Mid-August</strong> — when spring listings have gone stale, back-to-school urgency kicks in, and a fresh home stands out on a tired block. And <strong>December</strong> — counterintuitive as it sounds, the buyers still looking after the holidays are serious, not browsing. No circus, no feeding frenzy, just motivated people and a seller with the nerve to stay in.</p>
-    <p>This isn't a theory. We've closed transactions in all three windows, often above asking, in markets where sellers who waited for "spring" sat for weeks. If you're thinking of selling, your next pocket is about two months away. Reach out to see if your market and home can take advantage of this strategy.</p>
-    <img class="article-img" src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/ddfbda0d-f034-119d-c4a6-bde3d04f6273.png" alt="Seasonal selling windows by month" loading="lazy">
-
-    <h2>Recent Sales</h2>
-    <a class="article-img-link" href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-224-mountain-avenue-piedmont-94611-bayeast-238" target="_blank" rel="noopener"><img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/77405fdc-5384-db4e-77a5-ac31a1a71f7b.jpg" alt="224 Mountain Avenue, Piedmont" loading="lazy"></a>
-    <p><strong>224 Mountain Ave — Piedmont.</strong> Cozy, playfully eclectic, and meticulously designed for understated luxury living in the heart of Piedmont. My buyers never had to compete — we got it before it hit the market. This is what hyperlocal and hyperconnected looks like.</p>
-    <a class="article-img-link" href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-9359-ladera-road-glen-ellen-95442-recbareis-995" target="_blank" rel="noopener"><img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/2feba242-52d5-dcfb-d691-cade3860e6f3.png" alt="9359 Ladera Road, Glen Ellen" loading="lazy"></a>
-    <p><strong>9359 Ladera Rd — Glen Ellen.</strong> A completely updated private resort on five acres in Sonoma wine country — pool, guest house, a glen of oaks, total privacy. Past East Bay clients who wanted somewhere to unwind and entertain; their third transaction with me. That's all.</p>
-    <a class="article-img-link" href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-6465-pinehaven-rd-oakland-94611-bayeast-34" target="_blank" rel="noopener"><img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/359b45fe-d17a-8a81-0128-4f67aaf2e1ac.png" alt="6465 Pinehaven Road, Montclair" loading="lazy"></a>
-    <p><strong>6465 Pinehaven Rd — Montclair.</strong> A totally updated 1940 mountain bungalow tucked into the woods on one of Montclair's most charming streets. First-time buyers Dennis and Altana — who also happen to be my neighbors. They're not moving far, but I'd be lying if I said it wasn't a little bittersweet. Congrats, you two. You earned it.</p>
-
-    <h2>Around the East Bay</h2>
-    <p>Because there's more to life than square footage.</p>
-    <a class="article-img-link" href="https://www.payakk.com/" target="_blank" rel="noopener"><img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/557cfed1-b340-f0b2-eddd-9970299cc003.png" alt="Payakk Thai, Montclair" loading="lazy"></a>
-    <p><strong>🔥 Payakk Thai · Montclair.</strong> I've tried to get in twice. Once without a reservation — turned away at the door. Once with a reservation — turned away because they ran out of food. I am not even remotely mad. That's a restaurant earning its reputation in real time. Make a reservation, show up early, and order everything. Thornhill Rd in Montclair. You'll thank me.</p>
-    <img class="article-img" src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/a351295a-7fb5-7727-b572-bfa5ebfbc0d7.jpg" alt="Montclair Beer &amp; Wine Festival" loading="lazy">
-    <p><strong>🍺 Montclair Beer &amp; Wine Festival.</strong> Team Crocker showed up to face-paint the kids, hand out drinks, and host games for the crowd in our best Pat &amp; Vanna impression. Montclair showing up for itself — which is exactly why this neighborhood is worth living in, and yes, selling in.</p>
-  </article>
-
-  <div style="background:#f5f3ef; border-left:3px solid #C01C2C; padding:20px 24px; margin:32px 0; font-family:'DM Sans',sans-serif; max-width:700px; margin-left:auto; margin-right:auto;">
-    <p style="font-size:12px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:#888; margin:0 0 8px;">Related Resource</p>
-    <p style="font-size:18px; font-weight:500; color:#111; margin:0 0 8px;">Buying where the schools matter?</p>
-    <p style="font-size:14px; color:#4a4a4a; margin:0 0 16px;">The East Bay School Guide covers GreatSchools ratings for every neighborhood in this update — plus Spring 2026 home prices by school zone.</p>
-    <a href="/east-bay-school-guide" style="color:#C01C2C; font-size:14px; font-weight:500; text-decoration:none;">See the East Bay School Guide →</a>
-  </div>
-
-  <div class="cta-section">
-    <div class="cta-box">
-      <h3>Want a straight read on your home's value?</h3>
-      <p>If you're thinking about buying, selling, or just want honest numbers on what your home is worth right now, my door is open. No pitch, no pressure — just a good conversation.</p>
-      <div class="cta-buttons">
-        <a href="javascript:void(0)" onclick="window.location.href='tel:'+[5,1,0].join('')+[8,5,9].join('')+[4,8,9,5].join('')" class="btn-cta btn-cta-primary">Call Me</a>
-        <a href="javascript:void(0)" onclick="window.location.href='mailto:'+['patrick','realtor510.com'].join('@')" class="btn-cta btn-cta-outline">Email Me</a>
+    <div class="nav-inner">
+      <a href="/">
+        <img src="/PM_LOGO_Banner.png" alt="Patrick MacCartee" class="nav-logo">
+      </a>
+      <div class="nav-links">
+        <a href="/buy">Buy</a>
+        <a href="/sell">Sell</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/neighborhoods">Neighborhoods</a>
+        <a href="/blog">Blog</a>
+        <a href="javascript:void(0)" onclick="window.location.href='mailto:' + ['patrick','realtor510.com'].join('@')" class="nav-contact">Contact</a>
       </div>
     </div>
-  </div>
-
-  <!-- ── FOOTER ── -->
-<footer style="padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-top: 1px solid #e5e5e5; background: #fff; font-family: sans-serif;">
-  <div>
-    <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #111; margin-bottom: 4px;">Patrick MacCartee</div>
-    <div style="font-size: 11px; color: #888;">DRE# 02142693</div>
-  </div>
-  <nav style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
-    <a href="/east-bay-school-guide" style="font-size: 12px; color: #555; text-decoration: none;">Schools</a>
-    <a href="/waters" style="font-size: 12px; color: #555; text-decoration: none;">Alice Waters</a>
-    <a href="/julia-morgan" style="font-size: 12px; color: #555; text-decoration: none;">Julia Morgan</a>
-    <a href="mailto:patrick@realtor510.com" style="font-size: 12px; color: #555; text-decoration: none;">Contact</a>
   </nav>
-</footer>
+  <div class="page-spacer"></div>
+
+  <div class="wrapper">
+
+    <!-- Top bar -->
+    <div class="topbar">
+      <span class="topbar-brand">Real Estate Decoded &middot; Patrick MacCartee</span>
+      <span class="topbar-date">June 2026 &middot; Issue 3</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-kicker">East Bay Market Glance</div>
+      <h1 class="header-headline">The media said free fall.<br>The market said <em>No Ma'am.</em></h1>
+      <p class="header-deck">Spring 2026 was one of the most competitive markets I've seen in years. Agents on the ground knew it. The headlines didn't. Here's what the data actually says — and what's coming next.</p>
+    </header>
+
+    <!-- Stat row -->
+    <div class="statrow">
+      <div class="statrow-item">
+        <div class="statrow-num">1.2</div>
+        <div class="statrow-label">Months of Inventory</div>
+      </div>
+      <div class="statrow-item">
+        <div class="statrow-num">13</div>
+        <div class="statrow-label">Median Days on Market</div>
+      </div>
+      <div class="statrow-item">
+        <div class="statrow-num">84%</div>
+        <div class="statrow-label">Sold Over Asking</div>
+      </div>
+      <div class="statrow-item">
+        <div class="statrow-num">&minus;25%</div>
+        <div class="statrow-label">Inventory vs. Last Year</div>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div style="height:8px;"></div>
+      <div style="margin:0 0 32px 0;">
+        <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/bf3c47a7-52e4-5306-6be5-d91cd07ac3cf.png" alt="Median Sale Price of Single Family Homes in the Inner East Bay by Month" style="width:100%;max-width:680px;display:block;margin:0 auto;border-radius:4px;" loading="lazy">
+      </div>
+      <div class="section-tag">The Fabled Free Fall</div>
+      <h2>Spoiler: it didn't <em>fall.</em></h2>
+
+      <p>Earlier this year, several outlets ran stories about Oakland's real estate market in "free fall." I'll be charitable and call it lazy reporting. Every agent I know on the ground was watching the opposite — a spring market that was cut-throat, especially in the Hills neighborhoods east of the 580. The only thing falling was the number of homes available.</p>
+
+      <p>Here's what actually happened. After a strong fall 2025 with rates dropping and pent-up demand building, we all expected a big spring. It started that way. Then geopolitical uncertainty pushed rates back up — and sellers with <strong>2.9% mortgages suddenly had very good reasons to stay put.</strong> Golden handcuffs. Buyers showed up. Sellers didn't. Supply got crushed. Prices went the only direction they could.</p>
+
+      <p>Up. Solidly, stubbornly, defiantly up.</p>
+    </div>
+
+    <!-- Callout -->
+    <div class="callout">
+      <div class="callout-label">The Oakland Narrative vs. Reality</div>
+      <p>The media reports Oakland in aggregate — which includes neighborhoods and price points that behave very differently from the areas I work. Filter to Montclair, Rockridge, Crocker Highlands, Grand Lake — and the story is completely different. <strong>The numbers don't lie. The headlines often do.</strong> Oakland's median crossed $1M this spring. Not exactly free fall territory.</p>
+    </div>
+
+    <!-- Data table -->
+    <div class="table-wrap">
+      <div class="table-kicker">Spring 2026 Sales &middot; Mar–May &middot; Single Family Homes</div>
+      <table>
+        <thead>
+          <tr>
+            <th>City</th>
+            <th>Median Sold</th>
+            <th>Price YoY</th>
+            <th>Sale/List</th>
+            <th>% Over Ask</th>
+            <th>Sales Vol.</th>
+            <th>Vol. YoY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Alameda</td><td>$1,450,000</td><td class="up">+1.8%</td><td>115%</td><td>78%</td><td>65</td><td class="dn">−30.1%</td></tr>
+          <tr><td>Albany</td><td>$1,352,500</td><td class="up">+2.5%</td><td>131%</td><td>86%</td><td>28</td><td class="up">+27.3%</td></tr>
+          <tr><td>Berkeley</td><td>$1,632,500</td><td class="dn">−5.3%†</td><td>129%</td><td>84%</td><td>174</td><td class="up">+7.4%</td></tr>
+          <tr><td>El Cerrito</td><td>$1,146,000</td><td class="dn">−5.5%</td><td>122%</td><td>85%</td><td>40</td><td class="dn">−23.1%</td></tr>
+          <tr><td>Kensington</td><td>$1,750,000</td><td class="up">+29.5%</td><td>128%</td><td>96%</td><td>23</td><td class="up">+9.5%</td></tr>
+          <tr><td>Lafayette</td><td>$2,010,000</td><td class="dn">−11.5%</td><td>100%</td><td>47%</td><td>73</td><td class="dn">−9.9%</td></tr>
+          <tr><td>Moraga</td><td>$1,975,000</td><td class="dn">−2.2%</td><td>100%</td><td>53%</td><td>34</td><td class="up">+17.2%</td></tr>
+          <tr><td>Oakland</td><td>$1,008,000</td><td class="up">+4.5%</td><td>112%</td><td>76%</td><td>537</td><td class="up">+2.9%</td></tr>
+          <tr><td style="padding-left:22px;font-weight:400;font-size:11px;color:#555;">Rockridge–Temescal–Piedmont Ave</td><td>$1,900,000</td><td class="up">+15.5%</td><td>127%</td><td>88%</td><td>42</td><td class="dn">−12.5%</td></tr>
+          <tr><td style="padding-left:22px;font-weight:400;font-size:11px;color:#555;">Crocker–Lakeshore–TrestleGlen</td><td>$1,737,500</td><td class="up">+4.2%</td><td>123%</td><td>96%</td><td>24</td><td class="up">+20.0%</td></tr>
+          <tr><td style="padding-left:22px;font-weight:400;font-size:11px;color:#555;">Montclair</td><td>$1,500,000</td><td class="up">+6.8%</td><td>127%</td><td>84%</td><td>87</td><td class="up">+22.5%</td></tr>
+          <tr><td style="padding-left:22px;font-weight:400;font-size:11px;color:#555;">Oakmore–Glenview–Redwood Hts</td><td>$1,200,000</td><td class="up">+8.6%</td><td>125%</td><td>93%</td><td>71</td><td class="dn">−12.3%</td></tr>
+          <tr><td style="padding-left:22px;font-weight:400;font-size:11px;color:#555;">Sequoyah–Chabot–Bayo Vista</td><td>$1,330,000</td><td class="up">+14.8%</td><td>110%</td><td>79%</td><td>19</td><td class="dn">−9.5%</td></tr>
+          <tr><td>Orinda</td><td>$2,020,000</td><td class="up">+1.0%</td><td>101%</td><td>54%</td><td>57</td><td class="dn">−26.0%</td></tr>
+          <tr><td>Piedmont</td><td>$3,150,000</td><td class="up">+13.5%</td><td>128%</td><td>98%</td><td>43</td><td class="up">+48.3%</td></tr>
+          <tr><td>San Leandro</td><td>$889,444</td><td class="dn">−1.2%</td><td>105%</td><td>71%</td><td>100</td><td class="up">+9.9%</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">† Berkeley's dip reflects a shift in inventory mix, not softening demand — overbidding actually increased YoY. &middot; Oakland = Hills + Central only. East/West Oakland excluded. &middot; Neighborhood rows are Oakland subsets, not additive to city total.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Section 2: Summer -->
+    <div class="section">
+      <div style="height:8px;"></div>
+      <div class="section-tag">Market Timing</div>
+      <h2>A Reprieve for Exhausted Buyers.</h2>
+
+      <p>Every June the same thing happens. Graduations. Juneteenth. Pride. Fourth of July. Buyers get distracted. Sellers get nervous. The market exhales. Homes that got ten offers in April start sitting for two weeks and sellers start doing something they haven't done in months — negotiating.</p>
+
+      <p>Every year, buyers hear the same advice: <em>wait until September when there's more inventory.</em> And every year, that advice costs them. By September every buyer who "waited" shows up at the same time, inventory collapses, and the window slams shut. <strong>The deals are in July. Not September.</strong></p>
+
+      <p>The chart below tells the whole story. Watch the orange line — that's 2026, already running 25% below last year. The summer bump is coming. It just won't be as warm as people think.</p>
+    </div>
+
+    <!-- Chart: MOI -->
+    <div class="chart-wrap">
+      <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/bd633c21-94e1-32a9-7f5b-f59cc6f3fd72.png" alt="Months Supply of Inventory chart showing 2025 vs 2026. 2026 tracks 25% below 2025. Both years show a seasonal summer increase before falling sharply in fall." loading="lazy">
+    </div>
+    <div class="chart-note">
+      <p>Months' Supply of Inventory, Inner East Bay single family homes, weekly. Source: BridgeMLS / The Grubb Company. Higher value = slower market. Below 2 months = strong seller's market. We haven't been above 2.2 months in over a year.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Section: Seller Timing -->
+    <div class="section">
+      <div style="height:8px;"></div>
+      <div class="section-tag">Market Timing</div>
+      <h2>3 Secret Pockets for Sellers.</h2>
+
+      <p>Most sellers list when they feel ready — but the market rewards timing, not readiness. Three windows consistently tilt the odds in a seller's favor: <strong>mid-January to early February</strong>, when inventory hits its annual floor and hungry, focused buyers have almost nothing to compete over; <strong>mid-August</strong>, when spring listings have gone stale, back-to-school urgency kicks in, and a fresh home stands out on a tired block; and <strong>December</strong>, counterintuitive as it sounds — the buyers still looking after the holidays are serious, not browsing, which means no circus, no feeding frenzy, just motivated people and a seller with the nerve to stay in. This isn't a theory. We've closed transactions in all three windows, often above asking, in markets where sellers who waited for "spring" sat for weeks.</p>
+    </div>
+
+    <!-- Sellers Chart -->
+    <div class="chart-wrap">
+      <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/ddfbda0d-f034-119d-c4a6-bde3d04f6273.png" alt="Number of Single Family Home Listings in the Inner East Bay by List Month 2023-2025 showing inventory peaks in September and troughs in January, August, and December" loading="lazy">
+    </div>
+    <div class="chart-note">
+      <p>Single family home listings by month, Inner East Bay 2023–2025. Source: BridgeMLS / The Grubb Company. The red stars mark the three low-inventory windows where sellers consistently see the strongest relative demand. The red line shows the seasonal trend.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Notable Sales -->
+    <div class="section">
+      <div style="height:8px;"></div>
+      <div class="section-tag">Recent Sales</div>
+      <h2>A few stories from <em>the last few months.</em></h2>
+    </div>
+
+    <div class="sales">
+      <div class="sale">
+        <a href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-224-mountain-avenue-piedmont-94611-bayeast-238" target="_blank" rel="noopener">
+          <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/77405fdc-5384-db4e-77a5-ac31a1a71f7b.jpg" alt="224 Mountain Ave, Piedmont" loading="lazy">
+        </a>
+        <div class="sale-address"><a href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-224-mountain-avenue-piedmont-94611-bayeast-238" target="_blank" rel="noopener">224 Mountain Ave &middot; Piedmont</a></div>
+        <p>Cozy, playfully eclectic, meticulously designed for understated luxury living in the heart of Piedmont. My buyers never had to compete &mdash; we got it before it hit the market. That's what hyperlocal and hyperconnected looks like.</p>
+      </div>
+      <div class="sale">
+        <a href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-9359-ladera-road-glen-ellen-95442-recbareis-995" target="_blank" rel="noopener">
+          <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/2feba242-52d5-dcfb-d691-cade3860e6f3.png" alt="9359 Ladera Rd, Glen Ellen" loading="lazy">
+        </a>
+        <div class="sale-address"><a href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-9359-ladera-road-glen-ellen-95442-recbareis-995" target="_blank" rel="noopener">9359 Ladera Rd &middot; Glen Ellen</a></div>
+        <p>A completely updated private resort on 5 acres in Sonoma Wine Country. Pool, guest house, a glen of oaks, total privacy. Past East Bay clients who wanted somewhere to unwind and entertain &mdash; their third transaction with me. That's all.</p>
+      </div>
+      <div class="sale">
+        <a href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-6465-pinehaven-rd-oakland-94611-bayeast-34" target="_blank" rel="noopener">
+          <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/359b45fe-d17a-8a81-0128-4f67aaf2e1ac.png" alt="6465 Pinehaven Rd, Montclair" loading="lazy">
+        </a>
+        <div class="sale-address"><a href="https://patrickmaccartee970.realscout.com/homesearch/listings/p-6465-pinehaven-rd-oakland-94611-bayeast-34" target="_blank" rel="noopener">6465 Pinehaven Rd &middot; Montclair</a></div>
+        <p>A totally updated 1940 mountain bungalow tucked into the woods on one of Montclair's quietest streets. First-time buyers Dennis and Altana &mdash; who also happen to be my neighbors. They're not moving far, but I'd be lying if I said it wasn't a little bittersweet. Congrats, you two. You earned it.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Local -->
+    <div class="section">
+      <div style="height:8px;"></div>
+      <div class="section-tag">Around the East Bay</div>
+      <h2>Because there's more to life than <em>square footage.</em></h2>
+    </div>
+
+    <div class="local-grid">
+      <div class="local-card">
+        <div class="local-card-label">Go Here. Seriously.</div>
+        <a href="https://www.payakk.com/" target="_blank" rel="noopener">
+          <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/557cfed1-b340-f0b2-eddd-9970299cc003.png" alt="Payakk Thai, Montclair" loading="lazy">
+        </a>
+        <p><a href="https://www.payakk.com/" target="_blank" rel="noopener"><strong>Payakk Thai &middot; Montclair</strong></a><br><br>I've tried to get in twice. Once without a reservation &mdash; turned away at the door. Once with a reservation &mdash; turned away because they ran out of food. I am not even remotely mad. That's a restaurant earning its reputation in real time. Make a reservation, show up early, and order everything. Thornhill Rd in Montclair. You'll thank me.</p>
+      </div>
+      <div class="local-card">
+        <div class="local-card-label">That Just Happened</div>
+        <a href="https://www.realtor510.com" target="_blank" rel="noopener">
+          <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/a351295a-7fb5-7727-b572-bfa5ebfbc0d7.jpg" alt="Montclair Beer and Wine Festival" loading="lazy">
+        </a>
+        <p><strong>Montclair Beer &amp; Wine Festival</strong><br><br>Team Crocker showed up to face paint the kids, handed out drinks, and hosted games for the crowd in our best Pat &amp; Vanna impression. Montclair showing up for itself &mdash; which is exactly why this neighborhood is worth living in, farming, and yes, selling in.</p>
+      </div>
+    </div>
+
+    <div style="height:32px;"></div>
+
+    <!-- Signoff -->
+    <div class="signoff">
+      <div class="signoff-photo">
+        <img src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/00616181-c7b6-dcd2-e260-5c003e4bbcd2.png" alt="Patrick MacCartee">
+      </div>
+      <div class="signoff-text">
+        <p>As always — if you're thinking about buying, selling, or just want a straight read on what your home is worth right now, my door is open. No pitch, no pressure. Just honest numbers and a good conversation.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <p>Are you or someone you love thinking about buying or selling a home? I promise I'll take good care of them — and you'll get full credit.</p>
+      <a class="cta-btn" href="tel:4156370257">Get in Touch</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="http://realtor510.com" target="_blank" rel="noopener">
+        <img class="footer-logo" src="https://mcusercontent.com/65e5956b95fe8e9480b5c09a9/images/64822fd8-c181-b326-1f30-0bd48d8511aa.jpeg" alt="Patrick MacCartee Realtor510">
+      </a>
+      <p class="footer-contact">
+        The Grubb Company &middot; DRE# 02142693<br>
+        <a href="tel:4156370257">415-637-0257</a> &middot;
+        <a href="mailto:patrick@realtor510.com">patrick@realtor510.com</a> &middot;
+        <a href="https://realtor510.com">realtor510.com</a>
+      </p>
+      <p>Data reflects single family home sales, March–May 2026, BridgeMLS. Oakland figures include Hills and Central Oakland only. East and West Oakland excluded. For informational purposes only.</p>
+    </div>
+
+  </div>
 </body>
 </html>
