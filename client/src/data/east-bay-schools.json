@@ -1,0 +1,194 @@
+{
+  "districts": [
+    {
+      "name": "Piedmont Unified",
+      "city": "Piedmont",
+      "grades": "K-12",
+      "finderUrl": "https://www.piedmont.k12.ca.us",
+      "schools": [
+        {"name": "Beach Elementary", "level": "elementary", "grades": "K-5", "address": "100 Magnolia Ave, Piedmont CA 94611", "lat": 37.82023, "lng": -122.241, "greatschools_rating": 10},
+        {"name": "Havens Elementary", "level": "elementary", "grades": "K-5", "address": "Cambridge Way, Piedmont CA 94611", "lat": 37.82536, "lng": -122.23327, "greatschools_rating": 10},
+        {"name": "Wildwood Elementary", "level": "elementary", "grades": "K-5", "address": "420 Wildwood Ave, Piedmont CA 94611", "lat": 37.81985, "lng": -122.22811, "greatschools_rating": 10},
+        {"name": "Piedmont Middle School", "level": "middle", "grades": "6-8", "address": "760 Magnolia Ave, Piedmont CA 94611", "lat": 37.82268, "lng": -122.23441, "greatschools_rating": 10},
+        {"name": "Piedmont High School", "level": "high", "grades": "9-12", "address": "800 Magnolia Ave, Piedmont CA 94611", "lat": 37.82306, "lng": -122.23332, "greatschools_rating": 10, "usnews_rank_ca": "Top 1-2%", "note": "Top 3 unified district in CA on CAASPP 2024-25"}
+      ]
+    },
+    {
+      "name": "Albany Unified",
+      "city": "Albany",
+      "grades": "K-12",
+      "finderUrl": "https://www.ausdk12.org",
+      "schools": [
+        {"name": "Cornell Elementary", "level": "elementary", "grades": "K-5", "address": "920 Talbot Ave, Albany CA 94706", "lat": 37.88973, "lng": -122.29536, "greatschools_rating": 9},
+        {"name": "Marin Elementary", "level": "elementary", "grades": "K-5", "address": "1001 Santa Fe Ave, Albany CA 94706", "lat": 37.88821, "lng": -122.28797, "greatschools_rating": 9},
+        {"name": "Ocean View Elementary", "level": "elementary", "grades": "K-5", "address": "1000 Jackson St, Albany CA 94706", "lat": 37.88733, "lng": -122.30113, "greatschools_rating": 9},
+        {"name": "Albany Middle School", "level": "middle", "grades": "6-8", "address": "1259 Brighton Ave, Albany CA 94706", "lat": 37.89822, "lng": -122.29508, "greatschools_rating": 9},
+        {"name": "Albany High School", "level": "high", "grades": "9-12", "address": "603 Key Route Blvd, Albany CA 94706", "lat": 37.8963, "lng": -122.29242, "greatschools_rating": 9}
+      ]
+    },
+    {
+      "name": "Berkeley Unified",
+      "city": "Berkeley",
+      "grades": "K-12",
+      "finderUrl": "https://www.berkeleyschools.net/admissions/find-your-busd-zone/",
+      "note": "3-zone system for elementary and middle. Use finder for specific assignment.",
+      "schools": [
+        {"name": "Berkeley Arts Magnet (BAM)", "level": "elementary", "grades": "K-5", "address": "2015 Virginia St, Berkeley CA 94709", "lat": 37.87688, "lng": -122.27037, "greatschools_rating": 8},
+        {"name": "Cragmont Elementary", "level": "elementary", "grades": "K-5", "address": "1860 Purdue Ave, Berkeley CA 94707", "lat": 37.89402, "lng": -122.26743, "greatschools_rating": 8},
+        {"name": "Jefferson Elementary", "level": "elementary", "grades": "K-5", "address": "1400 Ada St, Berkeley CA 94702", "lat": 37.87905, "lng": -122.28468, "greatschools_rating": 7},
+        {"name": "John Muir Elementary", "level": "elementary", "grades": "K-5", "address": "2955 Claremont Ave, Berkeley CA 94705", "lat": 37.85754, "lng": -122.24534, "greatschools_rating": 8},
+        {"name": "Malcolm X Elementary", "level": "elementary", "grades": "K-5", "address": "1731 Prince St, Berkeley CA 94703", "lat": 37.85251, "lng": -122.2737, "greatschools_rating": 7},
+        {"name": "Oxford Elementary", "level": "elementary", "grades": "K-5", "address": "1130 Oxford St, Berkeley CA 94707", "lat": 37.88762, "lng": -122.26843, "greatschools_rating": 9},
+        {"name": "Rosa Parks Elementary", "level": "elementary", "grades": "K-5", "address": "920 Allston Way, Berkeley CA 94710", "lat": 37.86526, "lng": -122.29519, "greatschools_rating": 6},
+        {"name": "Sylvia Mendez Elementary", "level": "elementary", "grades": "K-5", "address": "2241 Russell St, Berkeley CA 94705", "lat": 37.8577, "lng": -122.26275, "greatschools_rating": 7, "note": "District-wide Spanish/English Two Way Immersion"},
+        {"name": "Thousand Oaks Elementary", "level": "elementary", "grades": "K-5", "address": "840 Colusa Ave, Berkeley CA 94707", "lat": 37.89233, "lng": -122.28071, "greatschools_rating": 9},
+        {"name": "Longfellow Middle School", "level": "middle", "grades": "6-8", "address": "1500 Derby St, Berkeley CA 94703", "lat": 37.8584, "lng": -122.27895, "greatschools_rating": 7},
+        {"name": "Martin Luther King Jr. Middle School", "level": "middle", "grades": "6-8", "address": "1781 Rose St, Berkeley CA 94703", "lat": 37.8819, "lng": -122.27774, "greatschools_rating": 7},
+        {"name": "Willard Middle School", "level": "middle", "grades": "6-8", "address": "2425 Stuart St, Berkeley CA 94705", "lat": 37.8604, "lng": -122.25825, "greatschools_rating": 8},
+        {"name": "Berkeley High School", "level": "high", "grades": "9-12", "address": "1980 Allston Way, Berkeley CA 94704", "lat": 37.8694, "lng": -122.2686, "greatschools_rating": 8, "note": "~3,000 students. Broadest course catalog in the region including 40+ AP courses."}
+      ]
+    },
+    {
+      "name": "Alameda Unified",
+      "city": "Alameda",
+      "grades": "K-12",
+      "finderUrl": "https://www.schoolsitelocator.com/apps/alameda/",
+      "schools": [
+        {"name": "Bay Farm Elementary", "level": "elementary", "grades": "K-5", "address": "200 Packet Landing Rd, Alameda CA 94502", "lat": 37.74735, "lng": -122.23992, "greatschools_rating": 8},
+        {"name": "Earhart Elementary", "level": "elementary", "grades": "K-5", "address": "400 Packet Landing Rd, Alameda CA 94502", "lat": 37.74532, "lng": -122.2385, "greatschools_rating": 8},
+        {"name": "Edison Elementary", "level": "elementary", "grades": "K-5", "address": "3223 Lalime Ave, Alameda CA 94501", "lat": 37.76444, "lng": -122.23484, "greatschools_rating": 8},
+        {"name": "Franklin Elementary", "level": "elementary", "grades": "K-5", "address": "1433 San Antonio Ave, Alameda CA 94501", "lat": 37.76906, "lng": -122.26145, "greatschools_rating": 7},
+        {"name": "Love Elementary", "level": "elementary", "grades": "K-5", "address": "2025 Santa Clara Ave, Alameda CA 94501", "lat": 37.76987, "lng": -122.25023, "greatschools_rating": 7},
+        {"name": "Maya Lin Elementary", "level": "elementary", "grades": "K-5", "address": "678 W Ranger Ave, Alameda CA 94502", "lat": 37.78454, "lng": -122.29935, "greatschools_rating": 8},
+        {"name": "Otis Elementary", "level": "elementary", "grades": "K-5", "address": "2200 Central Ave, Alameda CA 94501", "lat": 37.76551, "lng": -122.2464, "greatschools_rating": 8},
+        {"name": "Paden Elementary", "level": "elementary", "grades": "K-5", "address": "444 Central Ave, Alameda CA 94501", "lat": 37.77081, "lng": -122.28369, "greatschools_rating": 7},
+        {"name": "Ruby Bridges Elementary", "level": "elementary", "grades": "K-5", "address": "351 Jack London Ave, Alameda CA 94501", "lat": 37.78246, "lng": -122.28549, "greatschools_rating": 7},
+        {"name": "Lincoln Middle School", "level": "middle", "grades": "6-8", "address": "1250 Fernside Blvd, Alameda CA 94501", "lat": 37.75239, "lng": -122.23118, "greatschools_rating": 8},
+        {"name": "Will C. Wood Middle School", "level": "middle", "grades": "6-8", "address": "420 Grand St, Alameda CA 94501", "lat": 37.76106, "lng": -122.26294, "greatschools_rating": 7},
+        {"name": "Alameda High School", "level": "high", "grades": "9-12", "address": "2200 Central Ave, Alameda CA 94501", "lat": 37.76538, "lng": -122.24619, "greatschools_rating": 8},
+        {"name": "Encinal Jr/Sr High School", "level": "high", "grades": "7-12", "address": "210 Central Ave, Alameda CA 94501", "lat": 37.77141, "lng": -122.2897, "greatschools_rating": 7}
+      ]
+    },
+    {
+      "name": "Oakland Unified",
+      "city": "Oakland",
+      "grades": "K-12",
+      "finderUrl": "https://www.ousd.org/enrollment",
+      "note": "Open enrollment district. Families may apply to any OUSD school regardless of address.",
+      "schools": [
+        {"name": "Chabot Elementary", "level": "elementary", "grades": "K-5", "address": "6686 Chabot Rd, Oakland CA 94618", "lat": 37.85003, "lng": -122.24317, "greatschools_rating": 9, "neighborhood": "Rockridge"},
+        {"name": "Crocker Highlands Elementary", "level": "elementary", "grades": "K-5", "address": "525 Midcrest Rd, Oakland CA 94610", "lat": 37.81107, "lng": -122.22721, "greatschools_rating": 9, "neighborhood": "Crocker Highlands/Grand Lake"},
+        {"name": "Hillcrest Elementary", "level": "elementary", "grades": "K-8", "address": "30 Marguerite Dr, Oakland CA 94611", "lat": 37.84051, "lng": -122.23249, "greatschools_rating": 9, "neighborhood": "Montclair"},
+        {"name": "Lincoln Elementary", "level": "elementary", "grades": "K-5", "address": "225 11th St, Oakland CA 94607", "lat": 37.80014, "lng": -122.26756, "greatschools_rating": 9, "neighborhood": "West Oakland", "note": "High equity school; strong for ELL students"},
+        {"name": "Montclair Elementary", "level": "elementary", "grades": "K-5", "address": "1757 Mountain Blvd, Oakland CA 94611", "lat": 37.83081, "lng": -122.21268, "greatschools_rating": 7, "neighborhood": "Montclair"},
+        {"name": "Peralta Elementary", "level": "elementary", "grades": "K-5", "address": "460 63rd St, Oakland CA 94609", "lat": 37.8494, "lng": -122.25875, "greatschools_rating": 8, "neighborhood": "Temescal/Rockridge"},
+        {"name": "Redwood Heights Elementary", "level": "elementary", "grades": "K-5", "address": "4401 39th Ave, Oakland CA 94619", "lat": 37.79695, "lng": -122.18672, "greatschools_rating": 9, "neighborhood": "Redwood Heights/Oakland Hills"},
+        {"name": "Thornhill Elementary", "level": "elementary", "grades": "K-5", "address": "5880 Thornhill Dr, Oakland CA 94611", "lat": 37.83596, "lng": -122.21148, "greatschools_rating": 8, "neighborhood": "Montclair"},
+        {"name": "Joaquin Miller Elementary", "level": "elementary", "grades": "K-5", "address": "5525 Ascot Dr, Oakland CA 94611", "lat": 37.81917, "lng": -122.20191, "greatschools_rating": 6, "neighborhood": "Montclair/Oakland Hills"},
+        {"name": "Montera Middle School", "level": "middle", "grades": "6-8", "address": "5555 Ascot Dr, Oakland CA 94611", "lat": 37.8196, "lng": -122.20186, "greatschools_rating": 7, "neighborhood": "Montclair/Oakland Hills"},
+        {"name": "Skyline High School", "level": "high", "grades": "9-12", "address": "12250 Skyline Blvd, Oakland CA 94619", "lat": 37.79782, "lng": -122.16303, "greatschools_rating": 6, "neighborhood": "Oakland Hills"},
+        {"name": "Oakland Technical High School", "level": "high", "grades": "9-12", "address": "4351 Broadway, Oakland CA 94611", "lat": 37.83179, "lng": -122.25459, "greatschools_rating": 8, "neighborhood": "Temescal/Piedmont Ave"}
+      ]
+    },
+    {
+      "name": "San Leandro Unified",
+      "city": "San Leandro",
+      "grades": "K-12",
+      "finderUrl": "https://www.slusd.us",
+      "schools": [
+        {"name": "Garfield Elementary", "level": "elementary", "grades": "K-5", "address": "13050 Aurora Dr, San Leandro CA 94577", "lat": 37.70418, "lng": -122.18571, "greatschools_rating": 5},
+        {"name": "Halkin Elementary", "level": "elementary", "grades": "K-5", "address": "1300 Williams St, San Leandro CA 94577", "lat": 37.71583, "lng": -122.16522, "greatschools_rating": 5},
+        {"name": "Jefferson Elementary", "level": "elementary", "grades": "K-5", "address": "14300 Bancroft Ave, San Leandro CA 94578", "lat": 37.71304, "lng": -122.13566, "greatschools_rating": 5},
+        {"name": "Madison Elementary", "level": "elementary", "grades": "K-5", "address": "14751 Juniper St, San Leandro CA 94579", "lat": 37.69574, "lng": -122.1608, "greatschools_rating": 5},
+        {"name": "McKinley Elementary", "level": "elementary", "grades": "K-5", "address": "2150 East 14th St, San Leandro CA 94577", "lat": 37.71913, "lng": -122.14722, "greatschools_rating": 6},
+        {"name": "Monroe Elementary", "level": "elementary", "grades": "K-5", "address": "3750 Monterey Blvd, San Leandro CA 94578", "lat": 37.69879, "lng": -122.14626, "greatschools_rating": 5},
+        {"name": "Roosevelt Elementary", "level": "elementary", "grades": "K-5", "address": "951 Dowling Blvd, San Leandro CA 94577", "lat": 37.7362, "lng": -122.14682, "greatschools_rating": 6},
+        {"name": "Washington Elementary", "level": "elementary", "grades": "K-5", "address": "250 Dutton Ave, San Leandro CA 94577", "lat": 37.73271, "lng": -122.15651, "greatschools_rating": 6},
+        {"name": "Bancroft Middle School", "level": "middle", "grades": "6-8", "address": "1520 Bancroft Ave, San Leandro CA 94577", "lat": 37.7252, "lng": -122.14687, "greatschools_rating": 3},
+        {"name": "John Muir Middle School", "level": "middle", "grades": "6-8", "address": "1444 Williams St, San Leandro CA 94577", "lat": 37.71486, "lng": -122.16845, "greatschools_rating": 5},
+        {"name": "San Leandro High School", "level": "high", "grades": "9-12", "address": "2200 Bancroft Ave, San Leandro CA 94577", "lat": 37.71821, "lng": -122.14185, "greatschools_rating": 4}
+      ]
+    },
+    {
+      "name": "West Contra Costa Unified (El Cerrito/Kensington schools)",
+      "cities": ["El Cerrito", "Kensington"],
+      "grades": "K-12",
+      "finderUrl": "https://www.wccusd.net",
+      "note": "El Cerrito and Kensington are served by WCCUSD. High school is El Cerrito Senior High.",
+      "schools": [
+        {"name": "Kensington Elementary School", "level": "elementary", "grades": "K-6", "address": "85 Rincon Ave, Kensington CA 94707", "lat": 37.91402, "lng": -122.27982, "greatschools_rating": 10, "city": "Kensington"},
+        {"name": "Madera Elementary School", "level": "elementary", "grades": "K-6", "address": "8500 Madera Dr, El Cerrito CA 94530", "lat": 37.92799, "lng": -122.29886, "greatschools_rating": 10, "city": "El Cerrito"},
+        {"name": "Harding Elementary School", "level": "elementary", "grades": "K-6", "address": "1625 Avis Dr, El Cerrito CA 94530", "lat": 37.90243, "lng": -122.2943, "greatschools_rating": 6, "city": "El Cerrito"},
+        {"name": "Fairmont Elementary School", "level": "elementary", "grades": "K-6", "address": "2005 Barnard St, El Cerrito CA 94530", "lat": 37.90741, "lng": -122.30426, "greatschools_rating": 6, "city": "El Cerrito"},
+        {"name": "Fred T. Korematsu Middle School", "level": "middle", "grades": "7-8", "address": "7740 Ransom Ave, El Cerrito CA 94530", "lat": 37.92075, "lng": -122.3062, "greatschools_rating": 5, "city": "El Cerrito"},
+        {"name": "El Cerrito Senior High School", "level": "high", "grades": "9-12", "address": "540 Ashbury Ave, El Cerrito CA 94530", "lat": 37.90631, "lng": -122.29422, "greatschools_rating": 7, "city": "El Cerrito"}
+      ]
+    },
+    {
+      "name": "Walnut Creek Elementary",
+      "city": "Walnut Creek",
+      "grades": "K-8",
+      "finderUrl": "https://www.walnutcreekschooldisstrict.org",
+      "note": "K-8 district. High school via Mt. Diablo Unified (Las Lomas or Northgate).",
+      "schools": [
+        {"name": "Buena Vista Elementary", "level": "elementary", "grades": "K-5", "address": "273 N San Carlos Dr, Walnut Creek CA 94598", "lat": 37.91335, "lng": -122.07045, "greatschools_rating": 8, "wc_code": "BV"},
+        {"name": "Indian Valley Elementary", "level": "elementary", "grades": "K-5", "address": "100 Alvarado Ave, Walnut Creek CA 94597", "lat": 37.90035, "lng": -122.03222, "greatschools_rating": 8, "wc_code": "IV"},
+        {"name": "Murwood Elementary", "level": "elementary", "grades": "K-5", "address": "75 Eckley Ln, Walnut Creek CA 94596", "lat": 37.89916, "lng": -122.04437, "greatschools_rating": 9, "wc_code": "MW"},
+        {"name": "Parkmead Elementary", "level": "elementary", "grades": "K-5", "address": "1895 Geary Rd, Walnut Creek CA 94596", "lat": 37.92627, "lng": -122.07332, "greatschools_rating": 9, "wc_code": "PM"},
+        {"name": "Walnut Heights Elementary", "level": "elementary", "grades": "K-5", "address": "4064 Walnut Blvd, Walnut Creek CA 94596", "lat": 37.8945, "lng": -122.03726, "greatschools_rating": 9, "wc_code": "WH"},
+        {"name": "Walnut Creek Intermediate (WCI)", "level": "middle", "grades": "6-8", "address": "64 Lacassie Ave, Walnut Creek CA 94596", "lat": 37.90348, "lng": -122.06663, "greatschools_rating": 9, "note": "All Walnut Creek Elementary District students attend WCI"}
+      ]
+    },
+    {
+      "name": "Acalanes Union High School District",
+      "cities": ["Orinda", "Lafayette", "Moraga", "Walnut Creek (partial)"],
+      "grades": "9-12",
+      "finderUrl": "https://www.acalanes.k12.ca.us",
+      "note": "High school only district. Elementary/middle schools are separate feeder districts.",
+      "schools": [
+        {"name": "Miramonte High School", "level": "high", "grades": "9-12", "address": "750 Moraga Way, Orinda CA 94563", "lat": 37.84215, "lng": -122.1455, "greatschools_rating": 10, "usnews_rank_ca": 31, "serves": "Orinda"},
+        {"name": "Acalanes High School", "level": "high", "grades": "9-12", "address": "1200 Pleasant Hill Rd, Lafayette CA 94549", "lat": 37.90455, "lng": -122.09738, "greatschools_rating": 10, "usnews_rank_ca": 77, "serves": "Lafayette"},
+        {"name": "Campolindo High School", "level": "high", "grades": "9-12", "address": "300 Moraga Rd, Moraga CA 94556", "lat": 37.86488, "lng": -122.12585, "greatschools_rating": 10, "usnews_rank_ca": 30, "serves": "Moraga"},
+        {"name": "Las Lomas High School", "level": "high", "grades": "9-12", "address": "1460 S Main St, Walnut Creek CA 94596", "lat": 37.89092, "lng": -122.05695, "greatschools_rating": 9, "usnews_rank_ca": 165, "serves": "Most of Walnut Creek"}
+      ]
+    },
+    {
+      "name": "Orinda Union Elementary",
+      "city": "Orinda",
+      "grades": "K-8",
+      "finderUrl": "https://www.orindaschools.org",
+      "schools": [
+        {"name": "Del Rey Elementary", "level": "elementary", "grades": "K-5", "address": "25 Avenida de Orinda, Orinda CA 94563", "lat": 37.88496, "lng": -122.19182, "greatschools_rating": 10},
+        {"name": "Glorietta Elementary", "level": "elementary", "grades": "K-5", "address": "14 Lagunitas Rd, Orinda CA 94563", "lat": 37.8718, "lng": -122.16271, "greatschools_rating": 10},
+        {"name": "Sleepy Hollow Elementary", "level": "elementary", "grades": "K-5", "address": "1 Dewing Ave, Orinda CA 94563", "lat": 37.90868, "lng": -122.20039, "greatschools_rating": 10},
+        {"name": "Wagner Ranch Elementary", "level": "elementary", "grades": "K-5", "address": "200 Camino Pablo, Orinda CA 94563", "lat": 37.89617, "lng": -122.20645, "greatschools_rating": 10},
+        {"name": "Orinda Intermediate", "level": "middle", "grades": "6-8", "address": "80 Orinda Way, Orinda CA 94563", "lat": 37.88442, "lng": -122.19062, "greatschools_rating": 10}
+      ]
+    },
+    {
+      "name": "Lafayette Elementary",
+      "city": "Lafayette",
+      "grades": "K-8",
+      "finderUrl": "https://www.lafsd.org",
+      "schools": [
+        {"name": "Burton Valley Elementary", "level": "elementary", "grades": "K-5", "address": "561 Merriewood Dr, Lafayette CA 94549", "lat": 37.86286, "lng": -122.09305, "greatschools_rating": 10},
+        {"name": "Happy Valley Elementary", "level": "elementary", "grades": "K-5", "address": "3483 Happy Valley Rd, Lafayette CA 94549", "lat": 37.90428, "lng": -122.14197, "greatschools_rating": 10},
+        {"name": "Lafayette Elementary", "level": "elementary", "grades": "K-5", "address": "950 Moraga Rd, Lafayette CA 94549", "lat": 37.88943, "lng": -122.11797, "greatschools_rating": 10},
+        {"name": "Springhill Elementary", "level": "elementary", "grades": "K-5", "address": "3301 Springhill Rd, Lafayette CA 94549", "lat": 37.90757, "lng": -122.10183, "greatschools_rating": 10},
+        {"name": "Stanley Middle School", "level": "middle", "grades": "6-8", "address": "3455 School St, Lafayette CA 94549", "lat": 37.88715, "lng": -122.11515, "greatschools_rating": 10}
+      ]
+    },
+    {
+      "name": "Moraga Elementary",
+      "city": "Moraga",
+      "grades": "K-8",
+      "finderUrl": "https://www.moragaschools.org",
+      "schools": [
+        {"name": "Camino Pablo Elementary", "level": "elementary", "grades": "K-5", "address": "1000 Camino Pablo, Moraga CA 94556", "lat": 37.82742, "lng": -122.1314, "greatschools_rating": 10},
+        {"name": "Donald L. Rheem Elementary", "level": "elementary", "grades": "K-5", "address": "30 La Encinal, Moraga CA 94556", "lat": 37.85792, "lng": -122.13222, "greatschools_rating": 10},
+        {"name": "Los Perales Elementary", "level": "elementary", "grades": "K-5", "address": "80 Corliss Dr, Moraga CA 94556", "lat": 37.84528, "lng": -122.13563, "greatschools_rating": 10},
+        {"name": "Joaquin Moraga Intermediate", "level": "middle", "grades": "6-8", "address": "1010 Camino Pablo, Moraga CA 94556", "lat": 37.82567, "lng": -122.13076, "greatschools_rating": 10}
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@ import { booleanPointInPolygon } from "@turf/boolean-point-in-polygon";
 import elemRaw from "@/data/ousd-elementary-boundaries.geojson?raw";
 import midRaw from "@/data/ousd-middle-boundaries.geojson?raw";
 import highRaw from "@/data/ousd-high-boundaries.geojson?raw";
-import pointsRaw from "@/data/ousd-school-points.geojson?raw";
+import schoolDataRaw from "@/data/east-bay-schools.json?raw";
 
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY;
 
@@ -19,13 +19,24 @@ type Level = "elementary" | "middle" | "high";
 const elementaryFC = JSON.parse(elemRaw);
 const middleFC = JSON.parse(midRaw);
 const highFC = JSON.parse(highRaw);
-const pointsFC = JSON.parse(pointsRaw);
 
 const LEVELS: { key: Level; label: string; color: string; fc: any }[] = [
   { key: "elementary", label: "Elementary", color: "#2E7D32", fc: elementaryFC }, // green
   { key: "middle", label: "Middle", color: "#1565C0", fc: middleFC }, // blue
   { key: "high", label: "High", color: "#C62828", fc: highFC }, // red
 ];
+
+const LEVEL_COLOR: Record<Level, string> = {
+  elementary: "#2E7D32",
+  middle: "#1565C0",
+  high: "#C62828",
+};
+
+// East Bay schools verified against GreatSchools ("Realtor510 — East Bay School
+// Data v2"). Flattened to one row per school, carrying its district along.
+const RATED_SCHOOLS: any[] = JSON.parse(schoolDataRaw).districts.flatMap((d: any) =>
+  d.schools.map((s: any) => ({ ...s, district: d.name, finderUrl: d.finderUrl }))
+);
 
 // GeoJSON Polygon/MultiPolygon -> array of Google Maps paths ([lng,lat] -> {lat,lng}).
 function toPaths(geometry: any): LatLng[][] {
@@ -54,6 +65,32 @@ function greatSchoolsUrl(name: string): string {
   return `https://www.greatschools.org/search/search.page?q=${encodeURIComponent(titleCase(name) + " Oakland CA")}`;
 }
 
+// City for a rated school — explicit field, else parsed from its address.
+function cityOf(s: any): string {
+  if (s.city) return s.city;
+  const m = /,\s*([^,]+?)\s+CA\b/.exec(s.address || "");
+  return m ? m[1].trim() : "CA";
+}
+
+function ratedSchoolUrl(s: any): string {
+  return `https://www.greatschools.org/search/search.page?q=${encodeURIComponent(s.name + " " + cityOf(s))}`;
+}
+
+// A map pin shaped like a GreatSchools score chip: the rating number inside a
+// circle, colored by school level. Rendered as an inline SVG data URI.
+function scoreIcon(g: any, rating: number, color: string) {
+  const svg =
+    `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">` +
+    `<circle cx="16" cy="16" r="13" fill="${color}" stroke="#ffffff" stroke-width="2.5"/>` +
+    `<text x="16" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">${rating}</text>` +
+    `</svg>`;
+  return {
+    url: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg),
+    scaledSize: new g.maps.Size(32, 32),
+    anchor: new g.maps.Point(16, 16),
+  };
+}
+
 export default function SchoolMap() {
   const [visible, setVisible] = useState<Record<Level, boolean>>({
     elementary: true,
@@ -63,6 +100,7 @@ export default function SchoolMap() {
   const [address, setAddress] = useState("");
   const [report, setReport] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+  const [minScore, setMinScore] = useState(0); // 0 = show all; otherwise minimum GreatSchools rating to show
 
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
@@ -85,6 +123,11 @@ export default function SchoolMap() {
   useEffect(() => {
     if (mapInstanceRef.current) drawPolygons();
   }, [visible]);
+
+  // Redraw the school dots whenever the minimum-score filter changes.
+  useEffect(() => {
+    if (mapInstanceRef.current) drawPins();
+  }, [minScore]);
 
   function initMap() {
     if (!mapRef.current) return;
@@ -116,6 +159,11 @@ export default function SchoolMap() {
     infoWindowRef.current = new g.maps.InfoWindow();
     drawPins();
     drawPolygons();
+
+    // Frame the full set of rated schools (East Bay-wide, beyond Oakland).
+    const bounds = new g.maps.LatLngBounds();
+    RATED_SCHOOLS.forEach(s => bounds.extend({ lat: s.lat, lng: s.lng }));
+    mapInstanceRef.current.fitBounds(bounds, 48);
   }
 
   function drawPolygons() {
@@ -155,32 +203,32 @@ export default function SchoolMap() {
     const g = (window as any).google;
     markersRef.current.forEach(m => m.setMap(null));
     markersRef.current = [];
-    for (const feature of pointsFC.features) {
-      const [lng, lat] = feature.geometry.coordinates;
-      const p = feature.properties;
+    for (const s of RATED_SCHOOLS) {
+      if (s.greatschools_rating < minScore) continue; // hide schools below the chosen minimum
+      const color = LEVEL_COLOR[s.level as Level] ?? "#555";
       const marker = new g.maps.Marker({
-        position: { lat, lng },
+        position: { lat: s.lat, lng: s.lng },
         map: mapInstanceRef.current,
-        title: p.name,
-        icon: {
-          path: g.maps.SymbolPath.CIRCLE,
-          scale: 5,
-          fillColor: "#B22222",
-          fillOpacity: 0.95,
-          strokeColor: "#fff",
-          strokeWeight: 1.5,
-        },
+        title: `${s.name} — GreatSchools ${s.greatschools_rating}/10`,
+        icon: scoreIcon(g, s.greatschools_rating, color),
+        zIndex: s.greatschools_rating, // higher-rated dots sit on top when overlapping
       });
       marker.addListener("click", () => {
+        const levelLabel = s.level.charAt(0).toUpperCase() + s.level.slice(1);
         infoWindowRef.current.setContent(
-          `<div style="font-family:Arial,sans-serif;max-width:220px">
-             <div style="font-weight:700;font-size:14px;margin-bottom:2px">${p.name}</div>
-             <div style="font-size:11px;color:#666;margin-bottom:4px">${p.type}${p.gradeSpan ? " · " + p.gradeSpan : ""}</div>
-             ${p.address ? `<div style="font-size:11px;color:#888;margin-bottom:6px">${p.address}</div>` : ""}
-             <a href="${greatSchoolsUrl(p.name)}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:#B22222;font-weight:600">GreatSchools profile →</a>
+          `<div style="font-family:Arial,sans-serif;max-width:240px">
+             <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+               <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:${color};color:#fff;font-weight:700;font-size:14px;flex:none">${s.greatschools_rating}</span>
+               <span style="font-weight:700;font-size:14px;line-height:1.2">${s.name}</span>
+             </div>
+             <div style="font-size:11px;color:#666;margin-bottom:2px">${levelLabel}${s.grades ? " · " + s.grades : ""} · GreatSchools ${s.greatschools_rating}/10</div>
+             <div style="font-size:11px;color:#999;margin-bottom:6px">${s.district}</div>
+             ${s.address ? `<div style="font-size:11px;color:#888;margin-bottom:6px">${s.address}</div>` : ""}
+             ${s.note ? `<div style="font-size:11px;color:#555;font-style:italic;margin-bottom:6px">${s.note}</div>` : ""}
+             <a href="${ratedSchoolUrl(s)}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:${color};font-weight:600;text-decoration:none">GreatSchools profile →</a>
            </div>`
         );
-        infoWindowRef.current.setPosition({ lat, lng });
+        infoWindowRef.current.setPosition({ lat: s.lat, lng: s.lng });
         infoWindowRef.current.open(mapInstanceRef.current);
       });
       markersRef.current.push(marker);
@@ -230,14 +278,20 @@ export default function SchoolMap() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", maxWidth: "900px", margin: "0 auto", padding: "0 16px" }}>
       <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "28px", fontWeight: 400, color: "#1A1A1A", marginBottom: "8px" }}>
-        Oakland School Attendance Map
+        East Bay School Ratings Map
       </h2>
       <p style={{ fontSize: "14px", color: "#666", marginBottom: "8px", lineHeight: 1.6 }}>
-        Official Oakland Unified (OUSD) attendance areas for 2025–26. Toggle elementary, middle, and high boundaries on or off, click any zone or school for details, or enter an address to find its assigned schools.
+        Every dot is a school, labeled with its <strong>GreatSchools rating (1–10)</strong> and colored by level — <span style={{ color: "#2E7D32", fontWeight: 600 }}>elementary</span>, <span style={{ color: "#1565C0", fontWeight: 600 }}>middle</span>, <span style={{ color: "#C62828", fontWeight: 600 }}>high</span>. Click any dot for details and a link to its full GreatSchools profile. Toggle the Oakland Unified (OUSD) attendance boundaries below, or enter an address to find its assigned OUSD schools.
       </p>
       <p style={{ fontSize: "11px", color: "#aaa", marginBottom: "20px" }}>
-        ⚠️ Source: OUSD official attendance boundaries (2025–26). Assignments can change and some addresses have options/exceptions — always confirm directly with OUSD before relying on this.
+        ⚠️ Ratings from GreatSchools.org; OUSD attendance boundaries are official 2025–26 data. Ratings and assignments change over time and some addresses have options/exceptions — always confirm directly with the school or district before relying on this.
       </p>
+
+      {/* Numbered-dot legend */}
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px", fontSize: "12px", color: "#666" }}>
+        <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "24px", height: "24px", borderRadius: "50%", background: "#2E7D32", color: "#fff", fontWeight: 700, fontSize: "12px", flex: "none" }}>9</span>
+        <span>Number = GreatSchools rating, out of 10. Click a dot for the school's details.</span>
+      </div>
 
       {/* Layer toggles */}
       <div style={{ display: "flex", gap: "8px", marginBottom: "16px", flexWrap: "wrap" }}>
@@ -256,6 +310,20 @@ export default function SchoolMap() {
             </button>
           );
         })}
+
+        <label style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#666" }}>
+          Min rating
+          <select value={minScore} onChange={e => setMinScore(Number(e.target.value))}
+            style={{ padding: "9px 12px", borderRadius: "4px", border: "1px solid #CFCFCF", fontSize: "13px", fontWeight: 600, color: "#1A1A1A", background: "#fff", cursor: "pointer" }}>
+            <option value={0}>All schools</option>
+            <option value={4}>4+</option>
+            <option value={5}>5+</option>
+            <option value={6}>6+</option>
+            <option value={7}>7+</option>
+            <option value={8}>8+</option>
+            <option value={9}>9+</option>
+          </select>
+        </label>
       </div>
 
       {/* Map */}
