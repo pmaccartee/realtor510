@@ -70,7 +70,7 @@ async function main() {
   const feats = geo.features || [];
   if (!feats.length) throw new Error("SABS returned 0 features — check leaids/endpoint");
 
-  const out = feats
+  const all = feats
     .filter(f => f.properties.leaid !== WCCUSD_ID || WCCUSD_KEEP.has(f.properties.schnam))
     .map(f => ({
       name: f.properties.schnam,
@@ -79,6 +79,24 @@ async function main() {
       rings: geometryToRings(f.geometry),
     }))
     .filter(s => s.rings.length > 0);
+
+  // Drop districts where every school shares one identical, district-wide
+  // boundary (lottery/zone districts like Berkeley & Albany). Those are just the
+  // city outline repeated, not real per-school attendance areas.
+  const geomKey = z => JSON.stringify(z.rings);
+  const distinctGeom = {};
+  const zoneCount = {};
+  for (const z of all) {
+    (distinctGeom[z.district] ??= new Set()).add(geomKey(z));
+    zoneCount[z.district] = (zoneCount[z.district] || 0) + 1;
+  }
+  const dropped = new Set();
+  const out = all.filter(z => {
+    const districtWideOnly = distinctGeom[z.district].size === 1 && zoneCount[z.district] > 1;
+    if (districtWideOnly) dropped.add(z.district);
+    return !districtWideOnly;
+  });
+  if (dropped.size) console.log("Dropped district-wide-only (lottery/zone) districts:", [...dropped].join(", "));
 
   await mkdir(path.dirname(OUT), { recursive: true });
   const header =

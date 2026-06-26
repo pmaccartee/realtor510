@@ -12,6 +12,7 @@ import midRaw from "@/data/ousd-middle-boundaries.geojson?raw";
 import highRaw from "@/data/ousd-high-boundaries.geojson?raw";
 import schoolDataRaw from "@/data/east-bay-schools.json?raw";
 import { sabsAttendance } from "@/data/sabsAttendance";
+import { busdZones } from "@/data/busdZones";
 
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY;
 
@@ -249,6 +250,38 @@ export default function SchoolMap() {
       });
       polygonsRef.current.push(polygon);
     }
+
+    // Berkeley Unified runs a 3-zone elementary lottery (no per-school catchment),
+    // so it gets its own reconstructed zone polygons under the elementary layer.
+    if (visible.elementary) {
+      const color = LEVEL_COLOR.elementary;
+      for (const z of busdZones) {
+        for (const ring of z.rings) {
+          const polygon = new g.maps.Polygon({
+            paths: ring.map(([lng, lat]) => ({ lat, lng })),
+            strokeColor: color,
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: color,
+            fillOpacity: 0.06, // light tint so the zone area reads as a zone, not a single-school catchment
+            map: mapInstanceRef.current,
+          });
+          polygon.addListener("click", (e: any) => {
+            infoWindowRef.current.setContent(
+              `<div style="font-family:Arial,sans-serif;max-width:240px">
+                 <div style="font-weight:700;font-size:14px;margin-bottom:2px">${z.zone} Zone</div>
+                 <div style="font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">Berkeley Unified · elementary</div>
+                 <div style="font-size:12px;color:#555;margin-bottom:6px">Families are assigned by <strong>lottery within this zone</strong>: ${z.schools.join(", ")}.</div>
+                 <a href="https://www.berkeleyschools.net/admissions/find-your-busd-zone/" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:${color};font-weight:600">Find your exact BUSD zone →</a>
+               </div>`
+            );
+            infoWindowRef.current.setPosition(e.latLng);
+            infoWindowRef.current.open(mapInstanceRef.current);
+          });
+          polygonsRef.current.push(polygon);
+        }
+      }
+    }
   }
 
   function drawPins() {
@@ -336,7 +369,7 @@ export default function SchoolMap() {
         Every dot is a school, labeled with its <strong>GreatSchools rating (1–10)</strong> and colored by level — <span style={{ color: "#2E7D32", fontWeight: 600 }}>elementary</span>, <span style={{ color: "#1565C0", fontWeight: 600 }}>middle</span>, <span style={{ color: "#C62828", fontWeight: 600 }}>high</span>. Click any dot for details and a link to its full GreatSchools profile. Toggle the attendance boundaries below to see which school serves which area, or enter an Oakland address to find its assigned OUSD schools.
       </p>
       <p style={{ fontSize: "11px", color: "#aaa", marginBottom: "20px" }}>
-        ⚠️ Ratings from GreatSchools.org. Boundaries: Oakland (OUSD) is official 2025–26 data; other districts are from the NCES School Attendance Boundary Survey (2015–16) and may be out of date. Ratings and assignments change over time and some addresses have options/exceptions — always confirm directly with the school or district before relying on this.
+        ⚠️ Ratings from GreatSchools.org. Boundaries: Oakland (OUSD) is official 2025–26 data; most other districts are from the NCES School Attendance Boundary Survey (2015–16); Berkeley's 3 elementary zones (lottery within each zone) are reconstructed from BUSD's address directory and are approximate near the edges. Ratings and assignments change over time and some addresses have options/exceptions — always confirm directly with the school or district before relying on this.
       </p>
 
       {/* Numbered-dot legend */}
