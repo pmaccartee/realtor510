@@ -411,19 +411,19 @@ export default function SchoolMap() {
       {/* Map */}
       <div ref={mapRef} style={{ width: "100%", height: "520px", borderRadius: "8px", border: "1px solid #EBEBEB", marginBottom: "16px" }} />
 
-      {/* Address lookup */}
-      <div style={{ background: "#fff", border: "1px solid #EBEBEB", borderRadius: "8px", padding: "20px" }}>
-        <h3 style={{ margin: "0 0 4px 0", fontSize: "16px", fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}>Find Your Schools</h3>
-        <p style={{ margin: "0 0 12px 0", fontSize: "13px", color: "#888" }}>
+      {/* Address lookup — red call-to-action card */}
+      <div style={{ background: "#B22222", borderRadius: "10px", padding: "26px", boxShadow: "0 6px 22px rgba(178,34,34,0.28)" }}>
+        <h3 style={{ margin: "0 0 6px 0", fontSize: "22px", fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 500, color: "#fff" }}>Find Your Schools</h3>
+        <p style={{ margin: "0 0 16px 0", fontSize: "14px", color: "rgba(255,255,255,0.9)", lineHeight: 1.5 }}>
           Enter an Oakland address to see its assigned elementary, middle, and high school.
         </p>
-        <div style={{ display: "flex", gap: "8px" }}>
+        <div style={{ display: "flex", gap: "10px" }}>
           <input type="text" value={address} onChange={e => setAddress(e.target.value)}
             onKeyDown={e => e.key === "Enter" && lookupAddress()}
             placeholder="e.g. 3670 Penniman Ave, Oakland CA"
-            style={{ flex: 1, padding: "10px 14px", border: "1px solid #EBEBEB", borderRadius: "4px", fontSize: "14px", outline: "none" }} />
+            style={{ flex: 1, padding: "12px 16px", border: "none", borderRadius: "6px", fontSize: "14px", outline: "none", color: "#1A1A1A", background: "#fff" }} />
           <button onClick={lookupAddress} disabled={loading}
-            style={{ padding: "10px 20px", background: "#B22222", color: "#fff", border: "none", borderRadius: "4px", cursor: "pointer", fontSize: "13px", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>
+            style={{ padding: "12px 24px", background: "#fff", color: "#B22222", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "13px", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>
             {loading ? "Looking up..." : "Look Up"}
           </button>
         </div>
@@ -431,20 +431,20 @@ export default function SchoolMap() {
         {report && (
           <div style={{ marginTop: "16px" }}>
             {report.error ? (
-              <p style={{ color: "#B22222", fontSize: "13px" }}>{report.error}</p>
+              <p style={{ color: "#fff", fontSize: "13px", fontWeight: 500 }}>{report.error}</p>
             ) : report.outside ? (
               <div>
-                <p style={{ fontSize: "12px", color: "#888", margin: "0 0 8px 0" }}>Results for: <strong>{report.address}</strong></p>
-                <p style={{ fontSize: "13px", color: "#555" }}>This address falls outside OUSD attendance areas (Oakland only for now). Other East Bay districts are coming soon.</p>
+                <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.85)", margin: "0 0 8px 0" }}>Results for: <strong style={{ color: "#fff" }}>{report.address}</strong></p>
+                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.92)" }}>This address falls outside OUSD attendance areas (Oakland only for now). Other East Bay districts are coming soon.</p>
               </div>
             ) : (
               <div>
-                <p style={{ fontSize: "12px", color: "#888", margin: "0 0 12px 0" }}>Results for: <strong>{report.address}</strong></p>
+                <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.85)", margin: "0 0 12px 0" }}>Results for: <strong style={{ color: "#fff" }}>{report.address}</strong></p>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }}>
                   {LEVELS.map(level => {
                     const name = report[level.key];
                     return (
-                      <div key={level.key} style={{ background: "#FAFAFA", border: `2px solid ${level.color}`, borderRadius: "6px", padding: "12px" }}>
+                      <div key={level.key} style={{ background: "#fff", border: `2px solid ${level.color}`, borderRadius: "6px", padding: "12px" }}>
                         <div style={{ fontSize: "10px", color: level.color, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "6px" }}>{level.label}</div>
                         <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", marginBottom: name ? "6px" : 0 }}>{name ? titleCase(name) : "—"}</div>
                         {name && (
