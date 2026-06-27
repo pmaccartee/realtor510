@@ -54,7 +54,7 @@
       "grades": "K-12",
       "finderUrl": "https://www.schoolsitelocator.com/apps/alameda/",
       "schools": [
-        {"name": "Bay Farm Elementary", "level": "elementary", "grades": "K-5", "address": "200 Packet Landing Rd, Alameda CA 94502", "lat": 37.74735, "lng": -122.23992, "greatschools_rating": 8},
+        {"name": "Bay Farm Elementary", "level": "elementary", "grades": "K-5", "address": "200 Packet Landing Rd, Alameda CA 94502", "lat": 37.74735, "lng": -122.23992, "greatschools_rating": 9},
         {"name": "Earhart Elementary", "level": "elementary", "grades": "K-5", "address": "400 Packet Landing Rd, Alameda CA 94502", "lat": 37.74532, "lng": -122.2385, "greatschools_rating": 8},
         {"name": "Edison Elementary", "level": "elementary", "grades": "K-5", "address": "3223 Lalime Ave, Alameda CA 94501", "lat": 37.76444, "lng": -122.23484, "greatschools_rating": 8},
         {"name": "Franklin Elementary", "level": "elementary", "grades": "K-5", "address": "1433 San Antonio Ave, Alameda CA 94501", "lat": 37.76906, "lng": -122.26145, "greatschools_rating": 7},
@@ -65,7 +65,7 @@
         {"name": "Ruby Bridges Elementary", "level": "elementary", "grades": "K-5", "address": "351 Jack London Ave, Alameda CA 94501", "lat": 37.78246, "lng": -122.28549, "greatschools_rating": 7},
         {"name": "Lincoln Middle School", "level": "middle", "grades": "6-8", "address": "1250 Fernside Blvd, Alameda CA 94501", "lat": 37.75239, "lng": -122.23118, "greatschools_rating": 8},
         {"name": "Will C. Wood Middle School", "level": "middle", "grades": "6-8", "address": "420 Grand St, Alameda CA 94501", "lat": 37.76106, "lng": -122.26294, "greatschools_rating": 7},
-        {"name": "Alameda High School", "level": "high", "grades": "9-12", "address": "2200 Central Ave, Alameda CA 94501", "lat": 37.76538, "lng": -122.24619, "greatschools_rating": 8},
+        {"name": "Alameda High School", "level": "high", "grades": "9-12", "address": "2200 Central Ave, Alameda CA 94501", "lat": 37.76538, "lng": -122.24619, "greatschools_rating": 10},
         {"name": "Encinal Jr/Sr High School", "level": "high", "grades": "7-12", "address": "210 Central Ave, Alameda CA 94501", "lat": 37.77141, "lng": -122.2897, "greatschools_rating": 7}
       ]
     },
