@@ -393,18 +393,21 @@ export default function SchoolMap() {
           );
         })}
 
-        <label style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#666" }}>
+        <label style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#1A1A1A", fontWeight: 600 }}>
           Min rating
-          <select value={minScore} onChange={e => setMinScore(Number(e.target.value))}
-            style={{ padding: "9px 12px", borderRadius: "4px", border: "1px solid #CFCFCF", fontSize: "13px", fontWeight: 600, color: "#1A1A1A", background: "#fff", cursor: "pointer" }}>
-            <option value={0}>All schools</option>
-            <option value={4}>4+</option>
-            <option value={5}>5+</option>
-            <option value={6}>6+</option>
-            <option value={7}>7+</option>
-            <option value={8}>8+</option>
-            <option value={9}>9+</option>
-          </select>
+          <span style={{ position: "relative", display: "inline-flex", alignItems: "center" }}>
+            <select value={minScore} onChange={e => setMinScore(Number(e.target.value))}
+              style={{ appearance: "none", WebkitAppearance: "none", MozAppearance: "none", padding: "10px 36px 10px 16px", borderRadius: "6px", border: "none", fontSize: "13px", fontWeight: 700, letterSpacing: "0.02em", color: "#fff", background: "#B22222", cursor: "pointer" }}>
+              <option value={0} style={{ background: "#fff", color: "#1A1A1A" }}>All schools</option>
+              <option value={4} style={{ background: "#fff", color: "#1A1A1A" }}>4+</option>
+              <option value={5} style={{ background: "#fff", color: "#1A1A1A" }}>5+</option>
+              <option value={6} style={{ background: "#fff", color: "#1A1A1A" }}>6+</option>
+              <option value={7} style={{ background: "#fff", color: "#1A1A1A" }}>7+</option>
+              <option value={8} style={{ background: "#fff", color: "#1A1A1A" }}>8+</option>
+              <option value={9} style={{ background: "#fff", color: "#1A1A1A" }}>9+</option>
+            </select>
+            <span style={{ position: "absolute", right: "13px", pointerEvents: "none", color: "#fff", fontSize: "10px", lineHeight: 1 }}>▼</span>
+          </span>
         </label>
       </div>
 
