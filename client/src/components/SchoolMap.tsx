@@ -140,10 +140,10 @@ export default function SchoolMap() {
     if (mapInstanceRef.current) drawPolygons();
   }, [visible]);
 
-  // Redraw the school dots whenever the minimum-score filter changes.
+  // Redraw the school dots whenever the level toggles or the score filter change.
   useEffect(() => {
     if (mapInstanceRef.current) drawPins();
-  }, [minScore]);
+  }, [minScore, visible]);
 
   function initMap() {
     if (!mapRef.current) return;
@@ -282,6 +282,7 @@ export default function SchoolMap() {
     markersRef.current.forEach(m => m.setMap(null));
     markersRef.current = [];
     for (const s of RATED_SCHOOLS) {
+      if (!visible[s.level as Level]) continue; // hide dots whose grade level is toggled off
       if (s.greatschools_rating < minScore) continue; // hide schools below the chosen minimum
       const color = LEVEL_COLOR[s.level as Level] ?? "#555";
       const marker = new g.maps.Marker({
