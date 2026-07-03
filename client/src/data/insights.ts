@@ -323,7 +323,7 @@ export const insights = [
     "id": "how-to-read-east-bay-disclosure-package",
     "title": "How to Read an East Bay Disclosure Package",
     "category": "Buyer Guide",
-    "description": "Disclosure packages in the East Bay can run 200+ pages. Here's what actually matters, what to read carefully, and what to hand to your inspector.",
+    "description": "East Bay disclosure packages run 200+ pages and offers are non-contingent — so you read everything before you bid. A document-by-document guide to what actually matters.",
     "content": "",
     "link": "/blog/how-to-read-east-bay-disclosure-package/"
   },
