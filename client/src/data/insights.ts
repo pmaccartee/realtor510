@@ -72,6 +72,14 @@ export const insights = [
     "link": "/blog/what-local-micro-markets-are-quietly-heating-up-for-2026"
   },
   {
+    "id": "east-bay-tic-guide",
+    "title": "The East Bay Guide to Tenancy in Common (TIC)",
+    "category": "Buyer Guide",
+    "description": "What East Bay buyers and sellers need to know about Tenancy in Common — financing, pricing, condo conversion, and why modern TICs aren't the risk they used to be.",
+    "content": "",
+    "link": "/blog/east-bay-tic-guide/"
+  },
+  {
     "id": "whats-your-process-for-pricing-strategy-in-low-inventory-high-demand-zones",
     "title": "What’s your process for pricing strategy in low-inventory, high-demand zones?",
     "category": "Market Intelligence",
@@ -102,6 +110,14 @@ export const insights = [
     "description": "Post-2020, luxury buyers seek wellness, flexibility, and calm. See what’s \nin demand now.",
     "content": "",
     "link": "/blog/how-are-affluent-buyers-preferences-changing-post-2020/"
+  },
+  {
+    "id": "san-francisco-tic-guide",
+    "title": "Buying a TIC in San Francisco — The Complete Guide",
+    "category": "Buyer Guide",
+    "description": "A San Francisco buyer's guide to Tenancy in Common — fractional financing, the discount vs. condos, the suspended condo conversion lottery, the two-unit bypass, and what to check before you buy.",
+    "content": "",
+    "link": "/blog/san-francisco-tic-guide/"
   },
   {
     "id": "how-are-fire-insurance-constraints-affecting-buyer-psychology",
