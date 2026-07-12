@@ -172,9 +172,38 @@
       .local-card { margin-bottom: 16px; }
       .local-card img { height: 220px; }
     }
+    /* SITE NAV (site chrome — same as /june26 and other pages) */
+    .site-nav { position:fixed; top:0; left:0; right:0; z-index:9999; background:#fff; border-bottom:1px solid #e5e0d8; box-shadow:0 1px 3px rgba(0,0,0,0.05); padding:0 24px; height:80px; display:flex; align-items:center; justify-content:space-between; font-family:'Montserrat',sans-serif; max-width:100%; }
+    .site-nav a { text-decoration:none; }
+    .nav-inner { max-width:1280px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { height:48px; width:auto; object-fit:contain; }
+    .nav-links { display:flex; align-items:center; gap:32px; }
+    .nav-links a { font-size:11px; font-weight:500; letter-spacing:0.08em; color:#1A1A1A; text-transform:uppercase; transition:color 0.2s; }
+    .nav-links a:hover { color:#B22222; }
+    .nav-contact { background:#B22222; color:white !important; padding:8px 24px; box-shadow:0 1px 2px rgba(0,0,0,0.1); }
+    .nav-contact:hover { opacity:0.9; }
+    .page-spacer { height:80px; }
+    @media (max-width:768px) { .nav-links { display:none; } }
   </style>
 </head>
 <body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/">
+        <img src="/PM_LOGO_Banner.png" alt="Patrick MacCartee" class="nav-logo">
+      </a>
+      <div class="nav-links">
+        <a href="/buy">Buy</a>
+        <a href="/sell">Sell</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/neighborhoods">Neighborhoods</a>
+        <a href="/blog">Blog</a>
+        <a href="javascript:void(0)" onclick="window.location.href='mailto:' + ['patrick','realtor510.com'].join('@')" class="nav-contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <div class="page-spacer"></div>
+
 <!-- Preview text -->
 <div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#ffffff;opacity:0;">Q2 is closed out. Prices up 4.6% across the region. Piedmont +47%. Montclair roaring back. Here's what the numbers actually say.&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;</div>
 
