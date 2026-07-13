@@ -1,5 +1,13 @@
 export const insights = [
   {
+    "id": "real-estate-decoded-july-2026",
+    "title": "Real Estate Decoded — July 2026",
+    "category": "Market Update",
+    "description": "The East Bay's first half of 2026 is in the books — prices surged to close out Q2. The regional median hit $1.36M (+4.6% YoY) and 76% of homes sold over asking. The H1 2026 market report for buyers and sellers.",
+    "content": "",
+    "link": "/july26"
+  },
+  {
     "id": "real-estate-decoded-june-2026",
     "title": "Real Estate Decoded — June 2026",
     "category": "Market Update",
