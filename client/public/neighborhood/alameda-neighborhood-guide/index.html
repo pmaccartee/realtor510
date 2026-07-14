@@ -161,6 +161,39 @@
   .section-body p:last-child { margin-bottom: 0; }
 
   /* DATA ROW */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #d8d8d8;
+    border: 1px solid #d8d8d8;
+    margin: 48px 0;
+  }
+
+  .stat-cell {
+    background: #f5f5f5;
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--crimson);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: .65rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #6b6b6b;
+  }
+
   .data-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -491,24 +524,24 @@ src="https://www.facebook.com/tr?id=1438966301114887&ev=PageView&noscript=1"
             <div class="section-body">
                 
             <p>Alameda offers relative value compared to Piedmont and Berkeley while sharing many of the same lifestyle advantages. Median home prices for single-family homes run around $1,450,000. Victorian properties on the Gold Coast and Bronze Coast command premiums. The market is competitive — well-priced homes move quickly and receive multiple offers.</p>
-            <div class="data-row" style="grid-template-columns: repeat(4, 1fr); max-width: 800px;">
-                <div class="data-item">
-                    <span class="data-label">Median List Price</span>
-                    <span class="data-value">$1,280,000</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Median Sale Price</span>
-                    <span class="data-value">$1,450,000</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Days on Market</span>
-                    <span class="data-value">13 days</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">List-to-Sale Ratio</span>
-                    <span class="data-value">115%</span>
-                </div>
-            </div>
+              <div class="stat-row" style="grid-template-columns: repeat(4,1fr);">
+    <div class="stat-cell">
+      <span class="stat-num">$1.28M</span>
+      <span class="stat-label">Median List Price</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">$1.45M</span>
+      <span class="stat-label">Median Sale Price</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">13</span>
+      <span class="stat-label">Avg. Days on Market</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">115%</span>
+      <span class="stat-label">List-to-Sale Ratio</span>
+    </div>
+  </div>
             <p class="agent-note">Data sourced from MLS. I update these figures quarterly. For the most current numbers or a specific property valuation, <a href="/cdn-cgi/l/email-protection#36465742445f555d76514443545455591855595b">contact me directly</a>.</p>
         
             </div>
