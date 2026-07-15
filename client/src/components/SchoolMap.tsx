@@ -41,6 +41,95 @@ const RATED_SCHOOLS: any[] = JSON.parse(schoolDataRaw).districts.flatMap((d: any
   d.schools.map((s: any) => ({ ...s, district: d.name, finderUrl: d.finderUrl }))
 );
 
+// ── Median home price by area (drives the "Median Home Price" filter) ──
+// Single source of truth: the pricing table on /east-bay-school-guide. Values in
+// dollars. The filter shows a school only when its area median is <= the chosen
+// ceiling, so areas priced above the selection drop off the map.
+const AREA_MEDIAN: Record<string, number> = {
+  // Whole-city districts
+  Albany: 1_590_000,
+  Alameda: 1_620_000,
+  Berkeley: 1_740_000, // citywide — the guide collapses Berkeley's 3 zones into one
+  Piedmont: 3_230_000,
+  Orinda: 2_190_000,
+  Lafayette: 2_020_000,
+  Moraga: 2_000_000,
+  "El Cerrito": 1_290_000,
+  Kensington: 1_800_000,
+  // Oakland (OUSD) neighborhood pipeline rows
+  Rockridge: 2_250_000,
+  "Upper Rockridge": 2_250_000,
+  "Crocker Highlands": 1_960_000,
+  Glenview: 1_360_000,
+  Montclair: 1_500_000, // "Montclair / Thornhill" row
+  // Outlier assignments (July 2026 newsletter — not on the guide's pricing table)
+  "San Leandro": 921_000,
+  Oakland: 1_000_000, // citywide fallback for OUSD schools outside a priced pipeline row
+};
+
+// Oakland has no single citywide price — each school maps to the neighborhood
+// pipeline row it sits in on the guide table. Keys must match names in
+// east-bay-schools.json. Oakland schools absent here have no priced area on the
+// guide and fall through to "visible" (see areaMedianFor).
+const OAKLAND_SCHOOL_AREA: Record<string, string> = {
+  "Chabot Elementary": "Rockridge",
+  "Peralta Elementary": "Rockridge",
+  "Oakland Technical High School": "Rockridge", // 2.25M — serves Rockridge/Upper Rockridge
+  "Hillcrest Elementary": "Upper Rockridge",
+  "Crocker Highlands Elementary": "Crocker Highlands",
+  "Montclair Elementary": "Montclair",
+  "Thornhill Elementary": "Montclair",
+  "Joaquin Miller Elementary": "Montclair", // Montclair/Oakland Hills
+  "Montera Middle School": "Montclair",
+  "Skyline High School": "Montclair",
+  // Oakland schools not listed here (e.g. Lincoln/West Oakland, Redwood Heights)
+  // fall back to the Oakland citywide median in areaMedianFor.
+};
+
+// Median home price of a school's area, or null when the school can't be cleanly
+// assigned one (defaults to visible under the price filter — never silently hidden).
+function areaMedianFor(s: any): number | null {
+  const d: string = s.district || "";
+  if (d === "Albany Unified") return AREA_MEDIAN.Albany;
+  if (d === "Alameda Unified") return AREA_MEDIAN.Alameda;
+  if (d === "Berkeley Unified") return AREA_MEDIAN.Berkeley; // one citywide median, no zones
+  if (d === "Piedmont Unified") return AREA_MEDIAN.Piedmont;
+  if (d === "Orinda Union Elementary") return AREA_MEDIAN.Orinda;
+  if (d === "Lafayette Elementary") return AREA_MEDIAN.Lafayette;
+  if (d === "Moraga Elementary") return AREA_MEDIAN.Moraga;
+  // Oakland: per-school neighborhood pipeline, else the citywide fallback.
+  if (d === "Oakland Unified") {
+    const area = OAKLAND_SCHOOL_AREA[s.name];
+    return area ? AREA_MEDIAN[area] : AREA_MEDIAN.Oakland;
+  }
+  if (d === "San Leandro Unified") return AREA_MEDIAN["San Leandro"];
+  // WCCUSD El Cerrito / Kensington: each school carries its city.
+  if (d.startsWith("West Contra Costa")) {
+    return s.city && AREA_MEDIAN[s.city] != null ? AREA_MEDIAN[s.city] : null;
+  }
+  // Acalanes HS district: each high school serves one priced Lamorinda city.
+  if (d === "Acalanes Union High School District") {
+    if (s.serves === "Orinda") return AREA_MEDIAN.Orinda;
+    if (s.serves === "Lafayette") return AREA_MEDIAN.Lafayette;
+    if (s.serves === "Moraga") return AREA_MEDIAN.Moraga;
+    return null; // TODO: Las Lomas serves Walnut Creek — not on the guide
+  }
+  // TODO: Walnut Creek Elementary (and Las Lomas above) are out-of-market with no
+  // newsletter figure — no fabricated price; they default to visible.
+  return null;
+}
+
+// "Median Home Price" dropdown options — half-million steps, $1M–$4M ($ millions).
+const PRICE_OPTIONS: { label: string; value: number }[] = [
+  { label: "$1M", value: 1_000_000 },
+  { label: "$1.5M", value: 1_500_000 },
+  { label: "$2M", value: 2_000_000 },
+  { label: "$2.5M", value: 2_500_000 },
+  { label: "$3M", value: 3_000_000 },
+  { label: "$3.5M", value: 3_500_000 },
+  { label: "$4M", value: 4_000_000 },
+];
+
 // NCES SABS level code -> our toggle level. "4" (combined 6-12, e.g. Encinal
 // Jr/Sr) is shown with the high layer.
 const SABS_LEVEL: Record<string, Level> = { "1": "elementary", "2": "middle", "3": "high", "4": "high" };
@@ -117,6 +206,7 @@ export default function SchoolMap() {
   const [report, setReport] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [minScore, setMinScore] = useState(0); // 0 = show all; otherwise minimum GreatSchools rating to show
+  const [maxPrice, setMaxPrice] = useState<number | null>(null); // null = All Prices; else max area median to show
 
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
@@ -128,6 +218,9 @@ export default function SchoolMap() {
 
   useEffect(() => {
     if ((window as any).google) { initMap(); return; }
+    // No key (e.g. local preview — the production key is HTTP-referrer restricted):
+    // skip loading Maps rather than injecting a broken script. Filters/legend still render.
+    if (!GOOGLE_MAPS_API_KEY) return;
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places`;
     script.async = true;
@@ -140,10 +233,10 @@ export default function SchoolMap() {
     if (mapInstanceRef.current) drawPolygons();
   }, [visible]);
 
-  // Redraw the school dots whenever the level toggles or the score filter change.
+  // Redraw the school dots whenever the level toggles, score, or price filter change.
   useEffect(() => {
     if (mapInstanceRef.current) drawPins();
-  }, [minScore, visible]);
+  }, [minScore, maxPrice, visible]);
 
   function initMap() {
     if (!mapRef.current) return;
@@ -284,6 +377,12 @@ export default function SchoolMap() {
     for (const s of RATED_SCHOOLS) {
       if (!visible[s.level as Level]) continue; // hide dots whose grade level is toggled off
       if (s.greatschools_rating < minScore) continue; // hide schools below the chosen minimum
+      if (maxPrice != null) {
+        const median = areaMedianFor(s);
+        // Hide schools whose area median is above the ceiling. Unknown medians
+        // stay visible (default visible — never silently hidden). AND with rating.
+        if (median != null && median > maxPrice) continue;
+      }
       const color = LEVEL_COLOR[s.level as Level] ?? "#555";
       const marker = new g.maps.Marker({
         position: { lat: s.lat, lng: s.lng },
@@ -359,7 +458,7 @@ export default function SchoolMap() {
         East Bay Schools Map
       </h2>
       <p style={{ fontSize: "14px", color: "#666", marginBottom: "8px", lineHeight: 1.6 }}>
-        Every dot is a school, colored by level — <span style={{ color: "#2E7D32", fontWeight: 600 }}>elementary</span>, <span style={{ color: "#1565C0", fontWeight: 600 }}>middle</span>, <span style={{ color: "#C62828", fontWeight: 600 }}>high</span>. Click any dot for details. Use <strong>Min rating</strong> to show only higher-rated schools, toggle the attendance boundaries below to see which school serves which area, or enter an Oakland address to find its assigned OUSD schools.
+        Every dot is a school, colored by level — <span style={{ color: "#2E7D32", fontWeight: 600 }}>elementary</span>, <span style={{ color: "#1565C0", fontWeight: 600 }}>middle</span>, <span style={{ color: "#C62828", fontWeight: 600 }}>high</span>. Click any dot for details. Filter by <strong>Median Home Price</strong> or <strong>Min rating</strong> to narrow the map, toggle the attendance boundaries below to see which school serves which area, or enter an Oakland address to find its assigned OUSD schools.
       </p>
       <p style={{ fontSize: "11px", color: "#aaa", marginBottom: "20px" }}>
         ⚠️ Boundaries: Oakland (OUSD) is official 2025–26 data; most other districts are from the NCES School Attendance Boundary Survey (2015–16); Berkeley's 3 elementary zones (lottery within each zone) are reconstructed from BUSD's address directory and are approximate near the edges. Assignments change over time and some addresses have options/exceptions — always confirm directly with the school or district before relying on this.
@@ -393,22 +492,39 @@ export default function SchoolMap() {
           );
         })}
 
-        <label style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#1A1A1A", fontWeight: 600 }}>
-          Min rating
-          <span style={{ position: "relative", display: "inline-flex", alignItems: "center" }}>
-            <select value={minScore} onChange={e => setMinScore(Number(e.target.value))}
-              style={{ appearance: "none", WebkitAppearance: "none", MozAppearance: "none", padding: "10px 36px 10px 16px", borderRadius: "6px", border: "none", fontSize: "13px", fontWeight: 700, letterSpacing: "0.02em", color: "#fff", background: "#B22222", cursor: "pointer" }}>
-              <option value={0} style={{ background: "#fff", color: "#1A1A1A" }}>All schools</option>
-              <option value={4} style={{ background: "#fff", color: "#1A1A1A" }}>4+</option>
-              <option value={5} style={{ background: "#fff", color: "#1A1A1A" }}>5+</option>
-              <option value={6} style={{ background: "#fff", color: "#1A1A1A" }}>6+</option>
-              <option value={7} style={{ background: "#fff", color: "#1A1A1A" }}>7+</option>
-              <option value={8} style={{ background: "#fff", color: "#1A1A1A" }}>8+</option>
-              <option value={9} style={{ background: "#fff", color: "#1A1A1A" }}>9+</option>
-            </select>
-            <span style={{ position: "absolute", right: "13px", pointerEvents: "none", color: "#fff", fontSize: "10px", lineHeight: 1 }}>▼</span>
-          </span>
-        </label>
+        {/* Filter dropdowns, grouped to the right: Median Home Price · Min rating */}
+        <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
+          <label style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#1A1A1A", fontWeight: 600 }}>
+            Median Home Price
+            <span style={{ position: "relative", display: "inline-flex", alignItems: "center" }}>
+              <select value={maxPrice ?? ""} onChange={e => setMaxPrice(e.target.value ? Number(e.target.value) : null)}
+                style={{ appearance: "none", WebkitAppearance: "none", MozAppearance: "none", padding: "10px 36px 10px 16px", borderRadius: "6px", border: "none", fontSize: "13px", fontWeight: 700, letterSpacing: "0.02em", color: "#fff", background: "#B22222", cursor: "pointer" }}>
+                <option value="" style={{ background: "#fff", color: "#1A1A1A" }}>All Prices</option>
+                {PRICE_OPTIONS.map(p => (
+                  <option key={p.value} value={p.value} style={{ background: "#fff", color: "#1A1A1A" }}>{p.label}</option>
+                ))}
+              </select>
+              <span style={{ position: "absolute", right: "13px", pointerEvents: "none", color: "#fff", fontSize: "10px", lineHeight: 1 }}>▼</span>
+            </span>
+          </label>
+
+          <label style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#1A1A1A", fontWeight: 600 }}>
+            Min rating
+            <span style={{ position: "relative", display: "inline-flex", alignItems: "center" }}>
+              <select value={minScore} onChange={e => setMinScore(Number(e.target.value))}
+                style={{ appearance: "none", WebkitAppearance: "none", MozAppearance: "none", padding: "10px 36px 10px 16px", borderRadius: "6px", border: "none", fontSize: "13px", fontWeight: 700, letterSpacing: "0.02em", color: "#fff", background: "#B22222", cursor: "pointer" }}>
+                <option value={0} style={{ background: "#fff", color: "#1A1A1A" }}>All schools</option>
+                <option value={4} style={{ background: "#fff", color: "#1A1A1A" }}>4+</option>
+                <option value={5} style={{ background: "#fff", color: "#1A1A1A" }}>5+</option>
+                <option value={6} style={{ background: "#fff", color: "#1A1A1A" }}>6+</option>
+                <option value={7} style={{ background: "#fff", color: "#1A1A1A" }}>7+</option>
+                <option value={8} style={{ background: "#fff", color: "#1A1A1A" }}>8+</option>
+                <option value={9} style={{ background: "#fff", color: "#1A1A1A" }}>9+</option>
+              </select>
+              <span style={{ position: "absolute", right: "13px", pointerEvents: "none", color: "#fff", fontSize: "10px", lineHeight: 1 }}>▼</span>
+            </span>
+          </label>
+        </div>
       </div>
 
       {/* Map */}
