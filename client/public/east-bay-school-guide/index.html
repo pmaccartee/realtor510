@@ -182,7 +182,7 @@ fbq('track', 'PageView');
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -599,6 +599,7 @@ fbq('track', 'PageView');
       <h1>East Bay School Guide.<br><em>Ratings, pipelines, the full picture.</em></h1>
       <p>GreatSchools ratings for every level — elementary, middle, and high — across Oakland neighborhoods, Berkeley, Albany, Piedmont, Alameda, Orinda, Lafayette, Moraga, El Cerrito, and Kensington. Because a block can change the school. And a school can change everything.</p>
       <p class="hero-meta">Schools: GreatSchools.org · Homes.com · Niche (2024–25) &nbsp;·&nbsp; Market data: Spring 2026 MLS · 3+ bed / 2+ bath &nbsp;·&nbsp; Ratings compare schools within California (1–10 scale)</p>
+      <a href="/schools" class="btn-primary" style="display:inline-block; margin-top:22px;">See the full ratings table &rarr;</a>
     </div>
   </div>
 </div>
@@ -618,6 +619,9 @@ fbq('track', 'PageView');
     </div>
   </div>
 
+  <!-- INTERACTIVE SCHOOL MAP (reuses the <SchoolMap /> component from /schools) -->
+  <div id="school-map-embed-root" style="margin: 36px 0 8px;"></div>
+
   <!-- SECTION 1 -->
   <div class="section-divider">
     <h2>Whole-City Districts &mdash; <em style="font-style:italic; color:var(--mid);">Consistent 7+ at every level</em></h2>
@@ -628,11 +632,10 @@ fbq('track', 'PageView');
     <thead>
       <tr>
         <th style="width:13%">Area</th>
-        <th style="width:24%">Elementary</th>
-        <th style="width:20%">Middle</th>
-        <th style="width:21%">High School</th>
-        <th class="stat-th" style="width:9%;text-align:right">Median<br>Sale Price</th>
-        <th class="stat-th" style="width:6%;text-align:right">Homes<br>Sold</th>
+        <th class="stat-th" style="width:10%;text-align:right">Median<br>Sale Price</th>
+        <th style="width:25%">Elementary</th>
+        <th style="width:22%">Middle</th>
+        <th style="width:24%">High School</th>
       </tr>
     </thead>
     <tbody>
@@ -640,6 +643,7 @@ fbq('track', 'PageView');
       <!-- Albany -->
       <tr>
         <td class="area-cell">Albany<span class="district">Albany City Unified</span></td>
+        <td class="stat-cell"><span class="stat-val">$1.59M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Ocean View, Cornell, Marin, Harding</span>
@@ -659,13 +663,12 @@ fbq('track', 'PageView');
             <div class="school-sub">#76 in CA · A+ Niche · 95% grad rate</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$1.59M</span></td>
-        <td class="stat-cell"><span class="stat-val">17</span></td>
       </tr>
 
       <!-- Alameda -->
       <tr>
         <td class="area-cell">Alameda<span class="district">Alameda Unified</span></td>
+        <td class="stat-cell"><span class="stat-val">$1.62M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Amelia Earhart Elementary<span class="badge r10">10/10</span></span>
@@ -705,14 +708,13 @@ fbq('track', 'PageView');
             <div class="school-sub">6–12 · west end · $50M renovation 2021</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$1.62M</span></td>
-        <td class="stat-cell"><span class="stat-val">65</span></td>
       </tr>
 
       <!-- Berkeley -->
       <tr>
-        <td class="area-cell" rowspan="3">Berkeley<span class="district">Berkeley Unified</span></td>
-        <td rowspan="3">
+        <td class="area-cell">Berkeley<span class="district">Berkeley Unified</span></td>
+        <td class="stat-cell"><span class="stat-val">$1.74M</span></td>
+        <td>
           <div class="school-entry">
             <span class="school-name">Washington<span class="badge r10">10/10</span></span>
             <div class="school-sub">K–5 · North Berkeley</div>
@@ -728,7 +730,7 @@ fbq('track', 'PageView');
             <span class="school-name">Cragmont · Emerson · John Muir<span class="badge r7">7/10</span></span>
           </div>
         </td>
-        <td rowspan="3">
+        <td>
           <div class="school-entry">
             <span class="school-name">Willard Middle<span class="badge r10">10/10</span></span>
             <div class="school-sub">6–8 · Stuart St</div>
@@ -738,28 +740,19 @@ fbq('track', 'PageView');
             <div class="school-sub">6–8</div>
           </div>
         </td>
-        <td rowspan="3">
+        <td>
           <div class="school-entry">
             <span class="school-name">Berkeley High<span class="badge r9">9/10</span></span>
             <div class="school-sub">9–12 · only public HS · #213 in CA</div>
           </div>
           <div class="note-line">Lottery/integration system — zone ≠ guarantee</div>
         </td>
-        <td class="stat-cell"><span class="sub-area-tag">Hills &amp; Thousand Oaks</span><span class="stat-val">$1.95M</span></td>
-        <td class="stat-cell"><span class="sub-area-tag">Hills &amp; Thousand Oaks</span><span class="stat-val">76</span></td>
-      </tr>
-      <tr>
-        <td class="stat-cell"><span class="sub-area-tag">Clairmont &amp; Elmwood</span><span class="stat-val">$2.20M</span></td>
-        <td class="stat-cell"><span class="sub-area-tag">Clairmont &amp; Elmwood</span><span class="stat-val">39</span></td>
-      </tr>
-      <tr>
-        <td class="stat-cell"><span class="sub-area-tag">South &amp; West</span><span class="stat-val">$1.49M</span></td>
-        <td class="stat-cell"><span class="sub-area-tag">South &amp; West</span><span class="stat-val">26</span></td>
       </tr>
 
       <!-- Piedmont -->
       <tr>
         <td class="area-cell">Piedmont<span class="district">Piedmont Unified</span></td>
+        <td class="stat-cell"><span class="stat-val">$3.23M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Havens · Wildwood<span class="badge r9">9/10</span></span>
@@ -782,13 +775,12 @@ fbq('track', 'PageView');
             <div class="school-sub">A+ Niche · top 100 nationally · separate city district</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$3.23M</span></td>
-        <td class="stat-cell"><span class="stat-val">48</span></td>
       </tr>
 
       <!-- Orinda -->
       <tr>
         <td class="area-cell">Orinda<span class="district">Orinda Union Elem. +<br>Acalanes HS District</span></td>
+        <td class="stat-cell"><span class="stat-val">$2.19M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Los Perales<span class="badge r9">9/10</span></span>
@@ -811,13 +803,12 @@ fbq('track', 'PageView');
             <div class="school-sub">#31 in CA · A+ Niche · 98% grad rate</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$2.19M</span></td>
-        <td class="stat-cell"><span class="stat-val">82</span></td>
       </tr>
 
       <!-- Lafayette -->
       <tr>
         <td class="area-cell">Lafayette<span class="district">Lafayette Elem. District +<br>Acalanes HS District</span></td>
+        <td class="stat-cell"><span class="stat-val">$2.02M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Burton Valley · Happy Valley · Springhill · Lafayette Elem.<span class="badge r8">8/10</span></span>
@@ -836,13 +827,12 @@ fbq('track', 'PageView');
             <div class="school-sub">#77 in CA · A+ Niche · 97% grad rate</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$2.02M</span></td>
-        <td class="stat-cell"><span class="stat-val">100</span></td>
       </tr>
 
       <!-- Moraga -->
       <tr>
         <td class="area-cell">Moraga<span class="district">Moraga Elem. District +<br>Acalanes HS District</span></td>
+        <td class="stat-cell"><span class="stat-val">$2.00M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Los Perales<span class="badge r9">9/10</span></span>
@@ -865,8 +855,6 @@ fbq('track', 'PageView');
             <div class="school-sub">#30 in CA · A+ Niche · 99% grad rate</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$2.00M</span></td>
-        <td class="stat-cell"><span class="stat-val">45</span></td>
       </tr>
 
     </tbody>
@@ -883,11 +871,10 @@ fbq('track', 'PageView');
     <thead>
       <tr>
         <th style="width:16%">Neighborhood</th>
-        <th style="width:22%">Elementary</th>
-        <th style="width:20%">Middle</th>
-        <th style="width:19%">High School</th>
-        <th class="stat-th" style="width:9%;text-align:right">Median<br>Sale Price</th>
-        <th class="stat-th" style="width:6%;text-align:right">Homes<br>Sold</th>
+        <th class="stat-th" style="width:10%;text-align:right">Median<br>Sale Price</th>
+        <th style="width:24%">Elementary</th>
+        <th style="width:22%">Middle</th>
+        <th style="width:21%">High School</th>
       </tr>
     </thead>
     <tbody>
@@ -895,6 +882,7 @@ fbq('track', 'PageView');
       <!-- Upper Rockridge -->
       <tr>
         <td class="area-cell">Upper Rockridge<span class="district">Hillcrest zone</span></td>
+        <td class="stat-cell"><span class="stat-val">$2.25M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Hillcrest Elementary<span class="badge r7">7/10</span></span>
@@ -913,13 +901,12 @@ fbq('track', 'PageView');
             <div class="school-sub">A Niche · #557 in CA</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$2.25M</span></td>
-        <td class="stat-cell"><span class="stat-val">34</span></td>
       </tr>
 
       <!-- Rockridge -->
       <tr>
         <td class="area-cell">Rockridge<span class="district">Chabot / Peralta zone</span></td>
+        <td class="stat-cell"><span class="stat-val">$2.25M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Peralta Elementary<span class="badge r9">9/10</span></span>
@@ -941,13 +928,12 @@ fbq('track', 'PageView');
             <span class="school-name">Oakland Technical<span class="badge r8">8/10</span></span>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$2.25M</span></td>
-        <td class="stat-cell"><span class="stat-val">34</span></td>
       </tr>
 
       <!-- Crocker Highlands -->
       <tr>
         <td class="area-cell">Crocker Highlands<span class="district">Trestle Glen area</span></td>
+        <td class="stat-cell"><span class="stat-val">$1.96M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Crocker Highlands Elem.<span class="badge r8">8/10</span></span>
@@ -967,13 +953,12 @@ fbq('track', 'PageView');
             <div class="note-line">Many families pursue lottery transfer to Oakland Tech</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$1.96M</span></td>
-        <td class="stat-cell"><span class="stat-val">26</span></td>
       </tr>
 
       <!-- Glenview -->
       <tr>
         <td class="area-cell">Glenview</td>
+        <td class="stat-cell"><span class="stat-val">$1.36M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Glenview Elementary<span class="badge r7">7/10</span></span>
@@ -992,13 +977,12 @@ fbq('track', 'PageView');
             <div class="note-line">Many families pursue lottery transfer to Oakland Tech</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$1.36M</span></td>
-        <td class="stat-cell"><span class="stat-val">14</span></td>
       </tr>
 
       <!-- Montclair -->
       <tr>
         <td class="area-cell">Montclair / Thornhill</td>
+        <td class="stat-cell"><span class="stat-val">$1.50M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Montclair Elementary<span class="badge r9">9/10</span></span>
@@ -1021,8 +1005,6 @@ fbq('track', 'PageView');
             <div class="school-sub">B+ Niche · 45-acre hill campus</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$1.50M</span></td>
-        <td class="stat-cell"><span class="stat-val">73</span></td>
       </tr>
 
     </tbody>
@@ -1039,11 +1021,10 @@ fbq('track', 'PageView');
     <thead>
       <tr>
         <th style="width:16%">Area</th>
-        <th style="width:22%">Elementary</th>
-        <th style="width:20%">Middle</th>
-        <th style="width:19%">High School</th>
-        <th class="stat-th" style="width:9%;text-align:right">Median<br>Sale Price</th>
-        <th class="stat-th" style="width:6%;text-align:right">Homes<br>Sold</th>
+        <th class="stat-th" style="width:10%;text-align:right">Median<br>Sale Price</th>
+        <th style="width:24%">Elementary</th>
+        <th style="width:22%">Middle</th>
+        <th style="width:21%">High School</th>
       </tr>
     </thead>
     <tbody>
@@ -1051,6 +1032,7 @@ fbq('track', 'PageView');
       <!-- El Cerrito -->
       <tr>
         <td class="area-cell">El Cerrito<span class="district">West Contra Costa Unified</span></td>
+        <td class="stat-cell"><span class="stat-val">$1.29M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Madera Elementary</span>
@@ -1074,13 +1056,12 @@ fbq('track', 'PageView');
             <div class="note-line">IT Academy · Media Academy · career pathways</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$1.29M</span></td>
-        <td class="stat-cell"><span class="stat-val">34</span></td>
       </tr>
 
       <!-- Kensington -->
       <tr>
         <td class="area-cell">Kensington<span class="district">Unincorporated ·<br>West Contra Costa Unified</span></td>
+        <td class="stat-cell"><span class="stat-val">$1.80M</span></td>
         <td>
           <div class="school-entry">
             <span class="school-name">Kensington Hilltop Elem.<span class="badge r8">8/10</span></span>
@@ -1102,8 +1083,6 @@ fbq('track', 'PageView');
             <div class="note-line">Some families transfer to Berkeley High (9/10) via interdistrict permit</div>
           </div>
         </td>
-        <td class="stat-cell"><span class="stat-val">$1.80M</span></td>
-        <td class="stat-cell"><span class="stat-val">17</span></td>
       </tr>
 
     </tbody>
@@ -1152,6 +1131,9 @@ fbq('track', 'PageView');
   </nav>
 </footer>
 
+
+<!-- East Bay Schools Map — same component as /schools -->
+<script type="module" src="/embed/school-map-embed.js"></script>
 
 <script>
   const mobileBtn = document.getElementById('mobile-menu-btn');

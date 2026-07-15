@@ -8,6 +8,13 @@ const PROJECT_ROOT = path.resolve(__dirname, "..");
 
 const ROUTES = ["/", "/buy", "/sell", "/reviews", "/waters", "/blog", "/neighborhoods", "/schools"];
 
+// Per-route canonical tags. /schools shares its ratings/pricing matrix with the
+// flagship /east-bay-school-guide page, which is the primary — canonicalize to it
+// so the duplicated table doesn't dilute either page.
+const CANONICALS = {
+  "/schools": "https://realtor510.com/east-bay-school-guide",
+};
+
 const ssrPath = path.join(PROJECT_ROOT, "dist", "server", "entry-server.js");
 const { render } = await import(pathToFileURL(ssrPath).href);
 
@@ -17,8 +24,9 @@ const template = await readFile(templatePath, "utf-8");
 for (const route of ROUTES) {
   const appHtml = render(route);
   const buildStamp = `<!-- built: ${new Date().toISOString()} -->`;
+  const canonical = CANONICALS[route] ? `<link rel="canonical" href="${CANONICALS[route]}">\n` : "";
   const html = template
-    .replace('</head>', `${buildStamp}\n</head>`)
+    .replace('</head>', `${canonical}${buildStamp}\n</head>`)
     .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
 
   let outPath;

@@ -1,5 +1,6 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
+import react from "@vitejs/plugin-react";
 import { rm, readFile, mkdir, copyFile, writeFile } from "fs/promises";
 import path from "path";
 import { pathToFileURL } from "url";
@@ -51,6 +52,43 @@ async function buildAll() {
           format: "es",
           entryFileNames: "entry-server.js",
         },
+      },
+    },
+  });
+
+  console.log("building school-map embed bundle...");
+  // Self-contained bundle (React + <SchoolMap /> + data) with a FIXED filename so
+  // the static /east-bay-school-guide page can embed the same map that /schools
+  // renders. Output: dist/public/embed/school-map-embed.js
+  // configFile:false so we don't inherit the main app's rollup input/CSS/publicDir
+  // — this is a standalone widget, not the SPA.
+  await viteBuild({
+    configFile: false,
+    root: path.resolve("client"),
+    plugins: [react()],
+    resolve: {
+      alias: {
+        "@": path.resolve("client/src"),
+        "@shared": path.resolve("shared"),
+        "@assets": path.resolve("attached_assets"),
+      },
+    },
+    define: {
+      // React reads process.env.NODE_ENV; with configFile:false we must define it
+      // ourselves (the main app build does this automatically).
+      "process.env.NODE_ENV": JSON.stringify("production"),
+      // Same Maps key the /schools build uses (from the Replit env at build time).
+      "import.meta.env.VITE_GOOGLE_MAPS_KEY": JSON.stringify(process.env.VITE_GOOGLE_MAPS_KEY || ""),
+    },
+    build: {
+      outDir: path.resolve("dist/public/embed"),
+      emptyOutDir: true,
+      copyPublicDir: false, // don't duplicate client/public into the embed dir
+      minify: "esbuild",
+      lib: {
+        entry: path.resolve("client/src/school-map-embed.tsx"),
+        formats: ["es"],
+        fileName: () => "school-map-embed.js",
       },
     },
   });
