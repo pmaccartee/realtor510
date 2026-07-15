@@ -607,8 +607,11 @@ fbq('track', 'PageView');
 <!-- MAIN CONTENT -->
 <div class="page-wrap">
 
-  <!-- RATING KEY -->
-  <div class="key-section">
+  <!-- INTERACTIVE SCHOOL MAP (reuses the <SchoolMap /> component from /schools) -->
+  <div id="school-map-embed-root" style="margin: 36px 0 8px;"></div>
+
+  <!-- RATING KEY (for the table sections below) -->
+  <div class="key-section" style="margin-top: 32px;">
     <div class="key-label">Rating Key</div>
     <div class="key-pills">
       <span class="pill r10">9–10 &nbsp;Excellent</span>
@@ -618,9 +621,6 @@ fbq('track', 'PageView');
       <span class="pill r4">≤5 &nbsp;Weak</span>
     </div>
   </div>
-
-  <!-- INTERACTIVE SCHOOL MAP (reuses the <SchoolMap /> component from /schools) -->
-  <div id="school-map-embed-root" style="margin: 36px 0 8px;"></div>
 
   <!-- SECTION 1 -->
   <div class="section-divider">
