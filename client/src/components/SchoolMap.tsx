@@ -161,12 +161,18 @@ function titleCase(s: string): string {
   return s.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
 }
 
-// Reliable lookup link for a school. GreatSchools' legacy search endpoint
-// dead-ends or 404s on some names, so we send users to a Google search of the
-// school, which always lands on it.
+// GreatSchools search — used only where we have a bare school NAME (attendance
+// boundary/zone popups, address-lookup results) rather than a full school record.
 function schoolSearchUrl(name: string, locality: string): string {
   const q = `${name} ${locality} CA`.replace(/\s+/g, " ").trim();
-  return `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+  return `https://www.greatschools.org/search/search.page?q=${encodeURIComponent(q)}&state=CA`;
+}
+
+// Direct GreatSchools profile for a rated school (every school in the data has
+// greatschools_url); the search fallback is a safety net for future additions.
+function schoolUrl(school: any): string {
+  if (school.greatschools_url) return school.greatschools_url;
+  return schoolSearchUrl(school.name, cityOf(school));
 }
 
 // Best-effort city from a SABS district name, for the lookup query.
@@ -402,7 +408,7 @@ export default function SchoolMap() {
              <div style="font-size:11px;color:#999;margin-bottom:6px">${s.district}</div>
              ${s.address ? `<div style="font-size:11px;color:#888;margin-bottom:6px">${s.address}</div>` : ""}
              ${s.note ? `<div style="font-size:11px;color:#555;font-style:italic;margin-bottom:6px">${s.note}</div>` : ""}
-             <a href="${schoolSearchUrl(s.name, cityOf(s))}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:${color};font-weight:600;text-decoration:none">School details →</a>
+             <a href="${schoolUrl(s)}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:${color};font-weight:600;text-decoration:none">School details →</a>
            </div>`
         );
         infoWindowRef.current.setPosition({ lat: s.lat, lng: s.lng });
