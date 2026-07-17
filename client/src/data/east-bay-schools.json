@@ -87,7 +87,46 @@
         {"name": "Joaquin Miller Elementary", "level": "elementary", "grades": "K-5", "address": "5525 Ascot Dr, Oakland CA 94611", "lat": 37.81917, "lng": -122.20191, "greatschools_rating": 6, "neighborhood": "Montclair/Oakland Hills", "greatschools_url": "https://www.greatschools.org/california/oakland/242-Joaquin-Miller-Elementary-School/"},
         {"name": "Montera Middle School", "level": "middle", "grades": "6-8", "address": "5555 Ascot Dr, Oakland CA 94611", "lat": 37.8196, "lng": -122.20186, "greatschools_rating": 7, "neighborhood": "Montclair/Oakland Hills", "greatschools_url": "https://www.greatschools.org/california/oakland/244-Montera-Middle-School/"},
         {"name": "Skyline High School", "level": "high", "grades": "9-12", "address": "12250 Skyline Blvd, Oakland CA 94619", "lat": 37.79782, "lng": -122.16303, "greatschools_rating": 6, "neighborhood": "Oakland Hills", "greatschools_url": "https://www.greatschools.org/california/oakland/259-Skyline-High-School/"},
-        {"name": "Oakland Technical High School", "level": "high", "grades": "9-12", "address": "4351 Broadway, Oakland CA 94611", "lat": 37.83179, "lng": -122.25459, "greatschools_rating": 8, "neighborhood": "Temescal/Piedmont Ave", "greatschools_url": "https://www.greatschools.org/california/oakland/248-Oakland-Technical-High-School/"}
+        {"name": "Oakland Technical High School", "level": "high", "grades": "9-12", "address": "4351 Broadway, Oakland CA 94611", "lat": 37.83179, "lng": -122.25459, "greatschools_rating": 8, "neighborhood": "Temescal/Piedmont Ave", "greatschools_url": "https://www.greatschools.org/california/oakland/248-Oakland-Technical-High-School/"},
+        {"name": "ACORN Woodland Elementary", "level": "elementary", "grades": "K-5", "address": "1025 81st Ave, Oakland CA", "lat": 37.75237, "lng": -122.1872, "greatschools_rating": 4, "neighborhood": "East Oakland"},
+        {"name": "Allendale Elementary", "level": "elementary", "grades": "K-5", "address": "3670 Penniman Ave, Oakland CA", "lat": 37.78834, "lng": -122.20482, "greatschools_rating": 1, "neighborhood": "Allendale"},
+        {"name": "Bella Vista Elementary", "level": "elementary", "grades": "K-5", "address": "1025 E 28th St, Oakland CA", "lat": 37.80032, "lng": -122.2372, "greatschools_rating": 4, "neighborhood": "Bella Vista/Clinton"},
+        {"name": "Bridges Academy", "level": "elementary", "grades": "K-5", "address": "1325 53rd Ave, Oakland CA", "lat": 37.76714, "lng": -122.20732, "greatschools_rating": 2, "neighborhood": "Central East Oakland"},
+        {"name": "Brookfield Elementary", "level": "elementary", "grades": "K-5", "address": "401 Jones Ave, Oakland CA", "lat": 37.73505, "lng": -122.18895, "greatschools_rating": 2, "neighborhood": "Brookfield Village"},
+        {"name": "Burckhalter Elementary", "level": "elementary", "grades": "K-5", "address": "3994 Burckhalter Ave, Oakland CA", "lat": 37.77524, "lng": -122.1673, "greatschools_rating": 7, "neighborhood": "Toler Heights"},
+        {"name": "Carl B. Munck Elementary", "level": "elementary", "grades": "K-5", "address": "11900 Campus Dr, Oakland CA", "lat": 37.79461, "lng": -122.17446, "greatschools_rating": 5, "neighborhood": "Oakland Hills", "greatschools_url": "https://www.greatschools.org/california/oakland/245-Carl-B.-Munck-Elementary-School/"},
+        {"name": "Cleveland Elementary", "level": "elementary", "grades": "K-5", "address": "745 Cleveland St, Oakland CA", "lat": 37.80419, "lng": -122.24358, "greatschools_rating": 6, "neighborhood": "Cleveland Heights"},
+        {"name": "East Oakland Pride Elementary", "level": "elementary", "grades": "K-5", "address": "8000 Birch St, Oakland CA", "lat": 37.75912, "lng": -122.17463, "greatschools_rating": 1, "neighborhood": "East Oakland"},
+        {"name": "Emerson Elementary", "level": "elementary", "grades": "K-5", "address": "4803 Lawton Ave, Oakland CA", "lat": 37.83442, "lng": -122.25741, "greatschools_rating": 5, "neighborhood": "Temescal"},
+        {"name": "EnCompass Academy", "level": "elementary", "grades": "K-5", "address": "1025 81st Ave, Oakland CA", "lat": 37.75269, "lng": -122.18653, "greatschools_rating": 3, "neighborhood": "East Oakland"},
+        {"name": "Esperanza Elementary", "level": "elementary", "grades": "K-5", "address": "10315 E St, Oakland CA", "lat": 37.73672, "lng": -122.17306, "greatschools_rating": 2, "neighborhood": "Elmhurst"},
+        {"name": "Franklin Elementary", "level": "elementary", "grades": "K-5", "address": "915 Foothill Blvd, Oakland CA", "lat": 37.79371, "lng": -122.24834, "greatschools_rating": 7, "neighborhood": "San Antonio"},
+        {"name": "Fred T. Korematsu Discovery Academy", "level": "elementary", "grades": "K-5", "address": "10315 E St, Oakland CA", "lat": 37.73744, "lng": -122.17359, "greatschools_rating": 1, "neighborhood": "Elmhurst"},
+        {"name": "Fruitvale Elementary", "level": "elementary", "grades": "K-5", "address": "3200 Boston Ave, Oakland CA", "lat": 37.7962, "lng": -122.21403, "greatschools_rating": 2, "neighborhood": "Fruitvale"},
+        {"name": "Garfield Elementary", "level": "elementary", "grades": "K-5", "address": "1640 22nd Ave, Oakland CA", "lat": 37.7866, "lng": -122.23581, "greatschools_rating": 3, "neighborhood": "San Antonio"},
+        {"name": "Glenview Elementary", "level": "elementary", "grades": "K-5", "address": "4215 La Cresta Ave, Oakland CA", "lat": 37.8055, "lng": -122.21876, "greatschools_rating": 8, "neighborhood": "Glenview", "greatschools_url": "https://www.greatschools.org/california/oakland/210-Glenview-Elementary-School/"},
+        {"name": "Global Family Elementary", "level": "elementary", "grades": "K-5", "address": "2035 40th Ave, Oakland CA", "lat": 37.77973, "lng": -122.2127, "greatschools_rating": 5, "neighborhood": "Fruitvale"},
+        {"name": "Grass Valley Elementary", "level": "elementary", "grades": "K-5", "address": "4720 Dunkirk Ave, Oakland CA", "lat": 37.75306, "lng": -122.12532, "greatschools_rating": 1, "neighborhood": "East Oakland Hills", "greatschools_url": "https://www.greatschools.org/california/oakland/212-Grass-Valley-Elementary-School/"},
+        {"name": "New Highland Academy", "level": "elementary", "grades": "K-5", "address": "8521 A St, Oakland CA", "lat": 37.75206, "lng": -122.17877, "greatschools_rating": 4, "neighborhood": "East Oakland"},
+        {"name": "Hoover Elementary", "level": "elementary", "grades": "K-5", "address": "890 Brockhurst St, Oakland CA", "lat": 37.82301, "lng": -122.27434, "greatschools_rating": 4, "neighborhood": "Hoover-Foster"},
+        {"name": "Horace Mann Elementary", "level": "elementary", "grades": "K-5", "address": "5222 Ygnacio Ave, Oakland CA", "lat": 37.77359, "lng": -122.20243, "greatschools_rating": 1, "neighborhood": "Maxwell Park"},
+        {"name": "International Community School", "level": "elementary", "grades": "K-5", "address": "2825 International Blvd, Oakland CA", "lat": 37.7806, "lng": -122.23148, "greatschools_rating": 5, "neighborhood": "San Antonio"},
+        {"name": "La Escuelita Elementary", "level": "elementary", "grades": "K-5", "address": "1050 2nd Ave, Oakland CA", "lat": 37.79623, "lng": -122.25864, "greatschools_rating": 2, "neighborhood": "Eastlake"},
+        {"name": "Laurel Elementary", "level": "elementary", "grades": "K-5", "address": "3750 Brown Ave, Oakland CA", "lat": 37.79308, "lng": -122.19647, "greatschools_rating": 4, "neighborhood": "Laurel", "greatschools_url": "https://www.greatschools.org/california/oakland/228-Laurel-Elementary-School/"},
+        {"name": "Lockwood STEAM Academy", "level": "elementary", "grades": "K-5", "address": "6701 International Blvd, Oakland CA", "lat": 37.76118, "lng": -122.19159, "greatschools_rating": 1, "neighborhood": "Central East Oakland"},
+        {"name": "Madison Park Academy Primary", "level": "elementary", "grades": "K-5", "address": "470 El Paseo Dr, Oakland CA", "lat": 37.72802, "lng": -122.17744, "greatschools_rating": 6, "neighborhood": "East Oakland"},
+        {"name": "Manzanita Community School", "level": "elementary", "grades": "K-5", "address": "2409 E 27th St, Oakland CA", "lat": 37.79235, "lng": -122.22433, "greatschools_rating": 1, "neighborhood": "Fruitvale/San Antonio"},
+        {"name": "Manzanita SEED Elementary", "level": "elementary", "grades": "K-5", "address": "2641 25th Ave, Oakland CA", "lat": 37.7915, "lng": -122.22445, "greatschools_rating": 4, "neighborhood": "Fruitvale/San Antonio"},
+        {"name": "Markham Elementary", "level": "elementary", "grades": "K-5", "address": "7220 Krause Ave, Oakland CA", "lat": 37.76539, "lng": -122.17885, "greatschools_rating": 3, "neighborhood": "Central East Oakland"},
+        {"name": "Martin Luther King Jr Elementary", "level": "elementary", "grades": "K-5", "address": "960 10th St, Oakland CA", "lat": 37.80576, "lng": -122.28301, "greatschools_rating": 1, "neighborhood": "West Oakland"},
+        {"name": "Melrose Leadership Academy", "level": "elementary", "grades": "K-8", "address": "5328 Brann St, Oakland CA", "lat": 37.77814, "lng": -122.18983, "greatschools_rating": 7, "neighborhood": "Melrose/Maxwell Park"},
+        {"name": "Oakland Academy of Knowledge", "level": "elementary", "grades": "K-5", "address": "8755 Fontaine St, Oakland CA", "lat": 37.76273, "lng": -122.15165, "greatschools_rating": 3, "neighborhood": "East Oakland Hills"},
+        {"name": "Piedmont Avenue Elementary", "level": "elementary", "grades": "K-5", "address": "4314 Piedmont Ave, Oakland CA", "lat": 37.82896, "lng": -122.2489, "greatschools_rating": 5, "neighborhood": "Piedmont Ave"},
+        {"name": "Prescott Elementary", "level": "elementary", "grades": "K-5", "address": "920 Campbell St, Oakland CA", "lat": 37.80819, "lng": -122.29817, "greatschools_rating": 3, "neighborhood": "West Oakland"},
+        {"name": "REACH Academy", "level": "elementary", "grades": "K-5", "address": "9860 Sunnyside St, Oakland CA", "lat": 37.74699, "lng": -122.16215, "greatschools_rating": 3, "neighborhood": "Elmhurst"},
+        {"name": "Sankofa United Elementary", "level": "elementary", "grades": "K-8", "address": "581 61st St, Oakland CA", "lat": 37.84718, "lng": -122.26384, "greatschools_rating": 2, "neighborhood": "North Oakland/Bushrod"},
+        {"name": "Sequoia Elementary", "level": "elementary", "grades": "K-5", "address": "3730 Lincoln Ave, Oakland CA", "lat": 37.80251, "lng": -122.21121, "greatschools_rating": 7, "neighborhood": "Lincoln Highlands/Oakmore", "greatschools_url": "https://www.greatschools.org/california/oakland/256-Sequoia-Elementary-School/"},
+        {"name": "Think College Now", "level": "elementary", "grades": "K-5", "address": "2825 International Blvd, Oakland CA", "lat": 37.77995, "lng": -122.23039, "greatschools_rating": 3, "neighborhood": "San Antonio"}
       ]
     },
     {
@@ -188,6 +227,16 @@
         {"name": "Donald L. Rheem Elementary", "level": "elementary", "grades": "K-5", "address": "30 La Encinal, Moraga CA 94556", "lat": 37.85792, "lng": -122.13222, "greatschools_rating": 10, "greatschools_url": "https://www.greatschools.org/california/moraga/459-Donald-L.-Rheem-Elementary-School/"},
         {"name": "Los Perales Elementary", "level": "elementary", "grades": "K-5", "address": "80 Corliss Dr, Moraga CA 94556", "lat": 37.84528, "lng": -122.13563, "greatschools_rating": 10, "greatschools_url": "https://www.greatschools.org/california/moraga/457-Los-Perales-Elementary-School/"},
         {"name": "Joaquin Moraga Intermediate", "level": "middle", "grades": "6-8", "address": "1010 Camino Pablo, Moraga CA 94556", "lat": 37.82567, "lng": -122.13076, "greatschools_rating": 10, "greatschools_url": "https://www.greatschools.org/california/moraga/458-Joaquin-Moraga-Intermediate-School/"}
+      ]
+    },
+    {
+      "name": "Canyon Elementary",
+      "city": "Canyon",
+      "grades": "K-8",
+      "finderUrl": "https://www.greatschools.org/california/canyon/",
+      "note": "Single-school district serving Canyon and the surrounding hills.",
+      "schools": [
+        {"name": "Canyon Elementary", "level": "elementary", "grades": "K-8", "address": "187 Pinehurst Rd, Canyon CA 94516", "lat": 37.8276, "lng": -122.1636, "greatschools_rating": 8, "greatschools_url": "https://www.greatschools.org/california/canyon/434-Canyon-Elementary-School/", "neighborhood": "Canyon"}
       ]
     }
   ]
