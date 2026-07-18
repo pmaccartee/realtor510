@@ -489,7 +489,7 @@ const TABLE_HTML = `
       <td>
         <div class="school-entry">
           <span class="school-name">Fred T. Korematsu Middle<span class="badge r4">4–5/10</span></span>
-          <div class="school-sub">7–8 · below avg per GS · #44 most diverse MS in CA</div>
+          <div class="school-sub">7–8 · below average · #44 most diverse MS in CA</div>
         </div>
       </td>
       <td>
@@ -535,7 +535,7 @@ const TABLE_HTML = `
 <div class="notes-block">
   <p class="notes-title">Notes</p>
   <ul>
-    <li>GreatSchools rates schools 1–10 based on test scores, college readiness, academic progress, and equity relative to other California schools.</li>
+    <li>Schools are rated 1–10 based on test scores, college readiness, academic progress, and equity relative to other California schools.</li>
     <li>Oakland Unified uses a neighborhood lottery — zone priority does not guarantee placement. Siblings of enrolled students get first priority.</li>
     <li>Berkeley Unified uses an integration lottery. Placement is by ranked preference within zones, not purely by address.</li>
     <li>Orinda, Lafayette, and Moraga each have separate K–8 elementary districts. After 8th grade, students feed into the Acalanes Union High School District (Miramonte, Acalanes, or Campolindo).</li>

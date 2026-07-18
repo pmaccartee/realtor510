@@ -9,7 +9,7 @@ import { useDescription } from "@/hooks/useDescription";
 // page cross-links to it and carries rel=canonical to it — see prerender.mjs).
 export default function EastBayGuide() {
   useTitle("East Bay School Ratings & Home Prices | Patrick MacCartee");
-  useDescription("GreatSchools ratings and median home prices for every East Bay school district — Oakland, Berkeley, Albany, Piedmont, Alameda, Orinda, Lafayette, Moraga, El Cerrito, and Kensington — from East Bay realtor Patrick MacCartee.");
+  useDescription("School ratings and median home prices for every East Bay school district — Oakland, Berkeley, Albany, Piedmont, Alameda, Orinda, Lafayette, Moraga, El Cerrito, and Kensington — from East Bay realtor Patrick MacCartee.");
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -21,7 +21,7 @@ export default function EastBayGuide() {
               East Bay Schools
             </h1>
             <p className="text-xl md:text-2xl font-light text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-              GreatSchools ratings and median home prices, district by district.
+              School ratings and median home prices, district by district.
             </p>
             <a
               href="/east-bay-school-guide"
