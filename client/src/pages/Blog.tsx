@@ -70,7 +70,7 @@ export default function Blog() {
                         {insight.description}
                       </p>
                       <div className="flex items-center text-sm font-bold mt-auto group-hover:translate-x-2 transition-transform duration-300 text-foreground uppercase tracking-widest">
-                        Read Insight <ArrowRight className="ml-2 h-4 w-4 text-primary" />
+                        {(insight as any).cta || "Read Insight"} <ArrowRight className="ml-2 h-4 w-4 text-primary" />
                       </div>
                     </div>
                   );
