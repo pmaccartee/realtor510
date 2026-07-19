@@ -234,12 +234,8 @@ const TABLE_HTML = `
       <td class="stat-cell"><span class="stat-val">$2.19M</span></td>
       <td>
         <div class="school-entry">
-          <span class="school-name">Los Perales<span class="badge r9">9/10</span></span>
-          <div class="school-sub">K–5</div>
-        </div>
-        <div class="school-entry">
-          <span class="school-name">Del Rey · Rheem · Glorietta · Wagner Ranch<span class="badge r8">8/10</span></span>
-          <div class="school-sub">K–5</div>
+          <span class="school-name">Del Rey · Glorietta · Sleepy Hollow · Wagner Ranch<span class="badge r8">8/10</span></span>
+          <div class="school-sub">K–5 · all four Orinda Union elementaries</div>
         </div>
       </td>
       <td>
@@ -541,7 +537,7 @@ const TABLE_HTML = `
     <li>Orinda, Lafayette, and Moraga each have separate K–8 elementary districts. After 8th grade, students feed into the Acalanes Union High School District (Miramonte, Acalanes, or Campolindo).</li>
     <li>Piedmont is a separate city and school district geographically surrounded by Oakland. Not part of Oakland Unified.</li>
     <li>Alameda Unified has two HS pipelines: most of the main island feeds into Alameda High (10/10), while the west end feeds into Encinal Jr/Sr High (7/10, grades 6–12).</li>
-    <li>El Cerrito WCCUSD ratings are partly dragged down by a high ELL population — parent satisfaction is generally higher than raw numbers suggest. El Cerrito High is the standout at 7/10.</li>
+    <li>El Cerrito and Kensington are served by West Contra Costa Unified; El Cerrito High is the standout at 7/10.</li>
     <li>Crocker Highlands and Glenview families frequently pursue lottery transfers to Oakland Tech to bypass the Oakland High assignment.</li>
   </ul>
 </div>

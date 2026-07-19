@@ -148,7 +148,7 @@ export default function Buy() {
             margin: '0 0 16px',
             lineHeight: 1.6,
           }}>
-            GreatSchools ratings and Spring 2026 home prices for every East Bay neighborhood — Rockridge, Crocker Highlands, Orinda, Albany, Piedmont, Alameda and more. One page, every district.
+            School ratings and Spring 2026 home prices for every East Bay neighborhood — Rockridge, Crocker Highlands, Orinda, Albany, Piedmont, Alameda and more. One page, every district.
           </p>
           <a href="/east-bay-school-guide" style={{
             color: '#C01C2C',
