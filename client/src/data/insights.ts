@@ -19,19 +19,19 @@ export const insights = [
     "id": "east-bay-school-guide",
     "title": "The East Bay School Guide",
     "category": "Buyer Resource",
-    "description": "A 9-rated school you can't get into is worth less than a 7 you're guaranteed. Ratings, home prices, and how each district really assigns kids.",
+    "description": "Every district-run school across 13 East Bay districts, mapped and rated — plus an address lookup and the rules each district actually uses.",
     "content": "",
     "link": "/east-bay-school-guide/",
-    "cta": "Read the guide"
+    "cta": "Open the guide"
   },
   {
-    "id": "east-bay-school-map",
-    "title": "East Bay School Map",
-    "category": "Interactive Tool",
-    "description": "Every district-run school across 13 East Bay districts — mapped, rated, and filterable. Look up an address to see which schools serve it.",
+    "id": "east-bay-school-ratings-by-district",
+    "title": "East Bay School Ratings by District",
+    "category": "Data",
+    "description": "Thirteen East Bay districts, side by side — school ratings against median home prices, in one scannable table.",
     "content": "",
     "link": "/schools/",
-    "cta": "Open the map"
+    "cta": "Compare districts"
   },
   {
     "id": "how-do-you-create-leverage-when-theres-only-one-offer",
