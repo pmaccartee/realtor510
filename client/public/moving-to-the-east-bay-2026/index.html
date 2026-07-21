@@ -16,7 +16,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moving to the East Bay in 2026: A Guide for People Leaving San Francisco | realtor510.com</title>
 <meta name="description" content="What your San Francisco budget buys in the East Bay in 2026 — real median prices, school predictability, the commute, and neighborhood-by-neighborhood guidance from East Bay agent Patrick MacCartee.">
+<link rel="icon" type="image/png" href="/favicon.png">
 <link rel="canonical" href="https://realtor510.com/moving-to-the-east-bay-2026/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+<meta property="og:image" content="https://realtor510.com/PM_OG_Card.png">
+<meta name="robots" content="noindex, nofollow"><!-- unlisted: not indexed and not in the blog index -->
+
+<!-- Google Analytics 4 (site-wide pageview) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6DDVCG0Q3F');</script>
 <meta property="og:type" content="article">
 <meta property="og:title" content="Moving to the East Bay in 2026: A Guide for People Leaving San Francisco">
 <meta property="og:description" content="Where your budget buys a category more, your kid's school isn't a lottery, and the commute is a train, not a bridge.">
@@ -24,7 +32,7 @@
 <meta property="og:site_name" content="realtor510.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -109,24 +117,24 @@
   }
   .eb-wrap{max-width:var(--measure);margin:0 auto;padding:0 24px}
 
-  /* ---- header ---- */
-  .eb-top{
-    position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:saturate(180%) blur(8px);
-    border-bottom:1px solid var(--hair);
+  /* ---- header (site nav — matches june26 site chrome) ---- */
+  .site-nav {
+    position:fixed; top:0; left:0; right:0; z-index:9999;
+    background:#fff; border-bottom:1px solid #e5e0d8; box-shadow:0 1px 3px rgba(0,0,0,0.05);
+    padding:0 24px; height:80px;
+    display:flex; align-items:center; justify-content:space-between;
+    font-family:'Montserrat',sans-serif; max-width:100%;
   }
-  .eb-top .eb-wrap{max-width:1120px;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .eb-brand{font-family:"Inter";font-weight:700;letter-spacing:.04em;font-size:16px;color:var(--ink);text-decoration:none}
-  .eb-brand b{color:var(--red)}
-  .eb-topcta{
-    font-size:13px;font-weight:600;letter-spacing:.02em;
-    color:var(--paper);background:var(--red);
-    text-decoration:none;padding:8px 16px;border-radius:2px;
-    transition:background .18s ease;
-  }
-  .eb-topcta:hover{background:var(--red-deep)}
-  @media(max-width:560px){.eb-topcta{display:none}}
+  .site-nav a { text-decoration:none; }
+  .nav-inner { max-width:1280px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; }
+  .nav-logo { height:48px; width:auto; object-fit:contain; }
+  .nav-links { display:flex; align-items:center; gap:32px; }
+  .nav-links a { font-size:11px; font-weight:500; letter-spacing:0.08em; color:var(--ink); text-transform:uppercase; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--red); }
+  .nav-contact { background:var(--red); color:white !important; padding:8px 24px; box-shadow:0 1px 2px rgba(0,0,0,0.1); }
+  .nav-contact:hover { opacity:0.9; }
+  .page-spacer { height:80px; }
+  @media (max-width:768px) { .nav-links { display:none; } }
 
   /* ---- hero ---- */
   .eb-hero{padding:64px 0 40px;border-bottom:1px solid var(--hair)}
@@ -272,12 +280,22 @@
 </head>
 <body>
 
-<header class="eb-top">
-  <div class="eb-wrap">
-    <a class="eb-brand" href="https://realtor510.com/">realtor<b>510</b></a>
-    <a class="eb-topcta" href="#work-with-patrick">Talk to Patrick</a>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/">
+      <img src="/PM_LOGO_Banner.png" alt="Patrick MacCartee" class="nav-logo">
+    </a>
+    <div class="nav-links">
+      <a href="/buy">Buy</a>
+      <a href="/sell">Sell</a>
+      <a href="/reviews">Reviews</a>
+      <a href="/neighborhoods">Neighborhoods</a>
+      <a href="/blog">Blog</a>
+      <a href="javascript:void(0)" onclick="window.location.href='mailto:' + ['patrick','realtor510.com'].join('@')" class="nav-contact">Contact</a>
+    </div>
   </div>
-</header>
+</nav>
+<div class="page-spacer"></div>
 
 <main>
   <!-- HERO -->
