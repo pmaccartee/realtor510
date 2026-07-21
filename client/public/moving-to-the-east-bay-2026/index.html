@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--
+  realtor510.com — Blog post: "Moving to the East Bay in 2026"
+  Self-contained page. Namespaced .eb-* classes for easy port into the React/Vite site (drop body markup into a route, lift <style> into a module/global, keep JSON-LD in <head>).
+
+  ⚠️ PRE-PUBLISH CHECKLIST (do not remove until done):
+    1. REFFKIN: attributed to "CNBC" in body (accurate — Squawk Box). Link the PRIMARY CNBC clip before publish. Do NOT cite a competitor's blog.
+    2. DATA: SF medians are June 2026; East Bay is Apr–Jun 2026 (BridgeMLS). Swap in a June-only East Bay single-family median from MLS export for a clean month-to-month headline.
+    3. DOM: per-neighborhood days-on-market still pending MLS export (only regional ~13 used here).
+    4. Set canonical URL + published date below once the slug is final.
+    5. Confirm spelling everywhere: REFFKIN (Patrick's source file was mis-named "Resnick").
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moving to the East Bay in 2026: A Guide for People Leaving San Francisco | realtor510.com</title>
+<meta name="description" content="What your San Francisco budget buys in the East Bay in 2026 — real median prices, school predictability, the commute, and neighborhood-by-neighborhood guidance from East Bay agent Patrick MacCartee.">
+<link rel="canonical" href="https://realtor510.com/moving-to-the-east-bay-2026/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Moving to the East Bay in 2026: A Guide for People Leaving San Francisco">
+<meta property="og:description" content="Where your budget buys a category more, your kid's school isn't a lottery, and the commute is a train, not a bridge.">
+<meta property="og:url" content="https://realtor510.com/moving-to-the-east-bay-2026/">
+<meta property="og:site_name" content="realtor510.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Moving to the East Bay in 2026: A Guide for People Leaving San Francisco",
+      "description": "What your San Francisco budget buys in the East Bay in 2026 — real median prices, school predictability, the commute, and neighborhood-by-neighborhood guidance.",
+      "author": {
+        "@type": "Person",
+        "name": "Patrick MacCartee",
+        "url": "https://realtor510.com/",
+        "jobTitle": "REALTOR®",
+        "worksFor": { "@type": "Organization", "name": "The Grubb Company" }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "realtor510.com",
+        "url": "https://realtor510.com/"
+      },
+      "mainEntityOfPage": "https://realtor510.com/moving-to-the-east-bay-2026/",
+      "datePublished": "2026-07-20",
+      "articleSection": "Buyer & Seller Guides",
+      "about": ["East Bay real estate", "Oakland", "Berkeley", "Alameda", "Piedmont", "relocation from San Francisco"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the East Bay cheaper than San Francisco?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In specific neighborhoods, meaningfully. The regional single-family median is about $1.36M, and your budget generally buys a category more — detached instead of attached, a yard, a garage. The best of Piedmont, Rockridge, and the Berkeley hills still out-price plenty of San Francisco, so value lives in specific pockets rather than a blanket discount." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is the commute to San Francisco from the East Bay?",
+          "acceptedAnswer": { "@type": "Answer", "text": "By BART: Rockridge about 20 minutes, Berkeley 25–27, El Cerrito about 30 — all to the Embarcadero, with no toll or bridge. Ferries from Alameda and Jack London Square run roughly 20–25 minutes to the Ferry Building." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which East Bay cities have the best schools?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Piedmont Unified, Albany Unified, and Berkeley Unified are consistently top-ranked, with Lamorinda's Acalanes Union district among the best in California. Unlike San Francisco's lottery, most East Bay communities assign schools by attendance area, so the boundaries are knowable before you write an offer." }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the best East Bay neighborhood for someone leaving San Francisco?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on what you loved about your San Francisco neighborhood — most SF neighborhoods have a distinct East Bay counterpart with more space and a lower price. Rockridge, Berkeley, Alameda, Piedmont, and Montclair each suit a different SF buyer." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I buy or sell first when relocating from San Francisco?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your equity, financing, and tolerance for briefly carrying two mortgages. The right move is to coordinate both as one transaction rather than two disconnected events, which is the first thing we map out together." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --ink:#1A1A1A;
+    --red:#B22222;
+    --red-deep:#8E1B1B;
+    --muted:#6B6B6B;
+    --hair:#E7E7E7;
+    --wash:#FBF6F6;      /* faint red-tinted white for accent bands — NOT cream */
+    --measure:680px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:18px;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+  }
+  .eb-wrap{max-width:var(--measure);margin:0 auto;padding:0 24px}
+
+  /* ---- header ---- */
+  .eb-top{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:saturate(180%) blur(8px);
+    border-bottom:1px solid var(--hair);
+  }
+  .eb-top .eb-wrap{max-width:1120px;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .eb-brand{font-family:"Inter";font-weight:700;letter-spacing:.04em;font-size:16px;color:var(--ink);text-decoration:none}
+  .eb-brand b{color:var(--red)}
+  .eb-topcta{
+    font-size:13px;font-weight:600;letter-spacing:.02em;
+    color:var(--paper);background:var(--red);
+    text-decoration:none;padding:8px 16px;border-radius:2px;
+    transition:background .18s ease;
+  }
+  .eb-topcta:hover{background:var(--red-deep)}
+  @media(max-width:560px){.eb-topcta{display:none}}
+
+  /* ---- hero ---- */
+  .eb-hero{padding:64px 0 40px;border-bottom:1px solid var(--hair)}
+  .eb-eyebrow{
+    font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--red);margin:0 0 20px;
+  }
+  .eb-hero h1{
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-weight:600;font-size:clamp(44px,7vw,76px);line-height:1.02;
+    letter-spacing:-.01em;margin:0 0 20px;
+  }
+  .eb-hero h1 .eb-east{color:var(--red);display:block}
+  .eb-deck{font-size:clamp(19px,2.4vw,23px);line-height:1.5;color:var(--ink);max-width:34ch;margin:0 0 28px;font-weight:400}
+  .eb-byline{font-size:14px;color:var(--muted);letter-spacing:.01em}
+  .eb-byline b{color:var(--ink);font-weight:600}
+
+  /* ---- article body ---- */
+  .eb-article{padding:8px 0 0}
+  .eb-sec{padding:44px 0;border-bottom:1px solid var(--hair)}
+  .eb-sec:last-of-type{border-bottom:0}
+  .eb-kicker{
+    font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--red);margin:0 0 14px;
+  }
+  .eb-sec h2{
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-weight:600;font-size:clamp(30px,4.4vw,42px);line-height:1.08;
+    letter-spacing:-.01em;margin:0 0 22px;
+  }
+  .eb-sec p{margin:0 0 20px}
+  .eb-sec p:last-child{margin-bottom:0}
+  .eb-sec a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(178,34,34,.32);transition:border-color .18s}
+  .eb-sec a:hover{border-color:var(--red)}
+  strong{font-weight:600}
+  em{font-style:italic}
+
+  /* ---- Reffkin aside (kept deliberately small) ---- */
+  .eb-aside{
+    border-left:3px solid var(--red);
+    padding:4px 0 4px 22px;margin:0 0 20px;
+    color:var(--ink);
+  }
+  .eb-aside .eb-src{display:block;font-size:13px;color:var(--muted);margin-top:8px;letter-spacing:.01em}
+
+  /* ---- signature: the price ledger ---- */
+  .eb-ledger{
+    margin:6px 0 26px;border:1px solid var(--hair);border-radius:4px;overflow:hidden;
+  }
+  .eb-ledger-row{display:grid;grid-template-columns:1fr 1fr}
+  .eb-ledger-cell{padding:26px 24px;text-align:center}
+  .eb-ledger-cell.sf{border-right:1px solid var(--hair)}
+  .eb-ledger-cell.eb{background:var(--wash)}
+  .eb-ledger .lbl{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  .eb-ledger-cell.eb .lbl{color:var(--red)}
+  .eb-ledger .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(40px,7vw,58px);line-height:.95}
+  .eb-ledger-cell.eb .num{color:var(--red)}
+  .eb-ledger .sub{font-size:13px;color:var(--muted);margin-top:8px}
+  .eb-ledger-foot{border-top:1px solid var(--hair);padding:16px 24px;text-align:center;font-size:16px}
+  .eb-ledger-foot b{color:var(--ink)}
+
+  .eb-jump{
+    background:var(--wash);border-left:3px solid var(--red);
+    padding:20px 24px;border-radius:0 4px 4px 0;margin:0 0 24px;font-size:17px;
+  }
+  .eb-jump b{color:var(--ink)}
+
+  /* ---- median quick grid ---- */
+  .eb-medgrid{
+    list-style:none;margin:8px 0 20px;padding:0;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--hair);border:1px solid var(--hair);border-radius:4px;overflow:hidden;
+  }
+  .eb-medgrid li{background:var(--paper);padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+  .eb-medgrid .place{font-size:13px;color:var(--muted);letter-spacing:.01em}
+  .eb-medgrid .val{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:24px;color:var(--ink)}
+  @media(max-width:560px){.eb-medgrid{grid-template-columns:repeat(2,1fr)}}
+
+  .eb-stat{display:flex;gap:18px;flex-wrap:wrap;margin:4px 0 20px}
+  .eb-stat .chip{border:1px solid var(--hair);border-radius:4px;padding:14px 18px;flex:1;min-width:150px}
+  .eb-stat .chip .n{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:30px;color:var(--red);line-height:1}
+  .eb-stat .chip .c{font-size:13px;color:var(--muted);margin-top:6px}
+
+  /* ---- neighborhood cards ---- */
+  .eb-hoods{display:grid;grid-template-columns:1fr;gap:0;margin-top:6px}
+  .eb-hood{padding:22px 0;border-top:1px solid var(--hair)}
+  .eb-hood:first-child{border-top:0}
+  .eb-hood-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+  .eb-hood-name{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:26px;line-height:1.1}
+  .eb-hood-med{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:22px;color:var(--red);white-space:nowrap}
+  .eb-hood p{margin:0 0 10px;font-size:17px}
+  .eb-hood a{font-size:15px;font-weight:500}
+  .eb-cheer{
+    font-family:"Cormorant Garamond",serif;font-style:italic;font-size:21px;line-height:1.35;
+    color:var(--red);border-left:3px solid var(--red);padding-left:18px;margin:14px 0 10px;
+  }
+  .eb-note{font-size:15px;color:var(--muted);font-style:italic;margin-top:18px}
+
+  /* ---- reasons list ---- */
+  .eb-reasons{list-style:none;margin:6px 0 0;padding:0}
+  .eb-reasons li{padding:14px 0;border-top:1px solid var(--hair)}
+  .eb-reasons li:first-child{border-top:0}
+  .eb-reasons .r{color:var(--red);font-weight:600}
+
+  /* ---- FAQ ---- */
+  .eb-faq details{border-top:1px solid var(--hair);padding:2px 0}
+  .eb-faq details:last-child{border-bottom:1px solid var(--hair)}
+  .eb-faq summary{
+    cursor:pointer;list-style:none;padding:18px 40px 18px 0;position:relative;
+    font-weight:600;font-size:19px;color:var(--ink);
+  }
+  .eb-faq summary::-webkit-details-marker{display:none}
+  .eb-faq summary::after{
+    content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);
+    color:var(--red);font-size:24px;font-weight:400;transition:transform .2s;
+  }
+  .eb-faq details[open] summary::after{content:"–"}
+  .eb-faq .a{padding:0 0 18px;color:var(--ink);font-size:17px}
+
+  /* ---- CTA / bio ---- */
+  .eb-cta{background:var(--ink);color:var(--paper);margin-top:0}
+  .eb-cta .eb-wrap{padding-top:56px;padding-bottom:56px}
+  .eb-cta .eb-kicker{color:#F1A6A6}
+  .eb-cta h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(30px,4.4vw,40px);line-height:1.1;margin:0 0 16px;color:var(--paper)}
+  .eb-cta p{color:#D9D4D4;margin:0 0 26px;font-size:18px}
+  .eb-cta-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+  .eb-btn{
+    display:inline-block;text-decoration:none;font-weight:600;font-size:16px;
+    padding:14px 26px;border-radius:2px;transition:transform .12s ease,background .18s ease;
+  }
+  .eb-btn.primary{background:var(--red);color:#fff}
+  .eb-btn.primary:hover{background:#C93030}
+  .eb-btn.ghost{border:1px solid #4A4A4A;color:#fff}
+  .eb-btn.ghost:hover{border-color:#fff}
+  .eb-sig{font-size:14px;color:#9A9494;line-height:1.7;border-top:1px solid #333;padding-top:20px}
+  .eb-sig b{color:var(--paper)}
+
+  .eb-foot{padding:28px 0;font-size:13px;color:var(--muted);text-align:center}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+  a:focus-visible,summary:focus-visible,.eb-btn:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<header class="eb-top">
+  <div class="eb-wrap">
+    <a class="eb-brand" href="https://realtor510.com/">realtor<b>510</b></a>
+    <a class="eb-topcta" href="#work-with-patrick">Talk to Patrick</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="eb-hero">
+    <div class="eb-wrap">
+      <p class="eb-eyebrow">Relocation Guide · 2026</p>
+      <h1>Moving to the<span class="eb-east">East Bay.</span></h1>
+      <p class="eb-deck">A guide for people leaving San Francisco — where your budget buys a category more, your kid's school isn't a lottery, and the commute is a train, not a bridge.</p>
+      <p class="eb-byline">By <b>Patrick MacCartee</b> · The Grubb Company · DRE#&nbsp;02142693</p>
+    </div>
+  </section>
+
+  <article class="eb-article">
+    <div class="eb-wrap">
+
+      <!-- WHY EAST -->
+      <section class="eb-sec">
+        <p class="eb-kicker">Why look east</p>
+        <h2>Everyone leaves for Marin first. The smart money crosses the other bridge.</h2>
+        <p>Marin is the reflex — the golden hills, the water, the glossy relocation guides. And Marin is lovely. But for most people crossing a bridge to buy, Marin is a car-dependent, single-note answer to a question the East Bay answers better on nearly every line.</p>
+        <div class="eb-aside">
+          Asked on CNBC where he'd buy a home if he could buy anywhere in the country, Compass CEO Robert Reffkin said the East Bay. His reason: every other major Bay Area market has already climbed back past its 2022 highs, and this one hasn't yet.
+          <span class="eb-src">He's not wrong — and he's naming the <em>least</em> interesting reason to move here. Here's the rest of it.</span>
+        </div>
+        <p>You're not choosing between San Francisco and the East Bay — you've already decided to leave. The real choice is East Bay versus the alternatives: Marin, the Peninsula. And on that comparison the East Bay wins on value, schools, space, weather, the commute, and a food-and-culture scene that isn't close.</p>
+      </section>
+
+      <!-- MONEY -->
+      <section class="eb-sec">
+        <p class="eb-kicker">The money</p>
+        <h2>What your San Francisco budget actually buys over here</h2>
+        <p>The comparison that matters most is single-family to single-family:</p>
+
+        <div class="eb-ledger">
+          <div class="eb-ledger-row">
+            <div class="eb-ledger-cell sf">
+              <p class="lbl">San Francisco</p>
+              <div class="num">$2.2M</div>
+              <div class="sub">single-family median</div>
+            </div>
+            <div class="eb-ledger-cell eb">
+              <p class="lbl">East Bay</p>
+              <div class="num">$1.36M</div>
+              <div class="sub">single-family median</div>
+            </div>
+          </div>
+          <div class="eb-ledger-foot">Same house type — about <b>$840,000 less</b>, roughly <b>38% under</b> San Francisco.</div>
+        </div>
+
+        <div class="eb-jump">It's not just a discount — it's a <b>change of property class</b>. A median San Francisco condo runs about <b>$1.33M</b>: a shared wall and an HOA. That same money over here buys a <b>detached house with a yard</b>. You move up a category while moving down in price.</div>
+
+        <p>Even the East Bay neighborhoods San Francisco buyers actually chase come in <strong>under</strong> the city's single-family median — Rockridge, Berkeley, Crocker Highlands, Alameda. The one exception is Piedmont, a trophy tier of its own, and still a relative bargain against Pacific Heights.</p>
+
+        <div class="eb-stat">
+          <div class="chip"><div class="n">$1.36M</div><div class="c">Regional median · +4.6% year over year</div></div>
+          <div class="chip"><div class="n">~13 days</div><div class="c">Typical time to find a buyer — be ready</div></div>
+        </div>
+
+        <p>Where the names you know are landing this year:</p>
+        <ul class="eb-medgrid">
+          <li><span class="place">Piedmont</span><span class="val">$3.3M</span></li>
+          <li><span class="place">Montclair</span><span class="val">$1.85M</span></li>
+          <li><span class="place">Rockridge</span><span class="val">$1.8M</span></li>
+          <li><span class="place">Berkeley</span><span class="val">$1.74M</span></li>
+          <li><span class="place">Kensington</span><span class="val">$1.73M</span></li>
+          <li><span class="place">Crocker Highlands</span><span class="val">$1.7M</span></li>
+          <li><span class="place">Albany</span><span class="val">$1.575M</span></li>
+          <li><span class="place">Alameda</span><span class="val">$1.45M</span></li>
+          <li><span class="place">El Cerrito</span><span class="val">$1.2M</span></li>
+        </ul>
+      </section>
+
+      <!-- SCHOOLS -->
+      <section class="eb-sec">
+        <p class="eb-kicker">The schools</p>
+        <h2>You'll actually know which school your kid attends</h2>
+        <p>Talk to enough families who've made this move and a theme repeats — it isn't only about test scores. It's about <strong>knowing which school your kid will actually attend.</strong></p>
+        <p>In San Francisco, elementary assignment runs through a lottery. You can buy a home a block from a school you love and still be placed across town. For a lot of families, that lack of control is the thing that finally tips the decision.</p>
+        <p>The East Bay works differently. In most of these communities you buy into an attendance area and that's your school — Piedmont, Albany, and the Lamorinda districts operate on straightforward neighborhood assignment, and the boundaries are knowable before you write an offer. The house you choose determines the school. No lottery, no waiting, no backup plan.</p>
+        <p>If schools matter to your search, start there. My <a href="https://realtor510.com/east-bay-school-guide/">East Bay School Guide</a> maps ratings and attendance boundaries against neighborhood median prices, so you can see the trade-offs before you fall in love with a house.</p>
+      </section>
+
+      <!-- THE CATCH -->
+      <section class="eb-sec">
+        <p class="eb-kicker">The one catch</p>
+        <h2>Out here, the list price is an opening move — not the price</h2>
+        <p>There's one local quirk that catches newcomers, and it's better to hear it now than mid-search. It isn't new and it isn't a bubble — Oakland has priced this way since the 1990s, long before San Francisco picked up the habit. It simply means the number on a listing tells you very little on its own.</p>
+        <p>What matters is what homes on <em>that particular street</em> actually clear at, and that varies more than most people expect. In a neighborhood like Crocker Highlands, two nearly identical houses across the street from one another can settle at meaningfully different numbers. It isn't in any report you can pull — it's pattern recognition earned block by block over years. Some of the best homes never reach a public portal at all, or trade in the few days before they do.</p>
+        <p>None of which should worry you, because this is the part of the job that's <em>mine</em>, not yours. You focus on which neighborhood feels like home. The pricing strategy, the timing, the calls to listing agents I already know — that's what you're hiring me for. Buyers who come over with the right guidance rarely describe this market as brutal. They describe it as the easiest part of the move.</p>
+      </section>
+
+      <!-- NEIGHBORHOODS -->
+      <section class="eb-sec">
+        <p class="eb-kicker">The neighborhoods</p>
+        <h2>Neighborhoods, decoded</h2>
+        <p class="eb-note">Medians are a starting frame, not a price tag — every one of these places has a wide range.</p>
+
+        <div class="eb-hoods">
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Rockridge</span><span class="eb-hood-med">$1.8M</span></div>
+            <p>The one that converts San Francisco buyers fastest. Craftsman bungalows on tree-lined streets, College Avenue running through the middle of it with Market Hall, the bookstores, the sidewalk tables. You can live here without touching your car, and BART puts you at the Embarcadero in about twenty minutes. If what you loved about San Francisco was walking out your door into a real neighborhood, this is where that feeling lives.</p>
+            <a href="https://realtor510.com/neighborhood/rockridge-guide/">Explore Rockridge →</a>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Upper Rockridge</span><span class="eb-hood-med">$1.8M+</span></div>
+            <p>Where Rockridge climbs into the hills. Wider lots, mid-century moderns with Bay views, quieter streets, and Hillcrest K–8 — one of the most sought-after schools in Oakland Unified. A little more room to breathe, a five-minute drop back down to College Avenue when you want the action.</p>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Montclair</span><span class="eb-hood-med">$1.85M</span></div>
+            <p>Its own village tucked into the hills, with a proper little downtown of restaurants and shops. Wooded lots, big houses, deer in the yard, and a genuine sense of retreat fifteen minutes from downtown Oakland. This is where your money buys square footage and trees — the classic "we didn't know we could have this" moment for buyers coming from a city flat.</p>
+            <a href="https://realtor510.com/neighborhood/montclair-guide/">Explore Montclair →</a>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Crocker Highlands &amp; Trestle Glen</span><span class="eb-hood-med">$1.7M</span></div>
+            <p>If you care about architecture, start here. Spanish Eclectic, Mediterranean Revival, and Tudor homes built in the 1920s and '30s, most of them lovingly kept, on curving streets that were designed to curve. Grand Lake and its farmers market on one side, Piedmont on the other. Trestle Glen is the quieter sibling just over the ridge — same beloved elementary, a little more house for the money.</p>
+            <a href="https://realtor510.com/neighborhood/crocker-highlands-guide/">Explore Crocker Highlands →</a>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Piedmont</span><span class="eb-hood-med">$3.3M</span></div>
+            <p>An independent city of its own, wrapped entirely inside Oakland — own police, own schools, own civic life. Estate homes, old oaks, and public schools that families genuinely move here for. It's the East Bay's most established address, and for a certain buyer it's the whole reason they cross the bridge.</p>
+            <p class="eb-cheer">San Francisco has a mansion shortage. Piedmont has a comeback: "We've got mansions — yes we do! We've got mansions — how 'bout you?"</p>
+            <a href="https://realtor510.com/neighborhood/piedmont-home-values/">Explore Piedmont →</a>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Berkeley</span><span class="eb-hood-med">$1.74M</span></div>
+            <p>Craftsman architecture at its peak, the Gourmet Ghetto, Elmwood's shops, Claremont's hills, and a university that keeps the whole place intellectually caffeinated. Three BART stations, twenty-five minutes to the city. For buyers who want culture and character rather than polish, Berkeley is hard to beat at this price.</p>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Alameda</span><span class="eb-hood-med">$1.45M</span></div>
+            <p>A flat, bikeable island with one of the most intact Victorian streetscapes in California, three ferry terminals, and a beach. Alameda Unified earned a National Blue Ribbon in 2024, which makes this a rare schools-and-value combination. Park Street for dinner, the Seaplane Lagoon ferry under twenty minutes to downtown San Francisco. Quiet luxury with actual bones.</p>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Albany</span><span class="eb-hood-med">$1.575M</span></div>
+            <p>Small, walkable, and genuinely excellent — Albany Unified is one of the best districts in the Bay Area, and the town is charming in an unshowy way. Solano Avenue for the shops and the food, close enough to Berkeley to borrow its culture. Consistently the best value-per-school-quality trade in the region.</p>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Kensington</span><span class="eb-hood-med">$1.73M</span></div>
+            <p>An unincorporated hillside enclave above El Cerrito with sweeping Bay views, winding roads, and Berkeley schools. Tiny, leafy, and quietly beloved by the people who live there. If you want views and calm without a long drive, this is the pocket.</p>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">El Cerrito</span><span class="eb-hood-med">$1.2M</span></div>
+            <p>The value story right now. Two BART stations, postwar bungalows and hillside homes with views, an easy family pace, and prices meaningfully below its neighbors. If your budget is the binding constraint, this is where it stretches furthest without giving up location.</p>
+          </div>
+
+          <div class="eb-hood">
+            <div class="eb-hood-head"><span class="eb-hood-name">Orinda, Lafayette &amp; Moraga</span><span class="eb-hood-med">~$2M</span></div>
+            <p>Just through the Caldecott: big lots, mature trees, a suburban rhythm, and the Acalanes Union district — among the strongest public schools in California. This is the choice for families who want space and certainty and don't mind a fifteen-minute drive to reach it.</p>
+          </div>
+        </div>
+
+        <p class="eb-note">A note on Oakland: the citywide median sits around $1.0M, but Oakland is not one market. The range across its neighborhoods is enormous — which is exactly why block-level guidance matters more than any citywide number.</p>
+      </section>
+
+      <!-- COMMUTE -->
+      <section class="eb-sec">
+        <p class="eb-kicker">The commute</p>
+        <h2>Marin means a bridge. The East Bay means a train.</h2>
+        <p>The biggest myth is that Marin means a better commute. In reality, Marin means a car and a bridge that doesn't always cooperate. From Rockridge, you're about twenty minutes from the Embarcadero by BART — no toll, no merge, no white-knuckling the approach. Berkeley, 25–27 minutes. El Cerrito, about 30. The Alameda–Oakland ferry runs a genuinely civilized route to the Ferry Building.</p>
+        <p>With hybrid work now permanent for most professionals, the math has shifted further. When you're heading in two or three days a week, the question isn't whether the commute is manageable — it's whether the lifestyle you're buying is worth the price. On that calculation, the East Bay wins decisively.</p>
+      </section>
+
+      <!-- REASONS -->
+      <section class="eb-sec">
+        <p class="eb-kicker">The short version</p>
+        <h2>Five reasons people actually cross the Bay</h2>
+        <ul class="eb-reasons">
+          <li><span class="r">Value</span> — your budget buys a category more: detached instead of attached, a yard instead of a balcony, architecture instead of a footprint.</li>
+          <li><span class="r">Schools</span> — Piedmont, Albany, Berkeley, and Lamorinda rank among the state's best, with deep private options layered on top.</li>
+          <li><span class="r">Space &amp; yards</span> — the thing an SF condo can't give you and a Marin house makes you drive everywhere to get.</li>
+          <li><span class="r">Weather</span> — most of the East Bay's best neighborhoods get dramatically more sun than their foggy SF counterparts.</li>
+          <li><span class="r">Food &amp; culture</span> — College Avenue, Temescal, Lakeshore, Piedmont Avenue, the Gourmet Ghetto. One of the strongest food scenes in the country.</li>
+        </ul>
+      </section>
+
+      <!-- SELLERS -->
+      <section class="eb-sec">
+        <p class="eb-kicker">If you're selling too</p>
+        <h2>Getting your San Francisco sale right</h2>
+        <p>If you're funding your East Bay purchase by selling in San Francisco, preparation is everything. The first conversation I have with every seller-turned-buyer is about sequencing: do you sell first for certainty on your budget, or go under contract in the East Bay first? There's no universal answer — it depends on your equity, your financing, and your appetite for briefly carrying two mortgages. What matters is that we treat both transactions as one coordinated move, not two disconnected events.</p>
+      </section>
+
+      <!-- BUYERS -->
+      <section class="eb-sec">
+        <p class="eb-kicker">Making it easy</p>
+        <h2>How to have a genuinely pleasant East Bay purchase</h2>
+        <p>The buyers who have the best experience out here share three habits. They figure out which neighborhood actually fits their life before they start touring, so they're not deciding under pressure. They get fully pre-approved early, so a good house never becomes a missed opportunity. And they lean on someone who knows these blocks well enough to handle the tactical parts on their behalf.</p>
+        <p>Do those three things and the East Bay is a genuinely pleasant place to buy — which is not a sentence most people expect after shopping in San Francisco.</p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="eb-sec eb-faq">
+        <p class="eb-kicker">Questions</p>
+        <h2>Frequently asked</h2>
+        <details>
+          <summary>Is the East Bay cheaper than San Francisco?</summary>
+          <div class="a">In specific neighborhoods, meaningfully. The regional single-family median is about $1.36M, and your budget generally buys a category more — detached instead of attached, a yard, a garage. The best of Piedmont, Rockridge, and the Berkeley hills still out-price plenty of San Francisco, so value lives in specific pockets rather than a blanket discount.</div>
+        </details>
+        <details>
+          <summary>How long is the commute to San Francisco?</summary>
+          <div class="a">By BART: Rockridge about 20 minutes, Berkeley 25–27, El Cerrito about 30 — all to the Embarcadero, with no toll or bridge. Ferries from Alameda and Jack London Square run roughly 20–25 minutes to the Ferry Building.</div>
+        </details>
+        <details>
+          <summary>Which East Bay cities have the best schools?</summary>
+          <div class="a">Piedmont Unified, Albany Unified, and Berkeley Unified are consistently top-ranked, with Lamorinda's Acalanes Union district among the best in California. Unlike San Francisco's lottery, most East Bay communities assign schools by attendance area, so the boundaries are knowable before you write an offer. See the <a href="https://realtor510.com/east-bay-school-guide/">East Bay School Guide</a>.</div>
+        </details>
+        <details>
+          <summary>What's the best East Bay neighborhood for someone leaving San Francisco?</summary>
+          <div class="a">It depends on what you loved about your San Francisco neighborhood — most SF neighborhoods have a distinct East Bay counterpart with more space and a lower price. Rockridge, Berkeley, Alameda, Piedmont, and Montclair each suit a different SF buyer.</div>
+        </details>
+        <details>
+          <summary>Should I buy or sell first when relocating from SF?</summary>
+          <div class="a">It depends on your equity, financing, and tolerance for briefly carrying two mortgages. The right move is to coordinate both as one transaction rather than two disconnected events — the first thing we map out together.</div>
+        </details>
+      </section>
+
+    </div>
+  </article>
+
+  <!-- CTA -->
+  <section class="eb-cta" id="work-with-patrick">
+    <div class="eb-wrap">
+      <p class="eb-kicker">Work with Patrick</p>
+      <h2>Tell me what you loved about your SF neighborhood. I'll tell you where it lives over here — and what it costs.</h2>
+      <p>Ten years across this water, from first-time buyers to sellers running both sides of the move at once. Finance background, deep East Bay market knowledge, and a hospitality-grade approach to getting it done.</p>
+      <div class="eb-cta-actions">
+        <a class="eb-btn primary" href="tel:4156370257">Call 415-637-0257</a>
+        <a class="eb-btn ghost" href="mailto:patrick@realtor510.com">Email Patrick</a>
+      </div>
+      <p class="eb-sig"><b>Patrick MacCartee</b> · The Grubb Company<br>patrick@realtor510.com · realtor510.com · DRE#&nbsp;02142693</p>
+    </div>
+  </section>
+
+  <footer class="eb-foot">
+    <div class="eb-wrap">© 2026 Patrick MacCartee · realtor510.com · Information deemed reliable but not guaranteed.</div>
+  </footer>
+</main>
+
+</body>
+</html>
