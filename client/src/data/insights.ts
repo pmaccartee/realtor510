@@ -1,7 +1,7 @@
 export const insights = [
   {
     "id": "moving-to-the-east-bay-2026",
-    "title": "Moving From San Francisco to the East Bay in 2026",
+    "title": "Moving from San Francisco to the East Bay in 2026",
     "category": "Relocation Guide",
     "description": "A better life at roughly half the price of San Francisco, for a similar house. Regional price comparisons, school predictability without SF's lottery, the commute, and a neighborhood-by-neighborhood guide — Oakland, Berkeley, Piedmont, Alameda.",
     "content": "",
