@@ -169,6 +169,7 @@
   }
   .hero .eyebrow::before { content: ""; width: 44px; height: 2px; background: #B22222; flex: none; }
   .hero h1 { font-family: var(--serif); font-size: clamp(2rem,4.5vw,3.2rem); font-weight: 500; line-height: 1.15; margin-bottom: 16px; color: #fff; max-width: 17ch; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
+  .hero h1 .hl { color: #ED2939; }
   .hero .deck { font-family: var(--serif); font-size: 1.25rem; line-height: 1.4; color: #ffffff; font-style: italic; margin: 0 0 24px; max-width: 40ch; text-shadow: 0 2px 16px rgba(0,0,0,.35); }
   .hero .byline { font-size: 16px; letter-spacing: .01em; color: rgba(255,255,255,.88); }
   .hero .byline b { color: #fff; font-weight: 600; }
@@ -232,7 +233,7 @@
   .eb-ledger .sub { font-size: 13px; color: var(--ink-light); margin-top: 8px; }
   .eb-ledger-foot { border-top: 1px solid var(--rule); padding: 16px 24px; text-align: center; font-size: 1rem; color: var(--ink-mid); }
   .eb-ledger-foot b { color: var(--ink); font-weight: 600; }
-  .eb-src-note { font-size: 12px; color: var(--ink-light); font-style: italic; margin: 0 0 24px; max-width: 640px; line-height: 1.6; }
+  .section-body p.eb-src-note, .eb-src-note { font-size: 11px; color: var(--ink-light); font-style: italic; margin: 0 0 24px; max-width: 640px; line-height: 1.6; }
   .eb-cmp { border: 1px solid var(--rule); margin: 8px 0 12px; max-width: 640px; }
   .eb-cmp-row { display: grid; grid-template-columns: 1.4fr .8fr .6fr; align-items: baseline; padding: 13px 18px; border-bottom: 1px solid var(--rule); }
   .eb-cmp-row:last-child { border-bottom: 0; }
@@ -328,15 +329,13 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="eyebrow">Relocation Guide · 2026</div>
-    <h1>Moving From San Francisco to the East Bay.</h1>
+    <h1>Moving From San Francisco to the <span class="hl">East Bay.</span></h1>
     <p class="deck">A guide for buying where the sun is brighter, the schools are better, and life is easier.</p>
     <p class="byline">By <b>Patrick MacCartee</b> · The Grubb Company · DRE#&nbsp;02142693</p>
   </div>
 </section>
 
 <div class="content-wrapper">
-
-  <p class="eb-lead">So you've decided you want space, weather, a real food scene, an easy commute, and <strong>value</strong>. Now the only question left is where. Oakland? Berkeley? Piedmont? Alameda?</p>
 
   <section class="eb-tldr" aria-label="Quick answer">
     <h2>The short version</h2>
@@ -396,7 +395,6 @@
         </div>
         <div class="eb-ledger-foot">In San Francisco, the jump from condo to house is about <b>$2.1 million</b>.</div>
       </div>
-      <p class="eb-src-note">BridgeMLS/ConnectMLS closed sales, 2026. SF condo median from 1,191 closed condo sales, H1 2026; house figure spec-matched (single-family, 3+ BR, 1,800+ sq ft).</p>
 
       <div class="eb-jump">The East Bay's most sought-after neighborhoods still run about <b>half the price</b> of the median San Francisco house. The exception is <b>Piedmont</b> — the East Bay's trophy city, trading right alongside San Francisco. For the price of an average house in the city, you could be living among the castles and cottages of manicured Piedmont.</div>
 
@@ -451,7 +449,7 @@
       <h2>Neighborhoods, decoded</h2>
     </div>
     <div class="section-body">
-      <p class="eb-note">Medians are single-family detached, BridgeMLS (Real Estate Decoded, July 2026) — a starting frame, not a price tag. Every one of these places has a wide range.</p>
+      <p class="eb-note">Medians are single-family detached, BridgeMLS (Real Estate Decoded, July 2026)</p>
 
       <div class="eb-hoods">
         <div class="eb-hood">
