@@ -14,6 +14,14 @@ React/Vite SPA in `client/src` plus static HTML pages in `client/public/`
   website, including structured data.
 - Contact email on public pages: patrick@realtor510.com.
 
+## Text over photography
+
+- **Over a photo, text is always pure white (`#fff`) with a `text-shadow`,
+  never white at reduced opacity.** Transparent white (`rgba(255,255,255,.8)`)
+  samples the image beneath and shifts hue — a warm photo turns the text pink.
+  Use full-opacity white and carry contrast with the shadow (and a dark
+  gradient scrim over the image). Applies site-wide.
+
 ## Typography floor
 
 - **All reading copy is 16px minimum.** This covers anything a reader is meant
