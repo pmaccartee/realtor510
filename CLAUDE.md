@@ -13,3 +13,14 @@ React/Vite SPA in `client/src` plus static HTML pages in `client/public/`
 - **415-637-0257 is email-only.** It must never appear anywhere on the
   website, including structured data.
 - Contact email on public pages: patrick@realtor510.com.
+
+## Typography floor
+
+- **All reading copy is 16px minimum.** This covers anything a reader is meant
+  to read: body prose, table data cells (including comparison-table "vs." /
+  percentage columns), list and grid labels, neighborhood-card links, related
+  links, bylines, and editorial notes.
+- **Fine print is exempt and stays visibly smaller (12–13px)** to preserve
+  hierarchy: source/methodology notes under tables and charts, uppercase
+  section kickers/eyebrows, footer legal, and signature/contact blocks (name,
+  company, DRE line). Never below 12px.
