@@ -1,5 +1,13 @@
 export const insights = [
   {
+    "id": "moving-to-the-east-bay-2026",
+    "title": "Moving to the East Bay in 2026",
+    "category": "Relocation Guide",
+    "description": "What your San Francisco budget actually buys over here — real median prices, school predictability without SF's lottery, the BART commute, and a neighborhood-by-neighborhood guide for people leaving San Francisco.",
+    "content": "",
+    "link": "/blog/moving-to-the-east-bay-2026/"
+  },
+  {
     "id": "real-estate-decoded-july-2026",
     "title": "Real Estate Decoded — July 2026",
     "category": "Market Update",
