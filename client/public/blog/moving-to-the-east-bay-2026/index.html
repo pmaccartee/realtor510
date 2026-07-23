@@ -28,6 +28,7 @@
 <meta name="twitter:description" content="What your SF budget buys in the East Bay — real medians, school predictability, the commute, neighborhood by neighborhood.">
 <meta name="twitter:image" content="https://realtor510.com/east-bay-2026-og.jpg">
 
+<link rel="preload" as="image" href="/blog/moving-to-the-east-bay-2026/1015-warfield-avenue.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
@@ -142,14 +143,35 @@
   .breadcrumb a { color: var(--ink-light); text-decoration: none; }
   .breadcrumb a:hover { color: var(--crimson); }
   .breadcrumb-sep { color: var(--rule); }
-  .hero { background: var(--crimson); color: white; padding: 152px 0 72px; }
-  .hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
-  .hero-city-label { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson-mid); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
-  .hero-city-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--crimson-mid); }
-  .hero h1 { font-family: var(--serif); font-size: clamp(2rem,4.5vw,3.2rem); font-weight: 500; line-height: 1.15; margin-bottom: 16px; }
-  .hero-tagline { font-family: var(--serif); font-size: 1.25rem; font-style: italic; color: var(--crimson-mid); margin-bottom: 32px; }
-  .hero-copy { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.85); max-width: 680px; }
-  .hero-img { display: block; width: 100%; height: auto; margin-top: 36px; }
+  /* ── Hero: title over the photo (matches the OG card construction) ── */
+  .hero {
+    position: relative;
+    min-height: clamp(460px, 62vh, 660px);
+    display: flex;
+    align-items: flex-end;
+    background: #1A1A1A url("/blog/moving-to-the-east-bay-2026/1015-warfield-avenue.jpg") center 38% / cover no-repeat;
+    overflow: hidden;
+    padding: 0;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(100deg,
+      rgba(12,10,10,.86) 0%, rgba(12,10,10,.68) 42%,
+      rgba(12,10,10,.22) 72%, rgba(12,10,10,.10) 100%);
+  }
+  .hero-inner { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 1; padding-top: 80px; padding-bottom: 56px; }
+  .hero .eyebrow {
+    font-size: 16px; font-weight: 700; letter-spacing: .14em;
+    text-transform: uppercase; color: #fff; margin: 0 0 20px;
+    display: flex; align-items: center; gap: 14px;
+    text-shadow: 0 2px 12px rgba(0,0,0,.45);
+  }
+  .hero .eyebrow::before { content: ""; width: 44px; height: 2px; background: #B22222; flex: none; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2rem,4.5vw,3.2rem); font-weight: 500; line-height: 1.15; margin-bottom: 16px; color: #fff; max-width: 17ch; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
+  .hero .deck { font-family: var(--serif); font-size: 1.25rem; line-height: 1.4; color: #ffffff; font-style: italic; margin: 0 0 24px; max-width: 40ch; text-shadow: 0 2px 16px rgba(0,0,0,.35); }
+  .hero .byline { font-size: 16px; letter-spacing: .01em; color: rgba(255,255,255,.88); }
+  .hero .byline b { color: #fff; font-weight: 600; }
   .content-wrapper { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
   .content-section { padding: 64px 0; border-bottom: 1px solid var(--rule); }
   .content-section:last-of-type { border-bottom: none; }
@@ -183,6 +205,10 @@
   .cta-btn:hover { background: var(--ink); }
   .cta-btn-ghost { background: transparent; color: var(--crimson); border: 1px solid var(--crimson); margin-top: 8px; }
   .cta-btn-ghost:hover { background: var(--crimson); color: white; }
+
+  /* ── Article lead (moved off the hero photo onto white) ── */
+  .eb-lead { font-size: 1.2rem; line-height: 1.6; color: var(--ink); max-width: 720px; margin: 48px 0 0; }
+  .eb-lead strong { font-weight: 600; }
 
   /* ── Quick Answer / Key Takeaways (AEO block) ── */
   .eb-tldr { max-width: 720px; margin: 48px 0 0; background: var(--gray-bg); border: 1px solid var(--rule); border-left: 3px solid var(--crimson); padding: 28px 32px; }
@@ -255,7 +281,8 @@
   .eb-faq details[open] summary::after { content: "\2013"; }
   .eb-faq .a { padding: 0 0 20px; color: var(--ink-mid); font-size: 1rem; line-height: 1.7; }
   .eb-faq .a a { color: var(--crimson); }
-  @media (max-width: 768px) { .content-wrapper,.hero-inner,.bottom-line-inner,.cta-inner,.breadcrumb-inner { padding-left: 24px; padding-right: 24px; } .hero { padding-top: 120px; padding-bottom: 52px; } .cta-inner { flex-direction: column; } .cta-contact { text-align: left; } }
+  @media (max-width: 768px) { .content-wrapper,.hero-inner,.bottom-line-inner,.cta-inner,.breadcrumb-inner { padding-left: 24px; padding-right: 24px; } .cta-inner { flex-direction: column; } .cta-contact { text-align: left; } }
+  @media (max-width: 640px) { .hero { min-height: 420px; } .hero-inner { padding-top: 56px; padding-bottom: 40px; } }
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6DDVCG0Q3F');</script>
@@ -298,17 +325,18 @@
   </div>
 </nav>
 
-<div class="hero">
+<section class="hero">
   <div class="hero-inner">
-    <div class="hero-city-label">Relocation Guide · 2026</div>
+    <div class="eyebrow">Relocation Guide · 2026</div>
     <h1>Moving From San Francisco to the East Bay.</h1>
-    <p class="hero-tagline">A guide for buying where the sun is brighter, the schools are better, and life is easier.</p>
-    <p class="hero-copy">So you've decided you want space, weather, a real food scene, an easy commute, and <strong>value</strong>. Now the only question left is where. Oakland? Berkeley? Piedmont? Alameda?</p>
-    <img class="hero-img" src="/blog/moving-to-the-east-bay-2026/1015-warfield-avenue.jpg" width="1280" height="854" loading="eager" alt="1015 Warfield Avenue, Oakland — Craftsman home represented by Patrick MacCartee.">
+    <p class="deck">A guide for buying where the sun is brighter, the schools are better, and life is easier.</p>
+    <p class="byline">By <b>Patrick MacCartee</b> · The Grubb Company · DRE#&nbsp;02142693</p>
   </div>
-</div>
+</section>
 
 <div class="content-wrapper">
+
+  <p class="eb-lead">So you've decided you want space, weather, a real food scene, an easy commute, and <strong>value</strong>. Now the only question left is where. Oakland? Berkeley? Piedmont? Alameda?</p>
 
   <section class="eb-tldr" aria-label="Quick answer">
     <h2>The short version</h2>
@@ -602,7 +630,7 @@
 <div class="bottom-line">
   <div class="bottom-line-inner">
     <div class="bottom-line-label">The Bottom Line</div>
-    <h2>You've already decided to leave. The only question left is where it lives over here.</h2>
+    <h2>More house, more sun, better schools — and you keep the difference.</h2>
     <p>Most San Francisco neighborhoods have a distinct East Bay counterpart with more space and a lower price — and the difference between a brutal search and an easy one is having someone who knows these blocks well enough to handle the tactical parts on your behalf. Tell me what you loved about your SF neighborhood, and I'll tell you where it lives over here and what it costs.</p>
   </div>
 </div>
