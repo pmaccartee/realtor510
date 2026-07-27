@@ -118,7 +118,7 @@
 </script>
 
 <style>
-  :root { --crimson: hsl(355,75%,35%); --crimson-light: hsl(355,20%,95%); --crimson-mid: hsl(355,40%,75%); --parchment: #ffffff; --ink: #1A1A1A; --ink-mid: #3D3D3D; --ink-light: #6B6B6B; --rule: #E0D9CE; --gray-bg: #fafaf9; --serif: 'Playfair Display',Georgia,serif; --sans: 'Montserrat',sans-serif; }
+  :root { --crimson: hsl(355,75%,35%); --crimson-on-dark: #E85C5C; --crimson-light: hsl(355,20%,95%); --crimson-mid: hsl(355,40%,75%); --parchment: #ffffff; --ink: #1A1A1A; --ink-mid: #3D3D3D; --ink-light: #6B6B6B; --rule: #E0D9CE; --gray-bg: #fafaf9; --serif: 'Playfair Display',Georgia,serif; --sans: 'Montserrat',sans-serif; }
   *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: var(--sans); background: var(--parchment); color: var(--ink); line-height: 1.7; }
   .react-header-wrapper { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 50; background-color: #ffffff; border-bottom: 1px solid hsl(0,0%,90%); box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); height: 80px; }
@@ -167,7 +167,7 @@
     display: flex; align-items: center; gap: 14px;
     text-shadow: 0 2px 12px rgba(0,0,0,.45);
   }
-  .hero .eyebrow::before { content: ""; width: 44px; height: 2px; background: #B22222; flex: none; }
+  .hero .eyebrow::before { content: ""; width: 44px; height: 2px; background: var(--crimson-on-dark); flex: none; }
   .hero h1 { font-family: var(--serif); font-size: clamp(2rem,4.5vw,3.2rem); font-weight: 500; line-height: 1.15; margin-bottom: 16px; color: #fff; max-width: none; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
   .hero h1 .hl { color: #ED2939; }
   .hero .deck { font-family: var(--serif); font-size: 1.25rem; line-height: 1.4; color: #ffffff; font-style: italic; margin: 0 0 24px; max-width: 40ch; text-shadow: 0 2px 16px rgba(0,0,0,.35); }
@@ -188,10 +188,9 @@
   .related-links a { display: block; font-size: 1rem; color: var(--crimson); text-decoration: none; margin-bottom: 8px; }
   .related-links a:hover { text-decoration: underline; }
   .related-links a:last-child { margin-bottom: 0; }
-  .updated-stamp { display: inline-block; font-size: 13px; color: var(--ink-light); letter-spacing: 0.05em; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); max-width: 720px; }
   .bottom-line { background: var(--ink); color: white; padding: 64px 0; }
   .bottom-line-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
-  .bottom-line-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--crimson); margin-bottom: 20px; }
+  .bottom-line-label { font-family: var(--sans); font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--crimson-on-dark); font-weight: 500; margin-bottom: 20px; }
   .bottom-line h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 500; margin-bottom: 20px; color: white; }
   .bottom-line p { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.75); max-width: 720px; }
   .cta-section { background: var(--crimson-light); padding: 64px 0; border-top: 1px solid var(--crimson-mid); }
@@ -621,8 +620,6 @@
     <a href="/neighborhood/alameda-neighborhood-guide">Alameda neighborhood guide →</a>
     <a href="/neighborhood/oakland-neighborhood-guide">Oakland neighborhood guide →</a>
   </div>
-
-  <p class="updated-stamp">Last updated: July 2026 · Patrick MacCartee, The Grubb Company, DRE #02142693 · East Bay figures: BridgeMLS via Real Estate Decoded (July 2026).</p>
 </div>
 
 <div class="bottom-line">

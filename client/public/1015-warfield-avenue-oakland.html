@@ -37,6 +37,7 @@
 <style>
   :root {
     --crimson: hsl(355, 75%, 35%);
+    --crimson-on-dark: #E85C5C;
     --crimson-light: hsl(355, 20%, 95%);
     --crimson-mid: hsl(355, 40%, 75%);
     --parchment: #ffffff;
@@ -55,7 +56,7 @@
   .hero { background: var(--ink); color: white; padding: 152px 48px 72px; position: relative; overflow: hidden; }
   .hero-inner { max-width: 820px; position: relative; }
   .hero-label { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson-mid); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
-  .hero-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--crimson); }
+  .hero-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--crimson-on-dark); }
   .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
   .badge { display: inline-block; color: white; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 12px; }
   .badge-sage { background: var(--crimson); }
