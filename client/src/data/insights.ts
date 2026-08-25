@@ -1,5 +1,13 @@
 export const insights = [
   {
+    "id": "listing-war-compass-zillow-mls-east-bay",
+    "title": "The Listing War Isn't Really About Zillow and Compass. It's About Your Money.",
+    "category": "Industry & Consumer",
+    "description": "While Compass and Zillow fight a federal antitrust case over listing access, local MLS boards are quietly making the decisions that determine what your home sells for. Why Patrick MacCartee and D.J. Grubb joined the bridgeMLS board — and what's actually at stake for East Bay buyers and sellers.",
+    "content": "",
+    "link": "/blog/listing-war-compass-zillow-mls-east-bay/"
+  },
+  {
     "id": "moving-to-the-east-bay-2026",
     "title": "Moving from San Francisco to the East Bay in 2026",
     "category": "Relocation Guide",
