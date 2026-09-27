@@ -1,0 +1,52 @@
+{
+  "status": "sold",
+  "county": "Contra Costa",
+  "type": "Detached single-family home",
+  "images": [],
+  "lastUpdated": "2026-09-27",
+  "mls": null,
+  "showingPage": null,
+  "propertySite": null,
+  "slug": "615-western-drive",
+  "representation": "seller",
+  "address": {
+    "street": "615 Western Drive",
+    "city": "Richmond",
+    "state": "CA",
+    "zip": "94801"
+  },
+  "area": "Point Richmond",
+  "neighborhood": "Point Richmond",
+  "listPrice": 2450000,
+  "listDate": "2024-03-01",
+  "soldPrice": 2400000,
+  "soldDate": "2024-05-10",
+  "beds": 6,
+  "baths": 3,
+  "sqft": 5027,
+  "lotSqft": 6200,
+  "yearBuilt": 1963,
+  "garage": "No garage; 2 parking spaces",
+  "summary": "a 6 bedroom, 3 bath, \u00b15,027 sq ft bayfront home in Point Richmond, built in 1963. It is listed with the Smithsonian and has been featured on Dwell, and is known for the Wave Garden, a private garden park of about 7,000 sq ft with sweeping Bay views.",
+  "facts": [
+    [
+      "Recognition",
+      "Smithsonian-listed; featured on Dwell"
+    ]
+  ],
+  "features": {
+    "Highlights": [
+      "Bayfront setting in Point Richmond.",
+      "The Wave Garden: a private garden park of about 7,000 sq ft with sweeping Bay views.",
+      "Listed with the Smithsonian; featured on Dwell.",
+      "6 bedrooms across \u00b15,027 sq ft."
+    ]
+  },
+  "faqs": [
+    [
+      "What neighborhood is 615 Western Drive in?",
+      "Point Richmond, in Richmond, California 94801."
+    ]
+  ],
+  "dom": 46
+}

@@ -10,7 +10,10 @@
 /
   Cache-Control: no-cache, must-revalidate
 
-/22-kensington-court/*
+/:slug/facts/*
+  Cache-Control: no-cache, must-revalidate
+
+/sales/*
   Cache-Control: no-cache, must-revalidate
 
 /llms.txt

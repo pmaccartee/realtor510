@@ -1,0 +1,56 @@
+{
+  "status": "sold",
+  "county": "Alameda",
+  "type": "Detached single-family home",
+  "images": [],
+  "lastUpdated": "2026-09-27",
+  "mls": null,
+  "showingPage": null,
+  "propertySite": null,
+  "slug": "224-mountain-avenue",
+  "representation": "buyer",
+  "address": {
+    "street": "224 Mountain Avenue",
+    "city": "Piedmont",
+    "state": "CA",
+    "zip": "94611"
+  },
+  "area": "Piedmont",
+  "neighborhood": null,
+  "listPrice": 5500000,
+  "listDate": "2026-04-08",
+  "soldPrice": 7500000,
+  "soldDate": "2026-04-08",
+  "beds": 6,
+  "baths": 6,
+  "sqft": 5530,
+  "lotSqft": 8855,
+  "yearBuilt": 1906,
+  "garage": "Garage with 3 parking spaces",
+  "summary": "a 6 bedroom, 6 bath, \u00b15,530 sq ft Piedmont home built in 1906 on an 8,855 sq ft lot. Designed by Chloe Warner of Redmond Aldrich Design and featured in the New York Times, it is known for jewel-toned walls, a lacquered red ceiling, checkerboard floors, and a lush garden.",
+  "facts": [
+    [
+      "Interior design",
+      "Chloe Warner, Redmond Aldrich Design"
+    ],
+    [
+      "Press",
+      "Featured in the New York Times"
+    ]
+  ],
+  "features": {
+    "Highlights": [
+      "Interiors by Chloe Warner of Redmond Aldrich Design.",
+      "Featured in the New York Times.",
+      "Jewel-toned walls, a lacquered red ceiling and checkerboard floors.",
+      "Lush garden."
+    ]
+  },
+  "faqs": [
+    [
+      "Is 224 Mountain Avenue in Piedmont?",
+      "Yes. It is in the City of Piedmont, California 94611."
+    ]
+  ],
+  "dom": 0
+}
