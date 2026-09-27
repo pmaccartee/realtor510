@@ -18,7 +18,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt">
 
@@ -202,6 +201,9 @@
     @media(max-width:767px) {
       .market-stat:nth-child(2) { border-right: none; }
       .market-stat:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.08); }
+      /* Two columns of "$1,940,000" at full size overflowed a 390px phone by ~40px. */
+      .market-strip-inner { padding: 0 12px; }
+      .market-stat { padding: 24px 16px; }
     }
     .market-stat-label {
       font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
@@ -212,6 +214,7 @@
       color: #fff; line-height: 1;
     }
     .market-stat-sub { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }
+    @media(max-width:767px) { .market-stat-value { font-size: clamp(1.25rem, 6.2vw, 1.75rem); } }
     .market-strip-note {
       max-width: 1280px; margin: 0 auto; padding: 12px 28px;
       font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.05em;
@@ -231,6 +234,8 @@
       position: absolute; inset: -16px; background: var(--gray-bg);
       transform: rotate(2deg); z-index: 0; border: 1px solid var(--rule);
     }
+    /* Single column: at 2deg the frame's corner poked ~2px past the 24px gutter and scrolled the page sideways. */
+    @media(max-width:899px) { .bio-img-tilt { transform: rotate(1deg); } }
     .bio-img {
       position: relative; z-index: 1; width: 100%;
       height: 560px; object-fit: cover; object-position: top; box-shadow: 0 24px 64px rgba(0,0,0,0.15);
@@ -250,6 +255,7 @@
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 24px; margin-top: 48px;
     }
+    @media(max-width:389px) { .bio-pillars { grid-template-columns: 1fr; } } /* three columns need ~332px */
     .bio-pillar { border-top: 2px solid var(--crimson); padding-top: 16px; }
     .bio-pillar-title {
       font-family: var(--serif); font-size: 1.1rem; font-weight: 500;
@@ -332,7 +338,7 @@
     .neighborhood-card:hover .neighborhood-card-link { border-color: var(--crimson); }
 
     /* ── FEATURED LISTING ── */
-    .listing-section { padding: 96px 24px; background: var(--gray-bg); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .listing-section { padding: 96px 24px; background: var(--gray-bg); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); scroll-margin-top: 80px; }
     .listing-inner { max-width: 1100px; margin: 0 auto; }
     .listing-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid rgba(139,90,90,0.15); }
     .listing-view-all {
@@ -348,16 +354,23 @@
     .listing-main-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
-      display: flex; flex-direction: column; justify-content: flex-end; padding: 40px;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      /* Bottom padding keeps the text and dots clear of the description box, which overlaps the photo by 32px (48px desktop). */
+      padding: 40px 40px 72px;
       pointer-events: none;
     }
+    @media(min-width:900px) { .listing-main-overlay { padding-bottom: 96px; } }
     .listing-badge {
-      background: var(--crimson); color: #fff; font-size: 9px;
+      background: var(--crimson); color: #fff; font-size: 12px;
       letter-spacing: 0.2em; text-transform: uppercase; padding: 6px 16px;
       align-self: flex-start; margin-bottom: 16px; font-weight: 500;
     }
-    .listing-name { font-family: var(--serif); font-size: 2rem; color: #fff; font-weight: 400; margin-bottom: 6px; }
-    .listing-city { color: rgba(255,255,255,0.75); font-size: 0.95rem; letter-spacing: 0.05em; }
+    .listing-name { font-family: var(--serif); font-size: 2rem; color: #fff; font-weight: 400; margin-bottom: 6px; line-height: 1.2; text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
+    .listing-city { color: #fff; font-size: 1rem; letter-spacing: 0.05em; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+    @media(max-width:599px) {
+      .listing-main-overlay { padding: 24px 24px 72px; }
+      .listing-name { font-size: 1.6rem; }
+    }
     .carousel-btn {
       position: absolute; top: 50%; transform: translateY(-50%);
       background: rgba(255,255,255,0.15); backdrop-filter: blur(4px);
@@ -368,7 +381,8 @@
     .carousel-btn:hover { background: rgba(255,255,255,0.3); }
     .carousel-btn.prev { left: 16px; }
     .carousel-btn.next { right: 16px; }
-    .carousel-dots { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
+    .carousel-dots { position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
+    @media(min-width:900px) { .carousel-dots { bottom: 64px; } }
     .carousel-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.45); cursor: pointer; transition: background 0.2s, transform 0.2s; border: none; padding: 0; }
     .carousel-dot.active { background: #fff; transform: scale(1.3); }
     .listing-desc-box {
@@ -380,22 +394,48 @@
     .listing-desc-p { font-size: 1rem; color: var(--ink-mid); line-height: 1.8; font-weight: 300; margin-bottom: 28px; }
     .listing-cta {
       display: inline-block; border: 1px solid var(--crimson); color: var(--crimson);
-      padding: 14px 32px; font-size: 10px; letter-spacing: 0.15em;
+      padding: 14px 32px; font-size: 12px; letter-spacing: 0.15em;
       text-transform: uppercase; font-weight: 500; transition: all 0.2s;
     }
     .listing-cta:hover { background: var(--crimson); color: #fff; }
+    .listing-more {
+      display: block; width: fit-content; margin-top: 20px;
+      font-size: 1rem; color: var(--crimson); font-weight: 500;
+      border-bottom: 1px solid transparent; transition: border-color 0.2s;
+    }
+    .listing-more:hover { border-color: var(--crimson); }
+    .listing-more[hidden] { display: none; }
 
     /* ── CURRENT LISTINGS ── */
     .current-listings-section { padding: 96px 24px; background: var(--off-white); }
+    /* Hand-maintained cards. No card, no section — an empty heading never renders. */
+    .current-listings-section:not(:has(.cl-card)) { display: none; }
     .current-listings-inner { max-width: 1100px; margin: 0 auto; }
-    .realscout-wrap {
-      background: #fff; border: 1px solid var(--rule);
-      padding: 16px; min-height: 400px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    .cl-list { display: grid; gap: 24px; }
+    .cl-card {
+      display: grid; grid-template-columns: 1fr; background: #fff; color: inherit;
+      border: 1px solid var(--rule); transition: border-color 0.2s, box-shadow 0.2s;
     }
-    realscout-your-listings {
-      --rs-listing-divider-color: rgb(101,141,172);
-      width: 100%;
+    @media(min-width:700px) { .cl-card { grid-template-columns: minmax(0,5fr) minmax(0,6fr); } }
+    .cl-card:hover { border-color: var(--crimson); box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+    .cl-card-img { width: 100%; height: 100%; min-height: 240px; aspect-ratio: 3 / 2; object-fit: cover; }
+    .cl-card-body { padding: 32px 28px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+    .cl-card-status {
+      background: var(--crimson); color: #fff; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase; padding: 4px 12px; align-self: flex-start;
     }
+    .cl-card-city {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--crimson); font-weight: 600; margin-top: 6px;
+    }
+    .cl-card-name { font-family: var(--serif); font-size: 1.75rem; font-weight: 400; color: var(--ink); line-height: 1.2; }
+    .cl-card-hook { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--ink); }
+    .cl-card-facts { font-size: 1rem; color: var(--ink-mid); font-weight: 300; }
+    .cl-card-link {
+      font-size: 1rem; color: var(--crimson); font-weight: 500; margin-top: 8px;
+      align-self: flex-start; border-bottom: 1px solid transparent; transition: border-color 0.2s;
+    }
+    .cl-card:hover .cl-card-link { border-color: var(--crimson); }
 
     /* ── INSIGHTS / BLOG ── */
     .insights-section { padding: 96px 24px; background: #fff; }
@@ -622,7 +662,7 @@
       <a href="/reviews" class="nav-link">Reviews</a>
       <a href="/neighborhoods" class="nav-link">Neighborhoods</a>
       <a href="/blog" class="nav-link">Blog</a>
-      <a href="mailto:patrick@grubbco.com" class="nav-cta">Contact</a>
+      <a href="mailto:patrick@realtor510.com" class="nav-cta">Contact</a>
     </div>
   </div>
   <div id="mobile-menu" class="mobile-menu hidden">
@@ -631,7 +671,7 @@
     <a href="/reviews" class="mobile-link">Reviews</a>
     <a href="/neighborhoods" class="mobile-link">Neighborhoods</a>
     <a href="/blog" class="mobile-link">Blog</a>
-    <a href="mailto:patrick@grubbco.com" class="mobile-cta">Contact</a>
+    <a href="mailto:patrick@realtor510.com" class="mobile-cta">Contact</a>
   </div>
 </nav>
 
@@ -647,7 +687,7 @@
       <p class="hero-sub fade-up-2">Your partner in East Bay Real Estate. Serving Oakland, Piedmont, Berkeley, and Alameda with a rigorous, analytical approach.</p>
       <div class="hero-btns fade-up-3">
         <a href="tel:5108594895" class="btn-primary">Call Me</a>
-        <a href="mailto:patrick@grubbco.com" class="btn-outline">Email Me</a>
+        <a href="mailto:patrick@realtor510.com" class="btn-outline">Email Me</a>
       </div>
     </div>
   </div>
@@ -768,7 +808,7 @@
 </section>
 
 <!-- FEATURED LISTING -->
-<section class="listing-section">
+<section class="listing-section" id="featured-property">
   <div class="listing-inner">
     <div class="listing-header">
       <div>
@@ -776,50 +816,57 @@
         <h2 class="section-h2">Featured Property</h2>
       </div>
     </div>
-    <div class="carousel-wrap" id="mountain-carousel">
-      <div class="carousel-track" id="mountain-track">
-        <div class="carousel-slide"><img src="/m224-entrance.jpg" alt="224 Mountain Avenue — front entrance"></div>
-        <div class="carousel-slide"><img src="/m224-entry-nyt.webp" alt="224 Mountain Avenue — green foyer with checkerboard floors"></div>
-        <div class="carousel-slide"><img src="/m224-foyer-green.jpg" alt="224 Mountain Avenue — foyer looking into dining room"></div>
-        <div class="carousel-slide"><img src="/m224-dining-red.jpg" alt="224 Mountain Avenue — dining room with red lacquered ceiling"></div>
-        <div class="carousel-slide"><img src="/m224-living-nyt.webp" alt="224 Mountain Avenue — living room"></div>
-        <div class="carousel-slide"><img src="/m224-sunroom.jpg" alt="224 Mountain Avenue — sunroom with parrot and orange chairs" style="object-position: top left;"></div>
-        <div class="carousel-slide"><img src="/m224-fireplace.jpg" alt="224 Mountain Avenue — fireplace sitting area"></div>
-        <div class="carousel-slide"><img src="/m224-kitchen-wide.jpg" alt="224 Mountain Avenue — kitchen"></div>
-        <div class="carousel-slide"><img src="/m224-kitchen-stove.jpg" alt="224 Mountain Avenue — kitchen stove detail"></div>
-        <div class="carousel-slide"><img src="/m224-hutch.jpg" alt="224 Mountain Avenue — bar hutch"></div>
+    <div class="carousel-wrap" id="featured-carousel">
+      <div class="carousel-track" id="featured-track">
+        <div class="carousel-slide"><img src="/images/22-kensington/02FrontGarden2.jpg" alt="22 Kensington Court — front garden" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/01Front1.jpg" alt="22 Kensington Court — front of home on a quiet cul-de-sac" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/04FrontDoor.jpg" alt="22 Kensington Court — level-in front entry" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/05Liv1.jpg" alt="22 Kensington Court — living room" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/07LivFireplace.jpg" alt="22 Kensington Court — living room fireplace" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/12Din1.jpg" alt="22 Kensington Court — dining room" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/18Kit1.jpg" alt="22 Kensington Court — kitchen" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/19Primary1.jpg" alt="22 Kensington Court — primary bedroom" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/21PatioOffPrimary1.jpg" alt="22 Kensington Court — patio off the primary suite" loading="lazy" decoding="async"></div>
+        <div class="carousel-slide"><img src="/images/22-kensington/36GardenMoment.jpg" alt="22 Kensington Court — garden" loading="lazy" decoding="async"></div>
       </div>
       <div class="listing-main-overlay">
         <span class="listing-badge">Active</span>
-        <div class="listing-name">224 Mountain Avenue</div>
-        <div class="listing-city">Piedmont, CA</div>
+        <div class="listing-name">22 Kensington Court</div>
+        <div class="listing-city">Kensington, CA · Berkeley Hills</div>
       </div>
-      <button class="carousel-btn prev" onclick="mountainCarousel(-1)" aria-label="Previous">&#8592;</button>
-      <button class="carousel-btn next" onclick="mountainCarousel(1)" aria-label="Next">&#8594;</button>
-      <div class="carousel-dots" id="mountain-dots"></div>
+      <button class="carousel-btn prev" onclick="featuredCarousel(-1)" aria-label="Previous photo">&#8592;</button>
+      <button class="carousel-btn next" onclick="featuredCarousel(1)" aria-label="Next photo">&#8594;</button>
+      <div class="carousel-dots" id="featured-dots"></div>
     </div>
     <div class="listing-desc-box">
-      <p class="listing-desc-p" style="font-style:italic;font-size:1.05rem;color:var(--ink);margin-bottom:16px;">Some homes are just houses. This one is all vibes.</p>
-      <p class="listing-desc-p">Featured in the New York Times and designed by the celebrated Chloe Warner of Redmond Aldrich Design, 224 Mountain Avenue is one of the most extraordinary homes the East Bay has ever seen. Described by the Times as &ldquo;Little Women on acid,&rdquo; every room tells a story — jewel-toned walls, a lacquered red ceiling, checkerboard floors, and a garden so lush it stops you in your tracks. In a world of white walls and beige everything, this home is pure, unapologetic joy.</p>
-      <a href="mailto:patrick@realtor510.com" class="listing-cta">Request a Showing</a>
+      <p class="listing-desc-p" style="font-style:italic;font-size:1.05rem;color:var(--ink);margin-bottom:16px;">Quiet Court, Storybook Trail.</p>
+      <p class="listing-desc-p">Single-story, level-in, and tucked at the end of a quiet cul-de-sac in the Berkeley Hills, 22 Kensington Court is four bedrooms and three baths of one-floor living. Four doors open straight into the gardens, which are frankly the main character here. New roof, modern electrical, clean inspections. Wildcat Canyon views from the front yard, and Ye Olde School Trail right next door for a storybook walk to Kensington Elementary. No stairs. No drama. Just good bones and better blooms.</p>
+      <!-- Until /22-kensington-court is live, the CTA emails Patrick and "See the full home" stays hidden.
+           The landing-page check at the bottom of this file switches both over once that page responds. -->
+      <a href="mailto:patrick@realtor510.com?subject=22%20Kensington%20Court%20Showing" class="listing-cta" data-landing-href="/22-kensington-court">Request a Showing</a>
+      <a href="/22-kensington-court" class="listing-more" data-landing-only hidden>See the full home →</a>
     </div>
   </div>
 </section>
 
 <!-- CURRENT LISTINGS -->
+<!-- Hand-maintained: one .cl-card per active listing. Remove the last card and the whole section hides itself (CSS :has guard). -->
 <section class="current-listings-section">
   <div class="current-listings-inner">
     <span class="section-label">Properties</span>
     <h2 class="section-h2" style="margin-bottom:40px;">Current Listings</h2>
-    <div class="realscout-wrap">
-      <realscout-your-listings
-        agent-encoded-id="QWdlbnQtMjUyMzU1"
-        sort-order="STATUS_AND_SIGNIFICANT_CHANGE"
-        listing-status=",For Sale,In Contract"
-        property-types="SFR,MF"
-        include-co-listings
-        include-seller-listings>
-      </realscout-your-listings>
+    <div class="cl-list">
+      <a href="#featured-property" class="cl-card" data-landing-href="/22-kensington-court">
+        <img src="/images/22-kensington/01Front1.jpg" alt="" class="cl-card-img" width="1600" height="1070" loading="lazy" decoding="async">
+        <div class="cl-card-body">
+          <span class="cl-card-status">Active</span>
+          <span class="cl-card-city">Kensington, CA · Berkeley Hills</span>
+          <h3 class="cl-card-name">22 Kensington Court</h3>
+          <span class="cl-card-hook">Quiet Court, Storybook Trail.</span>
+          <span class="cl-card-facts">4 bed · 3 bath · Single-story, level-in</span>
+          <span class="cl-card-link" data-landing-text="See the full home →">See the photos ↑</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1011,11 +1058,15 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"7790379adaac4fcbbd5f81c0d86b8412","r":1}' crossorigin="anonymous"></script>
 <script>
 (function(){
+  var wrap = document.getElementById('featured-carousel');
+  var track = document.getElementById('featured-track');
+  var dotsWrap = document.getElementById('featured-dots');
+  var imgs = track.querySelectorAll('img');
+  var total = track.children.length;
   var current = 0;
-  var total = 10;
   var timer;
-  var track = document.getElementById('mountain-track');
-  var dotsWrap = document.getElementById('mountain-dots');
+  var inView = false;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   for(var i=0;i<total;i++){
     var d = document.createElement('button');
@@ -1026,21 +1077,78 @@
     dotsWrap.appendChild(d);
   }
 
+  // Slides are loading="lazy"; flipping one to eager fetches it before it slides in.
+  function warm(n){ imgs[(n + total) % total].loading = 'eager'; }
+
   function goTo(n){
     current = (n + total) % total;
+    warm(current + 1);
     track.style.transform = 'translateX(-'+current+'00%)';
     var dots = dotsWrap.querySelectorAll('.carousel-dot');
     dots.forEach(function(d,i){ d.classList.toggle('active', i===current); });
     resetTimer();
   }
 
+  // Autoplay only while the carousel is on screen, so visitors meet slide 1 (the gardens) first.
   function resetTimer(){
     clearInterval(timer);
-    timer = setInterval(function(){ goTo(current+1); }, 4000);
+    if (inView && !reduceMotion) timer = setInterval(function(){ goTo(current+1); }, 4000);
   }
 
-  window.mountainCarousel = function(dir){ goTo(current+dir); };
-  resetTimer();
+  window.featuredCarousel = function(dir){ goTo(current+dir); };
+
+  var x0 = null, y0 = 0;
+  wrap.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
+  wrap.addEventListener('touchend', function(e){
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) goTo(current + (dx < 0 ? 1 : -1));
+  }, {passive:true});
+
+  // Entries can arrive batched; the last one is the current state.
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries, obs){
+      if (entries[entries.length-1].isIntersecting) { for (var j=0;j<total;j++) warm(j); obs.disconnect(); }
+    }, { rootMargin: '600px 0px' }).observe(wrap);
+    new IntersectionObserver(function(entries){
+      inView = entries[entries.length-1].intersectionRatio >= 0.49;
+      resetTimer();
+    }, { threshold: 0.5 }).observe(wrap);
+  } else {
+    for (var j=0;j<total;j++) warm(j);
+    inView = true;
+    resetTimer();
+  }
+})();
+</script>
+<script>
+// 22 Kensington Court ships with a mailto CTA. Once /22-kensington-court is live, point the
+// CTA and the listing card there and reveal "See the full home" — no second deploy needed.
+(function(){
+  var targets = document.querySelectorAll('.listing-section, .current-listings-section');
+  if (!window.fetch || !targets.length) return;
+  function check(){
+    fetch('/22-kensington-court', { credentials: 'same-origin' })
+      .then(function(r){ return r.ok ? r.text() : ''; })
+      .then(function(html){
+        // A 404 page won't mention the listing; an SPA fallback to this homepage carries the carousel.
+        if (!/22 Kensington/i.test(html) || html.indexOf('featured-carousel') !== -1) return;
+        document.querySelectorAll('[data-landing-href]').forEach(function(a){ a.setAttribute('href', a.getAttribute('data-landing-href')); });
+        document.querySelectorAll('[data-landing-text]').forEach(function(el){ el.textContent = el.getAttribute('data-landing-text'); });
+        document.querySelectorAll('[data-landing-only]').forEach(function(el){ el.hidden = false; });
+      })
+      .catch(function(){});
+  }
+  // Only probe once a visitor nears the listing, so bounces never make the request.
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      if (entries.some(function(e){ return e.isIntersecting; })) { io.disconnect(); check(); }
+    }, { rootMargin: '600px 0px' });
+    targets.forEach(function(t){ io.observe(t); });
+  } else {
+    window.addEventListener('load', check);
+  }
 })();
 </script>
 </body>
