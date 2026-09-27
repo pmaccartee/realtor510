@@ -1,0 +1,56 @@
+{
+  "status": "sold",
+  "county": "Alameda",
+  "type": "Detached single-family home",
+  "images": [],
+  "lastUpdated": "2026-09-27",
+  "mls": null,
+  "showingPage": null,
+  "propertySite": null,
+  "slug": "1015-warfield-avenue",
+  "representation": "buyer",
+  "address": {
+    "street": "1015 Warfield Avenue",
+    "city": "Oakland",
+    "state": "CA",
+    "zip": "94610"
+  },
+  "area": "Grand Lake, Oakland",
+  "neighborhood": "Grand Lake",
+  "listPrice": 1995000,
+  "listDate": "2025-05-08",
+  "soldPrice": 2900000,
+  "soldDate": "2025-05-22",
+  "beds": 5,
+  "baths": 3.5,
+  "sqft": 3230,
+  "lotSqft": 12600,
+  "yearBuilt": 1907,
+  "garage": "No garage; 2 parking spaces",
+  "summary": "a masterfully renovated 1907 Craftsman in Oakland's Grand Lake neighborhood: 5 bedrooms, 3.5 baths and \u00b13,230 sq ft on a 12,600 sq ft lot, with a full ADU, a Heath tile kitchen, and an urban orchard of more than 20 fruit trees.",
+  "facts": [
+    [
+      "ADU",
+      "Yes, full ADU"
+    ],
+    [
+      "Kitchen",
+      "Heath tile"
+    ]
+  ],
+  "features": {
+    "Highlights": [
+      "1907 Craftsman, masterfully renovated.",
+      "Full accessory dwelling unit (ADU).",
+      "Heath tile kitchen.",
+      "Urban orchard with more than 20 fruit trees on a 12,600 sq ft lot."
+    ]
+  },
+  "faqs": [
+    [
+      "What neighborhood is 1015 Warfield Avenue in?",
+      "Grand Lake, in Oakland, California 94610."
+    ]
+  ],
+  "dom": 0
+}

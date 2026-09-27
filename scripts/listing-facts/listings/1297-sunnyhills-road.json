@@ -1,0 +1,62 @@
+{
+  "status": "sold",
+  "county": "Alameda",
+  "type": "Detached single-family home",
+  "images": [],
+  "lastUpdated": "2026-09-27",
+  "mls": null,
+  "showingPage": null,
+  "propertySite": null,
+  "slug": "1297-sunnyhills-road",
+  "representation": "seller",
+  "address": {
+    "street": "1297 Sunnyhills Road",
+    "city": "Oakland",
+    "state": "CA",
+    "zip": "94610"
+  },
+  "area": "Crocker Highlands, Oakland",
+  "neighborhood": "Crocker Highlands",
+  "listPrice": 1699888,
+  "listDate": "2025-10-17",
+  "soldPrice": 2150000,
+  "soldDate": "2025-11-26",
+  "beds": 4,
+  "baths": 3.5,
+  "sqft": 2765,
+  "lotSqft": 5460,
+  "yearBuilt": 1953,
+  "garage": "Garage with 4 parking spaces",
+  "levelIn": true,
+  "summary": "a luminous 4 bedroom, 3.5 bath, \u00b12,765 sq ft mid-century modern home in Crocker Highlands, Oakland, built in 1953 on a 5,460 sq ft lot. It has a level-in entry, a primary suite on the main level, walls of glass, Ipe decks on two levels, and two fireplaces.",
+  "facts": [
+    [
+      "Fireplaces",
+      "2"
+    ],
+    [
+      "Decks",
+      "Ipe, on two levels"
+    ]
+  ],
+  "features": {
+    "Highlights": [
+      "Mid-century modern design with walls of glass.",
+      "Level-in entry.",
+      "Primary suite on the main level.",
+      "Ipe decks on two levels.",
+      "Two fireplaces."
+    ]
+  },
+  "faqs": [
+    [
+      "Did Patrick MacCartee handle an earlier sale of 1297 Sunnyhills Road?",
+      "Yes. He represented the buyers when the home sold in December 2024 for $2,050,000, then represented the sellers when it sold again in November 2025 for $2,150,000."
+    ],
+    [
+      "What neighborhood is 1297 Sunnyhills Road in?",
+      "Crocker Highlands, in Oakland, California 94610."
+    ]
+  ],
+  "dom": 13
+}
