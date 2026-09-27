@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Updated 2026-03-18 -->
+<!-- Updated 2026-09-27 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Pages -->
   <url>
@@ -136,6 +136,12 @@
   </url>
 
   <!-- Static HTML Pages (property listings) -->
+  <url>
+    <loc>https://realtor510.com/22-kensington-court/facts/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://realtor510.com/1015-warfield-avenue-oakland.html</loc>
     <changefreq>monthly</changefreq>
