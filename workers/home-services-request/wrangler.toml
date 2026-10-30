@@ -1,0 +1,13 @@
+name = "home-services-request"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+# Same sender setup as ri-cloze-sync (cc-realtor510.com Email Routing).
+[[send_email]]
+name = "EMAIL"
+destination_address = "patrick@realtor510.com"
+
+[vars]
+NOTIFY_TO = "patrick@realtor510.com"
+NOTIFY_FROM = "home-services@cc-realtor510.com"

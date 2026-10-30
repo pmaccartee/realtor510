@@ -1,5 +1,13 @@
 export const insights = [
   {
+    "id": "el-nino-home-prep-checklist-east-bay",
+    "title": "El Niño Is Coming: Your East Bay Home Prep Checklist",
+    "category": "Homeowner Guide",
+    "description": "NOAA puts the odds of a strong-to-very-strong El Niño this winter above 83%. A 10-point checklist for Oakland, Berkeley and East Bay hills homes — gutters, drainage, slopes, trees, sandbags — plus how to get my hand-delivered Home Services Guide of nearly 100 trusted vendors.",
+    "content": "",
+    "link": "/blog/el-nino-home-prep-checklist-east-bay/"
+  },
+  {
     "id": "moving-to-the-east-bay-2026",
     "title": "Moving from San Francisco to the East Bay in 2026",
     "category": "Relocation Guide",
