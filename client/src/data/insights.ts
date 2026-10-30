@@ -8,6 +8,15 @@ export const insights = [
     "link": "/blog/el-nino-home-prep-checklist-east-bay/"
   },
   {
+    "id": "22-kensington-court-kensington",
+    "title": "22 Kensington Court, Kensington — No View, No Problem",
+    "category": "Notable Transaction",
+    "description": "A single-story, level-in Berkeley Hills home on a quiet cul-de-sac, with no view, so the gardens carried the story. Listed at $1,295,000 and sold in 12 days at 43% over list: the highest non-view sale in Kensington this year. Seller representation. Sold $1,850,000.",
+    "content": "",
+    "link": "/blog/22-kensington-court-kensington/",
+    "cta": "See how it sold"
+  },
+  {
     "id": "moving-to-the-east-bay-2026",
     "title": "Moving from San Francisco to the East Bay in 2026",
     "category": "Relocation Guide",
