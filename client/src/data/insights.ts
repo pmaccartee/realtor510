@@ -17,6 +17,15 @@ export const insights = [
     "cta": "See how it sold"
   },
   {
+    "id": "6145-fremont-street-oakland",
+    "title": "6145 Fremont Street, Oakland — The List Price Was an Invitation",
+    "category": "Notable Transaction",
+    "description": "A 1912 four-bedroom in North Oakland's Golden Gate area, right on the Emeryville line. Listed at $1,098,000 to draw a crowd; my buyers priced it off the comps, read every disclosure before offer day, and closed in a 15-day escrow. Buyer representation. Sold $1,450,000.",
+    "content": "",
+    "link": "/blog/6145-fremont-street-oakland/",
+    "cta": "See how we won it"
+  },
+  {
     "id": "moving-to-the-east-bay-2026",
     "title": "Moving from San Francisco to the East Bay in 2026",
     "category": "Relocation Guide",
