@@ -1,3 +1,12 @@
+# Real Estate Decoded Fall 2026 mailer: short root URLs for the notable transaction pages
+/22-kensington-court-kensington /blog/22-kensington-court-kensington/ 301
+/22-kensington-court-kensington/ /blog/22-kensington-court-kensington/ 301
+/17-roble-court-berkeley /blog/17-roble-court-berkeley/ 301
+/17-roble-court-berkeley/ /blog/17-roble-court-berkeley/ 301
+/6145-fremont-street-oakland /blog/6145-fremont-street-oakland/ 301
+/6145-fremont-street-oakland/ /blog/6145-fremont-street-oakland/ 301
+/5327-brann-street-oakland /blog/5327-brann-street-oakland/ 301
+/5327-brann-street-oakland/ /blog/5327-brann-street-oakland/ 301
 /crocker-highlands /neighborhood/crocker-highlands 301
 /piedmont /neighborhood/piedmont-home-values 301
 /temescal /neighborhood/temescal-guide 301

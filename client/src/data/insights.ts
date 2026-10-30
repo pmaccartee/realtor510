@@ -36,6 +36,15 @@ export const insights = [
     "cta": "See how we won it"
   },
   {
+    "id": "17-roble-court-berkeley",
+    "title": "17 Roble Court, Berkeley — The Landmark That Left the Market",
+    "category": "Notable Transaction",
+    "description": "A 1929 John Hudson Thomas Mediterranean on a quiet Claremont cul-de-sac, with Bay and Golden Gate views. It came off the market; my buyers bought it anyway, below the comps and below its last asking price, weeks before their first child arrived. Buyer representation. Sold $2,850,000.",
+    "content": "",
+    "link": "/blog/17-roble-court-berkeley/",
+    "cta": "See how we found it"
+  },
+  {
     "id": "moving-to-the-east-bay-2026",
     "title": "Moving from San Francisco to the East Bay in 2026",
     "category": "Relocation Guide",
