@@ -16,7 +16,11 @@ Output goes to `client/public/<slug>/facts/index.html`.
 4. Deploy (merge to `main`; Cloudflare Pages builds it). No cache purge needed: Pages serves these with `max-age=0`, and `_headers` marks `/:slug/facts/*`, `/sales/*`, `llms.txt` and `sitemap.xml` as no-cache.
 
 ## When it sells
-Set `"status": "sold"`, `"soldPrice"` and `"soldDate"` (YYYY-MM-DD), update `"lastUpdated"`, and rebuild. The page switches itself to a sold record: sold price and price per sq ft, "represented the seller" language, sold structured data, and a "thinking about selling nearby?" link in place of the showing link. Remove any feature bullets that only make sense while it's for sale (like "disclosures available from the listing agent"). Use `"pending"` while it's in contract.
+Set `"status": "sold"`, `"soldPrice"` and `"soldDate"` (YYYY-MM-DD), update `"lastUpdated"`, and rebuild. The page switches itself to a sold record: sold price and price per sq ft, "represented the seller" language, sold structured data, and a "thinking about selling nearby?" link in place of the showing link. Remove any feature bullets that only make sense while it's for sale (like "disclosures available from the listing agent"), along with offer terms such as financing accepted and possession. Add `"dom"` (days on market) from the MLS, and set `"showingPage"` and `"propertySite"` to `null`. Use `"pending"` while it's in contract.
+
+If the sale has a Notable Transaction story under `/blog/`, set `"storyPage"` to its path (for example `"/blog/22-kensington-court-kensington/"`). The sold page then links to it ("See how it sold →") right under the opening answer and names it in the structured data. Like `showingPage`, it's linked only once that page exists in `client/public`.
+
+Then take the home off the homepage's hand-maintained Current Listings (`index.html`, `.cl-card`).
 
 For a buyer-side sale you want on the site, add a sold file with `"representation": "buyer"`.
 

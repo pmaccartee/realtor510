@@ -66,6 +66,8 @@ function build(L, all = []) {
   const acres = (L.lotSqft / 43560).toFixed(2);
   const statusLabel = sold ? "Sold" : pending ? "Pending" : "Active · For Sale";
   const showing = pageExists(L.showingPage) ? L.showingPage : null;
+  // The sale story (a Notable Transaction under /blog/) is linked from sold pages once it's in the build.
+  const story = sold && pageExists(L.storyPage) ? L.storyPage : null;
   const showingHref = showing || `mailto:${AGENT.email}?subject=${encodeURIComponent(`${a.street} Showing`)}`;
   // On buyer-side sales Patrick was not the seller's agent, so the structured data must not say he was.
   const listedByAgent = L.representation !== "buyer";
@@ -164,6 +166,7 @@ function build(L, all = []) {
           ["Pool", L.pool],
           ["HOA", L.hoa == null ? null : !!L.hoa],
         ].filter(([, v]) => v != null).map(([name, value]) => ({ "@type": "LocationFeatureSpecification", name, value })),
+        ...(story ? { subjectOf: { "@type": "Article", url: SITE + story } } : {}),
       },
       {
         "@type": "RealEstateAgent",
@@ -248,7 +251,7 @@ ${JSON.stringify(ld, null, 2).replace(/</g, "\\u003c")}
 <h1>${esc(full)}</h1>
 <p class="sub">${esc(L.area)} · ${esc(L.county)} County · ${esc(priceLine)}</p>
 
-<p class="answer">${lead}</p>
+<p class="answer">${lead}</p>${story ? `\n<p><a href="${story}">See how it sold →</a></p>` : ""}
 ${hero ? `
 <figure>
   <img src="${hero[0]}" alt="${esc(hero[1])}" width="${hero[2]}" height="${hero[3]}" loading="eager">
