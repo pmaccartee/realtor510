@@ -1,6 +1,6 @@
 {
   "slug": "22-kensington-court",
-  "status": "active",
+  "status": "sold",
   "representation": "seller",
 
   "address": {
@@ -15,8 +15,9 @@
 
   "listPrice": 1295000,
   "listDate": "2026-09-18",
-  "soldPrice": null,
-  "soldDate": null,
+  "soldPrice": 1850000,
+  "soldDate": "2026-10-21",
+  "dom": 12,
   "mls": "41148545",
 
   "type": "Detached single-family home, ranch style",
@@ -45,9 +46,7 @@
     ["Exterior / roof", "Brick and stucco; new composition shingle roof"],
     ["Laundry", "Washer and dryer included"],
     ["Water / sewer", "Public / public"],
-    ["Cross street", "Cowper Avenue"],
-    ["Financing accepted", "Cash, conventional, VA, cryptocurrency"],
-    ["Possession", "At close of escrow"]
+    ["Cross street", "Cowper Avenue"]
   ],
 
   "features": {
@@ -64,7 +63,7 @@
       "New roof and modern electrical.",
       "Gas tankless water heater, double-strapped.",
       "Owned security alarm system.",
-      "Clean inspection reports; full disclosure package available from the listing agent."
+      "Clean pre-market inspection reports."
     ],
     "Outdoors": [
       "Gardens are the standout feature: dry-stacked stone walls, pergolas, flagstone patios and low-maintenance plantings.",
@@ -87,7 +86,7 @@
   "faqs": [
     ["Is 22 Kensington Court in Berkeley?", "It is in Kensington, CA 94707, an unincorporated community in Contra Costa County in the Berkeley Hills. Kensington borders Berkeley, but the address is Kensington."],
     ["What elementary school serves the home?", "Kensington is in West Contra Costa Unified. Kensington Elementary is a walk away via Ye Olde School Trail. Buyers should confirm the assignment directly with the district."],
-    ["What updates have been done?", "New roof, modern electrical, an all-new primary suite, a custom kitchen with new appliances, and a gas tankless water heater. Inspection reports are available from the listing agent."]
+    ["What updates have been done?", "New roof, modern electrical, an all-new primary suite, a custom kitchen with new appliances, and a gas tankless water heater. Pre-market inspection reports came back clean."]
   ],
 
   "images": [
@@ -98,7 +97,8 @@
     ["/images/22-kensington/36GardenMoment.jpg", "Garden at 22 Kensington Court", 1600, 1066]
   ],
 
-  "showingPage": "/22-kensington-court",
-  "propertySite": "https://22kensington.com",
-  "lastUpdated": "2026-09-27"
+  "showingPage": null,
+  "propertySite": null,
+  "storyPage": "/blog/22-kensington-court-kensington/",
+  "lastUpdated": "2026-10-30"
 }

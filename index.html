@@ -398,13 +398,6 @@
       text-transform: uppercase; font-weight: 500; transition: all 0.2s;
     }
     .listing-cta:hover { background: var(--crimson); color: #fff; }
-    .listing-more {
-      display: block; width: fit-content; margin-top: 20px;
-      font-size: 1rem; color: var(--crimson); font-weight: 500;
-      border-bottom: 1px solid transparent; transition: border-color 0.2s;
-    }
-    .listing-more:hover { border-color: var(--crimson); }
-    .listing-more[hidden] { display: none; }
 
     /* ── CURRENT LISTINGS ── */
     .current-listings-section { padding: 96px 24px; background: var(--off-white); }
@@ -818,7 +811,7 @@
   <div class="listing-inner">
     <div class="listing-header">
       <div>
-        <span class="section-label">Current Market</span>
+        <span class="section-label">Just Sold</span>
         <h2 class="section-h2">Featured Property</h2>
       </div>
     </div>
@@ -836,7 +829,7 @@
         <div class="carousel-slide"><img src="/images/22-kensington/36GardenMoment.jpg" alt="22 Kensington Court — garden" loading="lazy" decoding="async"></div>
       </div>
       <div class="listing-main-overlay">
-        <span class="listing-badge">Active</span>
+        <span class="listing-badge">Sold $1,850,000</span>
         <div class="listing-name">22 Kensington Court</div>
         <div class="listing-city">Kensington, CA · Berkeley Hills</div>
       </div>
@@ -845,12 +838,9 @@
       <div class="carousel-dots" id="featured-dots"></div>
     </div>
     <div class="listing-desc-box">
-      <p class="listing-desc-p" style="font-style:italic;font-size:1.05rem;color:var(--ink);margin-bottom:16px;">Quiet Court, Storybook Trail.</p>
-      <p class="listing-desc-p">Single-story, level-in, and tucked at the end of a quiet cul-de-sac in the Berkeley Hills, 22 Kensington Court is four bedrooms and three baths of one-floor living. Four doors open straight into the gardens, which are frankly the main character here. New roof, modern electrical, clean inspections. Wildcat Canyon views from the front yard, and Ye Olde School Trail right next door for a storybook walk to Kensington Elementary. No stairs. No drama. Just good bones and better blooms.</p>
-      <!-- Until /22-kensington-court is live, the CTA emails Patrick and "See the full home" stays hidden.
-           The landing-page check at the bottom of this file switches both over once that page responds. -->
-      <a href="mailto:patrick@realtor510.com?subject=22%20Kensington%20Court%20Showing" class="listing-cta" data-landing-href="/22-kensington-court">Request a Showing</a>
-      <a href="/22-kensington-court" class="listing-more" data-landing-only hidden>See the full home →</a>
+      <p class="listing-desc-p" style="font-style:italic;font-size:1.05rem;color:var(--ink);margin-bottom:16px;">No View, No Problem.</p>
+      <p class="listing-desc-p">Single-story, level-in, and tucked at the end of a quiet cul-de-sac in the Berkeley Hills: four bedrooms, three baths, and gardens that were frankly the main character. In Kensington, the view usually does the heavy lifting. This house didn't have one, so we prepped it right, priced it to compete, and let the gardens carry the story. Twelve days later it sold for $1,850,000: 43% over list, and the highest non-view sale in Kensington this year. No stairs. No drama. Just good bones, better blooms, and a very good number.</p>
+      <a href="/blog/22-kensington-court-kensington/" class="listing-cta">See how it sold</a>
     </div>
   </div>
 </section>
@@ -862,17 +852,7 @@
     <span class="section-label">Properties</span>
     <h2 class="section-h2" style="margin-bottom:40px;">Current Listings</h2>
     <div class="cl-list">
-      <a href="#featured-property" class="cl-card" data-landing-href="/22-kensington-court">
-        <img src="/images/22-kensington/01Front1.jpg" alt="" class="cl-card-img" width="1600" height="1070" loading="lazy" decoding="async">
-        <div class="cl-card-body">
-          <span class="cl-card-status">Active</span>
-          <span class="cl-card-city">Kensington, CA · Berkeley Hills</span>
-          <h3 class="cl-card-name">22 Kensington Court</h3>
-          <span class="cl-card-hook">Quiet Court, Storybook Trail.</span>
-          <span class="cl-card-facts">4 bed · 3 bath · Single-story, level-in</span>
-          <span class="cl-card-link" data-landing-text="See the full home →">See the photos ↑</span>
-        </div>
-      </a>
+      <!-- No active listings right now. Add a .cl-card here and the section shows again. -->
     </div>
   </div>
 </section>
@@ -1126,35 +1106,6 @@
     for (var j=0;j<total;j++) warm(j);
     inView = true;
     resetTimer();
-  }
-})();
-</script>
-<script>
-// 22 Kensington Court ships with a mailto CTA. Once /22-kensington-court is live, point the
-// CTA and the listing card there and reveal "See the full home" — no second deploy needed.
-(function(){
-  var targets = document.querySelectorAll('.listing-section, .current-listings-section');
-  if (!window.fetch || !targets.length) return;
-  function check(){
-    fetch('/22-kensington-court', { credentials: 'same-origin' })
-      .then(function(r){ return r.ok ? r.text() : ''; })
-      .then(function(html){
-        // A 404 page won't mention the listing; an SPA fallback to this homepage carries the carousel.
-        if (!/22 Kensington/i.test(html) || html.indexOf('featured-carousel') !== -1) return;
-        document.querySelectorAll('[data-landing-href]').forEach(function(a){ a.setAttribute('href', a.getAttribute('data-landing-href')); });
-        document.querySelectorAll('[data-landing-text]').forEach(function(el){ el.textContent = el.getAttribute('data-landing-text'); });
-        document.querySelectorAll('[data-landing-only]').forEach(function(el){ el.hidden = false; });
-      })
-      .catch(function(){});
-  }
-  // Only probe once a visitor nears the listing, so bounces never make the request.
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      if (entries.some(function(e){ return e.isIntersecting; })) { io.disconnect(); check(); }
-    }, { rootMargin: '600px 0px' });
-    targets.forEach(function(t){ io.observe(t); });
-  } else {
-    window.addEventListener('load', check);
   }
 })();
 </script>
