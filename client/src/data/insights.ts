@@ -7,15 +7,15 @@ export const insights = [
     "content": "",
     "link": "/blog/el-nino-home-prep-checklist-east-bay/"
   },
-  // AT RECORDING: append " Sold $FINAL." to the 5327 Brann Street description below.
+  // AT RECORDING: in the 5327 Brann Street description below, replace "Pending." with "Sold $FINAL."
   {
     "id": "5327-brann-street-oakland",
     "title": "5327 Brann Street, Oakland — The Homework House",
     "category": "Notable Transaction",
-    "description": "A 1936 Maxwell Park home with about 2,137 sq ft that other buyers scrolled past. My buyers read the reports, priced the open items, and negotiated twice: first the price, then the fix list. Buyer representation.",
+    "description": "A 1936 Maxwell Park home with about 2,137 sq ft that other buyers scrolled past. My buyers read the reports, priced the open items, and negotiated twice: first the price, then the fix list. Buyer representation. Pending.",
     "content": "",
     "link": "/blog/5327-brann-street-oakland/",
-    "cta": "See how we bought it"
+    "cta": "See the homework"
   },
   {
     "id": "22-kensington-court-kensington",
