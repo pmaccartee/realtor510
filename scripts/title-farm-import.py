@@ -17,6 +17,8 @@ FARMS={
  'FARM Rockridge Fairview Park.csv':('rockridge-fairview-park','Rockridge-Fairview Park'),
  'FARM Shafter & Lower Rockridge.csv':('shafter-lower-rockridge','Shafter & Lower Rockridge'),
  'FARM Upper Rockridge.csv':('upper-rockridge','Upper Rockridge'),
+ 'my_farm_10.csv':('upper-piedmont-crocker','Upper Piedmont & Crocker Highlands (my_farm_10)'),
+ 'my_farm_11.csv':('lower-piedmont-grand-lake','Lower Piedmont & Grand Lake (my_farm_11)'),
 }
 def money(v):
     v=re.sub(r'[$,\s]','',v or '');
@@ -33,9 +35,9 @@ def t(v): v=(v or '').strip(); return v or None
 def norm(s): return re.sub(r'\s+',' ',re.sub(r'[^a-z0-9 ]','',(s or '').lower())).strip()
 today=date.today().isoformat()
 parcels={}; farms=set(); imports=[]
-ONLY=sys.argv[3] if len(sys.argv)>3 else None
+ONLY=set(sys.argv[3:]) or None
 for fn,(fk,fname) in FARMS.items():
-    if ONLY and fn!=ONLY: continue
+    if ONLY and fn not in ONLY: continue
     rows=list(csv.DictReader(open(os.path.join(SRC,fn),encoding='utf-8',errors='replace')))
     imports.append((fn,fk,len(rows)))
     for x in rows:
