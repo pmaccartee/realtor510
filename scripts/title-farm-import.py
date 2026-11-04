@@ -17,8 +17,8 @@ FARMS={
  'FARM Rockridge Fairview Park.csv':('rockridge-fairview-park','Rockridge-Fairview Park'),
  'FARM Shafter & Lower Rockridge.csv':('shafter-lower-rockridge','Shafter & Lower Rockridge'),
  'FARM Upper Rockridge.csv':('upper-rockridge','Upper Rockridge'),
- 'my_farm_10.csv':('upper-piedmont-crocker','Upper Piedmont & Crocker Highlands (my_farm_10)'),
- 'my_farm_11.csv':('lower-piedmont-grand-lake','Lower Piedmont & Grand Lake (my_farm_11)'),
+ 'my_farm_10.csv':('piedmont-east','Piedmont East'),
+ 'my_farm_11.csv':('piedmont-west','Piedmont West'),
 }
 def money(v):
     v=re.sub(r'[$,\s]','',v or '');
