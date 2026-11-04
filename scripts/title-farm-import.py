@@ -19,6 +19,7 @@ FARMS={
  'FARM Upper Rockridge.csv':('upper-rockridge','Upper Rockridge'),
  'my_farm_10.csv':('piedmont-east','Piedmont East'),
  'my_farm_11.csv':('piedmont-west','Piedmont West'),
+ 'my_farm_12.csv':('temescal-bushrod','Temescal & Bushrod'),
 }
 def money(v):
     v=re.sub(r'[$,\s]','',v or '');
