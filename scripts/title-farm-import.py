@@ -12,11 +12,12 @@ from datetime import date
 SRC=sys.argv[1]; OUT=sys.argv[2]
 FARMS={
  'FARM Lwr Montclar-Piedmont N of Oak Ave-Pied Ave.csv':('lower-montclair-piedmont','Lower Montclair-Piedmont (N of Oakland Ave/Piedmont Ave)'),
- 'FARM Montclair North of Snake Rd.csv':('montclair-snake-rd','Montclair (Snake Rd - N/S export duplicated, needs re-pull)'),
+ 'FARM Montclair North of Snake Rd.csv':('montclair-north-snake-rd','Montclair North of Snake Rd'),
+ 'FARM Montclair South of Snake Rd.csv':('montclair-south-snake-rd','Montclair South of Snake Rd'),
  'FARM Rockridge Fairview Park.csv':('rockridge-fairview-park','Rockridge-Fairview Park'),
  'FARM Shafter & Lower Rockridge.csv':('shafter-lower-rockridge','Shafter & Lower Rockridge'),
  'FARM Upper Rockridge.csv':('upper-rockridge','Upper Rockridge'),
-}  # Montclair South is byte-identical to North; loaded once.
+}
 def money(v):
     v=re.sub(r'[$,\s]','',v or '');
     try: n=int(float(v)); return n or None
@@ -32,7 +33,9 @@ def t(v): v=(v or '').strip(); return v or None
 def norm(s): return re.sub(r'\s+',' ',re.sub(r'[^a-z0-9 ]','',(s or '').lower())).strip()
 today=date.today().isoformat()
 parcels={}; farms=set(); imports=[]
+ONLY=sys.argv[3] if len(sys.argv)>3 else None
 for fn,(fk,fname) in FARMS.items():
+    if ONLY and fn!=ONLY: continue
     rows=list(csv.DictReader(open(os.path.join(SRC,fn),encoding='utf-8',errors='replace')))
     imports.append((fn,fk,len(rows)))
     for x in rows:
@@ -106,6 +109,6 @@ fl=sorted(farms); k=0
 for i in range(0,len(fl),800):
     k+=1; vals=",".join(f"({q(a)},{q(b)},{q(c)},'{today}')" for a,b,c in fl[i:i+800])
     open(f'{OUT}/f{k:03d}.sql','w').write(f"INSERT OR IGNORE INTO title_parcel_farms (property_key,farm_key,farm_name,first_seen) VALUES {vals};")
-imp=",".join(f"({q(a)},{q(b)},'{today}',{c},{len(parcels)},{q('Montclair South file identical to North; loaded once' if b=='montclair-snake-rd' else None)})" for a,b,c in imports)
+imp=",".join(f"({q(a)},{q(b)},'{today}',{c},{len(parcels)},{q(None)})" for a,b,c in imports)
 open(f'{OUT}/z_imports.sql','w').write(f"INSERT INTO title_imports (file_name,farm_key,received_at,rows_in,parcels_after,note) VALUES {imp};")
 print(len(parcels),'parcels',len(fl),'farm tags', n,'parcel chunks',k,'farm chunks')
