@@ -23,6 +23,21 @@ const AGENT = {
 // Same favicon + analytics (GA4, Meta Pixel, Cloudflare Web Analytics) as the site's other property pages.
 const HEAD_EXTRAS = `<link rel="icon" type="image/png" href="/favicon.png">
 <!-- Google Analytics -->
+<!-- ZipISA Website Visitors pixel -->
+<script>
+  window.RI_TAG = {
+    serverUrl: "https://tracking.webhawk.ai",
+    tagPath: "/z5kq2NMRx0/tag.js",
+    identifier: "zipisa-f6291fd127535009574bcb17_4694",
+  };
+  (function () {
+    var sc = document.createElement("script");
+    sc.setAttribute("src", window.RI_TAG.serverUrl + window.RI_TAG.tagPath);
+    sc.setAttribute("async", "true");
+    sc.setAttribute("type", "text/javascript");
+    document.head.appendChild(sc);
+  })();
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6DDVCG0Q3F');</script>
 <!-- Meta Pixel -->

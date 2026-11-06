@@ -36,6 +36,21 @@ function generateHTML(post) {
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <!-- Google tag (gtag.js) -->
+  <!-- ZipISA Website Visitors pixel -->
+  <script>
+    window.RI_TAG = {
+      serverUrl: "https://tracking.webhawk.ai",
+      tagPath: "/z5kq2NMRx0/tag.js",
+      identifier: "zipisa-f6291fd127535009574bcb17_4694",
+    };
+    (function () {
+      var sc = document.createElement("script");
+      sc.setAttribute("src", window.RI_TAG.serverUrl + window.RI_TAG.tagPath);
+      sc.setAttribute("async", "true");
+      sc.setAttribute("type", "text/javascript");
+      document.head.appendChild(sc);
+    })();
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDVCG0Q3F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6DDVCG0Q3F');</script>
   <!-- Meta Pixel Code -->
