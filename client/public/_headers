@@ -21,3 +21,7 @@
 
 /sitemap.xml
   Cache-Control: no-cache, must-revalidate
+
+/santa/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache, must-revalidate
